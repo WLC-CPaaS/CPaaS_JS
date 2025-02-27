@@ -1,17 +1,13 @@
-
-
-# ServiceTemporalRuleOutputShort
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceTemporalRuleOutputShort
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**enabled** | **Boolean** |  |  [optional] |
-|**features** | **Array&lt;String&gt;** |  |  [optional] |
-|**flags** | **Array&lt;String&gt;** |  |  [optional] |
-|**id** | **String** |  |  [optional] |
-|**name** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**enabled** | **Boolean** |  | [optional] 
+**features** | **[String]** |  | [optional] 
+**flags** | **[String]** |  | [optional] 
+**id** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
 
 

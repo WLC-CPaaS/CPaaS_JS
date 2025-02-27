@@ -1,15 +1,11 @@
-
-
-# ServiceCampaignImportOutputMnoStatusListInner
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceCampaignImportOutputMnoStatusListInner
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**mnoId** | **String** |  |  [optional] |
-|**mnoName** | **String** |  |  [optional] |
-|**status** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**mnoId** | **String** |  | [optional] 
+**mnoName** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
 
 

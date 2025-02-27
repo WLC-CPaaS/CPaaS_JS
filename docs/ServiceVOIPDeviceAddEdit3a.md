@@ -1,23 +1,20 @@
-
-
-# ServiceVOIPDeviceAddEdit3a
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit3a
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**inviteFormat** | [**InviteFormatEnum**](#InviteFormatEnum) |  |  |
-|**password** | **String** |  |  [optional] |
-|**username** | **String** |  |  |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**inviteFormat** | **String** |  | 
+**password** | **String** |  | [optional] 
+**username** | **String** |  | 
 
 
 
 ## Enum: InviteFormatEnum
 
-| Name | Value |
-|---- | -----|
-| username | &quot;username&quot; |
+
+* `username` (value: `"username"`)
+
 
 
 

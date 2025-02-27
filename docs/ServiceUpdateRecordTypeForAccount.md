@@ -1,13 +1,9 @@
-
-
-# ServiceUpdateRecordTypeForAccount
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceUpdateRecordTypeForAccount
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**recordType** | **String** |  |  |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**recordType** | **String** |  | 
 
 

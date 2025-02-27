@@ -1,13 +1,9 @@
-
-
-# ServiceVOIPCallQueueEnableMembershipData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueEnableMembershipData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**acceptCharges** | **Boolean** |  |  |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**acceptCharges** | **Boolean** |  | 
 
 

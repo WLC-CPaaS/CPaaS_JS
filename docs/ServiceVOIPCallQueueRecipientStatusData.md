@@ -1,21 +1,18 @@
-
-
-# ServiceVOIPCallQueueRecipientStatusData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueRecipientStatusData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**status** | [**StatusEnum**](#StatusEnum) |  |  |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**status** | **String** |  | 
 
 
 
 ## Enum: StatusEnum
 
-| Name | Value |
-|---- | -----|
-| ready | &quot;ready&quot; |
+
+* `ready` (value: `"ready"`)
+
 
 
 

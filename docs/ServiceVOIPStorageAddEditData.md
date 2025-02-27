@@ -1,16 +1,12 @@
-
-
-# ServiceVOIPStorageAddEditData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPStorageAddEditData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**attachments** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**connections** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**id** | **String** |  |  [optional] |
-|**plan** | [**ServiceStoragePlan**](ServiceStoragePlan.md) |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**attachments** | **{String: Object}** |  | [optional] 
+**connections** | **{String: Object}** |  | [optional] 
+**id** | **String** |  | [optional] 
+**plan** | [**ServiceStoragePlan**](ServiceStoragePlan.md) |  | [optional] 
 
 

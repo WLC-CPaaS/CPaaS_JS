@@ -1,13 +1,9 @@
-
-
-# ServiceVoicemailMedia
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVoicemailMedia
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**unavailable** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**unavailable** | **String** |  | [optional] 
 
 

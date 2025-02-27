@@ -1,13 +1,9 @@
-
-
-# ServiceTelephoneNumberList
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceTelephoneNumberList
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**telephoneNumber** | **Array&lt;String&gt;** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**telephoneNumber** | **[String]** |  | [optional] 
 
 

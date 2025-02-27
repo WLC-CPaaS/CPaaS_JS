@@ -1,15 +1,11 @@
-
-
-# ServiceStoragePlanDatabaseAttachment
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceStoragePlanDatabaseAttachment
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**handler** | **String** |  |  [optional] |
-|**params** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**stub** | **Boolean** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**handler** | **String** |  | [optional] 
+**params** | **{String: Object}** |  | [optional] 
+**stub** | **Boolean** |  | [optional] 
 
 

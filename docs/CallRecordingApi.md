@@ -1,13 +1,13 @@
-# CallRecordingApi
+# WhiteLabelCommunicationsCPaasApiDocumentation.CallRecordingApi
 
 All URIs are relative to *http://api.cpaaslabs.net*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**v1AccountAccountIDRecordingGet**](CallRecordingApi.md#v1AccountAccountIDRecordingGet) | **GET** /v1/account/{accountID}/recording | Get Account Call Recording |
-| [**v1AccountAccountIDRecordingRecordingIDDelete**](CallRecordingApi.md#v1AccountAccountIDRecordingRecordingIDDelete) | **DELETE** /v1/account/{accountID}/recording/{recordingID} | Delete Call Recording |
-| [**v1AccountAccountIDRecordingRecordingIDGet**](CallRecordingApi.md#v1AccountAccountIDRecordingRecordingIDGet) | **GET** /v1/account/{accountID}/recording/{recordingID} | Get Call Recording Details |
-| [**v1AccountAccountIDUserUserIDRecordingGet**](CallRecordingApi.md#v1AccountAccountIDUserUserIDRecordingGet) | **GET** /v1/account/{accountID}/user/{userID}/recording | Get User Call Recording |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**v1AccountAccountIDRecordingGet**](CallRecordingApi.md#v1AccountAccountIDRecordingGet) | **GET** /v1/account/{accountID}/recording | Get Account Call Recording
+[**v1AccountAccountIDRecordingRecordingIDDelete**](CallRecordingApi.md#v1AccountAccountIDRecordingRecordingIDDelete) | **DELETE** /v1/account/{accountID}/recording/{recordingID} | Delete Call Recording
+[**v1AccountAccountIDRecordingRecordingIDGet**](CallRecordingApi.md#v1AccountAccountIDRecordingRecordingIDGet) | **GET** /v1/account/{accountID}/recording/{recordingID} | Get Call Recording Details
+[**v1AccountAccountIDUserUserIDRecordingGet**](CallRecordingApi.md#v1AccountAccountIDUserUserIDRecordingGet) | **GET** /v1/account/{accountID}/user/{userID}/recording | Get User Call Recording
 
 
 
@@ -21,48 +21,32 @@ Obtain a list of the call recordings within an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallRecordingApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallRecordingApi apiInstance = new CallRecordingApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        try {
-            ServiceDocsCallRecordingGetAll result = apiInstance.v1AccountAccountIDRecordingGet(accountID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallRecordingApi#v1AccountAccountIDRecordingGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallRecordingApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDRecordingGet(accountID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -78,13 +62,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDRecordingRecordingIDDelete
 
 > ServiceDocsCallRecordingGetSingle v1AccountAccountIDRecordingRecordingIDDelete(accountID, recordingID)
@@ -95,50 +72,34 @@ Delete a single call recording from an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallRecordingApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallRecordingApi apiInstance = new CallRecordingApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String recordingID = "recordingID_example"; // String | Recording ID, 39 (yyyymm-<32 id>)
-        try {
-            ServiceDocsCallRecordingGetSingle result = apiInstance.v1AccountAccountIDRecordingRecordingIDDelete(accountID, recordingID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallRecordingApi#v1AccountAccountIDRecordingRecordingIDDelete");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallRecordingApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let recordingID = "recordingID_example"; // String | Recording ID, 39 (yyyymm-<32 id>)
+apiInstance.v1AccountAccountIDRecordingRecordingIDDelete(accountID, recordingID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **recordingID** | **String**| Recording ID, 39 (yyyymm-&lt;32 id&gt;) | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **recordingID** | **String**| Recording ID, 39 (yyyymm-&lt;32 id&gt;) | 
 
 ### Return type
 
@@ -154,13 +115,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDRecordingRecordingIDGet
 
 > ServiceDocsCallRecordingGetSingle v1AccountAccountIDRecordingRecordingIDGet(accountID, recordingID)
@@ -171,50 +125,34 @@ Access details for each recorded call in an account (e.g., duration, names and n
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallRecordingApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallRecordingApi apiInstance = new CallRecordingApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String recordingID = "recordingID_example"; // String | Recording ID, 39 (yyyymm-<32 id>)
-        try {
-            ServiceDocsCallRecordingGetSingle result = apiInstance.v1AccountAccountIDRecordingRecordingIDGet(accountID, recordingID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallRecordingApi#v1AccountAccountIDRecordingRecordingIDGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallRecordingApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let recordingID = "recordingID_example"; // String | Recording ID, 39 (yyyymm-<32 id>)
+apiInstance.v1AccountAccountIDRecordingRecordingIDGet(accountID, recordingID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **recordingID** | **String**| Recording ID, 39 (yyyymm-&lt;32 id&gt;) | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **recordingID** | **String**| Recording ID, 39 (yyyymm-&lt;32 id&gt;) | 
 
 ### Return type
 
@@ -230,13 +168,6 @@ public class Example {
 - **Accept**: application/json, audio/mp3, audio/mpeg, audio/mpeg3, audio/x-wav, audio/wav
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDUserUserIDRecordingGet
 
 > ServiceDocsCallRecordingGetAll v1AccountAccountIDUserUserIDRecordingGet(accountID, userID)
@@ -247,50 +178,34 @@ Retrieve a list of call recordings for a user within an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallRecordingApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallRecordingApi apiInstance = new CallRecordingApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String userID = "userID_example"; // String | User ID, 32 alpha numeric
-        try {
-            ServiceDocsCallRecordingGetAll result = apiInstance.v1AccountAccountIDUserUserIDRecordingGet(accountID, userID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallRecordingApi#v1AccountAccountIDUserUserIDRecordingGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallRecordingApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let userID = "userID_example"; // String | User ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDUserUserIDRecordingGet(accountID, userID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **userID** | **String**| User ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **userID** | **String**| User ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -304,11 +219,4 @@ public class Example {
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 

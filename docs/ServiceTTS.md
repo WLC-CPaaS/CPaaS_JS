@@ -1,126 +1,227 @@
-
-
-# ServiceTTS
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceTTS
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**text** | **String** |  |  |
-|**voice** | [**VoiceEnum**](#VoiceEnum) |  |  [optional] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**text** | **String** |  | 
+**voice** | **String** |  | [optional] 
 
 
 
 ## Enum: VoiceEnum
 
-| Name | Value |
-|---- | -----|
-| female/en-US | &quot;female/en-US&quot; |
-| male/en-US | &quot;male/en-US&quot; |
-| female/en-CA | &quot;female/en-CA&quot; |
-| female/en-AU | &quot;female/en-AU&quot; |
-| female/en-GB | &quot;female/en-GB&quot; |
-| male/en-GB | &quot;male/en-GB&quot; |
-| female/es-US | &quot;female/es-US&quot; |
-| male/es-US | &quot;male/es-US&quot; |
-| female/us-US | &quot;female/us-US&quot; |
-| female/zh-CN | &quot;female/zh-CN&quot; |
-| male/zh-CN | &quot;male/zh-CN&quot; |
-| female/zh-HK | &quot;female/zh-HK&quot; |
-| female/zh-TW | &quot;female/zh-TW&quot; |
-| female/ja-JP | &quot;female/ja-JP&quot; |
-| male/ja-JP | &quot;male/ja-JP&quot; |
-| female/ko-KR | &quot;female/ko-KR&quot; |
-| male/ko-KR | &quot;male/ko-KR&quot; |
-| female/da-DK | &quot;female/da-DK&quot; |
-| female/de-DE | &quot;female/de-DE&quot; |
-| male/de-DE | &quot;male/de-DE&quot; |
-| female/ca-ES | &quot;female/ca-ES&quot; |
-| female/es-ES | &quot;female/es-ES&quot; |
-| male/es-ES | &quot;male/es-ES&quot; |
-| female/fi-FI | &quot;female/fi-FI&quot; |
-| female/fr-CA | &quot;female/fr-CA&quot; |
-| male/fr-CA | &quot;male/fr-CA&quot; |
-| female/fr-FR | &quot;female/fr-FR&quot; |
-| male/fr-FR | &quot;male/fr-FR&quot; |
-| female/it-IT | &quot;female/it-IT&quot; |
-| male/it-IT | &quot;male/it-IT&quot; |
-| female/nb-NO | &quot;female/nb-NO&quot; |
-| female/nl-NL | &quot;female/nl-NL&quot; |
-| female/pl-PL | &quot;female/pl-PL&quot; |
-| female/pt-BR | &quot;female/pt-BR&quot; |
-| female/pt-PT | &quot;female/pt-PT&quot; |
-| male/pt-PT | &quot;male/pt-PT&quot; |
-| female/ru-RU | &quot;female/ru-RU&quot; |
-| male/ru-RU | &quot;male/ru-RU&quot; |
-| female/sv-SE | &quot;female/sv-SE&quot; |
-| female/hu-HU | &quot;female/hu-HU&quot; |
-| female/cs-CZ | &quot;female/cs-CZ&quot; |
-| female/tr-TR | &quot;female/tr-TR&quot; |
-| male/tr-TR | &quot;male/tr-TR&quot; |
-| male/ru-RU/Vladimir | &quot;male/ru-RU/Vladimir&quot; |
-| female/ru-RU/Julia | &quot;female/ru-RU/Julia&quot; |
-| female/ru-RU/Anna | &quot;female/ru-RU/Anna&quot; |
-| female/ru-RU/Viktoria | &quot;female/ru-RU/Viktoria&quot; |
-| male/ru-RU/Alexander | &quot;male/ru-RU/Alexander&quot; |
-| female/ru-RU/Maria | &quot;female/ru-RU/Maria&quot; |
-| female/ru-RU/Lidia | &quot;female/ru-RU/Lidia&quot; |
-| es-ES-Standard-A | &quot;es-ES-Standard-A&quot; |
-| it-IT-Standard-A | &quot;it-IT-Standard-A&quot; |
-| ja-JP-Standard-A | &quot;ja-JP-Standard-A&quot; |
-| ko-KR-Standard-A | &quot;ko-KR-Standard-A&quot; |
-| pt-BR-Standard-A | &quot;pt-BR-Standard-A&quot; |
-| tr-TR-Standard-A | &quot;tr-TR-Standard-A&quot; |
-| sv-SE-Standard-A | &quot;sv-SE-Standard-A&quot; |
-| nl-NL-Standard-A | &quot;nl-NL-Standard-A&quot; |
-| en-US-Wavenet-D | &quot;en-US-Wavenet-D&quot; |
-| de-DE-Wavenet-A | &quot;de-DE-Wavenet-A&quot; |
-| de-DE-Wavenet-B | &quot;de-DE-Wavenet-B&quot; |
-| de-DE-Wavenet-C | &quot;de-DE-Wavenet-C&quot; |
-| de-DE-Wavenet-D | &quot;de-DE-Wavenet-D&quot; |
-| en-AU-Wavenet-A | &quot;en-AU-Wavenet-A&quot; |
-| en-AU-Wavenet-B | &quot;en-AU-Wavenet-B&quot; |
-| en-AU-Wavenet-C | &quot;en-AU-Wavenet-C&quot; |
-| en-AU-Wavenet-D | &quot;en-AU-Wavenet-D&quot; |
-| en-GB-Wavenet-A | &quot;en-GB-Wavenet-A&quot; |
-| en-GB-Wavenet-B | &quot;en-GB-Wavenet-B&quot; |
-| en-GB-Wavenet-C | &quot;en-GB-Wavenet-C&quot; |
-| en-GB-Wavenet-D | &quot;en-GB-Wavenet-D&quot; |
-| en-US-Wavenet-A | &quot;en-US-Wavenet-A&quot; |
-| en-US-Wavenet-B | &quot;en-US-Wavenet-B&quot; |
-| en-US-Wavenet-C | &quot;en-US-Wavenet-C&quot; |
-| en-US-Wavenet-E | &quot;en-US-Wavenet-E&quot; |
-| en-US-Wavenet-F | &quot;en-US-Wavenet-F&quot; |
-| fr-FR-Wavenet-A | &quot;fr-FR-Wavenet-A&quot; |
-| fr-FR-Wavenet-B | &quot;fr-FR-Wavenet-B&quot; |
-| fr-FR-Wavenet-C | &quot;fr-FR-Wavenet-C&quot; |
-| fr-FR-Wavenet-D | &quot;fr-FR-Wavenet-D&quot; |
-| it-IT-Wavenet-A | &quot;it-IT-Wavenet-A&quot; |
-| ja-JP-Wavenet-A | &quot;ja-JP-Wavenet-A&quot; |
-| nl-NL-Wavenet-A | &quot;nl-NL-Wavenet-A&quot; |
-| en-GB-Standard-A | &quot;en-GB-Standard-A&quot; |
-| en-GB-Standard-B | &quot;en-GB-Standard-B&quot; |
-| en-GB-Standard-C | &quot;en-GB-Standard-C&quot; |
-| en-GB-Standard-D | &quot;en-GB-Standard-D&quot; |
-| en-US-Standard-B | &quot;en-US-Standard-B&quot; |
-| en-US-Standard-C | &quot;en-US-Standard-C&quot; |
-| en-US-Standard-D | &quot;en-US-Standard-D&quot; |
-| en-US-Standard-E | &quot;en-US-Standard-E&quot; |
-| de-DE-Standard-A | &quot;de-DE-Standard-A&quot; |
-| de-DE-Standard-B | &quot;de-DE-Standard-B&quot; |
-| en-AU-Standard-A | &quot;en-AU-Standard-A&quot; |
-| en-AU-Standard-B | &quot;en-AU-Standard-B&quot; |
-| en-AU-Standard-C | &quot;en-AU-Standard-C&quot; |
-| en-AU-Standard-D | &quot;en-AU-Standard-D&quot; |
-| fr-CA-Standard-A | &quot;fr-CA-Standard-A&quot; |
-| fr-CA-Standard-B | &quot;fr-CA-Standard-B&quot; |
-| fr-CA-Standard-C | &quot;fr-CA-Standard-C&quot; |
-| fr-CA-Standard-D | &quot;fr-CA-Standard-D&quot; |
-| fr-FR-Standard-A | &quot;fr-FR-Standard-A&quot; |
-| fr-FR-Standard-B | &quot;fr-FR-Standard-B&quot; |
-| fr-FR-Standard-C | &quot;fr-FR-Standard-C&quot; |
-| fr-FR-Standard-D | &quot;fr-FR-Standard-D&quot; |
+
+* `female/en-US` (value: `"female/en-US"`)
+
+* `male/en-US` (value: `"male/en-US"`)
+
+* `female/en-CA` (value: `"female/en-CA"`)
+
+* `female/en-AU` (value: `"female/en-AU"`)
+
+* `female/en-GB` (value: `"female/en-GB"`)
+
+* `male/en-GB` (value: `"male/en-GB"`)
+
+* `female/es-US` (value: `"female/es-US"`)
+
+* `male/es-US` (value: `"male/es-US"`)
+
+* `female/us-US` (value: `"female/us-US"`)
+
+* `female/zh-CN` (value: `"female/zh-CN"`)
+
+* `male/zh-CN` (value: `"male/zh-CN"`)
+
+* `female/zh-HK` (value: `"female/zh-HK"`)
+
+* `female/zh-TW` (value: `"female/zh-TW"`)
+
+* `female/ja-JP` (value: `"female/ja-JP"`)
+
+* `male/ja-JP` (value: `"male/ja-JP"`)
+
+* `female/ko-KR` (value: `"female/ko-KR"`)
+
+* `male/ko-KR` (value: `"male/ko-KR"`)
+
+* `female/da-DK` (value: `"female/da-DK"`)
+
+* `female/de-DE` (value: `"female/de-DE"`)
+
+* `male/de-DE` (value: `"male/de-DE"`)
+
+* `female/ca-ES` (value: `"female/ca-ES"`)
+
+* `female/es-ES` (value: `"female/es-ES"`)
+
+* `male/es-ES` (value: `"male/es-ES"`)
+
+* `female/fi-FI` (value: `"female/fi-FI"`)
+
+* `female/fr-CA` (value: `"female/fr-CA"`)
+
+* `male/fr-CA` (value: `"male/fr-CA"`)
+
+* `female/fr-FR` (value: `"female/fr-FR"`)
+
+* `male/fr-FR` (value: `"male/fr-FR"`)
+
+* `female/it-IT` (value: `"female/it-IT"`)
+
+* `male/it-IT` (value: `"male/it-IT"`)
+
+* `female/nb-NO` (value: `"female/nb-NO"`)
+
+* `female/nl-NL` (value: `"female/nl-NL"`)
+
+* `female/pl-PL` (value: `"female/pl-PL"`)
+
+* `female/pt-BR` (value: `"female/pt-BR"`)
+
+* `female/pt-PT` (value: `"female/pt-PT"`)
+
+* `male/pt-PT` (value: `"male/pt-PT"`)
+
+* `female/ru-RU` (value: `"female/ru-RU"`)
+
+* `male/ru-RU` (value: `"male/ru-RU"`)
+
+* `female/sv-SE` (value: `"female/sv-SE"`)
+
+* `female/hu-HU` (value: `"female/hu-HU"`)
+
+* `female/cs-CZ` (value: `"female/cs-CZ"`)
+
+* `female/tr-TR` (value: `"female/tr-TR"`)
+
+* `male/tr-TR` (value: `"male/tr-TR"`)
+
+* `male/ru-RU/Vladimir` (value: `"male/ru-RU/Vladimir"`)
+
+* `female/ru-RU/Julia` (value: `"female/ru-RU/Julia"`)
+
+* `female/ru-RU/Anna` (value: `"female/ru-RU/Anna"`)
+
+* `female/ru-RU/Viktoria` (value: `"female/ru-RU/Viktoria"`)
+
+* `male/ru-RU/Alexander` (value: `"male/ru-RU/Alexander"`)
+
+* `female/ru-RU/Maria` (value: `"female/ru-RU/Maria"`)
+
+* `female/ru-RU/Lidia` (value: `"female/ru-RU/Lidia"`)
+
+* `es-ES-Standard-A` (value: `"es-ES-Standard-A"`)
+
+* `it-IT-Standard-A` (value: `"it-IT-Standard-A"`)
+
+* `ja-JP-Standard-A` (value: `"ja-JP-Standard-A"`)
+
+* `ko-KR-Standard-A` (value: `"ko-KR-Standard-A"`)
+
+* `pt-BR-Standard-A` (value: `"pt-BR-Standard-A"`)
+
+* `tr-TR-Standard-A` (value: `"tr-TR-Standard-A"`)
+
+* `sv-SE-Standard-A` (value: `"sv-SE-Standard-A"`)
+
+* `nl-NL-Standard-A` (value: `"nl-NL-Standard-A"`)
+
+* `en-US-Wavenet-D` (value: `"en-US-Wavenet-D"`)
+
+* `de-DE-Wavenet-A` (value: `"de-DE-Wavenet-A"`)
+
+* `de-DE-Wavenet-B` (value: `"de-DE-Wavenet-B"`)
+
+* `de-DE-Wavenet-C` (value: `"de-DE-Wavenet-C"`)
+
+* `de-DE-Wavenet-D` (value: `"de-DE-Wavenet-D"`)
+
+* `en-AU-Wavenet-A` (value: `"en-AU-Wavenet-A"`)
+
+* `en-AU-Wavenet-B` (value: `"en-AU-Wavenet-B"`)
+
+* `en-AU-Wavenet-C` (value: `"en-AU-Wavenet-C"`)
+
+* `en-AU-Wavenet-D` (value: `"en-AU-Wavenet-D"`)
+
+* `en-GB-Wavenet-A` (value: `"en-GB-Wavenet-A"`)
+
+* `en-GB-Wavenet-B` (value: `"en-GB-Wavenet-B"`)
+
+* `en-GB-Wavenet-C` (value: `"en-GB-Wavenet-C"`)
+
+* `en-GB-Wavenet-D` (value: `"en-GB-Wavenet-D"`)
+
+* `en-US-Wavenet-A` (value: `"en-US-Wavenet-A"`)
+
+* `en-US-Wavenet-B` (value: `"en-US-Wavenet-B"`)
+
+* `en-US-Wavenet-C` (value: `"en-US-Wavenet-C"`)
+
+* `en-US-Wavenet-E` (value: `"en-US-Wavenet-E"`)
+
+* `en-US-Wavenet-F` (value: `"en-US-Wavenet-F"`)
+
+* `fr-FR-Wavenet-A` (value: `"fr-FR-Wavenet-A"`)
+
+* `fr-FR-Wavenet-B` (value: `"fr-FR-Wavenet-B"`)
+
+* `fr-FR-Wavenet-C` (value: `"fr-FR-Wavenet-C"`)
+
+* `fr-FR-Wavenet-D` (value: `"fr-FR-Wavenet-D"`)
+
+* `it-IT-Wavenet-A` (value: `"it-IT-Wavenet-A"`)
+
+* `ja-JP-Wavenet-A` (value: `"ja-JP-Wavenet-A"`)
+
+* `nl-NL-Wavenet-A` (value: `"nl-NL-Wavenet-A"`)
+
+* `en-GB-Standard-A` (value: `"en-GB-Standard-A"`)
+
+* `en-GB-Standard-B` (value: `"en-GB-Standard-B"`)
+
+* `en-GB-Standard-C` (value: `"en-GB-Standard-C"`)
+
+* `en-GB-Standard-D` (value: `"en-GB-Standard-D"`)
+
+* `en-US-Standard-B` (value: `"en-US-Standard-B"`)
+
+* `en-US-Standard-C` (value: `"en-US-Standard-C"`)
+
+* `en-US-Standard-D` (value: `"en-US-Standard-D"`)
+
+* `en-US-Standard-E` (value: `"en-US-Standard-E"`)
+
+* `de-DE-Standard-A` (value: `"de-DE-Standard-A"`)
+
+* `de-DE-Standard-B` (value: `"de-DE-Standard-B"`)
+
+* `en-AU-Standard-A` (value: `"en-AU-Standard-A"`)
+
+* `en-AU-Standard-B` (value: `"en-AU-Standard-B"`)
+
+* `en-AU-Standard-C` (value: `"en-AU-Standard-C"`)
+
+* `en-AU-Standard-D` (value: `"en-AU-Standard-D"`)
+
+* `fr-CA-Standard-A` (value: `"fr-CA-Standard-A"`)
+
+* `fr-CA-Standard-B` (value: `"fr-CA-Standard-B"`)
+
+* `fr-CA-Standard-C` (value: `"fr-CA-Standard-C"`)
+
+* `fr-CA-Standard-D` (value: `"fr-CA-Standard-D"`)
+
+* `fr-FR-Standard-A` (value: `"fr-FR-Standard-A"`)
+
+* `fr-FR-Standard-B` (value: `"fr-FR-Standard-B"`)
+
+* `fr-FR-Standard-C` (value: `"fr-FR-Standard-C"`)
+
+* `fr-FR-Standard-D` (value: `"fr-FR-Standard-D"`)
+
 
 
 

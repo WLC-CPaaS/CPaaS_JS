@@ -1,14 +1,10 @@
-
-
-# ModelDailyAccountSummary
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ModelDailyAccountSummary
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**accountSummaryByDate** | [**Array&lt;ModelAccountSummaryByDate&gt;**](ModelAccountSummaryByDate.md) |  |  [optional] |
-|**componentId** | **Number** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**accountSummaryByDate** | [**[ModelAccountSummaryByDate]**](ModelAccountSummaryByDate.md) |  | [optional] 
+**componentId** | **Number** |  | [optional] 
 
 

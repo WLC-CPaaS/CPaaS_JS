@@ -1,17 +1,17 @@
-# CallQueueManagementApi
+# WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi
 
 All URIs are relative to *http://api.cpaaslabs.net*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**v1AccountAccountIDCallqueueGet**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueGet) | **GET** /v1/account/{accountID}/callqueue | Get Call Queues |
-| [**v1AccountAccountIDCallqueuePost**](CallQueueManagementApi.md#v1AccountAccountIDCallqueuePost) | **POST** /v1/account/{accountID}/callqueue | Create Call Queue |
-| [**v1AccountAccountIDCallqueueQueueIDDelete**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueQueueIDDelete) | **DELETE** /v1/account/{accountID}/callqueue/{queueID} | Delete Call Queue |
-| [**v1AccountAccountIDCallqueueQueueIDGet**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueQueueIDGet) | **GET** /v1/account/{accountID}/callqueue/{queueID} | Get Call Queue Details |
-| [**v1AccountAccountIDCallqueueQueueIDPut**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueQueueIDPut) | **PUT** /v1/account/{accountID}/callqueue/{queueID} | Update Call Queue |
-| [**v1AccountAccountIDCallqueueQueueIDStatusGet**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueQueueIDStatusGet) | **GET** /v1/account/{accountID}/callqueue/{queueID}/status | Get Call Queue Status |
-| [**v1AccountAccountIDQueuerolesGet**](CallQueueManagementApi.md#v1AccountAccountIDQueuerolesGet) | **GET** /v1/account/{accountID}/queueroles | Get Queue Roles of Account |
-| [**v1AccountAccountIDQueuerolesQueueIDPost**](CallQueueManagementApi.md#v1AccountAccountIDQueuerolesQueueIDPost) | **POST** /v1/account/{accountID}/queueroles/{queueID} | Assign Queue Role to Call Queue |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**v1AccountAccountIDCallqueueGet**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueGet) | **GET** /v1/account/{accountID}/callqueue | Get Call Queues
+[**v1AccountAccountIDCallqueuePost**](CallQueueManagementApi.md#v1AccountAccountIDCallqueuePost) | **POST** /v1/account/{accountID}/callqueue | Create Call Queue
+[**v1AccountAccountIDCallqueueQueueIDDelete**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueQueueIDDelete) | **DELETE** /v1/account/{accountID}/callqueue/{queueID} | Delete Call Queue
+[**v1AccountAccountIDCallqueueQueueIDGet**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueQueueIDGet) | **GET** /v1/account/{accountID}/callqueue/{queueID} | Get Call Queue Details
+[**v1AccountAccountIDCallqueueQueueIDPut**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueQueueIDPut) | **PUT** /v1/account/{accountID}/callqueue/{queueID} | Update Call Queue
+[**v1AccountAccountIDCallqueueQueueIDStatusGet**](CallQueueManagementApi.md#v1AccountAccountIDCallqueueQueueIDStatusGet) | **GET** /v1/account/{accountID}/callqueue/{queueID}/status | Get Call Queue Status
+[**v1AccountAccountIDQueuerolesGet**](CallQueueManagementApi.md#v1AccountAccountIDQueuerolesGet) | **GET** /v1/account/{accountID}/queueroles | Get Queue Roles of Account
+[**v1AccountAccountIDQueuerolesQueueIDPost**](CallQueueManagementApi.md#v1AccountAccountIDQueuerolesQueueIDPost) | **POST** /v1/account/{accountID}/queueroles/{queueID} | Assign Queue Role to Call Queue
 
 
 
@@ -25,48 +25,32 @@ Retrieve call queue details for an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallQueueManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallQueueManagementApi apiInstance = new CallQueueManagementApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        try {
-            ServiceDocsCallQueueGetAll result = apiInstance.v1AccountAccountIDCallqueueGet(accountID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallQueueManagementApi#v1AccountAccountIDCallqueueGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDCallqueueGet(accountID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -82,13 +66,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDCallqueuePost
 
 > ServiceDocsCallQueueGetSingle v1AccountAccountIDCallqueuePost(accountID, reqBody)
@@ -99,50 +76,34 @@ Set up a call queue in an account for specific inbound calls.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallQueueManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallQueueManagementApi apiInstance = new CallQueueManagementApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        ServiceVOIPCallQueueAddEditData reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueAddEditData(); // ServiceVOIPCallQueueAddEditData | payload fields
-        try {
-            ServiceDocsCallQueueGetSingle result = apiInstance.v1AccountAccountIDCallqueuePost(accountID, reqBody);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallQueueManagementApi#v1AccountAccountIDCallqueuePost");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueAddEditData(); // ServiceVOIPCallQueueAddEditData | payload fields
+apiInstance.v1AccountAccountIDCallqueuePost(accountID, reqBody, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **reqBody** | [**ServiceVOIPCallQueueAddEditData**](ServiceVOIPCallQueueAddEditData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **reqBody** | [**ServiceVOIPCallQueueAddEditData**](ServiceVOIPCallQueueAddEditData.md)| payload fields | 
 
 ### Return type
 
@@ -156,13 +117,6 @@ public class Example {
 
 - **Content-Type**: application/json
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 
 
 ## v1AccountAccountIDCallqueueQueueIDDelete
@@ -175,50 +129,34 @@ Remove the call queue from an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallQueueManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallQueueManagementApi apiInstance = new CallQueueManagementApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
-        try {
-            ServiceDocsCallQueueGetSingle result = apiInstance.v1AccountAccountIDCallqueueQueueIDDelete(accountID, queueID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallQueueManagementApi#v1AccountAccountIDCallqueueQueueIDDelete");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDCallqueueQueueIDDelete(accountID, queueID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **queueID** | **String**| Queue ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **queueID** | **String**| Queue ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -232,13 +170,6 @@ public class Example {
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 
 
 ## v1AccountAccountIDCallqueueQueueIDGet
@@ -251,50 +182,34 @@ Capture metadata about a specific queue, such as queue_type and agent_wrapup_tim
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallQueueManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallQueueManagementApi apiInstance = new CallQueueManagementApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
-        try {
-            ServiceDocsCallQueueGetSingle result = apiInstance.v1AccountAccountIDCallqueueQueueIDGet(accountID, queueID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallQueueManagementApi#v1AccountAccountIDCallqueueQueueIDGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDCallqueueQueueIDGet(accountID, queueID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **queueID** | **String**| Queue ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **queueID** | **String**| Queue ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -310,13 +225,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDCallqueueQueueIDPut
 
 > ServiceDocsCallQueueGetSingle v1AccountAccountIDCallqueueQueueIDPut(accountID, queueID, reqBody)
@@ -327,52 +235,36 @@ Update the metadata mentioned above.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallQueueManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallQueueManagementApi apiInstance = new CallQueueManagementApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
-        ServiceVOIPCallQueueAddEditData reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueAddEditData(); // ServiceVOIPCallQueueAddEditData | payload fields
-        try {
-            ServiceDocsCallQueueGetSingle result = apiInstance.v1AccountAccountIDCallqueueQueueIDPut(accountID, queueID, reqBody);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallQueueManagementApi#v1AccountAccountIDCallqueueQueueIDPut");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueAddEditData(); // ServiceVOIPCallQueueAddEditData | payload fields
+apiInstance.v1AccountAccountIDCallqueueQueueIDPut(accountID, queueID, reqBody, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **queueID** | **String**| Queue ID, 32 alpha numeric | |
-| **reqBody** | [**ServiceVOIPCallQueueAddEditData**](ServiceVOIPCallQueueAddEditData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **queueID** | **String**| Queue ID, 32 alpha numeric | 
+ **reqBody** | [**ServiceVOIPCallQueueAddEditData**](ServiceVOIPCallQueueAddEditData.md)| payload fields | 
 
 ### Return type
 
@@ -388,13 +280,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDCallqueueQueueIDStatusGet
 
 > ServiceDocsCallQueueGetSingleStatus v1AccountAccountIDCallqueueQueueIDStatusGet(accountID, queueID)
@@ -405,50 +290,34 @@ Access the status of a call queue in an account, such as the number of available
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallQueueManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallQueueManagementApi apiInstance = new CallQueueManagementApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
-        try {
-            ServiceDocsCallQueueGetSingleStatus result = apiInstance.v1AccountAccountIDCallqueueQueueIDStatusGet(accountID, queueID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallQueueManagementApi#v1AccountAccountIDCallqueueQueueIDStatusGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDCallqueueQueueIDStatusGet(accountID, queueID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **queueID** | **String**| Queue ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **queueID** | **String**| Queue ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -464,13 +333,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDQueuerolesGet
 
 > ServiceDocsCallQueueGetRoles v1AccountAccountIDQueuerolesGet(accountID)
@@ -481,48 +343,32 @@ Obtain data about each queue role in an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallQueueManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallQueueManagementApi apiInstance = new CallQueueManagementApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        try {
-            ServiceDocsCallQueueGetRoles result = apiInstance.v1AccountAccountIDQueuerolesGet(accountID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallQueueManagementApi#v1AccountAccountIDQueuerolesGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDQueuerolesGet(accountID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -538,13 +384,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDQueuerolesQueueIDPost
 
 > ServiceAPIResponse v1AccountAccountIDQueuerolesQueueIDPost(accountID, queueID, reqBody)
@@ -555,52 +394,36 @@ Assign roles to members in a call queue.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CallQueueManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CallQueueManagementApi apiInstance = new CallQueueManagementApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
-        ServiceVOIPCallQueueRoleAssignData reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueRoleAssignData(); // ServiceVOIPCallQueueRoleAssignData | payload fields
-        try {
-            ServiceAPIResponse result = apiInstance.v1AccountAccountIDQueuerolesQueueIDPost(accountID, queueID, reqBody);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CallQueueManagementApi#v1AccountAccountIDQueuerolesQueueIDPost");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueManagementApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let queueID = "queueID_example"; // String | Queue ID, 32 alpha numeric
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueRoleAssignData(); // ServiceVOIPCallQueueRoleAssignData | payload fields
+apiInstance.v1AccountAccountIDQueuerolesQueueIDPost(accountID, queueID, reqBody, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **queueID** | **String**| Queue ID, 32 alpha numeric | |
-| **reqBody** | [**ServiceVOIPCallQueueRoleAssignData**](ServiceVOIPCallQueueRoleAssignData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **queueID** | **String**| Queue ID, 32 alpha numeric | 
+ **reqBody** | [**ServiceVOIPCallQueueRoleAssignData**](ServiceVOIPCallQueueRoleAssignData.md)| payload fields | 
 
 ### Return type
 
@@ -614,11 +437,4 @@ public class Example {
 
 - **Content-Type**: application/json
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 

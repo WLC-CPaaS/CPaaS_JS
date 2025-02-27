@@ -1,26 +1,24 @@
-
-
-# ServiceWebhookAdd
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceWebhookAdd
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**callbackMethod** | [**CallbackMethodEnum**](#CallbackMethodEnum) |  |  |
-|**callbackUrl** | **String** |  |  |
-|**data** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**title** | **String** |  |  |
-|**webhookType** | **String** |  |  |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**callbackMethod** | **String** |  | 
+**callbackUrl** | **String** |  | 
+**data** | **{String: Object}** |  | [optional] 
+**title** | **String** |  | 
+**webhookType** | **String** |  | 
 
 
 
 ## Enum: CallbackMethodEnum
 
-| Name | Value |
-|---- | -----|
-| POST | &quot;POST&quot; |
-| PUT | &quot;PUT&quot; |
+
+* `POST` (value: `"POST"`)
+
+* `PUT` (value: `"PUT"`)
+
 
 
 

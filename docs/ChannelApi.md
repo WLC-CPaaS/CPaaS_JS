@@ -1,15 +1,15 @@
-# ChannelApi
+# WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi
 
 All URIs are relative to *http://api.cpaaslabs.net*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**v1AccountAccountIDChannelChannelIDGet**](ChannelApi.md#v1AccountAccountIDChannelChannelIDGet) | **GET** /v1/account/{accountID}/channel/{channelID} | Get Channel Details |
-| [**v1AccountAccountIDChannelChannelIDPost**](ChannelApi.md#v1AccountAccountIDChannelChannelIDPost) | **POST** /v1/account/{accountID}/channel/{channelID} | Associate Action to Channel |
-| [**v1AccountAccountIDChannelChannelIDPut**](ChannelApi.md#v1AccountAccountIDChannelChannelIDPut) | **PUT** /v1/account/{accountID}/channel/{channelID} | Associate Metaflow to Channel |
-| [**v1AccountAccountIDChannelGet**](ChannelApi.md#v1AccountAccountIDChannelGet) | **GET** /v1/account/{accountID}/channel | Get Account Channel List |
-| [**v1AccountAccountIDDeviceDeviceIDChannelGet**](ChannelApi.md#v1AccountAccountIDDeviceDeviceIDChannelGet) | **GET** /v1/account/{accountID}/device/{deviceID}/channel | Get Device Channel List |
-| [**v1AccountAccountIDUserUserIDChannelGet**](ChannelApi.md#v1AccountAccountIDUserUserIDChannelGet) | **GET** /v1/account/{accountID}/user/{userID}/channel | Get User Channel List |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**v1AccountAccountIDChannelChannelIDGet**](ChannelApi.md#v1AccountAccountIDChannelChannelIDGet) | **GET** /v1/account/{accountID}/channel/{channelID} | Get Channel Details
+[**v1AccountAccountIDChannelChannelIDPost**](ChannelApi.md#v1AccountAccountIDChannelChannelIDPost) | **POST** /v1/account/{accountID}/channel/{channelID} | Associate Action to Channel
+[**v1AccountAccountIDChannelChannelIDPut**](ChannelApi.md#v1AccountAccountIDChannelChannelIDPut) | **PUT** /v1/account/{accountID}/channel/{channelID} | Associate Metaflow to Channel
+[**v1AccountAccountIDChannelGet**](ChannelApi.md#v1AccountAccountIDChannelGet) | **GET** /v1/account/{accountID}/channel | Get Account Channel List
+[**v1AccountAccountIDDeviceDeviceIDChannelGet**](ChannelApi.md#v1AccountAccountIDDeviceDeviceIDChannelGet) | **GET** /v1/account/{accountID}/device/{deviceID}/channel | Get Device Channel List
+[**v1AccountAccountIDUserUserIDChannelGet**](ChannelApi.md#v1AccountAccountIDUserUserIDChannelGet) | **GET** /v1/account/{accountID}/user/{userID}/channel | Get User Channel List
 
 
 
@@ -23,50 +23,34 @@ Access details about each channel in an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.ChannelApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        ChannelApi apiInstance = new ChannelApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String channelID = "channelID_example"; // String | Channel ID
-        try {
-            ServiceDocsChannelGetSingle result = apiInstance.v1AccountAccountIDChannelChannelIDGet(accountID, channelID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ChannelApi#v1AccountAccountIDChannelChannelIDGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let channelID = "channelID_example"; // String | Channel ID
+apiInstance.v1AccountAccountIDChannelChannelIDGet(accountID, channelID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **channelID** | **String**| Channel ID | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **channelID** | **String**| Channel ID | 
 
 ### Return type
 
@@ -82,13 +66,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDChannelChannelIDPost
 
 > ServiceAPIResponse v1AccountAccountIDChannelChannelIDPost(accountID, channelID, reqBody)
@@ -99,52 +76,36 @@ Link an action, such as transfer or hangup to a channel.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.ChannelApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        ChannelApi apiInstance = new ChannelApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String channelID = "channelID_example"; // String | Channel ID
-        ServiceChannelRunActionData reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelRunActionData(); // ServiceChannelRunActionData | payload fields
-        try {
-            ServiceAPIResponse result = apiInstance.v1AccountAccountIDChannelChannelIDPost(accountID, channelID, reqBody);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ChannelApi#v1AccountAccountIDChannelChannelIDPost");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let channelID = "channelID_example"; // String | Channel ID
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelRunActionData(); // ServiceChannelRunActionData | payload fields
+apiInstance.v1AccountAccountIDChannelChannelIDPost(accountID, channelID, reqBody, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **channelID** | **String**| Channel ID | |
-| **reqBody** | [**ServiceChannelRunActionData**](ServiceChannelRunActionData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **channelID** | **String**| Channel ID | 
+ **reqBody** | [**ServiceChannelRunActionData**](ServiceChannelRunActionData.md)| payload fields | 
 
 ### Return type
 
@@ -158,13 +119,6 @@ public class Example {
 
 - **Content-Type**: application/json
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 
 
 ## v1AccountAccountIDChannelChannelIDPut
@@ -177,52 +131,36 @@ Link a metaflow to an active channel.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.ChannelApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        ChannelApi apiInstance = new ChannelApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String channelID = "channelID_example"; // String | Channel ID
-        ServiceChannelRunMetaflowData reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelRunMetaflowData(); // ServiceChannelRunMetaflowData | payload fields
-        try {
-            ServiceAPIResponse result = apiInstance.v1AccountAccountIDChannelChannelIDPut(accountID, channelID, reqBody);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ChannelApi#v1AccountAccountIDChannelChannelIDPut");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let channelID = "channelID_example"; // String | Channel ID
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelRunMetaflowData(); // ServiceChannelRunMetaflowData | payload fields
+apiInstance.v1AccountAccountIDChannelChannelIDPut(accountID, channelID, reqBody, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **channelID** | **String**| Channel ID | |
-| **reqBody** | [**ServiceChannelRunMetaflowData**](ServiceChannelRunMetaflowData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **channelID** | **String**| Channel ID | 
+ **reqBody** | [**ServiceChannelRunMetaflowData**](ServiceChannelRunMetaflowData.md)| payload fields | 
 
 ### Return type
 
@@ -238,13 +176,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDChannelGet
 
 > ServiceDocsChannelGet v1AccountAccountIDChannelGet(accountID)
@@ -255,48 +186,32 @@ Get a list of active channels for an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.ChannelApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        ChannelApi apiInstance = new ChannelApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        try {
-            ServiceDocsChannelGet result = apiInstance.v1AccountAccountIDChannelGet(accountID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ChannelApi#v1AccountAccountIDChannelGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDChannelGet(accountID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -310,13 +225,6 @@ public class Example {
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 
 
 ## v1AccountAccountIDDeviceDeviceIDChannelGet
@@ -329,50 +237,34 @@ Get the list of active channels for a device.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.ChannelApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        ChannelApi apiInstance = new ChannelApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String deviceID = "deviceID_example"; // String | Device ID, 32 alpha numeric
-        try {
-            ServiceDocsChannelGet result = apiInstance.v1AccountAccountIDDeviceDeviceIDChannelGet(accountID, deviceID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ChannelApi#v1AccountAccountIDDeviceDeviceIDChannelGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let deviceID = "deviceID_example"; // String | Device ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDDeviceDeviceIDChannelGet(accountID, deviceID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **deviceID** | **String**| Device ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **deviceID** | **String**| Device ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -386,13 +278,6 @@ public class Example {
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 
 
 ## v1AccountAccountIDUserUserIDChannelGet
@@ -405,50 +290,34 @@ Get the list of active channels for a user.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.ChannelApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        ChannelApi apiInstance = new ChannelApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String userID = "userID_example"; // String | User ID, 32 alpha numeric
-        try {
-            ServiceDocsChannelGet result = apiInstance.v1AccountAccountIDUserUserIDChannelGet(accountID, userID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling ChannelApi#v1AccountAccountIDUserUserIDChannelGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let userID = "userID_example"; // String | User ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDUserUserIDChannelGet(accountID, userID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **userID** | **String**| User ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **userID** | **String**| User ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -462,11 +331,4 @@ public class Example {
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 

@@ -1,25 +1,24 @@
-
-
-# ServiceMetaflowPattern
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceMetaflowPattern
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**children** | [**Map&lt;String, ServiceMetaflowPattern&gt;**](ServiceMetaflowPattern.md) |  |  [optional] |
-|**data** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**module** | [**ModuleEnum**](#ModuleEnum) |  |  |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**children** | [**{String: ServiceMetaflowPattern}**](ServiceMetaflowPattern.md) |  | [optional] 
+**data** | **{String: Object}** |  | [optional] 
+**module** | **String** |  | 
 
 
 
 ## Enum: ModuleEnum
 
-| Name | Value |
-|---- | -----|
-| transfer | &quot;transfer&quot; |
-| hold | &quot;hold&quot; |
-| record_call | &quot;record_call&quot; |
+
+* `transfer` (value: `"transfer"`)
+
+* `hold` (value: `"hold"`)
+
+* `record_call` (value: `"record_call"`)
+
 
 
 

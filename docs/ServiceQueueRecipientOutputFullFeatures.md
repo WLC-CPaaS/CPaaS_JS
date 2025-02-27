@@ -1,14 +1,10 @@
-
-
-# ServiceQueueRecipientOutputFullFeatures
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceQueueRecipientOutputFullFeatures
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**accountUpgrade** | **String** |  |  [optional] |
-|**pro** | **Boolean** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**accountUpgrade** | **String** |  | [optional] 
+**pro** | **Boolean** |  | [optional] 
 
 

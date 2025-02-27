@@ -1,14 +1,10 @@
-
-
-# ServiceCampaignTagDetagPhonenumbers
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceCampaignTagDetagPhonenumbers
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**detag** | **Boolean** |  |  [optional] |
-|**phoneNumbers** | **Array&lt;String&gt;** |  |  |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**detag** | **Boolean** |  | [optional] 
+**phoneNumbers** | **[String]** |  | 
 
 

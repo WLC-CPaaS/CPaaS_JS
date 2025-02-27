@@ -1,22 +1,20 @@
-
-
-# ServiceVOIPCallQueueRecipientLoginLogoutData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPCallQueueRecipientLoginLogoutData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**action** | [**ActionEnum**](#ActionEnum) |  |  |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**action** | **String** |  | 
 
 
 
 ## Enum: ActionEnum
 
-| Name | Value |
-|---- | -----|
-| login | &quot;login&quot; |
-| logout | &quot;logout&quot; |
+
+* `login` (value: `"login"`)
+
+* `logout` (value: `"logout"`)
+
 
 
 

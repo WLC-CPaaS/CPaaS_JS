@@ -1,42 +1,58 @@
-
-
-# ServiceCallflowAddEditFlowData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceCallflowAddEditFlowData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**children** | [**Map&lt;String, ServiceCallflowAddEditFlowData&gt;**](ServiceCallflowAddEditFlowData.md) |  |  [optional] |
-|**data** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**module** | [**ModuleEnum**](#ModuleEnum) |  |  |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**children** | [**{String: ServiceCallflowAddEditFlowData}**](ServiceCallflowAddEditFlowData.md) |  | [optional] 
+**data** | **{String: Object}** |  | [optional] 
+**module** | **String** |  | 
 
 
 
 ## Enum: ModuleEnum
 
-| Name | Value |
-|---- | -----|
-| device | &quot;device&quot; |
-| offnet | &quot;offnet&quot; |
-| menu | &quot;menu&quot; |
-| play | &quot;play&quot; |
-| temporal_route | &quot;temporal_route&quot; |
-| voicemail | &quot;voicemail&quot; |
-| user | &quot;user&quot; |
-| call_forward | &quot;call_forward&quot; |
-| group | &quot;group&quot; |
-| ring_group | &quot;ring_group&quot; |
-| do_not_disturb | &quot;do_not_disturb&quot; |
-| park | &quot;park&quot; |
-| group_pickup | &quot;group_pickup&quot; |
-| group_pickup_feature | &quot;group_pickup_feature&quot; |
-| intercom | &quot;intercom&quot; |
-| page_group | &quot;page_group&quot; |
-| record_call | &quot;record_call&quot; |
-| record_caller | &quot;record_caller&quot; |
-| qubicle | &quot;qubicle&quot; |
-| missed_call_alert | &quot;missed_call_alert&quot; |
+
+* `device` (value: `"device"`)
+
+* `offnet` (value: `"offnet"`)
+
+* `menu` (value: `"menu"`)
+
+* `play` (value: `"play"`)
+
+* `temporal_route` (value: `"temporal_route"`)
+
+* `voicemail` (value: `"voicemail"`)
+
+* `user` (value: `"user"`)
+
+* `call_forward` (value: `"call_forward"`)
+
+* `group` (value: `"group"`)
+
+* `ring_group` (value: `"ring_group"`)
+
+* `do_not_disturb` (value: `"do_not_disturb"`)
+
+* `park` (value: `"park"`)
+
+* `group_pickup` (value: `"group_pickup"`)
+
+* `group_pickup_feature` (value: `"group_pickup_feature"`)
+
+* `intercom` (value: `"intercom"`)
+
+* `page_group` (value: `"page_group"`)
+
+* `record_call` (value: `"record_call"`)
+
+* `record_caller` (value: `"record_caller"`)
+
+* `qubicle` (value: `"qubicle"`)
+
+* `missed_call_alert` (value: `"missed_call_alert"`)
+
 
 
 

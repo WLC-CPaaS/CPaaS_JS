@@ -1,14 +1,10 @@
-
-
-# ServiceAPIResponseStatusCodeOnly
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceAPIResponseStatusCodeOnly
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**requestId** | **String** |  |  [optional] |
-|**statusCode** | **Number** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**requestId** | **String** |  | [optional] 
+**statusCode** | **Number** |  | [optional] 
 
 

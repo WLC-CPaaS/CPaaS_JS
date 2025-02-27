@@ -1,14 +1,10 @@
-
-
-# ServiceCallForward
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceCallForward
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**enabled** | **Boolean** |  |  [optional] |
-|**number** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**enabled** | **Boolean** |  | [optional] 
+**number** | **String** |  | [optional] 
 
 

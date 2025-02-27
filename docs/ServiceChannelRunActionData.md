@@ -1,16 +1,12 @@
-
-
-# ServiceChannelRunActionData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelRunActionData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**action** | **String** |  |  |
-|**moh** | **String** |  |  [optional] |
-|**takebackDtmf** | **String** |  |  [optional] |
-|**target** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**action** | **String** |  | 
+**moh** | **String** |  | [optional] 
+**takebackDtmf** | **String** |  | [optional] 
+**target** | **String** |  | [optional] 
 
 

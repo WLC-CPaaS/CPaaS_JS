@@ -1,13 +1,9 @@
-
-
-# ServiceVOIPQueueMembershipAddData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPQueueMembershipAddData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**recipientId** | **String** |  |  |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**recipientId** | **String** |  | 
 
 

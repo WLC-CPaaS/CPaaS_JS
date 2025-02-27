@@ -1,14 +1,10 @@
-
-
-# ServiceStoragePlanDatabaseProperties
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceStoragePlanDatabaseProperties
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**createOptions** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**names** | **Array&lt;String&gt;** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**createOptions** | **{String: Object}** |  | [optional] 
+**names** | **[String]** |  | [optional] 
 
 

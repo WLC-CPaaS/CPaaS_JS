@@ -1,24 +1,22 @@
-
-
-# ServiceChannelRunMetaflowData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelRunMetaflowData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**children** | [**Map&lt;String, ServiceChannelRunMetaflowData&gt;**](ServiceChannelRunMetaflowData.md) |  |  [optional] |
-|**data** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**module** | [**ModuleEnum**](#ModuleEnum) |  |  |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**children** | [**{String: ServiceChannelRunMetaflowData}**](ServiceChannelRunMetaflowData.md) |  | [optional] 
+**data** | **{String: Object}** |  | [optional] 
+**module** | **String** |  | 
 
 
 
 ## Enum: ModuleEnum
 
-| Name | Value |
-|---- | -----|
-| transfer | &quot;transfer&quot; |
-| hold | &quot;hold&quot; |
+
+* `transfer` (value: `"transfer"`)
+
+* `hold` (value: `"hold"`)
+
 
 
 

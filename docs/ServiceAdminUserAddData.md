@@ -1,23 +1,21 @@
-
-
-# ServiceAdminUserAddData
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceAdminUserAddData
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**email** | **String** |  |  |
-|**role** | [**RoleEnum**](#RoleEnum) |  |  |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**email** | **String** |  | 
+**role** | **String** |  | 
 
 
 
 ## Enum: RoleEnum
 
-| Name | Value |
-|---- | -----|
-| admin | &quot;admin&quot; |
-| dev | &quot;dev&quot; |
+
+* `admin` (value: `"admin"`)
+
+* `dev` (value: `"dev"`)
+
 
 
 

@@ -1,15 +1,11 @@
-
-
-# ServiceDocsAdminUserGetAll
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsAdminUserGetAll
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**data** | [**Array&lt;ServiceAdminUserOutput&gt;**](ServiceAdminUserOutput.md) |  |  [optional] |
-|**requestId** | **String** |  |  [optional] |
-|**statusCode** | **Number** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**[ServiceAdminUserOutput]**](ServiceAdminUserOutput.md) |  | [optional] 
+**requestId** | **String** |  | [optional] 
+**statusCode** | **Number** |  | [optional] 
 
 

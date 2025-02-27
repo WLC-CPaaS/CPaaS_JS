@@ -1,13 +1,9 @@
-
-
-# ServiceSystemStatusMessagingService
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceSystemStatusMessagingService
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**messagingServer** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**messagingServer** | **String** |  | [optional] 
 
 

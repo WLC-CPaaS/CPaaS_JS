@@ -1,13 +1,9 @@
-
-
-# ServiceMusicOnHold
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceMusicOnHold
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**mediaId** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**mediaId** | **String** |  | [optional] 
 
 

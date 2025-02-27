@@ -1,14 +1,10 @@
-
-
-# ServiceCampaignPhoneNumberOutput
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceCampaignPhoneNumberOutput
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**telephoneNumbers** | **Array&lt;String&gt;** |  |  [optional] |
-|**totalCount** | **Number** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**telephoneNumbers** | **[String]** |  | [optional] 
+**totalCount** | **Number** |  | [optional] 
 
 

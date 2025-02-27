@@ -1,20 +1,20 @@
-# TemporalRuleSetApi
+# WhiteLabelCommunicationsCPaasApiDocumentation.TemporalRuleSetApi
 
 All URIs are relative to *http://api.cpaaslabs.net*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**v1AccountAccountIDTemporalrulesetGet**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetGet) | **GET** /v1/account/{accountID}/temporalruleset | Get Temporal Rule Set List |
-| [**v1AccountAccountIDTemporalrulesetPost**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetPost) | **POST** /v1/account/{accountID}/temporalruleset | Create Temporal Rule Set |
-| [**v1AccountAccountIDTemporalrulesetTemporalRuleSetIDDelete**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDDelete) | **DELETE** /v1/account/{accountID}/temporalruleset/{temporalRuleSetID} | Delete Temporal Rule Set |
-| [**v1AccountAccountIDTemporalrulesetTemporalRuleSetIDGet**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDGet) | **GET** /v1/account/{accountID}/temporalruleset/{temporalRuleSetID} | Get Temporal Rule Set Details |
-| [**v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut) | **PUT** /v1/account/{accountID}/temporalruleset/{temporalRuleSetID} | Update Temporal Rule Set |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**v1AccountAccountIDTemporalrulesetGet**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetGet) | **GET** /v1/account/{accountID}/temporalruleset | Get Temporal Rule Set List
+[**v1AccountAccountIDTemporalrulesetPost**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetPost) | **POST** /v1/account/{accountID}/temporalruleset | Create Temporal Rule Set
+[**v1AccountAccountIDTemporalrulesetTemporalRuleSetIDDelete**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDDelete) | **DELETE** /v1/account/{accountID}/temporalruleset/{temporalRuleSetID} | Delete Temporal Rule Set
+[**v1AccountAccountIDTemporalrulesetTemporalRuleSetIDGet**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDGet) | **GET** /v1/account/{accountID}/temporalruleset/{temporalRuleSetID} | Get Temporal Rule Set Details
+[**v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut**](TemporalRuleSetApi.md#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut) | **PUT** /v1/account/{accountID}/temporalruleset/{temporalRuleSetID} | Update Temporal Rule Set
 
 
 
 ## v1AccountAccountIDTemporalrulesetGet
 
-> ServiceDocsTemporalRuleSetGetAll v1AccountAccountIDTemporalrulesetGet(accountID, startKey, pageSize)
+> ServiceDocsTemporalRuleSetGetAll v1AccountAccountIDTemporalrulesetGet(accountID, opts)
 
 Get Temporal Rule Set List
 
@@ -22,52 +22,38 @@ Access the temporal rule set list in an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.TemporalRuleSetApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        TemporalRuleSetApi apiInstance = new TemporalRuleSetApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String startKey = "startKey_example"; // String | start_key for pagination that was returned as next_start_key from your previous call
-        Number pageSize = 56; // Number | number of records to return, range 1 to 50
-        try {
-            ServiceDocsTemporalRuleSetGetAll result = apiInstance.v1AccountAccountIDTemporalrulesetGet(accountID, startKey, pageSize);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TemporalRuleSetApi#v1AccountAccountIDTemporalrulesetGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.TemporalRuleSetApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let opts = {
+  'startKey': "startKey_example", // String | start_key for pagination that was returned as next_start_key from your previous call
+  'pageSize': 56 // Number | number of records to return, range 1 to 50
+};
+apiInstance.v1AccountAccountIDTemporalrulesetGet(accountID, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **startKey** | **String**| start_key for pagination that was returned as next_start_key from your previous call | [optional] |
-| **pageSize** | **Number**| number of records to return, range 1 to 50 | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **startKey** | **String**| start_key for pagination that was returned as next_start_key from your previous call | [optional] 
+ **pageSize** | **Number**| number of records to return, range 1 to 50 | [optional] 
 
 ### Return type
 
@@ -83,13 +69,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDTemporalrulesetPost
 
 > ServiceDocsTemporalRuleSetGetSingle v1AccountAccountIDTemporalrulesetPost(accountID, temporalruleset)
@@ -100,50 +79,34 @@ Develop a new temporal rule set for an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.TemporalRuleSetApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        TemporalRuleSetApi apiInstance = new TemporalRuleSetApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alphanumeric
-        ServiceVOIPTemporalRuleSetAddEditData temporalruleset = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPTemporalRuleSetAddEditData(); // ServiceVOIPTemporalRuleSetAddEditData | payload fields
-        try {
-            ServiceDocsTemporalRuleSetGetSingle result = apiInstance.v1AccountAccountIDTemporalrulesetPost(accountID, temporalruleset);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TemporalRuleSetApi#v1AccountAccountIDTemporalrulesetPost");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.TemporalRuleSetApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alphanumeric
+let temporalruleset = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPTemporalRuleSetAddEditData(); // ServiceVOIPTemporalRuleSetAddEditData | payload fields
+apiInstance.v1AccountAccountIDTemporalrulesetPost(accountID, temporalruleset, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alphanumeric | |
-| **temporalruleset** | [**ServiceVOIPTemporalRuleSetAddEditData**](ServiceVOIPTemporalRuleSetAddEditData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alphanumeric | 
+ **temporalruleset** | [**ServiceVOIPTemporalRuleSetAddEditData**](ServiceVOIPTemporalRuleSetAddEditData.md)| payload fields | 
 
 ### Return type
 
@@ -157,13 +120,6 @@ public class Example {
 
 - **Content-Type**: application/json
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 
 
 ## v1AccountAccountIDTemporalrulesetTemporalRuleSetIDDelete
@@ -176,50 +132,34 @@ Delete the temporal rule set from an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.TemporalRuleSetApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        TemporalRuleSetApi apiInstance = new TemporalRuleSetApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String temporalRuleSetID = "temporalRuleSetID_example"; // String | temporal rule set ID, 32 alpha numeric
-        try {
-            ServiceDocsTemporalRuleSetGetSingle result = apiInstance.v1AccountAccountIDTemporalrulesetTemporalRuleSetIDDelete(accountID, temporalRuleSetID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TemporalRuleSetApi#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDDelete");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.TemporalRuleSetApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let temporalRuleSetID = "temporalRuleSetID_example"; // String | temporal rule set ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDTemporalrulesetTemporalRuleSetIDDelete(accountID, temporalRuleSetID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **temporalRuleSetID** | **String**| temporal rule set ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **temporalRuleSetID** | **String**| temporal rule set ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -233,13 +173,6 @@ public class Example {
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 
 
 ## v1AccountAccountIDTemporalrulesetTemporalRuleSetIDGet
@@ -252,50 +185,34 @@ Acquire details about a temporal rule set in an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.TemporalRuleSetApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        TemporalRuleSetApi apiInstance = new TemporalRuleSetApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String temporalRuleSetID = "temporalRuleSetID_example"; // String | Temporal Ruleset ID, 32 alpha numeric
-        try {
-            ServiceDocsTemporalRuleSetGetSingle result = apiInstance.v1AccountAccountIDTemporalrulesetTemporalRuleSetIDGet(accountID, temporalRuleSetID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TemporalRuleSetApi#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.TemporalRuleSetApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let temporalRuleSetID = "temporalRuleSetID_example"; // String | Temporal Ruleset ID, 32 alpha numeric
+apiInstance.v1AccountAccountIDTemporalrulesetTemporalRuleSetIDGet(accountID, temporalRuleSetID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **temporalRuleSetID** | **String**| Temporal Ruleset ID, 32 alpha numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **temporalRuleSetID** | **String**| Temporal Ruleset ID, 32 alpha numeric | 
 
 ### Return type
 
@@ -311,13 +228,6 @@ public class Example {
 - **Accept**: application/json
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-
-
 ## v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut
 
 > ServiceDocsTemporalRuleSetGetSingle v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut(accountID, temporalRuleSetID, reqBody)
@@ -328,52 +238,36 @@ Efficiently adjust the temporal rule set in an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.TemporalRuleSetApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        TemporalRuleSetApi apiInstance = new TemporalRuleSetApi(defaultClient);
-        String accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
-        String temporalRuleSetID = "temporalRuleSetID_example"; // String | Temporal Ruleset ID, 32 alpha numeric
-        ServiceVOIPTemporalRuleSetAddEditData reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPTemporalRuleSetAddEditData(); // ServiceVOIPTemporalRuleSetAddEditData | payload fields
-        try {
-            ServiceDocsTemporalRuleSetGetSingle result = apiInstance.v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut(accountID, temporalRuleSetID, reqBody);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling TemporalRuleSetApi#v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.TemporalRuleSetApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let temporalRuleSetID = "temporalRuleSetID_example"; // String | Temporal Ruleset ID, 32 alpha numeric
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPTemporalRuleSetAddEditData(); // ServiceVOIPTemporalRuleSetAddEditData | payload fields
+apiInstance.v1AccountAccountIDTemporalrulesetTemporalRuleSetIDPut(accountID, temporalRuleSetID, reqBody, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountID** | **String**| Account ID, 32 alpha numeric | |
-| **temporalRuleSetID** | **String**| Temporal Ruleset ID, 32 alpha numeric | |
-| **reqBody** | [**ServiceVOIPTemporalRuleSetAddEditData**](ServiceVOIPTemporalRuleSetAddEditData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **temporalRuleSetID** | **String**| Temporal Ruleset ID, 32 alpha numeric | 
+ **reqBody** | [**ServiceVOIPTemporalRuleSetAddEditData**](ServiceVOIPTemporalRuleSetAddEditData.md)| payload fields | 
 
 ### Return type
 
@@ -387,11 +281,4 @@ public class Example {
 
 - **Content-Type**: application/json
 - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
 

@@ -1,24 +1,23 @@
-
-
-# ServiceVOIPVoicemailMessageChange
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPVoicemailMessageChange
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**folder** | [**FolderEnum**](#FolderEnum) |  |  [optional] |
-|**sourceId** | **Object** |  |  [optional] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**folder** | **String** |  | [optional] 
+**sourceId** | **Object** |  | [optional] 
 
 
 
 ## Enum: FolderEnum
 
-| Name | Value |
-|---- | -----|
-| deleted | &quot;deleted&quot; |
-| saved | &quot;saved&quot; |
-| new | &quot;new&quot; |
+
+* `deleted` (value: `"deleted"`)
+
+* `saved` (value: `"saved"`)
+
+* `new` (value: `"new"`)
+
 
 
 

@@ -1,15 +1,11 @@
-
-
-# ServiceDocsWebhookGetAll
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsWebhookGetAll
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**data** | [**Array&lt;ModelAccountWebhook&gt;**](ModelAccountWebhook.md) |  |  [optional] |
-|**requestId** | **String** |  |  [optional] |
-|**statusCode** | **Number** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**[ModelAccountWebhook]**](ModelAccountWebhook.md) |  | [optional] 
+**requestId** | **String** |  | [optional] 
+**statusCode** | **Number** |  | [optional] 
 
 

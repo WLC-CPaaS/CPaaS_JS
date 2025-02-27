@@ -1,15 +1,11 @@
-
-
-# ServiceDocsCallQueueResponseShort
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallQueueResponseShort
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**data** | **Map&lt;String, Object&gt;** |  |  [optional] |
-|**requestId** | **String** |  |  [optional] |
-|**statusCode** | **Number** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | **{String: Object}** |  | [optional] 
+**requestId** | **String** |  | [optional] 
+**statusCode** | **Number** |  | [optional] 
 
 

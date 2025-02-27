@@ -1,14 +1,10 @@
-
-
-# ServiceE911LocationURIStatus
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceE911LocationURIStatus
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**code** | **String** |  |  [optional] |
-|**description** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**code** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
 
 

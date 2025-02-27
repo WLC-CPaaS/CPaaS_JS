@@ -1,13 +1,9 @@
-
-
-# ServicePhoneNumberSearchOutput
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServicePhoneNumberSearchOutput
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**phoneNumber** | **String** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**phoneNumber** | **String** |  | [optional] 
 
 

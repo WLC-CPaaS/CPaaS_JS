@@ -1,17 +1,13 @@
-
-
-# ServiceCallflowOutputShort
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceCallflowOutputShort
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**id** | **String** |  |  [optional] |
-|**modules** | **Array&lt;String&gt;** |  |  [optional] |
-|**name** | **String** |  |  [optional] |
-|**numbers** | **Array&lt;String&gt;** |  |  [optional] |
-|**patterns** | **Array&lt;String&gt;** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | [optional] 
+**modules** | **[String]** |  | [optional] 
+**name** | **String** |  | [optional] 
+**numbers** | **[String]** |  | [optional] 
+**patterns** | **[String]** |  | [optional] 
 
 

@@ -1,20 +1,20 @@
-# CPaaSManagementApi
+# WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi
 
 All URIs are relative to *http://api.cpaaslabs.net*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**v1MgmtUserGet**](CPaaSManagementApi.md#v1MgmtUserGet) | **GET** /v1/mgmt/user | Get All CPaaS Users |
-| [**v1MgmtUserPost**](CPaaSManagementApi.md#v1MgmtUserPost) | **POST** /v1/mgmt/user | Invite CPaaS User |
-| [**v1MgmtUserUserIDDelete**](CPaaSManagementApi.md#v1MgmtUserUserIDDelete) | **DELETE** /v1/mgmt/user/{userID} | Delete CPaaS User |
-| [**v1MgmtUserUserIDGet**](CPaaSManagementApi.md#v1MgmtUserUserIDGet) | **GET** /v1/mgmt/user/{userID} | Get CPaaS User Details |
-| [**v1MgmtUserUserIDPut**](CPaaSManagementApi.md#v1MgmtUserUserIDPut) | **PUT** /v1/mgmt/user/{userID} | Update CPaaS User Role |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**v1MgmtUserGet**](CPaaSManagementApi.md#v1MgmtUserGet) | **GET** /v1/mgmt/user | Get All CPaaS Users
+[**v1MgmtUserPost**](CPaaSManagementApi.md#v1MgmtUserPost) | **POST** /v1/mgmt/user | Invite CPaaS User
+[**v1MgmtUserUserIDDelete**](CPaaSManagementApi.md#v1MgmtUserUserIDDelete) | **DELETE** /v1/mgmt/user/{userID} | Delete CPaaS User
+[**v1MgmtUserUserIDGet**](CPaaSManagementApi.md#v1MgmtUserUserIDGet) | **GET** /v1/mgmt/user/{userID} | Get CPaaS User Details
+[**v1MgmtUserUserIDPut**](CPaaSManagementApi.md#v1MgmtUserUserIDPut) | **PUT** /v1/mgmt/user/{userID} | Update CPaaS User Role
 
 
 
 ## v1MgmtUserGet
 
-> ServiceDocsAdminUserGetAll v1MgmtUserGet(pageSize, startKey, sort, email, role, firstName, lastName)
+> ServiceDocsAdminUserGetAll v1MgmtUserGet(opts)
 
 Get All CPaaS Users
 
@@ -22,60 +22,46 @@ Retrieve a list of all CPaaS users in an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CPaaSManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CPaaSManagementApi apiInstance = new CPaaSManagementApi(defaultClient);
-        Number pageSize = 56; // Number | number of records to return, range 1 to 100
-        String startKey = "startKey_example"; // String | unique to fetch next records
-        String sort = "sort_example"; // String | sorting the records by email(default)/role/first_name/last_name, _A is for ascending and _D is for descending, eg: sort=role_A,email_D
-        String email = "email_example"; // String | Email
-        String role = "role_example"; // String | User Role
-        String firstName = "firstName_example"; // String | First Name
-        String lastName = "lastName_example"; // String | Last Name
-        try {
-            ServiceDocsAdminUserGetAll result = apiInstance.v1MgmtUserGet(pageSize, startKey, sort, email, role, firstName, lastName);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CPaaSManagementApi#v1MgmtUserGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
+let opts = {
+  'pageSize': 56, // Number | number of records to return, range 1 to 100
+  'startKey': "startKey_example", // String | unique to fetch next records
+  'sort': "sort_example", // String | sorting the records by email(default)/role/first_name/last_name, _A is for ascending and _D is for descending, eg: sort=role_A,email_D
+  'email': "email_example", // String | Email
+  'role': "role_example", // String | User Role
+  'firstName': "firstName_example", // String | First Name
+  'lastName': "lastName_example" // String | Last Name
+};
+apiInstance.v1MgmtUserGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageSize** | **Number**| number of records to return, range 1 to 100 | [optional] |
-| **startKey** | **String**| unique to fetch next records | [optional] |
-| **sort** | **String**| sorting the records by email(default)/role/first_name/last_name, _A is for ascending and _D is for descending, eg: sort&#x3D;role_A,email_D | [optional] |
-| **email** | **String**| Email | [optional] |
-| **role** | **String**| User Role | [optional] |
-| **firstName** | **String**| First Name | [optional] |
-| **lastName** | **String**| Last Name | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | **Number**| number of records to return, range 1 to 100 | [optional] 
+ **startKey** | **String**| unique to fetch next records | [optional] 
+ **sort** | **String**| sorting the records by email(default)/role/first_name/last_name, _A is for ascending and _D is for descending, eg: sort&#x3D;role_A,email_D | [optional] 
+ **email** | **String**| Email | [optional] 
+ **role** | **String**| User Role | [optional] 
+ **firstName** | **String**| First Name | [optional] 
+ **lastName** | **String**| Last Name | [optional] 
 
 ### Return type
 
@@ -91,15 +77,6 @@ public class Example {
 - **Accept**: */*
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-| **404** | Not Found |  -  |
-| **500** | Internal Server Error |  -  |
-
-
 ## v1MgmtUserPost
 
 > ServiceDocsAdminUserGetSingle v1MgmtUserPost(reqBody)
@@ -110,48 +87,32 @@ Link a new CPaaS user to an existing client account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CPaaSManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CPaaSManagementApi apiInstance = new CPaaSManagementApi(defaultClient);
-        ServiceAdminUserAddData reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceAdminUserAddData(); // ServiceAdminUserAddData | payload fields
-        try {
-            ServiceDocsAdminUserGetSingle result = apiInstance.v1MgmtUserPost(reqBody);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CPaaSManagementApi#v1MgmtUserPost");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceAdminUserAddData(); // ServiceAdminUserAddData | payload fields
+apiInstance.v1MgmtUserPost(reqBody, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **reqBody** | [**ServiceAdminUserAddData**](ServiceAdminUserAddData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reqBody** | [**ServiceAdminUserAddData**](ServiceAdminUserAddData.md)| payload fields | 
 
 ### Return type
 
@@ -167,15 +128,6 @@ public class Example {
 - **Accept**: */*
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-| **404** | Not Found |  -  |
-| **500** | Internal Server Error |  -  |
-
-
 ## v1MgmtUserUserIDDelete
 
 > ServiceDocsAdminUserDelete v1MgmtUserUserIDDelete(userID)
@@ -186,48 +138,32 @@ Delete a CPaaS user from the associated account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CPaaSManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CPaaSManagementApi apiInstance = new CPaaSManagementApi(defaultClient);
-        String userID = "userID_example"; // String | User ID, numeric
-        try {
-            ServiceDocsAdminUserDelete result = apiInstance.v1MgmtUserUserIDDelete(userID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CPaaSManagementApi#v1MgmtUserUserIDDelete");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
+let userID = "userID_example"; // String | User ID, numeric
+apiInstance.v1MgmtUserUserIDDelete(userID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userID** | **String**| User ID, numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userID** | **String**| User ID, numeric | 
 
 ### Return type
 
@@ -243,15 +179,6 @@ public class Example {
 - **Accept**: */*
 
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-| **404** | Not Found |  -  |
-| **500** | Internal Server Error |  -  |
-
-
 ## v1MgmtUserUserIDGet
 
 > ServiceDocsAdminUserGetSingle v1MgmtUserUserIDGet(userID)
@@ -262,48 +189,32 @@ View details about each CPaaS user in an account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CPaaSManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CPaaSManagementApi apiInstance = new CPaaSManagementApi(defaultClient);
-        String userID = "userID_example"; // String | User ID, numeric
-        try {
-            ServiceDocsAdminUserGetSingle result = apiInstance.v1MgmtUserUserIDGet(userID);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CPaaSManagementApi#v1MgmtUserUserIDGet");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
+let userID = "userID_example"; // String | User ID, numeric
+apiInstance.v1MgmtUserUserIDGet(userID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userID** | **String**| User ID, numeric | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userID** | **String**| User ID, numeric | 
 
 ### Return type
 
@@ -317,15 +228,6 @@ public class Example {
 
 - **Content-Type**: Not defined
 - **Accept**: */*
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-| **404** | Not Found |  -  |
-| **500** | Internal Server Error |  -  |
 
 
 ## v1MgmtUserUserIDPut
@@ -338,50 +240,34 @@ Update a CPaaS user&#39;s role within a client&#39;s account.
 
 ### Example
 
-```java
-// Import classes:
-import .ApiClient;
-import .ApiException;
-import .Configuration;
-import .auth.*;
-import .models.*;
-import api.CPaaSManagementApi;
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
 
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://api.cpaaslabs.net");
-        
-        // Configure API key authorization: BearerAuth
-        ApiKeyAuth BearerAuth = (ApiKeyAuth) defaultClient.getAuthentication("BearerAuth");
-        BearerAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //BearerAuth.setApiKeyPrefix("Token");
-
-        CPaaSManagementApi apiInstance = new CPaaSManagementApi(defaultClient);
-        String userID = "userID_example"; // String | User ID, numeric
-        ServiceAdminUserEditData reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceAdminUserEditData(); // ServiceAdminUserEditData | payload fields
-        try {
-            ServiceDocsAdminUserGetSingle result = apiInstance.v1MgmtUserUserIDPut(userID, reqBody);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling CPaaSManagementApi#v1MgmtUserUserIDPut");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
+let userID = "userID_example"; // String | User ID, numeric
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceAdminUserEditData(); // ServiceAdminUserEditData | payload fields
+apiInstance.v1MgmtUserUserIDPut(userID, reqBody, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
 ```
 
 ### Parameters
 
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userID** | **String**| User ID, numeric | |
-| **reqBody** | [**ServiceAdminUserEditData**](ServiceAdminUserEditData.md)| payload fields | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userID** | **String**| User ID, numeric | 
+ **reqBody** | [**ServiceAdminUserEditData**](ServiceAdminUserEditData.md)| payload fields | 
 
 ### Return type
 
@@ -395,13 +281,4 @@ public class Example {
 
 - **Content-Type**: Not defined
 - **Accept**: */*
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **400** | Bad Request |  -  |
-| **404** | Not Found |  -  |
-| **500** | Internal Server Error |  -  |
 

@@ -1,15 +1,11 @@
-
-
-# ServiceDocsChannelGet
-
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsChannelGet
 
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**data** | [**Array&lt;ServiceChannelOutput&gt;**](ServiceChannelOutput.md) |  |  [optional] |
-|**requestId** | **String** |  |  [optional] |
-|**statusCode** | **Number** |  |  [optional] |
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**[ServiceChannelOutput]**](ServiceChannelOutput.md) |  | [optional] 
+**requestId** | **String** |  | [optional] 
+**statusCode** | **Number** |  | [optional] 
 
 
