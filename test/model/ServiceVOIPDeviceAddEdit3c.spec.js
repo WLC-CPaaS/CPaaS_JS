@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property internal (base name: "internal")', function() {
+      // uncomment below and update the code to test the property internal
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit3c();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

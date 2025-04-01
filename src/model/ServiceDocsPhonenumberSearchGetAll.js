@@ -96,11 +96,13 @@ class ServiceDocsPhonenumberSearchGetAll {
 ServiceDocsPhonenumberSearchGetAll.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsPhonenumberSearchGetAll.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsPhonenumberSearchGetAll.prototype['status_code'] = undefined;

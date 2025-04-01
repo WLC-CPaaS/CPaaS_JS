@@ -13,11 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceAPIResponse from '../model/ServiceAPIResponse';
 import ServiceDocsCallQueueMemberGetSingle from '../model/ServiceDocsCallQueueMemberGetSingle';
 import ServiceVOIPCallQueueEnableMembershipData from '../model/ServiceVOIPCallQueueEnableMembershipData';
 import ServiceVOIPQueueMembershipAddData from '../model/ServiceVOIPQueueMembershipAddData';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * CallQueueMembership service.

@@ -90,11 +90,13 @@ class ServiceDocsCallQueueGetRoles {
 ServiceDocsCallQueueGetRoles.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsCallQueueGetRoles.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsCallQueueGetRoles.prototype['status_code'] = undefined;

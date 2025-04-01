@@ -54,8 +54,20 @@
       //expect(instance).to.be.a(WhiteLabelCommunicationsCPaasApiDocumentation.ServiceWebhookAdd);
     });
 
+    it('should have the property callbackMethod (base name: "callback_method")', function() {
+      // uncomment below and update the code to test the property callbackMethod
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceWebhookAdd();
+      //expect(instance).to.be();
+    });
+
     it('should have the property callbackUrl (base name: "callback_url")', function() {
       // uncomment below and update the code to test the property callbackUrl
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceWebhookAdd();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property data (base name: "data")', function() {
+      // uncomment below and update the code to test the property data
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceWebhookAdd();
       //expect(instance).to.be();
     });

@@ -90,11 +90,13 @@ class ServiceDocsCampaignImportOutput {
 ServiceDocsCampaignImportOutput.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsCampaignImportOutput.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsCampaignImportOutput.prototype['status_code'] = undefined;

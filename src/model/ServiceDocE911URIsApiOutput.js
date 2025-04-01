@@ -96,11 +96,13 @@ class ServiceDocE911URIsApiOutput {
 ServiceDocE911URIsApiOutput.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocE911URIsApiOutput.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocE911URIsApiOutput.prototype['status_code'] = undefined;

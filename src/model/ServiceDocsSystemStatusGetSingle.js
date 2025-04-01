@@ -97,11 +97,13 @@ class ServiceDocsSystemStatusGetSingle {
 ServiceDocsSystemStatusGetSingle.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsSystemStatusGetSingle.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsSystemStatusGetSingle.prototype['status_code'] = undefined;

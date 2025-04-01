@@ -60,14 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property doNotDisturb (base name: "do_not_disturb")', function() {
-      // uncomment below and update the code to test the property doNotDisturb
+    it('should have the property callerId (base name: "caller_id")', function() {
+      // uncomment below and update the code to test the property callerId
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPAccountAddData();
       //expect(instance).to.be();
     });
 
-    it('should have the property enabled (base name: "enabled")', function() {
-      // uncomment below and update the code to test the property enabled
+    it('should have the property doNotDisturb (base name: "do_not_disturb")', function() {
+      // uncomment below and update the code to test the property doNotDisturb
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPAccountAddData();
       //expect(instance).to.be();
     });

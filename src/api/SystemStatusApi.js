@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsPingGet from '../model/ServiceDocsPingGet';
 import ServiceDocsSystemStatusGetSingle from '../model/ServiceDocsSystemStatusGetSingle';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * SystemStatus service.

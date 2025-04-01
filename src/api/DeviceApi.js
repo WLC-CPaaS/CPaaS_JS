@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsDeviceGetAll from '../model/ServiceDocsDeviceGetAll';
 import ServiceDocsDeviceGetSingle from '../model/ServiceDocsDeviceGetSingle';
 import ServiceVOIPDeviceAddEdit2 from '../model/ServiceVOIPDeviceAddEdit2';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Device service.

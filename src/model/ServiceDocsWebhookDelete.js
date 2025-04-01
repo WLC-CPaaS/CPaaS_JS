@@ -90,11 +90,13 @@ class ServiceDocsWebhookDelete {
 ServiceDocsWebhookDelete.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsWebhookDelete.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsWebhookDelete.prototype['status_code'] = undefined;

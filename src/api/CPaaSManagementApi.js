@@ -13,12 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceAdminUserAddData from '../model/ServiceAdminUserAddData';
 import ServiceAdminUserEditData from '../model/ServiceAdminUserEditData';
 import ServiceDocsAdminUserDelete from '../model/ServiceDocsAdminUserDelete';
 import ServiceDocsAdminUserGetAll from '../model/ServiceDocsAdminUserGetAll';
 import ServiceDocsAdminUserGetSingle from '../model/ServiceDocsAdminUserGetSingle';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * CPaaSManagement service.

@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsMediaGetAll from '../model/ServiceDocsMediaGetAll';
 import ServiceDocsMediaGetSingle from '../model/ServiceDocsMediaGetSingle';
 import ServiceVOIPMediaAddEditData from '../model/ServiceVOIPMediaAddEditData';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Media service.

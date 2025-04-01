@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocGroupGetAll from '../model/ServiceDocGroupGetAll';
 import ServiceDocGroupGetSingle from '../model/ServiceDocGroupGetSingle';
 import ServiceVOIPGroupAddEdit2 from '../model/ServiceVOIPGroupAddEdit2';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Group service.

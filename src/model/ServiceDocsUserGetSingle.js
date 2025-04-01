@@ -90,11 +90,13 @@ class ServiceDocsUserGetSingle {
 ServiceDocsUserGetSingle.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsUserGetSingle.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsUserGetSingle.prototype['status_code'] = undefined;

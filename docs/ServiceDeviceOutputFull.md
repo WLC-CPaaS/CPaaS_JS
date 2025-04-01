@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **enabled** | **Boolean** |  | [optional] 
 **id** | **String** |  | [optional] 
 **macAddress** | **String** |  | [optional] 
+**media** | [**ServiceDeviceOutputFullMedia**](ServiceDeviceOutputFullMedia.md) |  | [optional] 
 **musicOnHold** | [**ServiceMusicOnHold**](ServiceMusicOnHold.md) | Provision  *DeviceOutputFullProvision &#x60;json:\&quot;provision\&quot;&#x60; | [optional] 
 **name** | **String** |  | [optional] 
 **ownerId** | **String** |  | [optional] 

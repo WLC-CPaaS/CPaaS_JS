@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property callerId (base name: "caller_id")', function() {
+      // uncomment below and update the code to test the property callerId
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPAccountEditData();
+      //expect(instance).to.be();
+    });
+
     it('should have the property doNotDisturb (base name: "do_not_disturb")', function() {
       // uncomment below and update the code to test the property doNotDisturb
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPAccountEditData();

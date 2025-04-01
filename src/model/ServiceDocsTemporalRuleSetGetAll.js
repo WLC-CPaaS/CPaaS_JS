@@ -113,26 +113,31 @@ class ServiceDocsTemporalRuleSetGetAll {
 ServiceDocsTemporalRuleSetGetAll.prototype['data'] = undefined;
 
 /**
+ * List Pagination: Used to get the next page of results. Will not exist if this is the last page.
  * @member {String} next_start_key
  */
 ServiceDocsTemporalRuleSetGetAll.prototype['next_start_key'] = undefined;
 
 /**
+ * List Pagination: The number of results returned in this page
  * @member {Number} page_size
  */
 ServiceDocsTemporalRuleSetGetAll.prototype['page_size'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsTemporalRuleSetGetAll.prototype['request_id'] = undefined;
 
 /**
+ * List Pagination: Code for paged results
  * @member {String} start_key
  */
 ServiceDocsTemporalRuleSetGetAll.prototype['start_key'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsTemporalRuleSetGetAll.prototype['status_code'] = undefined;

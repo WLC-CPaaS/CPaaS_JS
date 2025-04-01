@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocMetaflowGet from '../model/ServiceDocMetaflowGet';
 import ServiceVOIPMetaflowAddData from '../model/ServiceVOIPMetaflowAddData';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Metaflow service.

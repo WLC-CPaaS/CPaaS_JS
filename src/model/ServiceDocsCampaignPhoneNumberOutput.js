@@ -90,11 +90,13 @@ class ServiceDocsCampaignPhoneNumberOutput {
 ServiceDocsCampaignPhoneNumberOutput.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsCampaignPhoneNumberOutput.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsCampaignPhoneNumberOutput.prototype['status_code'] = undefined;

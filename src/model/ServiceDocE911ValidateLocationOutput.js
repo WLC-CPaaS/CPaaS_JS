@@ -90,11 +90,13 @@ class ServiceDocE911ValidateLocationOutput {
 ServiceDocE911ValidateLocationOutput.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocE911ValidateLocationOutput.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocE911ValidateLocationOutput.prototype['status_code'] = undefined;

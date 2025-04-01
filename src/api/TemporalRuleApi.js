@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsTemporalRuleGetAll from '../model/ServiceDocsTemporalRuleGetAll';
 import ServiceDocsTemporalRuleGetSingle from '../model/ServiceDocsTemporalRuleGetSingle';
 import ServiceVOIPTemporalRuleAddEdit2 from '../model/ServiceVOIPTemporalRuleAddEdit2';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * TemporalRule service.

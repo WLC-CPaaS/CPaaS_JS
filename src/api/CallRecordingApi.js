@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsCallRecordingGetAll from '../model/ServiceDocsCallRecordingGetAll';
 import ServiceDocsCallRecordingGetSingle from '../model/ServiceDocsCallRecordingGetSingle';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * CallRecording service.

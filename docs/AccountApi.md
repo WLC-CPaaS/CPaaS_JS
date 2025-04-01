@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v1AccountAccountidChildrenGet**](AccountApi.md#v1AccountAccountidChildrenGet) | **GET** /v1/account/{accountid}/children | Get Sub Account List
 [**v1AccountAccountidDelete**](AccountApi.md#v1AccountAccountidDelete) | **DELETE** /v1/account/{accountid} | Delete Account
-[**v1AccountAccountidDnsrecordGet**](AccountApi.md#v1AccountAccountidDnsrecordGet) | **GET** /v1/account/{accountid}/dnsrecord | 
-[**v1AccountAccountidDnsrecordPost**](AccountApi.md#v1AccountAccountidDnsrecordPost) | **POST** /v1/account/{accountid}/dnsrecord | 
-[**v1AccountAccountidDnsrecordPut**](AccountApi.md#v1AccountAccountidDnsrecordPut) | **PUT** /v1/account/{accountid}/dnsrecord | 
+[**v1AccountAccountidDnsrecordGet**](AccountApi.md#v1AccountAccountidDnsrecordGet) | **GET** /v1/account/{accountid}/dnsrecord | Get Account DNS Record
+[**v1AccountAccountidDnsrecordPost**](AccountApi.md#v1AccountAccountidDnsrecordPost) | **POST** /v1/account/{accountid}/dnsrecord | Create Account DNS Record
+[**v1AccountAccountidDnsrecordPut**](AccountApi.md#v1AccountAccountidDnsrecordPut) | **PUT** /v1/account/{accountid}/dnsrecord | Convert Account DNS Record
 [**v1AccountAccountidGet**](AccountApi.md#v1AccountAccountidGet) | **GET** /v1/account/{accountid} | Get Account Details
 [**v1AccountAccountidLimitGet**](AccountApi.md#v1AccountAccountidLimitGet) | **GET** /v1/account/{accountid}/limit | Get Account Limits
 [**v1AccountAccountidLimitPut**](AccountApi.md#v1AccountAccountidLimitPut) | **PUT** /v1/account/{accountid}/limit | Set Account Limits
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 > ServiceDocsAccountGetSingle v1AccountAccountidDnsrecordGet(accountid)
 
-
+Get Account DNS Record
 
 Get the DNS record of an account from the Route 53 entry.
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 > ServiceDocsAccountGetSingle v1AccountAccountidDnsrecordPost(accountid)
 
-
+Create Account DNS Record
 
 Create the DNS record of an account with the help realm in the Route 53 entry.
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 > ServiceDocsAccountGetSingle v1AccountAccountidDnsrecordPut(accountid, dnsrecord)
 
-
+Convert Account DNS Record
 
 Toggle the realm DNS record between srv and cname.
 

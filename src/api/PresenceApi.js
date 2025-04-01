@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceAPIResponse from '../model/ServiceAPIResponse';
 import ServiceDocsPresenceGet from '../model/ServiceDocsPresenceGet';
 import ServiceVOIPPresenceSetResetEditData from '../model/ServiceVOIPPresenceSetResetEditData';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Presence service.

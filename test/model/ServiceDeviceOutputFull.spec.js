@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property media (base name: "media")', function() {
+      // uncomment below and update the code to test the property media
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDeviceOutputFull();
+      //expect(instance).to.be();
+    });
+
     it('should have the property musicOnHold (base name: "music_on_hold")', function() {
       // uncomment below and update the code to test the property musicOnHold
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDeviceOutputFull();

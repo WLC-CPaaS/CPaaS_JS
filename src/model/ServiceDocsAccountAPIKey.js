@@ -90,11 +90,13 @@ class ServiceDocsAccountAPIKey {
 ServiceDocsAccountAPIKey.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsAccountAPIKey.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsAccountAPIKey.prototype['status_code'] = undefined;

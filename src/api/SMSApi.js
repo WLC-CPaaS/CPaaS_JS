@@ -13,12 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceCampaignTagDetagPhonenumbers from '../model/ServiceCampaignTagDetagPhonenumbers';
 import ServiceDocsCampaignImportOutput from '../model/ServiceDocsCampaignImportOutput';
 import ServiceDocsCampaignImportedGetAllOutput from '../model/ServiceDocsCampaignImportedGetAllOutput';
 import ServiceDocsCampaignPhoneNumberOutput from '../model/ServiceDocsCampaignPhoneNumberOutput';
 import ServiceDocsCampaignTagDetagPhonenumbersOutput from '../model/ServiceDocsCampaignTagDetagPhonenumbersOutput';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * SMS service.

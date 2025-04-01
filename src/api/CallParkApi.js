@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsParkedcallGet from '../model/ServiceDocsParkedcallGet';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * CallPark service.

@@ -90,11 +90,13 @@ class ServiceDocsAccountLimit {
 ServiceDocsAccountLimit.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsAccountLimit.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsAccountLimit.prototype['status_code'] = undefined;

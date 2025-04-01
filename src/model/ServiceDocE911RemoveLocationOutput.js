@@ -90,11 +90,13 @@ class ServiceDocE911RemoveLocationOutput {
 ServiceDocE911RemoveLocationOutput.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocE911RemoveLocationOutput.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocE911RemoveLocationOutput.prototype['status_code'] = undefined;

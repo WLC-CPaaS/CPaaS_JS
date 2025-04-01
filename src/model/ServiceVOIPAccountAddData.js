@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import ServiceVOIPAccountCallRecording from './ServiceVOIPAccountCallRecording';
 import ServiceVOIPAccountMusicOnHold from './ServiceVOIPAccountMusicOnHold';
+import ServiceVOIPAccountOutputFullCallerid from './ServiceVOIPAccountOutputFullCallerid';
 import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
 
 /**
@@ -57,11 +58,11 @@ class ServiceVOIPAccountAddData {
             if (data.hasOwnProperty('call_recording')) {
                 obj['call_recording'] = ServiceVOIPAccountCallRecording.constructFromObject(data['call_recording']);
             }
+            if (data.hasOwnProperty('caller_id')) {
+                obj['caller_id'] = ServiceVOIPAccountOutputFullCallerid.constructFromObject(data['caller_id']);
+            }
             if (data.hasOwnProperty('do_not_disturb')) {
                 obj['do_not_disturb'] = ServiceVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
-            }
-            if (data.hasOwnProperty('enabled')) {
-                obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
             }
             if (data.hasOwnProperty('music_on_hold')) {
                 obj['music_on_hold'] = ServiceVOIPAccountMusicOnHold.constructFromObject(data['music_on_hold']);
@@ -94,6 +95,10 @@ class ServiceVOIPAccountAddData {
         // validate the optional field `call_recording`
         if (data['call_recording']) { // data not null
           ServiceVOIPAccountCallRecording.validateJSON(data['call_recording']);
+        }
+        // validate the optional field `caller_id`
+        if (data['caller_id']) { // data not null
+          ServiceVOIPAccountOutputFullCallerid.validateJSON(data['caller_id']);
         }
         // validate the optional field `do_not_disturb`
         if (data['do_not_disturb']) { // data not null
@@ -130,14 +135,14 @@ ServiceVOIPAccountAddData.RequiredProperties = ["name", "timezone"];
 ServiceVOIPAccountAddData.prototype['call_recording'] = undefined;
 
 /**
+ * @member {module:model/ServiceVOIPAccountOutputFullCallerid} caller_id
+ */
+ServiceVOIPAccountAddData.prototype['caller_id'] = undefined;
+
+/**
  * @member {module:model/ServiceVOIPSharedDoNotDisturb} do_not_disturb
  */
 ServiceVOIPAccountAddData.prototype['do_not_disturb'] = undefined;
-
-/**
- * @member {Boolean} enabled
- */
-ServiceVOIPAccountAddData.prototype['enabled'] = undefined;
 
 /**
  * @member {module:model/ServiceVOIPAccountMusicOnHold} music_on_hold

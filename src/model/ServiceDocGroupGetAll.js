@@ -90,11 +90,13 @@ class ServiceDocGroupGetAll {
 ServiceDocGroupGetAll.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocGroupGetAll.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocGroupGetAll.prototype['status_code'] = undefined;

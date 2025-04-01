@@ -13,12 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsWebhookDelete from '../model/ServiceDocsWebhookDelete';
 import ServiceDocsWebhookGetAll from '../model/ServiceDocsWebhookGetAll';
 import ServiceDocsWebhookGetSingle from '../model/ServiceDocsWebhookGetSingle';
 import ServiceWebhookAdd from '../model/ServiceWebhookAdd';
 import ServiceWebhookEdit from '../model/ServiceWebhookEdit';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Webhook service.

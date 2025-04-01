@@ -90,11 +90,13 @@ class ServiceDocE911ActiveLocationURIApiOutput {
 ServiceDocE911ActiveLocationURIApiOutput.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocE911ActiveLocationURIApiOutput.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocE911ActiveLocationURIApiOutput.prototype['status_code'] = undefined;

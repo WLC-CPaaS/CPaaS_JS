@@ -85,11 +85,13 @@ class ServiceDocsCallQueueResponseShort {
 ServiceDocsCallQueueResponseShort.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsCallQueueResponseShort.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsCallQueueResponseShort.prototype['status_code'] = undefined;

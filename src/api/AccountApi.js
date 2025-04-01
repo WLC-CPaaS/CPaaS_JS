@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsAccountAPIKey from '../model/ServiceDocsAccountAPIKey';
 import ServiceDocsAccountGetAll from '../model/ServiceDocsAccountGetAll';
 import ServiceDocsAccountGetSingle from '../model/ServiceDocsAccountGetSingle';
@@ -21,7 +22,6 @@ import ServiceUpdateRecordTypeForAccount from '../model/ServiceUpdateRecordTypeF
 import ServiceVOIPAccountAddData from '../model/ServiceVOIPAccountAddData';
 import ServiceVOIPAccountEditData from '../model/ServiceVOIPAccountEditData';
 import ServiceVOIPAccountLimit2 from '../model/ServiceVOIPAccountLimit2';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Account service.
@@ -143,6 +143,7 @@ export default class AccountApi {
      */
 
     /**
+     * Get Account DNS Record
      * Get the DNS record of an account from the Route 53 entry.
      * @param {String} accountid Account ID, 32 alpha numeric
      * @param {module:api/AccountApi~v1AccountAccountidDnsrecordGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -185,6 +186,7 @@ export default class AccountApi {
      */
 
     /**
+     * Create Account DNS Record
      * Create the DNS record of an account with the help realm in the Route 53 entry.
      * @param {String} accountid Account ID, 32 alpha numeric
      * @param {module:api/AccountApi~v1AccountAccountidDnsrecordPostCallback} callback The callback function, accepting three arguments: error, data, response
@@ -227,6 +229,7 @@ export default class AccountApi {
      */
 
     /**
+     * Convert Account DNS Record
      * Toggle the realm DNS record between srv and cname.
      * @param {String} accountid Account ID, 32 alpha numeric
      * @param {module:model/ServiceUpdateRecordTypeForAccount} dnsrecord record type fields with value SRV, CNAME

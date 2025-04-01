@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## v1AccountAccountIDMenuGet
 
-> ServiceDocsMenuGetAll v1AccountAccountIDMenuGet(accountID, opts)
+> MenuOutputList v1AccountAccountIDMenuGet(accountID, opts)
 
 Get Menu List
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsMenuGetAll**](ServiceDocsMenuGetAll.md)
+[**MenuOutputList**](MenuOutputList.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDMenuMenuIDDelete
 
-> ServiceDocsMenuGetSingle v1AccountAccountIDMenuMenuIDDelete(accountID, menuID)
+> MenuOutputDetail v1AccountAccountIDMenuMenuIDDelete(accountID, menuID)
 
 Delete Menu
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsMenuGetSingle**](ServiceDocsMenuGetSingle.md)
+[**MenuOutputDetail**](MenuOutputDetail.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDMenuMenuIDGet
 
-> ServiceDocsMenuGetSingle v1AccountAccountIDMenuMenuIDGet(accountID, menuID)
+> MenuOutputDetail v1AccountAccountIDMenuMenuIDGet(accountID, menuID)
 
 Get Menu Details
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsMenuGetSingle**](ServiceDocsMenuGetSingle.md)
+[**MenuOutputDetail**](MenuOutputDetail.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDMenuMenuIDPut
 
-> ServiceDocsMenuGetSingle v1AccountAccountIDMenuMenuIDPut(accountID, menuID, reqBody)
+> MenuOutputDetail v1AccountAccountIDMenuMenuIDPut(accountID, menuID, reqBody)
 
 Update Menu
 
@@ -197,7 +197,7 @@ BearerAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.MenuApi();
 let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
 let menuID = "menuID_example"; // String | Menu ID, 32 alpha numeric
-let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPMenuAddEditData(); // ServiceVOIPMenuAddEditData | payload fields
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.MenuInputData(); // MenuInputData | payload fields
 apiInstance.v1AccountAccountIDMenuMenuIDPut(accountID, menuID, reqBody, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -214,11 +214,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountID** | **String**| Account ID, 32 alpha numeric | 
  **menuID** | **String**| Menu ID, 32 alpha numeric | 
- **reqBody** | [**ServiceVOIPMenuAddEditData**](ServiceVOIPMenuAddEditData.md)| payload fields | 
+ **reqBody** | [**MenuInputData**](MenuInputData.md)| payload fields | 
 
 ### Return type
 
-[**ServiceDocsMenuGetSingle**](ServiceDocsMenuGetSingle.md)
+[**MenuOutputDetail**](MenuOutputDetail.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDMenuPost
 
-> ServiceDocsMenuGetSingle v1AccountAccountIDMenuPost(accountID, menu)
+> MenuOutputDetail v1AccountAccountIDMenuPost(accountID, menu)
 
 Create Menu
 
@@ -251,7 +251,7 @@ BearerAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.MenuApi();
 let accountID = "accountID_example"; // String | Account ID, 32 alphanumeric
-let menu = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPMenuAddEditData(); // ServiceVOIPMenuAddEditData | Menu data
+let menu = new WhiteLabelCommunicationsCPaasApiDocumentation.MenuInputData(); // MenuInputData | Menu data
 apiInstance.v1AccountAccountIDMenuPost(accountID, menu, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -267,11 +267,11 @@ apiInstance.v1AccountAccountIDMenuPost(accountID, menu, (error, data, response) 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountID** | **String**| Account ID, 32 alphanumeric | 
- **menu** | [**ServiceVOIPMenuAddEditData**](ServiceVOIPMenuAddEditData.md)| Menu data | 
+ **menu** | [**MenuInputData**](MenuInputData.md)| Menu data | 
 
 ### Return type
 
-[**ServiceDocsMenuGetSingle**](ServiceDocsMenuGetSingle.md)
+[**MenuOutputDetail**](MenuOutputDetail.md)
 
 ### Authorization
 

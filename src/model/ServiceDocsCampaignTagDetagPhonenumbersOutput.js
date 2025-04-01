@@ -90,11 +90,13 @@ class ServiceDocsCampaignTagDetagPhonenumbersOutput {
 ServiceDocsCampaignTagDetagPhonenumbersOutput.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsCampaignTagDetagPhonenumbersOutput.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsCampaignTagDetagPhonenumbersOutput.prototype['status_code'] = undefined;

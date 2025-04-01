@@ -96,11 +96,13 @@ class ServiceDocsWebhookGetAll {
 ServiceDocsWebhookGetAll.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsWebhookGetAll.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsWebhookGetAll.prototype['status_code'] = undefined;

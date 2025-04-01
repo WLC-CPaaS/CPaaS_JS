@@ -248,7 +248,7 @@ BearerAuth.apiKey = 'YOUR API KEY';
 //BearerAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.PhoneNumberApi();
-let phonenumber = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceTelephoneNumberList(); // ServiceTelephoneNumberList | phonenumber fields
+let phonenumber = ["null"]; // [String] | phonenumber fields
 apiInstance.v1AccountPhonenumberPost(phonenumber, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -263,7 +263,7 @@ apiInstance.v1AccountPhonenumberPost(phonenumber, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phonenumber** | [**ServiceTelephoneNumberList**](ServiceTelephoneNumberList.md)| phonenumber fields | 
+ **phonenumber** | [**[String]**](String.md)| phonenumber fields | 
 
 ### Return type
 

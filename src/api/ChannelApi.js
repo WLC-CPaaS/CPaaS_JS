@@ -13,12 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceAPIResponse from '../model/ServiceAPIResponse';
 import ServiceChannelRunActionData from '../model/ServiceChannelRunActionData';
 import ServiceChannelRunMetaflowData from '../model/ServiceChannelRunMetaflowData';
 import ServiceDocsChannelGet from '../model/ServiceDocsChannelGet';
 import ServiceDocsChannelGetSingle from '../model/ServiceDocsChannelGetSingle';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Channel service.

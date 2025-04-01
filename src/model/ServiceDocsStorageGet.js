@@ -90,11 +90,13 @@ class ServiceDocsStorageGet {
 ServiceDocsStorageGet.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsStorageGet.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsStorageGet.prototype['status_code'] = undefined;

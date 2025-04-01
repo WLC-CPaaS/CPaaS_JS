@@ -90,11 +90,13 @@ class ServiceDocsChannelGetSingle {
 ServiceDocsChannelGetSingle.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsChannelGetSingle.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsChannelGetSingle.prototype['status_code'] = undefined;

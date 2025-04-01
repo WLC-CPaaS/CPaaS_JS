@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsStorageGet from '../model/ServiceDocsStorageGet';
 import ServiceVOIPStorageAddEditData from '../model/ServiceVOIPStorageAddEditData';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Storage service.

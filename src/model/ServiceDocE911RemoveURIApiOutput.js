@@ -90,11 +90,13 @@ class ServiceDocE911RemoveURIApiOutput {
 ServiceDocE911RemoveURIApiOutput.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocE911RemoveURIApiOutput.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocE911RemoveURIApiOutput.prototype['status_code'] = undefined;

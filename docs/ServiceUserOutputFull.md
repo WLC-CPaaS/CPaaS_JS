@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **callForward** | [**ServiceCallForward**](ServiceCallForward.md) |  | [optional] 
 **callRecording** | [**ServiceCallRecordingSettings**](ServiceCallRecordingSettings.md) |  | [optional] 
+**callerId** | [**ServiceUserOutputFullCallerid**](ServiceUserOutputFullCallerid.md) |  | [optional] 
 **doNotDisturb** | [**ServiceVOIPSharedDoNotDisturb**](ServiceVOIPSharedDoNotDisturb.md) |  | [optional] 
 **email** | **String** |  | [optional] 
 **enabled** | **Boolean** |  | [optional] 

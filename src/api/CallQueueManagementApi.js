@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceAPIResponse from '../model/ServiceAPIResponse';
 import ServiceDocsCallQueueGetAll from '../model/ServiceDocsCallQueueGetAll';
 import ServiceDocsCallQueueGetRoles from '../model/ServiceDocsCallQueueGetRoles';
@@ -20,7 +21,6 @@ import ServiceDocsCallQueueGetSingle from '../model/ServiceDocsCallQueueGetSingl
 import ServiceDocsCallQueueGetSingleStatus from '../model/ServiceDocsCallQueueGetSingleStatus';
 import ServiceVOIPCallQueueAddEditData from '../model/ServiceVOIPCallQueueAddEditData';
 import ServiceVOIPCallQueueRoleAssignData from '../model/ServiceVOIPCallQueueRoleAssignData';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * CallQueueManagement service.

@@ -13,18 +13,33 @@
 
 
 import ApiClient from './ApiClient';
-import ModelAccountSummaryByDate from './model/ModelAccountSummaryByDate';
+import CPAASError from './model/CPAASError';
+import MenuInputData from './model/MenuInputData';
+import MenuOutputDetail from './model/MenuOutputDetail';
+import MenuOutputDetailData from './model/MenuOutputDetailData';
+import MenuOutputDetailMedia from './model/MenuOutputDetailMedia';
+import MenuOutputList from './model/MenuOutputList';
+import MenuOutputListData from './model/MenuOutputListData';
 import ModelAccountWebhook from './model/ModelAccountWebhook';
-import ModelDailyAccountSummary from './model/ModelDailyAccountSummary';
-import ModelInvoice from './model/ModelInvoice';
-import ModelMonthlySummaryComponentsData from './model/ModelMonthlySummaryComponentsData';
-import ModelMonthlySummaryReport from './model/ModelMonthlySummaryReport';
+import ModelCallDailySummary from './model/ModelCallDailySummary';
+import ModelCallDetail from './model/ModelCallDetail';
+import ModelCallMonthlySummary from './model/ModelCallMonthlySummary';
+import ModelEndpointList from './model/ModelEndpointList';
+import ModelEventDailySummary from './model/ModelEventDailySummary';
+import ModelEventDetail from './model/ModelEventDetail';
+import ModelEventMonthlySummary from './model/ModelEventMonthlySummary';
+import ModelFeatureDailySummary from './model/ModelFeatureDailySummary';
+import ModelFeatureMonthlySummary from './model/ModelFeatureMonthlySummary';
 import RepositoryLocationsResponse from './model/RepositoryLocationsResponse';
 import ServiceAPIKey from './model/ServiceAPIKey';
 import ServiceAPIResponse from './model/ServiceAPIResponse';
 import ServiceAPIResponseStatusCodeOnly from './model/ServiceAPIResponseStatusCodeOnly';
 import ServiceAccountLimitOutput from './model/ServiceAccountLimitOutput';
-import ServiceAccountOutput from './model/ServiceAccountOutput';
+import ServiceAccountOutputFull from './model/ServiceAccountOutputFull';
+import ServiceAccountOutputFullCalleridEmergency from './model/ServiceAccountOutputFullCalleridEmergency';
+import ServiceAccountOutputFullCalleridExternal from './model/ServiceAccountOutputFullCalleridExternal';
+import ServiceAccountOutputFullCalleridInternal from './model/ServiceAccountOutputFullCalleridInternal';
+import ServiceAccountOutputShort from './model/ServiceAccountOutputShort';
 import ServiceAdminUserAddData from './model/ServiceAdminUserAddData';
 import ServiceAdminUserDeleteOutput from './model/ServiceAdminUserDeleteOutput';
 import ServiceAdminUserEditData from './model/ServiceAdminUserEditData';
@@ -55,9 +70,11 @@ import ServiceDeviceOutputFull from './model/ServiceDeviceOutputFull';
 import ServiceDeviceOutputFullCallerid from './model/ServiceDeviceOutputFullCallerid';
 import ServiceDeviceOutputFullCalleridEmergency from './model/ServiceDeviceOutputFullCalleridEmergency';
 import ServiceDeviceOutputFullCalleridExternal from './model/ServiceDeviceOutputFullCalleridExternal';
+import ServiceDeviceOutputFullCalleridInternal from './model/ServiceDeviceOutputFullCalleridInternal';
+import ServiceDeviceOutputFullMedia from './model/ServiceDeviceOutputFullMedia';
+import ServiceDeviceOutputFullMediaAudio from './model/ServiceDeviceOutputFullMediaAudio';
 import ServiceDeviceOutputFullSIP from './model/ServiceDeviceOutputFullSIP';
 import ServiceDeviceOutputShort from './model/ServiceDeviceOutputShort';
-import ServiceDocDailyAccountSummaryOutput from './model/ServiceDocDailyAccountSummaryOutput';
 import ServiceDocE911ActiveLocationOutput from './model/ServiceDocE911ActiveLocationOutput';
 import ServiceDocE911ActiveLocationURIApiOutput from './model/ServiceDocE911ActiveLocationURIApiOutput';
 import ServiceDocE911AddLocationOutput from './model/ServiceDocE911AddLocationOutput';
@@ -68,9 +85,7 @@ import ServiceDocE911URIsApiOutput from './model/ServiceDocE911URIsApiOutput';
 import ServiceDocE911ValidateLocationOutput from './model/ServiceDocE911ValidateLocationOutput';
 import ServiceDocGroupGetAll from './model/ServiceDocGroupGetAll';
 import ServiceDocGroupGetSingle from './model/ServiceDocGroupGetSingle';
-import ServiceDocInvoiceOutput from './model/ServiceDocInvoiceOutput';
 import ServiceDocMetaflowGet from './model/ServiceDocMetaflowGet';
-import ServiceDocMonthlySummaryOutput from './model/ServiceDocMonthlySummaryOutput';
 import ServiceDocsAccountAPIKey from './model/ServiceDocsAccountAPIKey';
 import ServiceDocsAccountGetAll from './model/ServiceDocsAccountGetAll';
 import ServiceDocsAccountGetSingle from './model/ServiceDocsAccountGetSingle';
@@ -79,6 +94,9 @@ import ServiceDocsAccountPhonenumberGetAll from './model/ServiceDocsAccountPhone
 import ServiceDocsAdminUserDelete from './model/ServiceDocsAdminUserDelete';
 import ServiceDocsAdminUserGetAll from './model/ServiceDocsAdminUserGetAll';
 import ServiceDocsAdminUserGetSingle from './model/ServiceDocsAdminUserGetSingle';
+import ServiceDocsCallDailySummary from './model/ServiceDocsCallDailySummary';
+import ServiceDocsCallDetail from './model/ServiceDocsCallDetail';
+import ServiceDocsCallMonthlySummary from './model/ServiceDocsCallMonthlySummary';
 import ServiceDocsCallQueueGetAll from './model/ServiceDocsCallQueueGetAll';
 import ServiceDocsCallQueueGetRoles from './model/ServiceDocsCallQueueGetRoles';
 import ServiceDocsCallQueueGetSingle from './model/ServiceDocsCallQueueGetSingle';
@@ -97,11 +115,15 @@ import ServiceDocsChannelGet from './model/ServiceDocsChannelGet';
 import ServiceDocsChannelGetSingle from './model/ServiceDocsChannelGetSingle';
 import ServiceDocsDeviceGetAll from './model/ServiceDocsDeviceGetAll';
 import ServiceDocsDeviceGetSingle from './model/ServiceDocsDeviceGetSingle';
+import ServiceDocsEndpointList from './model/ServiceDocsEndpointList';
+import ServiceDocsEventDailySummary from './model/ServiceDocsEventDailySummary';
+import ServiceDocsEventDetail from './model/ServiceDocsEventDetail';
+import ServiceDocsEventMonthlySummary from './model/ServiceDocsEventMonthlySummary';
+import ServiceDocsFeatureDailySummary from './model/ServiceDocsFeatureDailySummary';
+import ServiceDocsFeatureMonthlySummary from './model/ServiceDocsFeatureMonthlySummary';
 import ServiceDocsGetQueueRecipients from './model/ServiceDocsGetQueueRecipients';
 import ServiceDocsMediaGetAll from './model/ServiceDocsMediaGetAll';
 import ServiceDocsMediaGetSingle from './model/ServiceDocsMediaGetSingle';
-import ServiceDocsMenuGetAll from './model/ServiceDocsMenuGetAll';
-import ServiceDocsMenuGetSingle from './model/ServiceDocsMenuGetSingle';
 import ServiceDocsOrderPhonenumber from './model/ServiceDocsOrderPhonenumber';
 import ServiceDocsParkedcallGet from './model/ServiceDocsParkedcallGet';
 import ServiceDocsPhonenumberAssignPayload from './model/ServiceDocsPhonenumberAssignPayload';
@@ -146,9 +168,6 @@ import ServiceGroupOutputFull from './model/ServiceGroupOutputFull';
 import ServiceGroupOutputShort from './model/ServiceGroupOutputShort';
 import ServiceMediaOutputFull from './model/ServiceMediaOutputFull';
 import ServiceMediaOutputShort from './model/ServiceMediaOutputShort';
-import ServiceMenuOutputFull from './model/ServiceMenuOutputFull';
-import ServiceMenuOutputFullMedia from './model/ServiceMenuOutputFullMedia';
-import ServiceMenuOutputShort from './model/ServiceMenuOutputShort';
 import ServiceMetaflowOutput from './model/ServiceMetaflowOutput';
 import ServiceMetaflowPattern from './model/ServiceMetaflowPattern';
 import ServiceMusicOnHold from './model/ServiceMusicOnHold';
@@ -174,19 +193,23 @@ import ServiceSystemStatusOutput from './model/ServiceSystemStatusOutput';
 import ServiceSystemStatusSupportService from './model/ServiceSystemStatusSupportService';
 import ServiceSystemStatusVOIPService from './model/ServiceSystemStatusVOIPService';
 import ServiceTTS from './model/ServiceTTS';
-import ServiceTelephoneNumberList from './model/ServiceTelephoneNumberList';
 import ServiceTemporalRuleOutputFull from './model/ServiceTemporalRuleOutputFull';
 import ServiceTemporalRuleOutputShort from './model/ServiceTemporalRuleOutputShort';
 import ServiceTemporalRuleSetOutputFull from './model/ServiceTemporalRuleSetOutputFull';
 import ServiceTemporalRuleSetOutputShort from './model/ServiceTemporalRuleSetOutputShort';
 import ServiceUpdateRecordTypeForAccount from './model/ServiceUpdateRecordTypeForAccount';
 import ServiceUserOutputFull from './model/ServiceUserOutputFull';
+import ServiceUserOutputFullCallerid from './model/ServiceUserOutputFullCallerid';
+import ServiceUserOutputFullCalleridEmergency from './model/ServiceUserOutputFullCalleridEmergency';
+import ServiceUserOutputFullCalleridExternal from './model/ServiceUserOutputFullCalleridExternal';
+import ServiceUserOutputFullCalleridInternal from './model/ServiceUserOutputFullCalleridInternal';
 import ServiceUserOutputShort from './model/ServiceUserOutputShort';
 import ServiceVOIPAccountAddData from './model/ServiceVOIPAccountAddData';
 import ServiceVOIPAccountCallRecording from './model/ServiceVOIPAccountCallRecording';
 import ServiceVOIPAccountEditData from './model/ServiceVOIPAccountEditData';
 import ServiceVOIPAccountLimit2 from './model/ServiceVOIPAccountLimit2';
 import ServiceVOIPAccountMusicOnHold from './model/ServiceVOIPAccountMusicOnHold';
+import ServiceVOIPAccountOutputFullCallerid from './model/ServiceVOIPAccountOutputFullCallerid';
 import ServiceVOIPCallQueueAddEditData from './model/ServiceVOIPCallQueueAddEditData';
 import ServiceVOIPCallQueueEnableMembershipData from './model/ServiceVOIPCallQueueEnableMembershipData';
 import ServiceVOIPCallQueueRecipientLoginLogoutData from './model/ServiceVOIPCallQueueRecipientLoginLogoutData';
@@ -195,10 +218,11 @@ import ServiceVOIPCallQueueRoleAssignData from './model/ServiceVOIPCallQueueRole
 import ServiceVOIPDeviceAddEdit2 from './model/ServiceVOIPDeviceAddEdit2';
 import ServiceVOIPDeviceAddEdit3a from './model/ServiceVOIPDeviceAddEdit3a';
 import ServiceVOIPDeviceAddEdit3c from './model/ServiceVOIPDeviceAddEdit3c';
+import ServiceVOIPDeviceAddEdit3d from './model/ServiceVOIPDeviceAddEdit3d';
 import ServiceVOIPDeviceAddEdit4 from './model/ServiceVOIPDeviceAddEdit4';
+import ServiceVOIPDeviceAddEdit5 from './model/ServiceVOIPDeviceAddEdit5';
 import ServiceVOIPGroupAddEdit2 from './model/ServiceVOIPGroupAddEdit2';
 import ServiceVOIPMediaAddEditData from './model/ServiceVOIPMediaAddEditData';
-import ServiceVOIPMenuAddEditData from './model/ServiceVOIPMenuAddEditData';
 import ServiceVOIPMetaflowAddData from './model/ServiceVOIPMetaflowAddData';
 import ServiceVOIPPresenceSetResetEditData from './model/ServiceVOIPPresenceSetResetEditData';
 import ServiceVOIPQueueMembershipAddData from './model/ServiceVOIPQueueMembershipAddData';
@@ -217,7 +241,6 @@ import ServiceVoicemailOutputShort from './model/ServiceVoicemailOutputShort';
 import ServiceWebhookAdd from './model/ServiceWebhookAdd';
 import ServiceWebhookDeleteOutput from './model/ServiceWebhookDeleteOutput';
 import ServiceWebhookEdit from './model/ServiceWebhookEdit';
-import UtilCPAASError from './model/UtilCPAASError';
 import AccountApi from './api/AccountApi';
 import CPaaSManagementApi from './api/CPaaSManagementApi';
 import CallParkApi from './api/CallParkApi';
@@ -227,10 +250,10 @@ import CallQueueRecipientApi from './api/CallQueueRecipientApi';
 import CallRecordingApi from './api/CallRecordingApi';
 import CallflowApi from './api/CallflowApi';
 import ChannelApi from './api/ChannelApi';
+import DataApi from './api/DataApi';
 import DeviceApi from './api/DeviceApi';
 import E911Api from './api/E911Api';
 import GroupApi from './api/GroupApi';
-import InvoiceApi from './api/InvoiceApi';
 import MediaApi from './api/MediaApi';
 import MenuApi from './api/MenuApi';
 import MetaflowApi from './api/MetaflowApi';
@@ -285,10 +308,46 @@ export {
     ApiClient,
 
     /**
-     * The ModelAccountSummaryByDate model constructor.
-     * @property {module:model/ModelAccountSummaryByDate}
+     * The CPAASError model constructor.
+     * @property {module:model/CPAASError}
      */
-    ModelAccountSummaryByDate,
+    CPAASError,
+
+    /**
+     * The MenuInputData model constructor.
+     * @property {module:model/MenuInputData}
+     */
+    MenuInputData,
+
+    /**
+     * The MenuOutputDetail model constructor.
+     * @property {module:model/MenuOutputDetail}
+     */
+    MenuOutputDetail,
+
+    /**
+     * The MenuOutputDetailData model constructor.
+     * @property {module:model/MenuOutputDetailData}
+     */
+    MenuOutputDetailData,
+
+    /**
+     * The MenuOutputDetailMedia model constructor.
+     * @property {module:model/MenuOutputDetailMedia}
+     */
+    MenuOutputDetailMedia,
+
+    /**
+     * The MenuOutputList model constructor.
+     * @property {module:model/MenuOutputList}
+     */
+    MenuOutputList,
+
+    /**
+     * The MenuOutputListData model constructor.
+     * @property {module:model/MenuOutputListData}
+     */
+    MenuOutputListData,
 
     /**
      * The ModelAccountWebhook model constructor.
@@ -297,28 +356,58 @@ export {
     ModelAccountWebhook,
 
     /**
-     * The ModelDailyAccountSummary model constructor.
-     * @property {module:model/ModelDailyAccountSummary}
+     * The ModelCallDailySummary model constructor.
+     * @property {module:model/ModelCallDailySummary}
      */
-    ModelDailyAccountSummary,
+    ModelCallDailySummary,
 
     /**
-     * The ModelInvoice model constructor.
-     * @property {module:model/ModelInvoice}
+     * The ModelCallDetail model constructor.
+     * @property {module:model/ModelCallDetail}
      */
-    ModelInvoice,
+    ModelCallDetail,
 
     /**
-     * The ModelMonthlySummaryComponentsData model constructor.
-     * @property {module:model/ModelMonthlySummaryComponentsData}
+     * The ModelCallMonthlySummary model constructor.
+     * @property {module:model/ModelCallMonthlySummary}
      */
-    ModelMonthlySummaryComponentsData,
+    ModelCallMonthlySummary,
 
     /**
-     * The ModelMonthlySummaryReport model constructor.
-     * @property {module:model/ModelMonthlySummaryReport}
+     * The ModelEndpointList model constructor.
+     * @property {module:model/ModelEndpointList}
      */
-    ModelMonthlySummaryReport,
+    ModelEndpointList,
+
+    /**
+     * The ModelEventDailySummary model constructor.
+     * @property {module:model/ModelEventDailySummary}
+     */
+    ModelEventDailySummary,
+
+    /**
+     * The ModelEventDetail model constructor.
+     * @property {module:model/ModelEventDetail}
+     */
+    ModelEventDetail,
+
+    /**
+     * The ModelEventMonthlySummary model constructor.
+     * @property {module:model/ModelEventMonthlySummary}
+     */
+    ModelEventMonthlySummary,
+
+    /**
+     * The ModelFeatureDailySummary model constructor.
+     * @property {module:model/ModelFeatureDailySummary}
+     */
+    ModelFeatureDailySummary,
+
+    /**
+     * The ModelFeatureMonthlySummary model constructor.
+     * @property {module:model/ModelFeatureMonthlySummary}
+     */
+    ModelFeatureMonthlySummary,
 
     /**
      * The RepositoryLocationsResponse model constructor.
@@ -351,10 +440,34 @@ export {
     ServiceAccountLimitOutput,
 
     /**
-     * The ServiceAccountOutput model constructor.
-     * @property {module:model/ServiceAccountOutput}
+     * The ServiceAccountOutputFull model constructor.
+     * @property {module:model/ServiceAccountOutputFull}
      */
-    ServiceAccountOutput,
+    ServiceAccountOutputFull,
+
+    /**
+     * The ServiceAccountOutputFullCalleridEmergency model constructor.
+     * @property {module:model/ServiceAccountOutputFullCalleridEmergency}
+     */
+    ServiceAccountOutputFullCalleridEmergency,
+
+    /**
+     * The ServiceAccountOutputFullCalleridExternal model constructor.
+     * @property {module:model/ServiceAccountOutputFullCalleridExternal}
+     */
+    ServiceAccountOutputFullCalleridExternal,
+
+    /**
+     * The ServiceAccountOutputFullCalleridInternal model constructor.
+     * @property {module:model/ServiceAccountOutputFullCalleridInternal}
+     */
+    ServiceAccountOutputFullCalleridInternal,
+
+    /**
+     * The ServiceAccountOutputShort model constructor.
+     * @property {module:model/ServiceAccountOutputShort}
+     */
+    ServiceAccountOutputShort,
 
     /**
      * The ServiceAdminUserAddData model constructor.
@@ -537,6 +650,24 @@ export {
     ServiceDeviceOutputFullCalleridExternal,
 
     /**
+     * The ServiceDeviceOutputFullCalleridInternal model constructor.
+     * @property {module:model/ServiceDeviceOutputFullCalleridInternal}
+     */
+    ServiceDeviceOutputFullCalleridInternal,
+
+    /**
+     * The ServiceDeviceOutputFullMedia model constructor.
+     * @property {module:model/ServiceDeviceOutputFullMedia}
+     */
+    ServiceDeviceOutputFullMedia,
+
+    /**
+     * The ServiceDeviceOutputFullMediaAudio model constructor.
+     * @property {module:model/ServiceDeviceOutputFullMediaAudio}
+     */
+    ServiceDeviceOutputFullMediaAudio,
+
+    /**
      * The ServiceDeviceOutputFullSIP model constructor.
      * @property {module:model/ServiceDeviceOutputFullSIP}
      */
@@ -547,12 +678,6 @@ export {
      * @property {module:model/ServiceDeviceOutputShort}
      */
     ServiceDeviceOutputShort,
-
-    /**
-     * The ServiceDocDailyAccountSummaryOutput model constructor.
-     * @property {module:model/ServiceDocDailyAccountSummaryOutput}
-     */
-    ServiceDocDailyAccountSummaryOutput,
 
     /**
      * The ServiceDocE911ActiveLocationOutput model constructor.
@@ -615,22 +740,10 @@ export {
     ServiceDocGroupGetSingle,
 
     /**
-     * The ServiceDocInvoiceOutput model constructor.
-     * @property {module:model/ServiceDocInvoiceOutput}
-     */
-    ServiceDocInvoiceOutput,
-
-    /**
      * The ServiceDocMetaflowGet model constructor.
      * @property {module:model/ServiceDocMetaflowGet}
      */
     ServiceDocMetaflowGet,
-
-    /**
-     * The ServiceDocMonthlySummaryOutput model constructor.
-     * @property {module:model/ServiceDocMonthlySummaryOutput}
-     */
-    ServiceDocMonthlySummaryOutput,
 
     /**
      * The ServiceDocsAccountAPIKey model constructor.
@@ -679,6 +792,24 @@ export {
      * @property {module:model/ServiceDocsAdminUserGetSingle}
      */
     ServiceDocsAdminUserGetSingle,
+
+    /**
+     * The ServiceDocsCallDailySummary model constructor.
+     * @property {module:model/ServiceDocsCallDailySummary}
+     */
+    ServiceDocsCallDailySummary,
+
+    /**
+     * The ServiceDocsCallDetail model constructor.
+     * @property {module:model/ServiceDocsCallDetail}
+     */
+    ServiceDocsCallDetail,
+
+    /**
+     * The ServiceDocsCallMonthlySummary model constructor.
+     * @property {module:model/ServiceDocsCallMonthlySummary}
+     */
+    ServiceDocsCallMonthlySummary,
 
     /**
      * The ServiceDocsCallQueueGetAll model constructor.
@@ -789,6 +920,42 @@ export {
     ServiceDocsDeviceGetSingle,
 
     /**
+     * The ServiceDocsEndpointList model constructor.
+     * @property {module:model/ServiceDocsEndpointList}
+     */
+    ServiceDocsEndpointList,
+
+    /**
+     * The ServiceDocsEventDailySummary model constructor.
+     * @property {module:model/ServiceDocsEventDailySummary}
+     */
+    ServiceDocsEventDailySummary,
+
+    /**
+     * The ServiceDocsEventDetail model constructor.
+     * @property {module:model/ServiceDocsEventDetail}
+     */
+    ServiceDocsEventDetail,
+
+    /**
+     * The ServiceDocsEventMonthlySummary model constructor.
+     * @property {module:model/ServiceDocsEventMonthlySummary}
+     */
+    ServiceDocsEventMonthlySummary,
+
+    /**
+     * The ServiceDocsFeatureDailySummary model constructor.
+     * @property {module:model/ServiceDocsFeatureDailySummary}
+     */
+    ServiceDocsFeatureDailySummary,
+
+    /**
+     * The ServiceDocsFeatureMonthlySummary model constructor.
+     * @property {module:model/ServiceDocsFeatureMonthlySummary}
+     */
+    ServiceDocsFeatureMonthlySummary,
+
+    /**
      * The ServiceDocsGetQueueRecipients model constructor.
      * @property {module:model/ServiceDocsGetQueueRecipients}
      */
@@ -805,18 +972,6 @@ export {
      * @property {module:model/ServiceDocsMediaGetSingle}
      */
     ServiceDocsMediaGetSingle,
-
-    /**
-     * The ServiceDocsMenuGetAll model constructor.
-     * @property {module:model/ServiceDocsMenuGetAll}
-     */
-    ServiceDocsMenuGetAll,
-
-    /**
-     * The ServiceDocsMenuGetSingle model constructor.
-     * @property {module:model/ServiceDocsMenuGetSingle}
-     */
-    ServiceDocsMenuGetSingle,
 
     /**
      * The ServiceDocsOrderPhonenumber model constructor.
@@ -1083,24 +1238,6 @@ export {
     ServiceMediaOutputShort,
 
     /**
-     * The ServiceMenuOutputFull model constructor.
-     * @property {module:model/ServiceMenuOutputFull}
-     */
-    ServiceMenuOutputFull,
-
-    /**
-     * The ServiceMenuOutputFullMedia model constructor.
-     * @property {module:model/ServiceMenuOutputFullMedia}
-     */
-    ServiceMenuOutputFullMedia,
-
-    /**
-     * The ServiceMenuOutputShort model constructor.
-     * @property {module:model/ServiceMenuOutputShort}
-     */
-    ServiceMenuOutputShort,
-
-    /**
      * The ServiceMetaflowOutput model constructor.
      * @property {module:model/ServiceMetaflowOutput}
      */
@@ -1251,12 +1388,6 @@ export {
     ServiceTTS,
 
     /**
-     * The ServiceTelephoneNumberList model constructor.
-     * @property {module:model/ServiceTelephoneNumberList}
-     */
-    ServiceTelephoneNumberList,
-
-    /**
      * The ServiceTemporalRuleOutputFull model constructor.
      * @property {module:model/ServiceTemporalRuleOutputFull}
      */
@@ -1293,6 +1424,30 @@ export {
     ServiceUserOutputFull,
 
     /**
+     * The ServiceUserOutputFullCallerid model constructor.
+     * @property {module:model/ServiceUserOutputFullCallerid}
+     */
+    ServiceUserOutputFullCallerid,
+
+    /**
+     * The ServiceUserOutputFullCalleridEmergency model constructor.
+     * @property {module:model/ServiceUserOutputFullCalleridEmergency}
+     */
+    ServiceUserOutputFullCalleridEmergency,
+
+    /**
+     * The ServiceUserOutputFullCalleridExternal model constructor.
+     * @property {module:model/ServiceUserOutputFullCalleridExternal}
+     */
+    ServiceUserOutputFullCalleridExternal,
+
+    /**
+     * The ServiceUserOutputFullCalleridInternal model constructor.
+     * @property {module:model/ServiceUserOutputFullCalleridInternal}
+     */
+    ServiceUserOutputFullCalleridInternal,
+
+    /**
      * The ServiceUserOutputShort model constructor.
      * @property {module:model/ServiceUserOutputShort}
      */
@@ -1327,6 +1482,12 @@ export {
      * @property {module:model/ServiceVOIPAccountMusicOnHold}
      */
     ServiceVOIPAccountMusicOnHold,
+
+    /**
+     * The ServiceVOIPAccountOutputFullCallerid model constructor.
+     * @property {module:model/ServiceVOIPAccountOutputFullCallerid}
+     */
+    ServiceVOIPAccountOutputFullCallerid,
 
     /**
      * The ServiceVOIPCallQueueAddEditData model constructor.
@@ -1377,10 +1538,22 @@ export {
     ServiceVOIPDeviceAddEdit3c,
 
     /**
+     * The ServiceVOIPDeviceAddEdit3d model constructor.
+     * @property {module:model/ServiceVOIPDeviceAddEdit3d}
+     */
+    ServiceVOIPDeviceAddEdit3d,
+
+    /**
      * The ServiceVOIPDeviceAddEdit4 model constructor.
      * @property {module:model/ServiceVOIPDeviceAddEdit4}
      */
     ServiceVOIPDeviceAddEdit4,
+
+    /**
+     * The ServiceVOIPDeviceAddEdit5 model constructor.
+     * @property {module:model/ServiceVOIPDeviceAddEdit5}
+     */
+    ServiceVOIPDeviceAddEdit5,
 
     /**
      * The ServiceVOIPGroupAddEdit2 model constructor.
@@ -1393,12 +1566,6 @@ export {
      * @property {module:model/ServiceVOIPMediaAddEditData}
      */
     ServiceVOIPMediaAddEditData,
-
-    /**
-     * The ServiceVOIPMenuAddEditData model constructor.
-     * @property {module:model/ServiceVOIPMenuAddEditData}
-     */
-    ServiceVOIPMenuAddEditData,
 
     /**
      * The ServiceVOIPMetaflowAddData model constructor.
@@ -1509,12 +1676,6 @@ export {
     ServiceWebhookEdit,
 
     /**
-     * The UtilCPAASError model constructor.
-     * @property {module:model/UtilCPAASError}
-     */
-    UtilCPAASError,
-
-    /**
     * The AccountApi service constructor.
     * @property {module:api/AccountApi}
     */
@@ -1569,6 +1730,12 @@ export {
     ChannelApi,
 
     /**
+    * The DataApi service constructor.
+    * @property {module:api/DataApi}
+    */
+    DataApi,
+
+    /**
     * The DeviceApi service constructor.
     * @property {module:api/DeviceApi}
     */
@@ -1585,12 +1752,6 @@ export {
     * @property {module:api/GroupApi}
     */
     GroupApi,
-
-    /**
-    * The InvoiceApi service constructor.
-    * @property {module:api/InvoiceApi}
-    */
-    InvoiceApi,
 
     /**
     * The MediaApi service constructor.

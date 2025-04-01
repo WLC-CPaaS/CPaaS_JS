@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceAccountOutput from './ServiceAccountOutput';
+import ServiceAccountOutputShort from './ServiceAccountOutputShort';
 
 /**
  * The ServiceDocsAccountGetAll model module.
@@ -49,7 +49,7 @@ class ServiceDocsAccountGetAll {
             obj = obj || new ServiceDocsAccountGetAll();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [ServiceAccountOutput]);
+                obj['data'] = ApiClient.convertToType(data['data'], [ServiceAccountOutputShort]);
             }
             if (data.hasOwnProperty('next_start_key')) {
                 obj['next_start_key'] = ApiClient.convertToType(data['next_start_key'], 'String');
@@ -83,7 +83,7 @@ class ServiceDocsAccountGetAll {
             }
             // validate the optional field `data` (array)
             for (const item of data['data']) {
-                ServiceAccountOutput.validateJSON(item);
+                ServiceAccountOutputShort.validateJSON(item);
             };
         }
         // ensure the json data is a string
@@ -108,31 +108,36 @@ class ServiceDocsAccountGetAll {
 
 
 /**
- * @member {Array.<module:model/ServiceAccountOutput>} data
+ * @member {Array.<module:model/ServiceAccountOutputShort>} data
  */
 ServiceDocsAccountGetAll.prototype['data'] = undefined;
 
 /**
+ * List Pagination: Used to get the next page of results. Will not exist if this is the last page.
  * @member {String} next_start_key
  */
 ServiceDocsAccountGetAll.prototype['next_start_key'] = undefined;
 
 /**
+ * List Pagination: The number of results returned in this page
  * @member {Number} page_size
  */
 ServiceDocsAccountGetAll.prototype['page_size'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsAccountGetAll.prototype['request_id'] = undefined;
 
 /**
+ * List Pagination: Code for paged results
  * @member {String} start_key
  */
 ServiceDocsAccountGetAll.prototype['start_key'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsAccountGetAll.prototype['status_code'] = undefined;

@@ -90,11 +90,13 @@ class ServiceDocsPingGet {
 ServiceDocsPingGet.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsPingGet.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsPingGet.prototype['status_code'] = undefined;

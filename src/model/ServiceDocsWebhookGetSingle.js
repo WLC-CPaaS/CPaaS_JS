@@ -90,11 +90,13 @@ class ServiceDocsWebhookGetSingle {
 ServiceDocsWebhookGetSingle.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsWebhookGetSingle.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsWebhookGetSingle.prototype['status_code'] = undefined;

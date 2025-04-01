@@ -85,11 +85,13 @@ class ServiceDocsPresenceGet {
 ServiceDocsPresenceGet.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsPresenceGet.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsPresenceGet.prototype['status_code'] = undefined;

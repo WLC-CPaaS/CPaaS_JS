@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocE911ActiveLocationOutput from '../model/ServiceDocE911ActiveLocationOutput';
 import ServiceDocE911ActiveLocationURIApiOutput from '../model/ServiceDocE911ActiveLocationURIApiOutput';
 import ServiceDocE911AddLocationOutput from '../model/ServiceDocE911AddLocationOutput';
@@ -23,7 +24,6 @@ import ServiceDocE911URIsApiOutput from '../model/ServiceDocE911URIsApiOutput';
 import ServiceDocE911ValidateLocationOutput from '../model/ServiceDocE911ValidateLocationOutput';
 import ServiceE911AddLocationInput from '../model/ServiceE911AddLocationInput';
 import ServiceE911ValidateLocationInput from '../model/ServiceE911ValidateLocationInput';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * E911 service.

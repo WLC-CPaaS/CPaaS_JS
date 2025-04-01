@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsVoicemailGetAll from '../model/ServiceDocsVoicemailGetAll';
 import ServiceDocsVoicemailGetSingle from '../model/ServiceDocsVoicemailGetSingle';
 import ServiceDocsVoicemailMessageGetAll from '../model/ServiceDocsVoicemailMessageGetAll';
@@ -20,7 +21,6 @@ import ServiceDocsVoicemailMessageGetSingle from '../model/ServiceDocsVoicemailM
 import ServiceVOIPVoicemailAddEditData from '../model/ServiceVOIPVoicemailAddEditData';
 import ServiceVOIPVoicemailMessageAddData from '../model/ServiceVOIPVoicemailMessageAddData';
 import ServiceVOIPVoicemailMessageChange from '../model/ServiceVOIPVoicemailMessageChange';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Voicemail service.

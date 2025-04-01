@@ -54,6 +54,9 @@ class ServiceVOIPDeviceAddEdit3c {
             if (data.hasOwnProperty('external')) {
                 obj['external'] = ServiceVOIPDeviceAddEdit4.constructFromObject(data['external']);
             }
+            if (data.hasOwnProperty('internal')) {
+                obj['internal'] = ServiceVOIPDeviceAddEdit4.constructFromObject(data['internal']);
+            }
         }
         return obj;
     }
@@ -71,6 +74,10 @@ class ServiceVOIPDeviceAddEdit3c {
         // validate the optional field `external`
         if (data['external']) { // data not null
           ServiceVOIPDeviceAddEdit4.validateJSON(data['external']);
+        }
+        // validate the optional field `internal`
+        if (data['internal']) { // data not null
+          ServiceVOIPDeviceAddEdit4.validateJSON(data['internal']);
         }
 
         return true;
@@ -90,6 +97,11 @@ ServiceVOIPDeviceAddEdit3c.prototype['emergency'] = undefined;
  * @member {module:model/ServiceVOIPDeviceAddEdit4} external
  */
 ServiceVOIPDeviceAddEdit3c.prototype['external'] = undefined;
+
+/**
+ * @member {module:model/ServiceVOIPDeviceAddEdit4} internal
+ */
+ServiceVOIPDeviceAddEdit3c.prototype['internal'] = undefined;
 
 
 

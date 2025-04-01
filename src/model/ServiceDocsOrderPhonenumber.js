@@ -96,11 +96,13 @@ class ServiceDocsOrderPhonenumber {
 ServiceDocsOrderPhonenumber.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsOrderPhonenumber.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsOrderPhonenumber.prototype['status_code'] = undefined;

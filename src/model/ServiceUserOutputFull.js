@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import ServiceCallForward from './ServiceCallForward';
 import ServiceCallRecordingSettings from './ServiceCallRecordingSettings';
 import ServiceMusicOnHold from './ServiceMusicOnHold';
+import ServiceUserOutputFullCallerid from './ServiceUserOutputFullCallerid';
 import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
 
 /**
@@ -56,6 +57,9 @@ class ServiceUserOutputFull {
             }
             if (data.hasOwnProperty('call_recording')) {
                 obj['call_recording'] = ServiceCallRecordingSettings.constructFromObject(data['call_recording']);
+            }
+            if (data.hasOwnProperty('caller_id')) {
+                obj['caller_id'] = ServiceUserOutputFullCallerid.constructFromObject(data['caller_id']);
             }
             if (data.hasOwnProperty('do_not_disturb')) {
                 obj['do_not_disturb'] = ServiceVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
@@ -104,6 +108,10 @@ class ServiceUserOutputFull {
         // validate the optional field `call_recording`
         if (data['call_recording']) { // data not null
           ServiceCallRecordingSettings.validateJSON(data['call_recording']);
+        }
+        // validate the optional field `caller_id`
+        if (data['caller_id']) { // data not null
+          ServiceUserOutputFullCallerid.validateJSON(data['caller_id']);
         }
         // validate the optional field `do_not_disturb`
         if (data['do_not_disturb']) { // data not null
@@ -155,6 +163,11 @@ ServiceUserOutputFull.prototype['call_forward'] = undefined;
  * @member {module:model/ServiceCallRecordingSettings} call_recording
  */
 ServiceUserOutputFull.prototype['call_recording'] = undefined;
+
+/**
+ * @member {module:model/ServiceUserOutputFullCallerid} caller_id
+ */
+ServiceUserOutputFull.prototype['caller_id'] = undefined;
 
 /**
  * @member {module:model/ServiceVOIPSharedDoNotDisturb} do_not_disturb

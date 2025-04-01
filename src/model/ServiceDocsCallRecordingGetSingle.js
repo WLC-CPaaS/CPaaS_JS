@@ -90,11 +90,13 @@ class ServiceDocsCallRecordingGetSingle {
 ServiceDocsCallRecordingGetSingle.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsCallRecordingGetSingle.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsCallRecordingGetSingle.prototype['status_code'] = undefined;

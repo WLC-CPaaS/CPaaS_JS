@@ -90,11 +90,13 @@ class ServiceDocsTemporalRuleSetGetSingle {
 ServiceDocsTemporalRuleSetGetSingle.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsTemporalRuleSetGetSingle.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsTemporalRuleSetGetSingle.prototype['status_code'] = undefined;

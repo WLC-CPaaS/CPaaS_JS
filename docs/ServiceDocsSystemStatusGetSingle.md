@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**ServiceSystemStatusOutput**](ServiceSystemStatusOutput.md) |  | [optional] 
-**requestId** | **String** |  | [optional] 
-**statusCode** | **Number** |  | [optional] 
+**requestId** | **String** | Unique id for each request | [optional] 
+**statusCode** | **Number** | HTTP response status code | [optional] 
 **systemStatus** | **String** |  | [optional] 
 
 

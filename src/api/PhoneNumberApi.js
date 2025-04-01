@@ -13,14 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceAPIResponseStatusCodeOnly from '../model/ServiceAPIResponseStatusCodeOnly';
 import ServiceDocsAccountPhonenumberGetAll from '../model/ServiceDocsAccountPhonenumberGetAll';
 import ServiceDocsOrderPhonenumber from '../model/ServiceDocsOrderPhonenumber';
 import ServiceDocsPhonenumberAssignPayload from '../model/ServiceDocsPhonenumberAssignPayload';
 import ServiceDocsPhonenumberSearchGetAll from '../model/ServiceDocsPhonenumberSearchGetAll';
 import ServiceDocsPhonenumberUnassignPayload from '../model/ServiceDocsPhonenumberUnassignPayload';
-import ServiceTelephoneNumberList from '../model/ServiceTelephoneNumberList';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * PhoneNumber service.
@@ -228,7 +227,7 @@ export default class PhoneNumberApi {
     /**
      * Purchase Number
      * Purchase or activate a phone number for CPaaS accounts within your business.
-     * @param {module:model/ServiceTelephoneNumberList} phonenumber phonenumber fields
+     * @param {Array.<String>} phonenumber phonenumber fields
      * @param {module:api/PhoneNumberApi~v1AccountPhonenumberPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ServiceDocsOrderPhonenumber}
      */

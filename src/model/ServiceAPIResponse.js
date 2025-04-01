@@ -80,16 +80,19 @@ class ServiceAPIResponse {
 
 
 /**
+ * Data payload
  * @member {Object} data
  */
 ServiceAPIResponse.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceAPIResponse.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceAPIResponse.prototype['status_code'] = undefined;

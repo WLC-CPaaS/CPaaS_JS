@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import ServiceDeviceOutputFullCalleridEmergency from './ServiceDeviceOutputFullCalleridEmergency';
 import ServiceDeviceOutputFullCalleridExternal from './ServiceDeviceOutputFullCalleridExternal';
+import ServiceDeviceOutputFullCalleridInternal from './ServiceDeviceOutputFullCalleridInternal';
 
 /**
  * The ServiceDeviceOutputFullCallerid model module.
@@ -55,6 +56,9 @@ class ServiceDeviceOutputFullCallerid {
             if (data.hasOwnProperty('external')) {
                 obj['external'] = ServiceDeviceOutputFullCalleridExternal.constructFromObject(data['external']);
             }
+            if (data.hasOwnProperty('internal')) {
+                obj['internal'] = ServiceDeviceOutputFullCalleridInternal.constructFromObject(data['internal']);
+            }
         }
         return obj;
     }
@@ -72,6 +76,10 @@ class ServiceDeviceOutputFullCallerid {
         // validate the optional field `external`
         if (data['external']) { // data not null
           ServiceDeviceOutputFullCalleridExternal.validateJSON(data['external']);
+        }
+        // validate the optional field `internal`
+        if (data['internal']) { // data not null
+          ServiceDeviceOutputFullCalleridInternal.validateJSON(data['internal']);
         }
 
         return true;
@@ -91,6 +99,11 @@ ServiceDeviceOutputFullCallerid.prototype['emergency'] = undefined;
  * @member {module:model/ServiceDeviceOutputFullCalleridExternal} external
  */
 ServiceDeviceOutputFullCallerid.prototype['external'] = undefined;
+
+/**
+ * @member {module:model/ServiceDeviceOutputFullCalleridInternal} internal
+ */
+ServiceDeviceOutputFullCallerid.prototype['internal'] = undefined;
 
 
 

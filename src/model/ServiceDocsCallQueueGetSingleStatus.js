@@ -90,11 +90,13 @@ class ServiceDocsCallQueueGetSingleStatus {
 ServiceDocsCallQueueGetSingleStatus.prototype['data'] = undefined;
 
 /**
+ * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocsCallQueueGetSingleStatus.prototype['request_id'] = undefined;
 
 /**
+ * HTTP response status code
  * @member {Number} status_code
  */
 ServiceDocsCallQueueGetSingleStatus.prototype['status_code'] = undefined;

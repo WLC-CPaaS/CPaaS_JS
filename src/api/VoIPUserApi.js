@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceDocsUserGetAll from '../model/ServiceDocsUserGetAll';
 import ServiceDocsUserGetSingle from '../model/ServiceDocsUserGetSingle';
 import ServiceVOIPUserAdd2 from '../model/ServiceVOIPUserAdd2';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * VoIPUser service.

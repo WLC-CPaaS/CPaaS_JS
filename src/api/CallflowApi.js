@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceCallflowAddEditData from '../model/ServiceCallflowAddEditData';
 import ServiceDocsCallflowGetAll from '../model/ServiceDocsCallflowGetAll';
 import ServiceDocsCallflowGetSingle from '../model/ServiceDocsCallflowGetSingle';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * Callflow service.

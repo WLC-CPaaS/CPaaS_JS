@@ -17,6 +17,7 @@ import ServiceCallRecordingSettings from './ServiceCallRecordingSettings';
 import ServiceMusicOnHold from './ServiceMusicOnHold';
 import ServiceVOIPDeviceAddEdit3a from './ServiceVOIPDeviceAddEdit3a';
 import ServiceVOIPDeviceAddEdit3c from './ServiceVOIPDeviceAddEdit3c';
+import ServiceVOIPDeviceAddEdit3d from './ServiceVOIPDeviceAddEdit3d';
 import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
 
 /**
@@ -78,6 +79,9 @@ class ServiceVOIPDeviceAddEdit2 {
             if (data.hasOwnProperty('mac_address')) {
                 obj['mac_address'] = ApiClient.convertToType(data['mac_address'], 'String');
             }
+            if (data.hasOwnProperty('media')) {
+                obj['media'] = ServiceVOIPDeviceAddEdit3d.constructFromObject(data['media']);
+            }
             if (data.hasOwnProperty('music_on_hold')) {
                 obj['music_on_hold'] = ServiceMusicOnHold.constructFromObject(data['music_on_hold']);
             }
@@ -129,6 +133,10 @@ class ServiceVOIPDeviceAddEdit2 {
         // ensure the json data is a string
         if (data['mac_address'] && !(typeof data['mac_address'] === 'string' || data['mac_address'] instanceof String)) {
             throw new Error("Expected the field `mac_address` to be a primitive type in the JSON string but got " + data['mac_address']);
+        }
+        // validate the optional field `media`
+        if (data['media']) { // data not null
+          ServiceVOIPDeviceAddEdit3d.validateJSON(data['media']);
         }
         // validate the optional field `music_on_hold`
         if (data['music_on_hold']) { // data not null
@@ -191,6 +199,11 @@ ServiceVOIPDeviceAddEdit2.prototype['enabled'] = undefined;
  * @member {String} mac_address
  */
 ServiceVOIPDeviceAddEdit2.prototype['mac_address'] = undefined;
+
+/**
+ * @member {module:model/ServiceVOIPDeviceAddEdit3d} media
+ */
+ServiceVOIPDeviceAddEdit2.prototype['media'] = undefined;
 
 /**
  * @member {module:model/ServiceMusicOnHold} music_on_hold

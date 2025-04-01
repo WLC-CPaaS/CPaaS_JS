@@ -13,12 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ServiceAPIResponse from '../model/ServiceAPIResponse';
 import ServiceDocsCallQueueResponseShort from '../model/ServiceDocsCallQueueResponseShort';
 import ServiceDocsGetQueueRecipients from '../model/ServiceDocsGetQueueRecipients';
 import ServiceVOIPCallQueueRecipientLoginLogoutData from '../model/ServiceVOIPCallQueueRecipientLoginLogoutData';
 import ServiceVOIPCallQueueRecipientStatusData from '../model/ServiceVOIPCallQueueRecipientStatusData';
-import UtilCPAASError from '../model/UtilCPAASError';
 
 /**
 * CallQueueRecipient service.

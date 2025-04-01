@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import ServiceCallForward from './ServiceCallForward';
 import ServiceCallRecordingSettings from './ServiceCallRecordingSettings';
 import ServiceDeviceOutputFullCallerid from './ServiceDeviceOutputFullCallerid';
+import ServiceDeviceOutputFullMedia from './ServiceDeviceOutputFullMedia';
 import ServiceDeviceOutputFullSIP from './ServiceDeviceOutputFullSIP';
 import ServiceMusicOnHold from './ServiceMusicOnHold';
 import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
@@ -77,6 +78,9 @@ class ServiceDeviceOutputFull {
             if (data.hasOwnProperty('mac_address')) {
                 obj['mac_address'] = ApiClient.convertToType(data['mac_address'], 'String');
             }
+            if (data.hasOwnProperty('media')) {
+                obj['media'] = ServiceDeviceOutputFullMedia.constructFromObject(data['media']);
+            }
             if (data.hasOwnProperty('music_on_hold')) {
                 obj['music_on_hold'] = ApiClient.convertToType(data['music_on_hold'], ServiceMusicOnHold);
             }
@@ -126,6 +130,10 @@ class ServiceDeviceOutputFull {
         // ensure the json data is a string
         if (data['mac_address'] && !(typeof data['mac_address'] === 'string' || data['mac_address'] instanceof String)) {
             throw new Error("Expected the field `mac_address` to be a primitive type in the JSON string but got " + data['mac_address']);
+        }
+        // validate the optional field `media`
+        if (data['media']) { // data not null
+          ServiceDeviceOutputFullMedia.validateJSON(data['media']);
         }
         // validate the optional field `music_on_hold`
         if (data['music_on_hold']) { // data not null
@@ -191,6 +199,11 @@ ServiceDeviceOutputFull.prototype['id'] = undefined;
  * @member {String} mac_address
  */
 ServiceDeviceOutputFull.prototype['mac_address'] = undefined;
+
+/**
+ * @member {module:model/ServiceDeviceOutputFullMedia} media
+ */
+ServiceDeviceOutputFull.prototype['media'] = undefined;
 
 /**
  * Provision  *DeviceOutputFullProvision `json:\"provision\"`
