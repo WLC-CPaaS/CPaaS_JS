@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ServiceVoicemailOutput**](ServiceVoicemailOutput.md) |  | [optional] 
+**data** | [**ServiceVoicemailOutputFull**](ServiceVoicemailOutputFull.md) |  | [optional] 
 **requestId** | **String** | Unique id for each request | [optional] 
 **statusCode** | **Number** | HTTP response status code | [optional] 
 

@@ -12,8 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceCallRecordingSettings from './ServiceCallRecordingSettings';
-import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
+import ModelsVOIPSharedDoNotDisturb from './ModelsVOIPSharedDoNotDisturb';
 
 /**
  * The ServiceDeviceOutputShort model module.
@@ -49,14 +48,11 @@ class ServiceDeviceOutputShort {
         if (data) {
             obj = obj || new ServiceDeviceOutputShort();
 
-            if (data.hasOwnProperty('call_recording')) {
-                obj['call_recording'] = ServiceCallRecordingSettings.constructFromObject(data['call_recording']);
-            }
             if (data.hasOwnProperty('device_type')) {
                 obj['device_type'] = ApiClient.convertToType(data['device_type'], 'String');
             }
             if (data.hasOwnProperty('do_not_disturb')) {
-                obj['do_not_disturb'] = ServiceVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
+                obj['do_not_disturb'] = ModelsVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
             }
             if (data.hasOwnProperty('enabled')) {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
@@ -89,17 +85,13 @@ class ServiceDeviceOutputShort {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ServiceDeviceOutputShort</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `call_recording`
-        if (data['call_recording']) { // data not null
-          ServiceCallRecordingSettings.validateJSON(data['call_recording']);
-        }
         // ensure the json data is a string
         if (data['device_type'] && !(typeof data['device_type'] === 'string' || data['device_type'] instanceof String)) {
             throw new Error("Expected the field `device_type` to be a primitive type in the JSON string but got " + data['device_type']);
         }
         // validate the optional field `do_not_disturb`
         if (data['do_not_disturb']) { // data not null
-          ServiceVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
+          ModelsVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['features'])) {
@@ -135,17 +127,12 @@ class ServiceDeviceOutputShort {
 
 
 /**
- * @member {module:model/ServiceCallRecordingSettings} call_recording
- */
-ServiceDeviceOutputShort.prototype['call_recording'] = undefined;
-
-/**
  * @member {String} device_type
  */
 ServiceDeviceOutputShort.prototype['device_type'] = undefined;
 
 /**
- * @member {module:model/ServiceVOIPSharedDoNotDisturb} do_not_disturb
+ * @member {module:model/ModelsVOIPSharedDoNotDisturb} do_not_disturb
  */
 ServiceDeviceOutputShort.prototype['do_not_disturb'] = undefined;
 

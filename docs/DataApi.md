@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 Get Call Daily Summary List
 
-Retrieve a paginated list of call daily summary based on query parameters.
+Retrieve a daily summary of calls, including the account ID that made or received a call, the call type, the month and year, the duration, and other relevant information.
 
 ### Example
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 Get Call Detail List
 
-Retrieve a paginated list of call details based on query parameters.
+Retrieve specific details about a call (e.g., caller, recipient, date, time, duration, etc.).
 
 ### Example
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 Get Call Detail List
 
-Retrieve a paginated list of call monthly summary based on query parameters.
+Retrieve a monthly summary of calls, including which accounts made or received calls, the call type, and other relevant information.
 
 ### Example
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 Get Endpoint List
 
-Retrieve a paginated list of endpoints based on query parameters.
+Access the endpoint list for each CPaaS API.
 
 ### Example
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 Get Event Daily Summary List
 
-Retrieve a paginated list of event daily summaries based on query parameters.
+Obtain a daily summary of events in a CPaaS account (e.g., setting/resetting the presence status for a user or extension).
 
 ### Example
 
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 Get Event Details
 
-Retrieve a paginated list of event detail based on query parameters.
+Obtain specific details about an event (e.g., an E911 notification, a deleted account, or a created user).
 
 ### Example
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 Get Event Monthly Summary List
 
-Retrieve a paginated list of event monthly summaries based on query parameters.
+Obtain a monthly summary of events in a CPaaS account (e.g., adding media files or assigning phone numbers).
 
 ### Example
 
@@ -485,7 +485,7 @@ Name | Type | Description  | Notes
 
 Get Feature Daily Summary List
 
-Retrieve a paginated list of feature daily summary based on query parameters.
+Retrieve a daily summary about a feature, including usage, which accounts execute the steps, and other relevant information.
 
 ### Example
 
@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 
 Get Feature Monthly Summary List
 
-Retrieve a paginated list of feature monthly summary based on query parameters.
+Retrieve a monthly summary about a feature’s usage, new users, updates, and other relevant information.
 
 ### Example
 

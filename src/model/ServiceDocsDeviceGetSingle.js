@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceDeviceOutputFull from './ServiceDeviceOutputFull';
+import ModelsDeviceOutputFull from './ModelsDeviceOutputFull';
 
 /**
  * The ServiceDocsDeviceGetSingle model module.
@@ -49,7 +49,7 @@ class ServiceDocsDeviceGetSingle {
             obj = obj || new ServiceDocsDeviceGetSingle();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ServiceDeviceOutputFull.constructFromObject(data['data']);
+                obj['data'] = ModelsDeviceOutputFull.constructFromObject(data['data']);
             }
             if (data.hasOwnProperty('request_id')) {
                 obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
@@ -69,7 +69,7 @@ class ServiceDocsDeviceGetSingle {
     static validateJSON(data) {
         // validate the optional field `data`
         if (data['data']) { // data not null
-          ServiceDeviceOutputFull.validateJSON(data['data']);
+          ModelsDeviceOutputFull.validateJSON(data['data']);
         }
         // ensure the json data is a string
         if (data['request_id'] && !(typeof data['request_id'] === 'string' || data['request_id'] instanceof String)) {
@@ -85,7 +85,7 @@ class ServiceDocsDeviceGetSingle {
 
 
 /**
- * @member {module:model/ServiceDeviceOutputFull} data
+ * @member {module:model/ModelsDeviceOutputFull} data
  */
 ServiceDocsDeviceGetSingle.prototype['data'] = undefined;
 

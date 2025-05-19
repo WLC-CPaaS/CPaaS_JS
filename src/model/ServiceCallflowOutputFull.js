@@ -24,12 +24,13 @@ class ServiceCallflowOutputFull {
     /**
      * Constructs a new <code>ServiceCallflowOutputFull</code>.
      * @alias module:model/ServiceCallflowOutputFull
+     * @param flow {module:model/ServiceCallflowAddEditFlowData} 
      * @param numbers {Array.<String>} 
      * @param patterns {Array.<String>} 
      */
-    constructor(numbers, patterns) { 
+    constructor(flow, numbers, patterns) { 
         
-        ServiceCallflowOutputFull.initialize(this, numbers, patterns);
+        ServiceCallflowOutputFull.initialize(this, flow, numbers, patterns);
     }
 
     /**
@@ -37,7 +38,8 @@ class ServiceCallflowOutputFull {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, numbers, patterns) { 
+    static initialize(obj, flow, numbers, patterns) { 
+        obj['flow'] = flow;
         obj['numbers'] = numbers;
         obj['patterns'] = patterns;
     }
@@ -118,7 +120,7 @@ class ServiceCallflowOutputFull {
 
 }
 
-ServiceCallflowOutputFull.RequiredProperties = ["numbers", "patterns"];
+ServiceCallflowOutputFull.RequiredProperties = ["flow", "numbers", "patterns"];
 
 /**
  * @member {module:model/ServiceFeatureCode} featurecode

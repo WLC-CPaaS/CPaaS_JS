@@ -12,11 +12,11 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceCallForward from './ServiceCallForward';
-import ServiceCallRecordingSettings from './ServiceCallRecordingSettings';
-import ServiceMusicOnHold from './ServiceMusicOnHold';
-import ServiceUserOutputFullCallerid from './ServiceUserOutputFullCallerid';
-import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
+import ModelsCallForward from './ModelsCallForward';
+import ModelsCallRecordingSettings from './ModelsCallRecordingSettings';
+import ModelsMusicOnHold from './ModelsMusicOnHold';
+import ModelsUserOutputFullCallerid from './ModelsUserOutputFullCallerid';
+import ModelsVOIPSharedDoNotDisturb from './ModelsVOIPSharedDoNotDisturb';
 
 /**
  * The ServiceVOIPUserAdd2 model module.
@@ -59,16 +59,16 @@ class ServiceVOIPUserAdd2 {
             obj = obj || new ServiceVOIPUserAdd2();
 
             if (data.hasOwnProperty('call_forward')) {
-                obj['call_forward'] = ServiceCallForward.constructFromObject(data['call_forward']);
+                obj['call_forward'] = ModelsCallForward.constructFromObject(data['call_forward']);
             }
             if (data.hasOwnProperty('call_recording')) {
-                obj['call_recording'] = ServiceCallRecordingSettings.constructFromObject(data['call_recording']);
+                obj['call_recording'] = ModelsCallRecordingSettings.constructFromObject(data['call_recording']);
             }
             if (data.hasOwnProperty('caller_id')) {
-                obj['caller_id'] = ServiceUserOutputFullCallerid.constructFromObject(data['caller_id']);
+                obj['caller_id'] = ModelsUserOutputFullCallerid.constructFromObject(data['caller_id']);
             }
             if (data.hasOwnProperty('do_not_disturb')) {
-                obj['do_not_disturb'] = ServiceVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
+                obj['do_not_disturb'] = ModelsVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
             }
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -83,7 +83,7 @@ class ServiceVOIPUserAdd2 {
                 obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
             }
             if (data.hasOwnProperty('music_on_hold')) {
-                obj['music_on_hold'] = ServiceMusicOnHold.constructFromObject(data['music_on_hold']);
+                obj['music_on_hold'] = ModelsMusicOnHold.constructFromObject(data['music_on_hold']);
             }
             if (data.hasOwnProperty('presence_id')) {
                 obj['presence_id'] = ApiClient.convertToType(data['presence_id'], 'String');
@@ -112,19 +112,19 @@ class ServiceVOIPUserAdd2 {
         }
         // validate the optional field `call_forward`
         if (data['call_forward']) { // data not null
-          ServiceCallForward.validateJSON(data['call_forward']);
+          ModelsCallForward.validateJSON(data['call_forward']);
         }
         // validate the optional field `call_recording`
         if (data['call_recording']) { // data not null
-          ServiceCallRecordingSettings.validateJSON(data['call_recording']);
+          ModelsCallRecordingSettings.validateJSON(data['call_recording']);
         }
         // validate the optional field `caller_id`
         if (data['caller_id']) { // data not null
-          ServiceUserOutputFullCallerid.validateJSON(data['caller_id']);
+          ModelsUserOutputFullCallerid.validateJSON(data['caller_id']);
         }
         // validate the optional field `do_not_disturb`
         if (data['do_not_disturb']) { // data not null
-          ServiceVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
+          ModelsVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
         }
         // ensure the json data is a string
         if (data['email'] && !(typeof data['email'] === 'string' || data['email'] instanceof String)) {
@@ -140,7 +140,7 @@ class ServiceVOIPUserAdd2 {
         }
         // validate the optional field `music_on_hold`
         if (data['music_on_hold']) { // data not null
-          ServiceMusicOnHold.validateJSON(data['music_on_hold']);
+          ModelsMusicOnHold.validateJSON(data['music_on_hold']);
         }
         // ensure the json data is a string
         if (data['presence_id'] && !(typeof data['presence_id'] === 'string' || data['presence_id'] instanceof String)) {
@@ -160,22 +160,22 @@ class ServiceVOIPUserAdd2 {
 ServiceVOIPUserAdd2.RequiredProperties = ["email", "first_name", "last_name"];
 
 /**
- * @member {module:model/ServiceCallForward} call_forward
+ * @member {module:model/ModelsCallForward} call_forward
  */
 ServiceVOIPUserAdd2.prototype['call_forward'] = undefined;
 
 /**
- * @member {module:model/ServiceCallRecordingSettings} call_recording
+ * @member {module:model/ModelsCallRecordingSettings} call_recording
  */
 ServiceVOIPUserAdd2.prototype['call_recording'] = undefined;
 
 /**
- * @member {module:model/ServiceUserOutputFullCallerid} caller_id
+ * @member {module:model/ModelsUserOutputFullCallerid} caller_id
  */
 ServiceVOIPUserAdd2.prototype['caller_id'] = undefined;
 
 /**
- * @member {module:model/ServiceVOIPSharedDoNotDisturb} do_not_disturb
+ * @member {module:model/ModelsVOIPSharedDoNotDisturb} do_not_disturb
  */
 ServiceVOIPUserAdd2.prototype['do_not_disturb'] = undefined;
 
@@ -200,7 +200,7 @@ ServiceVOIPUserAdd2.prototype['first_name'] = undefined;
 ServiceVOIPUserAdd2.prototype['last_name'] = undefined;
 
 /**
- * @member {module:model/ServiceMusicOnHold} music_on_hold
+ * @member {module:model/ModelsMusicOnHold} music_on_hold
  */
 ServiceVOIPUserAdd2.prototype['music_on_hold'] = undefined;
 

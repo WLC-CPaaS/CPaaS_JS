@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**callRecording** | [**ServiceCallRecordingSettings**](ServiceCallRecordingSettings.md) |  | [optional] 
-**doNotDisturb** | [**ServiceVOIPSharedDoNotDisturb**](ServiceVOIPSharedDoNotDisturb.md) |  | [optional] 
+**callRecording** | [**ModelsCallRecordingSettings**](ModelsCallRecordingSettings.md) |  | [optional] 
+**doNotDisturb** | [**ModelsVOIPSharedDoNotDisturb**](ModelsVOIPSharedDoNotDisturb.md) |  | [optional] 
 **email** | **String** |  | [optional] 
 **enabled** | **Boolean** |  | [optional] 
 **features** | **[String]** |  | [optional] 

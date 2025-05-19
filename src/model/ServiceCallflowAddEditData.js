@@ -24,12 +24,13 @@ class ServiceCallflowAddEditData {
     /**
      * Constructs a new <code>ServiceCallflowAddEditData</code>.
      * @alias module:model/ServiceCallflowAddEditData
+     * @param flow {module:model/ServiceCallflowAddEditFlowData} 
      * @param numbers {Array.<String>} 
      * @param patterns {Array.<String>} 
      */
-    constructor(numbers, patterns) { 
+    constructor(flow, numbers, patterns) { 
         
-        ServiceCallflowAddEditData.initialize(this, numbers, patterns);
+        ServiceCallflowAddEditData.initialize(this, flow, numbers, patterns);
     }
 
     /**
@@ -37,7 +38,8 @@ class ServiceCallflowAddEditData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, numbers, patterns) { 
+    static initialize(obj, flow, numbers, patterns) { 
+        obj['flow'] = flow;
         obj['numbers'] = numbers;
         obj['patterns'] = patterns;
     }
@@ -111,7 +113,7 @@ class ServiceCallflowAddEditData {
 
 }
 
-ServiceCallflowAddEditData.RequiredProperties = ["numbers", "patterns"];
+ServiceCallflowAddEditData.RequiredProperties = ["flow", "numbers", "patterns"];
 
 /**
  * @member {module:model/ServiceFeatureCode} featurecode

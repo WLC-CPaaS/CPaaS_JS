@@ -49,10 +49,19 @@ class ServiceDocGroupGetAll {
             obj = obj || new ServiceDocGroupGetAll();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ServiceGroupOutputShort.constructFromObject(data['data']);
+                obj['data'] = ApiClient.convertToType(data['data'], [ServiceGroupOutputShort]);
+            }
+            if (data.hasOwnProperty('next_start_key')) {
+                obj['next_start_key'] = ApiClient.convertToType(data['next_start_key'], 'String');
+            }
+            if (data.hasOwnProperty('page_size')) {
+                obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
             if (data.hasOwnProperty('request_id')) {
                 obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
+            }
+            if (data.hasOwnProperty('start_key')) {
+                obj['start_key'] = ApiClient.convertToType(data['start_key'], 'String');
             }
             if (data.hasOwnProperty('status_code')) {
                 obj['status_code'] = ApiClient.convertToType(data['status_code'], 'Number');
@@ -67,13 +76,27 @@ class ServiceDocGroupGetAll {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ServiceDocGroupGetAll</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `data`
         if (data['data']) { // data not null
-          ServiceGroupOutputShort.validateJSON(data['data']);
+            // ensure the json data is an array
+            if (!Array.isArray(data['data'])) {
+                throw new Error("Expected the field `data` to be an array in the JSON data but got " + data['data']);
+            }
+            // validate the optional field `data` (array)
+            for (const item of data['data']) {
+                ServiceGroupOutputShort.validateJSON(item);
+            };
+        }
+        // ensure the json data is a string
+        if (data['next_start_key'] && !(typeof data['next_start_key'] === 'string' || data['next_start_key'] instanceof String)) {
+            throw new Error("Expected the field `next_start_key` to be a primitive type in the JSON string but got " + data['next_start_key']);
         }
         // ensure the json data is a string
         if (data['request_id'] && !(typeof data['request_id'] === 'string' || data['request_id'] instanceof String)) {
             throw new Error("Expected the field `request_id` to be a primitive type in the JSON string but got " + data['request_id']);
+        }
+        // ensure the json data is a string
+        if (data['start_key'] && !(typeof data['start_key'] === 'string' || data['start_key'] instanceof String)) {
+            throw new Error("Expected the field `start_key` to be a primitive type in the JSON string but got " + data['start_key']);
         }
 
         return true;
@@ -85,15 +108,33 @@ class ServiceDocGroupGetAll {
 
 
 /**
- * @member {module:model/ServiceGroupOutputShort} data
+ * @member {Array.<module:model/ServiceGroupOutputShort>} data
  */
 ServiceDocGroupGetAll.prototype['data'] = undefined;
+
+/**
+ * List Pagination: Used to get the next page of results. Will not exist if this is the last page.
+ * @member {String} next_start_key
+ */
+ServiceDocGroupGetAll.prototype['next_start_key'] = undefined;
+
+/**
+ * List Pagination: The number of results returned in this page
+ * @member {Number} page_size
+ */
+ServiceDocGroupGetAll.prototype['page_size'] = undefined;
 
 /**
  * Unique id for each request
  * @member {String} request_id
  */
 ServiceDocGroupGetAll.prototype['request_id'] = undefined;
+
+/**
+ * List Pagination: Code for paged results
+ * @member {String} start_key
+ */
+ServiceDocGroupGetAll.prototype['start_key'] = undefined;
 
 /**
  * HTTP response status code

@@ -20,6 +20,7 @@ import MenuOutputDetailData from './model/MenuOutputDetailData';
 import MenuOutputDetailMedia from './model/MenuOutputDetailMedia';
 import MenuOutputList from './model/MenuOutputList';
 import MenuOutputListData from './model/MenuOutputListData';
+import ModelAccountProvisioning from './model/ModelAccountProvisioning';
 import ModelAccountWebhook from './model/ModelAccountWebhook';
 import ModelCallDailySummary from './model/ModelCallDailySummary';
 import ModelCallDetail from './model/ModelCallDetail';
@@ -30,30 +31,48 @@ import ModelEventDetail from './model/ModelEventDetail';
 import ModelEventMonthlySummary from './model/ModelEventMonthlySummary';
 import ModelFeatureDailySummary from './model/ModelFeatureDailySummary';
 import ModelFeatureMonthlySummary from './model/ModelFeatureMonthlySummary';
+import ModelsAccountOutputFull from './model/ModelsAccountOutputFull';
+import ModelsAccountOutputFullCalleridEmergency from './model/ModelsAccountOutputFullCalleridEmergency';
+import ModelsAccountOutputFullCalleridExternal from './model/ModelsAccountOutputFullCalleridExternal';
+import ModelsAccountOutputFullCalleridInternal from './model/ModelsAccountOutputFullCalleridInternal';
+import ModelsCallForward from './model/ModelsCallForward';
+import ModelsCallRecordingParameters from './model/ModelsCallRecordingParameters';
+import ModelsCallRecordingSettings from './model/ModelsCallRecordingSettings';
+import ModelsCallRecordingSource from './model/ModelsCallRecordingSource';
+import ModelsDeviceOutputFull from './model/ModelsDeviceOutputFull';
+import ModelsDeviceOutputFullCallerid from './model/ModelsDeviceOutputFullCallerid';
+import ModelsDeviceOutputFullCalleridEmergency from './model/ModelsDeviceOutputFullCalleridEmergency';
+import ModelsDeviceOutputFullCalleridExternal from './model/ModelsDeviceOutputFullCalleridExternal';
+import ModelsDeviceOutputFullCalleridInternal from './model/ModelsDeviceOutputFullCalleridInternal';
+import ModelsDeviceOutputFullMedia from './model/ModelsDeviceOutputFullMedia';
+import ModelsDeviceOutputFullMediaAudio from './model/ModelsDeviceOutputFullMediaAudio';
+import ModelsDeviceOutputFullProvision from './model/ModelsDeviceOutputFullProvision';
+import ModelsDeviceOutputFullSIP from './model/ModelsDeviceOutputFullSIP';
+import ModelsMusicOnHold from './model/ModelsMusicOnHold';
+import ModelsUserOutputFull from './model/ModelsUserOutputFull';
+import ModelsUserOutputFullCallerid from './model/ModelsUserOutputFullCallerid';
+import ModelsUserOutputFullCalleridEmergency from './model/ModelsUserOutputFullCalleridEmergency';
+import ModelsUserOutputFullCalleridExternal from './model/ModelsUserOutputFullCalleridExternal';
+import ModelsUserOutputFullCalleridInternal from './model/ModelsUserOutputFullCalleridInternal';
+import ModelsVOIPAccountMusicOnHold from './model/ModelsVOIPAccountMusicOnHold';
+import ModelsVOIPAccountOutputFullCallerid from './model/ModelsVOIPAccountOutputFullCallerid';
+import ModelsVOIPSharedDoNotDisturb from './model/ModelsVOIPSharedDoNotDisturb';
 import RepositoryLocationsResponse from './model/RepositoryLocationsResponse';
 import ServiceAPIKey from './model/ServiceAPIKey';
 import ServiceAPIResponse from './model/ServiceAPIResponse';
 import ServiceAPIResponseStatusCodeOnly from './model/ServiceAPIResponseStatusCodeOnly';
 import ServiceAccountLimitOutput from './model/ServiceAccountLimitOutput';
-import ServiceAccountOutputFull from './model/ServiceAccountOutputFull';
-import ServiceAccountOutputFullCalleridEmergency from './model/ServiceAccountOutputFullCalleridEmergency';
-import ServiceAccountOutputFullCalleridExternal from './model/ServiceAccountOutputFullCalleridExternal';
-import ServiceAccountOutputFullCalleridInternal from './model/ServiceAccountOutputFullCalleridInternal';
 import ServiceAccountOutputShort from './model/ServiceAccountOutputShort';
 import ServiceAdminUserAddData from './model/ServiceAdminUserAddData';
 import ServiceAdminUserDeleteOutput from './model/ServiceAdminUserDeleteOutput';
 import ServiceAdminUserEditData from './model/ServiceAdminUserEditData';
 import ServiceAdminUserOutput from './model/ServiceAdminUserOutput';
-import ServiceCallForward from './model/ServiceCallForward';
 import ServiceCallQueueOutputFull from './model/ServiceCallQueueOutputFull';
 import ServiceCallQueueOutputShort from './model/ServiceCallQueueOutputShort';
 import ServiceCallQueueRolesOutput from './model/ServiceCallQueueRolesOutput';
 import ServiceCallQueueStatusOutput from './model/ServiceCallQueueStatusOutput';
 import ServiceCallQueueStatusStats from './model/ServiceCallQueueStatusStats';
 import ServiceCallRecordingOutput from './model/ServiceCallRecordingOutput';
-import ServiceCallRecordingParameters from './model/ServiceCallRecordingParameters';
-import ServiceCallRecordingSettings from './model/ServiceCallRecordingSettings';
-import ServiceCallRecordingSource from './model/ServiceCallRecordingSource';
 import ServiceCallflowAddEditData from './model/ServiceCallflowAddEditData';
 import ServiceCallflowAddEditFlowData from './model/ServiceCallflowAddEditFlowData';
 import ServiceCallflowOutputFull from './model/ServiceCallflowOutputFull';
@@ -63,17 +82,8 @@ import ServiceCampaignImportOutputMnoStatusListInner from './model/ServiceCampai
 import ServiceCampaignPhoneNumberOutput from './model/ServiceCampaignPhoneNumberOutput';
 import ServiceCampaignTagDetagPhonenumbers from './model/ServiceCampaignTagDetagPhonenumbers';
 import ServiceCampaignTagDetagPhonenumbersOutput from './model/ServiceCampaignTagDetagPhonenumbersOutput';
+import ServiceCdrOutputShort from './model/ServiceCdrOutputShort';
 import ServiceChannelOutput from './model/ServiceChannelOutput';
-import ServiceChannelRunActionData from './model/ServiceChannelRunActionData';
-import ServiceChannelRunMetaflowData from './model/ServiceChannelRunMetaflowData';
-import ServiceDeviceOutputFull from './model/ServiceDeviceOutputFull';
-import ServiceDeviceOutputFullCallerid from './model/ServiceDeviceOutputFullCallerid';
-import ServiceDeviceOutputFullCalleridEmergency from './model/ServiceDeviceOutputFullCalleridEmergency';
-import ServiceDeviceOutputFullCalleridExternal from './model/ServiceDeviceOutputFullCalleridExternal';
-import ServiceDeviceOutputFullCalleridInternal from './model/ServiceDeviceOutputFullCalleridInternal';
-import ServiceDeviceOutputFullMedia from './model/ServiceDeviceOutputFullMedia';
-import ServiceDeviceOutputFullMediaAudio from './model/ServiceDeviceOutputFullMediaAudio';
-import ServiceDeviceOutputFullSIP from './model/ServiceDeviceOutputFullSIP';
 import ServiceDeviceOutputShort from './model/ServiceDeviceOutputShort';
 import ServiceDocE911ActiveLocationOutput from './model/ServiceDocE911ActiveLocationOutput';
 import ServiceDocE911ActiveLocationURIApiOutput from './model/ServiceDocE911ActiveLocationURIApiOutput';
@@ -91,6 +101,7 @@ import ServiceDocsAccountGetAll from './model/ServiceDocsAccountGetAll';
 import ServiceDocsAccountGetSingle from './model/ServiceDocsAccountGetSingle';
 import ServiceDocsAccountLimit from './model/ServiceDocsAccountLimit';
 import ServiceDocsAccountPhonenumberGetAll from './model/ServiceDocsAccountPhonenumberGetAll';
+import ServiceDocsAccountProvisioning from './model/ServiceDocsAccountProvisioning';
 import ServiceDocsAdminUserDelete from './model/ServiceDocsAdminUserDelete';
 import ServiceDocsAdminUserGetAll from './model/ServiceDocsAdminUserGetAll';
 import ServiceDocsAdminUserGetSingle from './model/ServiceDocsAdminUserGetSingle';
@@ -111,10 +122,13 @@ import ServiceDocsCampaignImportOutput from './model/ServiceDocsCampaignImportOu
 import ServiceDocsCampaignImportedGetAllOutput from './model/ServiceDocsCampaignImportedGetAllOutput';
 import ServiceDocsCampaignPhoneNumberOutput from './model/ServiceDocsCampaignPhoneNumberOutput';
 import ServiceDocsCampaignTagDetagPhonenumbersOutput from './model/ServiceDocsCampaignTagDetagPhonenumbersOutput';
-import ServiceDocsChannelGet from './model/ServiceDocsChannelGet';
+import ServiceDocsCdrGetAll from './model/ServiceDocsCdrGetAll';
+import ServiceDocsCdrGetSingle from './model/ServiceDocsCdrGetSingle';
+import ServiceDocsChannelGetAll from './model/ServiceDocsChannelGetAll';
 import ServiceDocsChannelGetSingle from './model/ServiceDocsChannelGetSingle';
 import ServiceDocsDeviceGetAll from './model/ServiceDocsDeviceGetAll';
 import ServiceDocsDeviceGetSingle from './model/ServiceDocsDeviceGetSingle';
+import ServiceDocsDeviceReboot from './model/ServiceDocsDeviceReboot';
 import ServiceDocsEndpointList from './model/ServiceDocsEndpointList';
 import ServiceDocsEventDailySummary from './model/ServiceDocsEventDailySummary';
 import ServiceDocsEventDetail from './model/ServiceDocsEventDetail';
@@ -170,7 +184,6 @@ import ServiceMediaOutputFull from './model/ServiceMediaOutputFull';
 import ServiceMediaOutputShort from './model/ServiceMediaOutputShort';
 import ServiceMetaflowOutput from './model/ServiceMetaflowOutput';
 import ServiceMetaflowPattern from './model/ServiceMetaflowPattern';
-import ServiceMusicOnHold from './model/ServiceMusicOnHold';
 import ServiceParkingSlotData from './model/ServiceParkingSlotData';
 import ServicePhoneNumberResult from './model/ServicePhoneNumberResult';
 import ServicePhoneNumberSearchOutput from './model/ServicePhoneNumberSearchOutput';
@@ -198,35 +211,29 @@ import ServiceTemporalRuleOutputShort from './model/ServiceTemporalRuleOutputSho
 import ServiceTemporalRuleSetOutputFull from './model/ServiceTemporalRuleSetOutputFull';
 import ServiceTemporalRuleSetOutputShort from './model/ServiceTemporalRuleSetOutputShort';
 import ServiceUpdateRecordTypeForAccount from './model/ServiceUpdateRecordTypeForAccount';
-import ServiceUserOutputFull from './model/ServiceUserOutputFull';
-import ServiceUserOutputFullCallerid from './model/ServiceUserOutputFullCallerid';
-import ServiceUserOutputFullCalleridEmergency from './model/ServiceUserOutputFullCalleridEmergency';
-import ServiceUserOutputFullCalleridExternal from './model/ServiceUserOutputFullCalleridExternal';
-import ServiceUserOutputFullCalleridInternal from './model/ServiceUserOutputFullCalleridInternal';
 import ServiceUserOutputShort from './model/ServiceUserOutputShort';
 import ServiceVOIPAccountAddData from './model/ServiceVOIPAccountAddData';
-import ServiceVOIPAccountCallRecording from './model/ServiceVOIPAccountCallRecording';
 import ServiceVOIPAccountEditData from './model/ServiceVOIPAccountEditData';
 import ServiceVOIPAccountLimit2 from './model/ServiceVOIPAccountLimit2';
-import ServiceVOIPAccountMusicOnHold from './model/ServiceVOIPAccountMusicOnHold';
-import ServiceVOIPAccountOutputFullCallerid from './model/ServiceVOIPAccountOutputFullCallerid';
 import ServiceVOIPCallQueueAddEditData from './model/ServiceVOIPCallQueueAddEditData';
 import ServiceVOIPCallQueueEnableMembershipData from './model/ServiceVOIPCallQueueEnableMembershipData';
 import ServiceVOIPCallQueueRecipientLoginLogoutData from './model/ServiceVOIPCallQueueRecipientLoginLogoutData';
 import ServiceVOIPCallQueueRecipientStatusData from './model/ServiceVOIPCallQueueRecipientStatusData';
 import ServiceVOIPCallQueueRoleAssignData from './model/ServiceVOIPCallQueueRoleAssignData';
+import ServiceVOIPChannelRunActionData from './model/ServiceVOIPChannelRunActionData';
+import ServiceVOIPChannelRunMetaflowData from './model/ServiceVOIPChannelRunMetaflowData';
 import ServiceVOIPDeviceAddEdit2 from './model/ServiceVOIPDeviceAddEdit2';
 import ServiceVOIPDeviceAddEdit3a from './model/ServiceVOIPDeviceAddEdit3a';
 import ServiceVOIPDeviceAddEdit3c from './model/ServiceVOIPDeviceAddEdit3c';
 import ServiceVOIPDeviceAddEdit3d from './model/ServiceVOIPDeviceAddEdit3d';
 import ServiceVOIPDeviceAddEdit4 from './model/ServiceVOIPDeviceAddEdit4';
 import ServiceVOIPDeviceAddEdit5 from './model/ServiceVOIPDeviceAddEdit5';
+import ServiceVOIPDeviceAddEditProvision from './model/ServiceVOIPDeviceAddEditProvision';
 import ServiceVOIPGroupAddEdit2 from './model/ServiceVOIPGroupAddEdit2';
 import ServiceVOIPMediaAddEditData from './model/ServiceVOIPMediaAddEditData';
 import ServiceVOIPMetaflowAddData from './model/ServiceVOIPMetaflowAddData';
 import ServiceVOIPPresenceSetResetEditData from './model/ServiceVOIPPresenceSetResetEditData';
 import ServiceVOIPQueueMembershipAddData from './model/ServiceVOIPQueueMembershipAddData';
-import ServiceVOIPSharedDoNotDisturb from './model/ServiceVOIPSharedDoNotDisturb';
 import ServiceVOIPStorageAddEditData from './model/ServiceVOIPStorageAddEditData';
 import ServiceVOIPTemporalRuleAddEdit2 from './model/ServiceVOIPTemporalRuleAddEdit2';
 import ServiceVOIPTemporalRuleSetAddEditData from './model/ServiceVOIPTemporalRuleSetAddEditData';
@@ -236,7 +243,7 @@ import ServiceVOIPVoicemailMessageAddData from './model/ServiceVOIPVoicemailMess
 import ServiceVOIPVoicemailMessageChange from './model/ServiceVOIPVoicemailMessageChange';
 import ServiceVoicemailMedia from './model/ServiceVoicemailMedia';
 import ServiceVoicemailMessageOutput from './model/ServiceVoicemailMessageOutput';
-import ServiceVoicemailOutput from './model/ServiceVoicemailOutput';
+import ServiceVoicemailOutputFull from './model/ServiceVoicemailOutputFull';
 import ServiceVoicemailOutputShort from './model/ServiceVoicemailOutputShort';
 import ServiceWebhookAdd from './model/ServiceWebhookAdd';
 import ServiceWebhookDeleteOutput from './model/ServiceWebhookDeleteOutput';
@@ -249,6 +256,7 @@ import CallQueueMembershipApi from './api/CallQueueMembershipApi';
 import CallQueueRecipientApi from './api/CallQueueRecipientApi';
 import CallRecordingApi from './api/CallRecordingApi';
 import CallflowApi from './api/CallflowApi';
+import CdrApi from './api/CdrApi';
 import ChannelApi from './api/ChannelApi';
 import DataApi from './api/DataApi';
 import DeviceApi from './api/DeviceApi';
@@ -350,6 +358,12 @@ export {
     MenuOutputListData,
 
     /**
+     * The ModelAccountProvisioning model constructor.
+     * @property {module:model/ModelAccountProvisioning}
+     */
+    ModelAccountProvisioning,
+
+    /**
      * The ModelAccountWebhook model constructor.
      * @property {module:model/ModelAccountWebhook}
      */
@@ -410,6 +424,162 @@ export {
     ModelFeatureMonthlySummary,
 
     /**
+     * The ModelsAccountOutputFull model constructor.
+     * @property {module:model/ModelsAccountOutputFull}
+     */
+    ModelsAccountOutputFull,
+
+    /**
+     * The ModelsAccountOutputFullCalleridEmergency model constructor.
+     * @property {module:model/ModelsAccountOutputFullCalleridEmergency}
+     */
+    ModelsAccountOutputFullCalleridEmergency,
+
+    /**
+     * The ModelsAccountOutputFullCalleridExternal model constructor.
+     * @property {module:model/ModelsAccountOutputFullCalleridExternal}
+     */
+    ModelsAccountOutputFullCalleridExternal,
+
+    /**
+     * The ModelsAccountOutputFullCalleridInternal model constructor.
+     * @property {module:model/ModelsAccountOutputFullCalleridInternal}
+     */
+    ModelsAccountOutputFullCalleridInternal,
+
+    /**
+     * The ModelsCallForward model constructor.
+     * @property {module:model/ModelsCallForward}
+     */
+    ModelsCallForward,
+
+    /**
+     * The ModelsCallRecordingParameters model constructor.
+     * @property {module:model/ModelsCallRecordingParameters}
+     */
+    ModelsCallRecordingParameters,
+
+    /**
+     * The ModelsCallRecordingSettings model constructor.
+     * @property {module:model/ModelsCallRecordingSettings}
+     */
+    ModelsCallRecordingSettings,
+
+    /**
+     * The ModelsCallRecordingSource model constructor.
+     * @property {module:model/ModelsCallRecordingSource}
+     */
+    ModelsCallRecordingSource,
+
+    /**
+     * The ModelsDeviceOutputFull model constructor.
+     * @property {module:model/ModelsDeviceOutputFull}
+     */
+    ModelsDeviceOutputFull,
+
+    /**
+     * The ModelsDeviceOutputFullCallerid model constructor.
+     * @property {module:model/ModelsDeviceOutputFullCallerid}
+     */
+    ModelsDeviceOutputFullCallerid,
+
+    /**
+     * The ModelsDeviceOutputFullCalleridEmergency model constructor.
+     * @property {module:model/ModelsDeviceOutputFullCalleridEmergency}
+     */
+    ModelsDeviceOutputFullCalleridEmergency,
+
+    /**
+     * The ModelsDeviceOutputFullCalleridExternal model constructor.
+     * @property {module:model/ModelsDeviceOutputFullCalleridExternal}
+     */
+    ModelsDeviceOutputFullCalleridExternal,
+
+    /**
+     * The ModelsDeviceOutputFullCalleridInternal model constructor.
+     * @property {module:model/ModelsDeviceOutputFullCalleridInternal}
+     */
+    ModelsDeviceOutputFullCalleridInternal,
+
+    /**
+     * The ModelsDeviceOutputFullMedia model constructor.
+     * @property {module:model/ModelsDeviceOutputFullMedia}
+     */
+    ModelsDeviceOutputFullMedia,
+
+    /**
+     * The ModelsDeviceOutputFullMediaAudio model constructor.
+     * @property {module:model/ModelsDeviceOutputFullMediaAudio}
+     */
+    ModelsDeviceOutputFullMediaAudio,
+
+    /**
+     * The ModelsDeviceOutputFullProvision model constructor.
+     * @property {module:model/ModelsDeviceOutputFullProvision}
+     */
+    ModelsDeviceOutputFullProvision,
+
+    /**
+     * The ModelsDeviceOutputFullSIP model constructor.
+     * @property {module:model/ModelsDeviceOutputFullSIP}
+     */
+    ModelsDeviceOutputFullSIP,
+
+    /**
+     * The ModelsMusicOnHold model constructor.
+     * @property {module:model/ModelsMusicOnHold}
+     */
+    ModelsMusicOnHold,
+
+    /**
+     * The ModelsUserOutputFull model constructor.
+     * @property {module:model/ModelsUserOutputFull}
+     */
+    ModelsUserOutputFull,
+
+    /**
+     * The ModelsUserOutputFullCallerid model constructor.
+     * @property {module:model/ModelsUserOutputFullCallerid}
+     */
+    ModelsUserOutputFullCallerid,
+
+    /**
+     * The ModelsUserOutputFullCalleridEmergency model constructor.
+     * @property {module:model/ModelsUserOutputFullCalleridEmergency}
+     */
+    ModelsUserOutputFullCalleridEmergency,
+
+    /**
+     * The ModelsUserOutputFullCalleridExternal model constructor.
+     * @property {module:model/ModelsUserOutputFullCalleridExternal}
+     */
+    ModelsUserOutputFullCalleridExternal,
+
+    /**
+     * The ModelsUserOutputFullCalleridInternal model constructor.
+     * @property {module:model/ModelsUserOutputFullCalleridInternal}
+     */
+    ModelsUserOutputFullCalleridInternal,
+
+    /**
+     * The ModelsVOIPAccountMusicOnHold model constructor.
+     * @property {module:model/ModelsVOIPAccountMusicOnHold}
+     */
+    ModelsVOIPAccountMusicOnHold,
+
+    /**
+     * The ModelsVOIPAccountOutputFullCallerid model constructor.
+     * @property {module:model/ModelsVOIPAccountOutputFullCallerid}
+     */
+    ModelsVOIPAccountOutputFullCallerid,
+
+    /**
+     * The ModelsVOIPSharedDoNotDisturb model constructor.
+     * @property {module:model/ModelsVOIPSharedDoNotDisturb}
+     */
+    ModelsVOIPSharedDoNotDisturb,
+
+    /**
      * The RepositoryLocationsResponse model constructor.
      * @property {module:model/RepositoryLocationsResponse}
      */
@@ -440,30 +610,6 @@ export {
     ServiceAccountLimitOutput,
 
     /**
-     * The ServiceAccountOutputFull model constructor.
-     * @property {module:model/ServiceAccountOutputFull}
-     */
-    ServiceAccountOutputFull,
-
-    /**
-     * The ServiceAccountOutputFullCalleridEmergency model constructor.
-     * @property {module:model/ServiceAccountOutputFullCalleridEmergency}
-     */
-    ServiceAccountOutputFullCalleridEmergency,
-
-    /**
-     * The ServiceAccountOutputFullCalleridExternal model constructor.
-     * @property {module:model/ServiceAccountOutputFullCalleridExternal}
-     */
-    ServiceAccountOutputFullCalleridExternal,
-
-    /**
-     * The ServiceAccountOutputFullCalleridInternal model constructor.
-     * @property {module:model/ServiceAccountOutputFullCalleridInternal}
-     */
-    ServiceAccountOutputFullCalleridInternal,
-
-    /**
      * The ServiceAccountOutputShort model constructor.
      * @property {module:model/ServiceAccountOutputShort}
      */
@@ -492,12 +638,6 @@ export {
      * @property {module:model/ServiceAdminUserOutput}
      */
     ServiceAdminUserOutput,
-
-    /**
-     * The ServiceCallForward model constructor.
-     * @property {module:model/ServiceCallForward}
-     */
-    ServiceCallForward,
 
     /**
      * The ServiceCallQueueOutputFull model constructor.
@@ -534,24 +674,6 @@ export {
      * @property {module:model/ServiceCallRecordingOutput}
      */
     ServiceCallRecordingOutput,
-
-    /**
-     * The ServiceCallRecordingParameters model constructor.
-     * @property {module:model/ServiceCallRecordingParameters}
-     */
-    ServiceCallRecordingParameters,
-
-    /**
-     * The ServiceCallRecordingSettings model constructor.
-     * @property {module:model/ServiceCallRecordingSettings}
-     */
-    ServiceCallRecordingSettings,
-
-    /**
-     * The ServiceCallRecordingSource model constructor.
-     * @property {module:model/ServiceCallRecordingSource}
-     */
-    ServiceCallRecordingSource,
 
     /**
      * The ServiceCallflowAddEditData model constructor.
@@ -608,70 +730,16 @@ export {
     ServiceCampaignTagDetagPhonenumbersOutput,
 
     /**
+     * The ServiceCdrOutputShort model constructor.
+     * @property {module:model/ServiceCdrOutputShort}
+     */
+    ServiceCdrOutputShort,
+
+    /**
      * The ServiceChannelOutput model constructor.
      * @property {module:model/ServiceChannelOutput}
      */
     ServiceChannelOutput,
-
-    /**
-     * The ServiceChannelRunActionData model constructor.
-     * @property {module:model/ServiceChannelRunActionData}
-     */
-    ServiceChannelRunActionData,
-
-    /**
-     * The ServiceChannelRunMetaflowData model constructor.
-     * @property {module:model/ServiceChannelRunMetaflowData}
-     */
-    ServiceChannelRunMetaflowData,
-
-    /**
-     * The ServiceDeviceOutputFull model constructor.
-     * @property {module:model/ServiceDeviceOutputFull}
-     */
-    ServiceDeviceOutputFull,
-
-    /**
-     * The ServiceDeviceOutputFullCallerid model constructor.
-     * @property {module:model/ServiceDeviceOutputFullCallerid}
-     */
-    ServiceDeviceOutputFullCallerid,
-
-    /**
-     * The ServiceDeviceOutputFullCalleridEmergency model constructor.
-     * @property {module:model/ServiceDeviceOutputFullCalleridEmergency}
-     */
-    ServiceDeviceOutputFullCalleridEmergency,
-
-    /**
-     * The ServiceDeviceOutputFullCalleridExternal model constructor.
-     * @property {module:model/ServiceDeviceOutputFullCalleridExternal}
-     */
-    ServiceDeviceOutputFullCalleridExternal,
-
-    /**
-     * The ServiceDeviceOutputFullCalleridInternal model constructor.
-     * @property {module:model/ServiceDeviceOutputFullCalleridInternal}
-     */
-    ServiceDeviceOutputFullCalleridInternal,
-
-    /**
-     * The ServiceDeviceOutputFullMedia model constructor.
-     * @property {module:model/ServiceDeviceOutputFullMedia}
-     */
-    ServiceDeviceOutputFullMedia,
-
-    /**
-     * The ServiceDeviceOutputFullMediaAudio model constructor.
-     * @property {module:model/ServiceDeviceOutputFullMediaAudio}
-     */
-    ServiceDeviceOutputFullMediaAudio,
-
-    /**
-     * The ServiceDeviceOutputFullSIP model constructor.
-     * @property {module:model/ServiceDeviceOutputFullSIP}
-     */
-    ServiceDeviceOutputFullSIP,
 
     /**
      * The ServiceDeviceOutputShort model constructor.
@@ -774,6 +842,12 @@ export {
      * @property {module:model/ServiceDocsAccountPhonenumberGetAll}
      */
     ServiceDocsAccountPhonenumberGetAll,
+
+    /**
+     * The ServiceDocsAccountProvisioning model constructor.
+     * @property {module:model/ServiceDocsAccountProvisioning}
+     */
+    ServiceDocsAccountProvisioning,
 
     /**
      * The ServiceDocsAdminUserDelete model constructor.
@@ -896,10 +970,22 @@ export {
     ServiceDocsCampaignTagDetagPhonenumbersOutput,
 
     /**
-     * The ServiceDocsChannelGet model constructor.
-     * @property {module:model/ServiceDocsChannelGet}
+     * The ServiceDocsCdrGetAll model constructor.
+     * @property {module:model/ServiceDocsCdrGetAll}
      */
-    ServiceDocsChannelGet,
+    ServiceDocsCdrGetAll,
+
+    /**
+     * The ServiceDocsCdrGetSingle model constructor.
+     * @property {module:model/ServiceDocsCdrGetSingle}
+     */
+    ServiceDocsCdrGetSingle,
+
+    /**
+     * The ServiceDocsChannelGetAll model constructor.
+     * @property {module:model/ServiceDocsChannelGetAll}
+     */
+    ServiceDocsChannelGetAll,
 
     /**
      * The ServiceDocsChannelGetSingle model constructor.
@@ -918,6 +1004,12 @@ export {
      * @property {module:model/ServiceDocsDeviceGetSingle}
      */
     ServiceDocsDeviceGetSingle,
+
+    /**
+     * The ServiceDocsDeviceReboot model constructor.
+     * @property {module:model/ServiceDocsDeviceReboot}
+     */
+    ServiceDocsDeviceReboot,
 
     /**
      * The ServiceDocsEndpointList model constructor.
@@ -1250,12 +1342,6 @@ export {
     ServiceMetaflowPattern,
 
     /**
-     * The ServiceMusicOnHold model constructor.
-     * @property {module:model/ServiceMusicOnHold}
-     */
-    ServiceMusicOnHold,
-
-    /**
      * The ServiceParkingSlotData model constructor.
      * @property {module:model/ServiceParkingSlotData}
      */
@@ -1418,36 +1504,6 @@ export {
     ServiceUpdateRecordTypeForAccount,
 
     /**
-     * The ServiceUserOutputFull model constructor.
-     * @property {module:model/ServiceUserOutputFull}
-     */
-    ServiceUserOutputFull,
-
-    /**
-     * The ServiceUserOutputFullCallerid model constructor.
-     * @property {module:model/ServiceUserOutputFullCallerid}
-     */
-    ServiceUserOutputFullCallerid,
-
-    /**
-     * The ServiceUserOutputFullCalleridEmergency model constructor.
-     * @property {module:model/ServiceUserOutputFullCalleridEmergency}
-     */
-    ServiceUserOutputFullCalleridEmergency,
-
-    /**
-     * The ServiceUserOutputFullCalleridExternal model constructor.
-     * @property {module:model/ServiceUserOutputFullCalleridExternal}
-     */
-    ServiceUserOutputFullCalleridExternal,
-
-    /**
-     * The ServiceUserOutputFullCalleridInternal model constructor.
-     * @property {module:model/ServiceUserOutputFullCalleridInternal}
-     */
-    ServiceUserOutputFullCalleridInternal,
-
-    /**
      * The ServiceUserOutputShort model constructor.
      * @property {module:model/ServiceUserOutputShort}
      */
@@ -1460,12 +1516,6 @@ export {
     ServiceVOIPAccountAddData,
 
     /**
-     * The ServiceVOIPAccountCallRecording model constructor.
-     * @property {module:model/ServiceVOIPAccountCallRecording}
-     */
-    ServiceVOIPAccountCallRecording,
-
-    /**
      * The ServiceVOIPAccountEditData model constructor.
      * @property {module:model/ServiceVOIPAccountEditData}
      */
@@ -1476,18 +1526,6 @@ export {
      * @property {module:model/ServiceVOIPAccountLimit2}
      */
     ServiceVOIPAccountLimit2,
-
-    /**
-     * The ServiceVOIPAccountMusicOnHold model constructor.
-     * @property {module:model/ServiceVOIPAccountMusicOnHold}
-     */
-    ServiceVOIPAccountMusicOnHold,
-
-    /**
-     * The ServiceVOIPAccountOutputFullCallerid model constructor.
-     * @property {module:model/ServiceVOIPAccountOutputFullCallerid}
-     */
-    ServiceVOIPAccountOutputFullCallerid,
 
     /**
      * The ServiceVOIPCallQueueAddEditData model constructor.
@@ -1518,6 +1556,18 @@ export {
      * @property {module:model/ServiceVOIPCallQueueRoleAssignData}
      */
     ServiceVOIPCallQueueRoleAssignData,
+
+    /**
+     * The ServiceVOIPChannelRunActionData model constructor.
+     * @property {module:model/ServiceVOIPChannelRunActionData}
+     */
+    ServiceVOIPChannelRunActionData,
+
+    /**
+     * The ServiceVOIPChannelRunMetaflowData model constructor.
+     * @property {module:model/ServiceVOIPChannelRunMetaflowData}
+     */
+    ServiceVOIPChannelRunMetaflowData,
 
     /**
      * The ServiceVOIPDeviceAddEdit2 model constructor.
@@ -1556,6 +1606,12 @@ export {
     ServiceVOIPDeviceAddEdit5,
 
     /**
+     * The ServiceVOIPDeviceAddEditProvision model constructor.
+     * @property {module:model/ServiceVOIPDeviceAddEditProvision}
+     */
+    ServiceVOIPDeviceAddEditProvision,
+
+    /**
      * The ServiceVOIPGroupAddEdit2 model constructor.
      * @property {module:model/ServiceVOIPGroupAddEdit2}
      */
@@ -1584,12 +1640,6 @@ export {
      * @property {module:model/ServiceVOIPQueueMembershipAddData}
      */
     ServiceVOIPQueueMembershipAddData,
-
-    /**
-     * The ServiceVOIPSharedDoNotDisturb model constructor.
-     * @property {module:model/ServiceVOIPSharedDoNotDisturb}
-     */
-    ServiceVOIPSharedDoNotDisturb,
 
     /**
      * The ServiceVOIPStorageAddEditData model constructor.
@@ -1646,10 +1696,10 @@ export {
     ServiceVoicemailMessageOutput,
 
     /**
-     * The ServiceVoicemailOutput model constructor.
-     * @property {module:model/ServiceVoicemailOutput}
+     * The ServiceVoicemailOutputFull model constructor.
+     * @property {module:model/ServiceVoicemailOutputFull}
      */
-    ServiceVoicemailOutput,
+    ServiceVoicemailOutputFull,
 
     /**
      * The ServiceVoicemailOutputShort model constructor.
@@ -1722,6 +1772,12 @@ export {
     * @property {module:api/CallflowApi}
     */
     CallflowApi,
+
+    /**
+    * The CdrApi service constructor.
+    * @property {module:api/CdrApi}
+    */
+    CdrApi,
 
     /**
     * The ChannelApi service constructor.

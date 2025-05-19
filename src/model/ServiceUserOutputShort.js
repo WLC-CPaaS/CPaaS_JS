@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceCallRecordingSettings from './ServiceCallRecordingSettings';
-import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
+import ModelsCallRecordingSettings from './ModelsCallRecordingSettings';
+import ModelsVOIPSharedDoNotDisturb from './ModelsVOIPSharedDoNotDisturb';
 
 /**
  * The ServiceUserOutputShort model module.
@@ -50,10 +50,10 @@ class ServiceUserOutputShort {
             obj = obj || new ServiceUserOutputShort();
 
             if (data.hasOwnProperty('call_recording')) {
-                obj['call_recording'] = ServiceCallRecordingSettings.constructFromObject(data['call_recording']);
+                obj['call_recording'] = ModelsCallRecordingSettings.constructFromObject(data['call_recording']);
             }
             if (data.hasOwnProperty('do_not_disturb')) {
-                obj['do_not_disturb'] = ServiceVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
+                obj['do_not_disturb'] = ModelsVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
             }
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -91,11 +91,11 @@ class ServiceUserOutputShort {
     static validateJSON(data) {
         // validate the optional field `call_recording`
         if (data['call_recording']) { // data not null
-          ServiceCallRecordingSettings.validateJSON(data['call_recording']);
+          ModelsCallRecordingSettings.validateJSON(data['call_recording']);
         }
         // validate the optional field `do_not_disturb`
         if (data['do_not_disturb']) { // data not null
-          ServiceVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
+          ModelsVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
         }
         // ensure the json data is a string
         if (data['email'] && !(typeof data['email'] === 'string' || data['email'] instanceof String)) {
@@ -135,12 +135,12 @@ class ServiceUserOutputShort {
 
 
 /**
- * @member {module:model/ServiceCallRecordingSettings} call_recording
+ * @member {module:model/ModelsCallRecordingSettings} call_recording
  */
 ServiceUserOutputShort.prototype['call_recording'] = undefined;
 
 /**
- * @member {module:model/ServiceVOIPSharedDoNotDisturb} do_not_disturb
+ * @member {module:model/ModelsVOIPSharedDoNotDisturb} do_not_disturb
  */
 ServiceUserOutputShort.prototype['do_not_disturb'] = undefined;
 

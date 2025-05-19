@@ -13,6 +13,8 @@ Method | HTTP request | Description
 [**v1AccountAccountidLimitGet**](AccountApi.md#v1AccountAccountidLimitGet) | **GET** /v1/account/{accountid}/limit | Get Account Limits
 [**v1AccountAccountidLimitPut**](AccountApi.md#v1AccountAccountidLimitPut) | **PUT** /v1/account/{accountid}/limit | Set Account Limits
 [**v1AccountAccountidPost**](AccountApi.md#v1AccountAccountidPost) | **POST** /v1/account/{accountid} | Create Sub Account
+[**v1AccountAccountidProvisioningdetailsGet**](AccountApi.md#v1AccountAccountidProvisioningdetailsGet) | **GET** /v1/account/{accountid}/provisioningdetails | Get Account Provisioning Details
+[**v1AccountAccountidProvisioningdetailsResetpwPut**](AccountApi.md#v1AccountAccountidProvisioningdetailsResetpwPut) | **PUT** /v1/account/{accountid}/provisioningdetails/resetpw | Reset the provisioning details password.
 [**v1AccountAccountidPut**](AccountApi.md#v1AccountAccountidPut) | **PUT** /v1/account/{accountid} | Update Account
 [**v1AccountApikeyGet**](AccountApi.md#v1AccountApikeyGet) | **GET** /v1/account/apikey | 
 [**v1AccountGet**](AccountApi.md#v1AccountGet) | **GET** /v1/account | Get Account List
@@ -488,6 +490,108 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## v1AccountAccountidProvisioningdetailsGet
+
+> ServiceDocsAccountProvisioning v1AccountAccountidProvisioningdetailsGet(accountid)
+
+Get Account Provisioning Details
+
+Get the provisioning details of an account.
+
+### Example
+
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.AccountApi();
+let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
+apiInstance.v1AccountAccountidProvisioningdetailsGet(accountid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountid** | **String**| Account ID, 32 alpha numeric | 
+
+### Return type
+
+[**ServiceDocsAccountProvisioning**](ServiceDocsAccountProvisioning.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## v1AccountAccountidProvisioningdetailsResetpwPut
+
+> ServiceDocsAccountProvisioning v1AccountAccountidProvisioningdetailsResetpwPut(accountid)
+
+Reset the provisioning details password.
+
+Reset the existing provisioning details password and set it to a new one.
+
+### Example
+
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.AccountApi();
+let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
+apiInstance.v1AccountAccountidProvisioningdetailsResetpwPut(accountid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountid** | **String**| Account ID, 32 alpha numeric | 
+
+### Return type
+
+[**ServiceDocsAccountProvisioning**](ServiceDocsAccountProvisioning.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

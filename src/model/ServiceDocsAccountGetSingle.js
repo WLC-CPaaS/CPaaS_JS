@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceAccountOutputFull from './ServiceAccountOutputFull';
+import ModelsAccountOutputFull from './ModelsAccountOutputFull';
 
 /**
  * The ServiceDocsAccountGetSingle model module.
@@ -49,7 +49,7 @@ class ServiceDocsAccountGetSingle {
             obj = obj || new ServiceDocsAccountGetSingle();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ServiceAccountOutputFull.constructFromObject(data['data']);
+                obj['data'] = ModelsAccountOutputFull.constructFromObject(data['data']);
             }
             if (data.hasOwnProperty('request_id')) {
                 obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
@@ -69,7 +69,7 @@ class ServiceDocsAccountGetSingle {
     static validateJSON(data) {
         // validate the optional field `data`
         if (data['data']) { // data not null
-          ServiceAccountOutputFull.validateJSON(data['data']);
+          ModelsAccountOutputFull.validateJSON(data['data']);
         }
         // ensure the json data is a string
         if (data['request_id'] && !(typeof data['request_id'] === 'string' || data['request_id'] instanceof String)) {
@@ -85,7 +85,7 @@ class ServiceDocsAccountGetSingle {
 
 
 /**
- * @member {module:model/ServiceAccountOutputFull} data
+ * @member {module:model/ModelsAccountOutputFull} data
  */
 ServiceDocsAccountGetSingle.prototype['data'] = undefined;
 

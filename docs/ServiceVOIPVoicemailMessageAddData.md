@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **callerIdName** | **String** |  | [optional] 
 **callerIdNumber** | **String** |  | [optional] 
-**folder** | **String** |  | [optional] 
+**folder** | **String** |  | 
 **from** | **String** |  | [optional] 
 **to** | **String** |  | [optional] 
 

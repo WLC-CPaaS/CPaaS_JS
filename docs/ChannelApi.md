@@ -88,7 +88,7 @@ BearerAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi();
 let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
 let channelID = "channelID_example"; // String | Channel ID
-let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelRunActionData(); // ServiceChannelRunActionData | payload fields
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPChannelRunActionData(); // ServiceVOIPChannelRunActionData | payload fields
 apiInstance.v1AccountAccountIDChannelChannelIDPost(accountID, channelID, reqBody, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountID** | **String**| Account ID, 32 alpha numeric | 
  **channelID** | **String**| Channel ID | 
- **reqBody** | [**ServiceChannelRunActionData**](ServiceChannelRunActionData.md)| payload fields | 
+ **reqBody** | [**ServiceVOIPChannelRunActionData**](ServiceVOIPChannelRunActionData.md)| payload fields | 
 
 ### Return type
 
@@ -143,7 +143,7 @@ BearerAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ChannelApi();
 let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
 let channelID = "channelID_example"; // String | Channel ID
-let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelRunMetaflowData(); // ServiceChannelRunMetaflowData | payload fields
+let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPChannelRunMetaflowData(); // ServiceVOIPChannelRunMetaflowData | payload fields
 apiInstance.v1AccountAccountIDChannelChannelIDPut(accountID, channelID, reqBody, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountID** | **String**| Account ID, 32 alpha numeric | 
  **channelID** | **String**| Channel ID | 
- **reqBody** | [**ServiceChannelRunMetaflowData**](ServiceChannelRunMetaflowData.md)| payload fields | 
+ **reqBody** | [**ServiceVOIPChannelRunMetaflowData**](ServiceVOIPChannelRunMetaflowData.md)| payload fields | 
 
 ### Return type
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDChannelGet
 
-> ServiceDocsChannelGet v1AccountAccountIDChannelGet(accountID)
+> ServiceDocsChannelGetAll v1AccountAccountIDChannelGet(accountID)
 
 Get Account Channel List
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsChannelGet**](ServiceDocsChannelGet.md)
+[**ServiceDocsChannelGetAll**](ServiceDocsChannelGetAll.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDDeviceDeviceIDChannelGet
 
-> ServiceDocsChannelGet v1AccountAccountIDDeviceDeviceIDChannelGet(accountID, deviceID)
+> ServiceDocsChannelGetAll v1AccountAccountIDDeviceDeviceIDChannelGet(accountID, deviceID)
 
 Get Device Channel List
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsChannelGet**](ServiceDocsChannelGet.md)
+[**ServiceDocsChannelGetAll**](ServiceDocsChannelGetAll.md)
 
 ### Authorization
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDUserUserIDChannelGet
 
-> ServiceDocsChannelGet v1AccountAccountIDUserUserIDChannelGet(accountID, userID)
+> ServiceDocsChannelGetAll v1AccountAccountIDUserUserIDChannelGet(accountID, userID)
 
 Get User Channel List
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsChannelGet**](ServiceDocsChannelGet.md)
+[**ServiceDocsChannelGetAll**](ServiceDocsChannelGetAll.md)
 
 ### Authorization
 

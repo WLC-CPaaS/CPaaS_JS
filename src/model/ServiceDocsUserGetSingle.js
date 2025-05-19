@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceUserOutputFull from './ServiceUserOutputFull';
+import ModelsUserOutputFull from './ModelsUserOutputFull';
 
 /**
  * The ServiceDocsUserGetSingle model module.
@@ -49,7 +49,7 @@ class ServiceDocsUserGetSingle {
             obj = obj || new ServiceDocsUserGetSingle();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ServiceUserOutputFull.constructFromObject(data['data']);
+                obj['data'] = ModelsUserOutputFull.constructFromObject(data['data']);
             }
             if (data.hasOwnProperty('request_id')) {
                 obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
@@ -69,7 +69,7 @@ class ServiceDocsUserGetSingle {
     static validateJSON(data) {
         // validate the optional field `data`
         if (data['data']) { // data not null
-          ServiceUserOutputFull.validateJSON(data['data']);
+          ModelsUserOutputFull.validateJSON(data['data']);
         }
         // ensure the json data is a string
         if (data['request_id'] && !(typeof data['request_id'] === 'string' || data['request_id'] instanceof String)) {
@@ -85,7 +85,7 @@ class ServiceDocsUserGetSingle {
 
 
 /**
- * @member {module:model/ServiceUserOutputFull} data
+ * @member {module:model/ModelsUserOutputFull} data
  */
 ServiceDocsUserGetSingle.prototype['data'] = undefined;
 

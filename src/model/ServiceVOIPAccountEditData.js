@@ -12,10 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceVOIPAccountCallRecording from './ServiceVOIPAccountCallRecording';
-import ServiceVOIPAccountMusicOnHold from './ServiceVOIPAccountMusicOnHold';
-import ServiceVOIPAccountOutputFullCallerid from './ServiceVOIPAccountOutputFullCallerid';
-import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
+import ModelsVOIPAccountMusicOnHold from './ModelsVOIPAccountMusicOnHold';
+import ModelsVOIPAccountOutputFullCallerid from './ModelsVOIPAccountOutputFullCallerid';
+import ModelsVOIPSharedDoNotDisturb from './ModelsVOIPSharedDoNotDisturb';
 
 /**
  * The ServiceVOIPAccountEditData model module.
@@ -55,20 +54,17 @@ class ServiceVOIPAccountEditData {
         if (data) {
             obj = obj || new ServiceVOIPAccountEditData();
 
-            if (data.hasOwnProperty('call_recording')) {
-                obj['call_recording'] = ServiceVOIPAccountCallRecording.constructFromObject(data['call_recording']);
-            }
             if (data.hasOwnProperty('caller_id')) {
-                obj['caller_id'] = ServiceVOIPAccountOutputFullCallerid.constructFromObject(data['caller_id']);
+                obj['caller_id'] = ModelsVOIPAccountOutputFullCallerid.constructFromObject(data['caller_id']);
             }
             if (data.hasOwnProperty('do_not_disturb')) {
-                obj['do_not_disturb'] = ServiceVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
+                obj['do_not_disturb'] = ModelsVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
             }
             if (data.hasOwnProperty('enabled')) {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
             }
             if (data.hasOwnProperty('music_on_hold')) {
-                obj['music_on_hold'] = ServiceVOIPAccountMusicOnHold.constructFromObject(data['music_on_hold']);
+                obj['music_on_hold'] = ModelsVOIPAccountMusicOnHold.constructFromObject(data['music_on_hold']);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -92,21 +88,17 @@ class ServiceVOIPAccountEditData {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
-        // validate the optional field `call_recording`
-        if (data['call_recording']) { // data not null
-          ServiceVOIPAccountCallRecording.validateJSON(data['call_recording']);
-        }
         // validate the optional field `caller_id`
         if (data['caller_id']) { // data not null
-          ServiceVOIPAccountOutputFullCallerid.validateJSON(data['caller_id']);
+          ModelsVOIPAccountOutputFullCallerid.validateJSON(data['caller_id']);
         }
         // validate the optional field `do_not_disturb`
         if (data['do_not_disturb']) { // data not null
-          ServiceVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
+          ModelsVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
         }
         // validate the optional field `music_on_hold`
         if (data['music_on_hold']) { // data not null
-          ServiceVOIPAccountMusicOnHold.validateJSON(data['music_on_hold']);
+          ModelsVOIPAccountMusicOnHold.validateJSON(data['music_on_hold']);
         }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
@@ -126,17 +118,12 @@ class ServiceVOIPAccountEditData {
 ServiceVOIPAccountEditData.RequiredProperties = ["name", "timezone"];
 
 /**
- * @member {module:model/ServiceVOIPAccountCallRecording} call_recording
- */
-ServiceVOIPAccountEditData.prototype['call_recording'] = undefined;
-
-/**
- * @member {module:model/ServiceVOIPAccountOutputFullCallerid} caller_id
+ * @member {module:model/ModelsVOIPAccountOutputFullCallerid} caller_id
  */
 ServiceVOIPAccountEditData.prototype['caller_id'] = undefined;
 
 /**
- * @member {module:model/ServiceVOIPSharedDoNotDisturb} do_not_disturb
+ * @member {module:model/ModelsVOIPSharedDoNotDisturb} do_not_disturb
  */
 ServiceVOIPAccountEditData.prototype['do_not_disturb'] = undefined;
 
@@ -146,7 +133,7 @@ ServiceVOIPAccountEditData.prototype['do_not_disturb'] = undefined;
 ServiceVOIPAccountEditData.prototype['enabled'] = undefined;
 
 /**
- * @member {module:model/ServiceVOIPAccountMusicOnHold} music_on_hold
+ * @member {module:model/ModelsVOIPAccountMusicOnHold} music_on_hold
  */
 ServiceVOIPAccountEditData.prototype['music_on_hold'] = undefined;
 

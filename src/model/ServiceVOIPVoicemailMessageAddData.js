@@ -22,10 +22,11 @@ class ServiceVOIPVoicemailMessageAddData {
     /**
      * Constructs a new <code>ServiceVOIPVoicemailMessageAddData</code>.
      * @alias module:model/ServiceVOIPVoicemailMessageAddData
+     * @param folder {module:model/ServiceVOIPVoicemailMessageAddData.FolderEnum} 
      */
-    constructor() { 
+    constructor(folder) { 
         
-        ServiceVOIPVoicemailMessageAddData.initialize(this);
+        ServiceVOIPVoicemailMessageAddData.initialize(this, folder);
     }
 
     /**
@@ -33,7 +34,8 @@ class ServiceVOIPVoicemailMessageAddData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, folder) { 
+        obj['folder'] = folder;
     }
 
     /**
@@ -72,6 +74,12 @@ class ServiceVOIPVoicemailMessageAddData {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ServiceVOIPVoicemailMessageAddData</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ServiceVOIPVoicemailMessageAddData.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
         // ensure the json data is a string
         if (data['caller_id_name'] && !(typeof data['caller_id_name'] === 'string' || data['caller_id_name'] instanceof String)) {
             throw new Error("Expected the field `caller_id_name` to be a primitive type in the JSON string but got " + data['caller_id_name']);
@@ -99,7 +107,7 @@ class ServiceVOIPVoicemailMessageAddData {
 
 }
 
-
+ServiceVOIPVoicemailMessageAddData.RequiredProperties = ["folder"];
 
 /**
  * @member {String} caller_id_name

@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
 import ServiceDocsDeviceGetAll from '../model/ServiceDocsDeviceGetAll';
 import ServiceDocsDeviceGetSingle from '../model/ServiceDocsDeviceGetSingle';
+import ServiceDocsDeviceReboot from '../model/ServiceDocsDeviceReboot';
 import ServiceVOIPDeviceAddEdit2 from '../model/ServiceVOIPDeviceAddEdit2';
 
 /**
@@ -184,6 +185,55 @@ export default class DeviceApi {
       let returnType = ServiceDocsDeviceGetSingle;
       return this.apiClient.callApi(
         '/v1/account/{accountid}/device/{deviceid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountidDeviceDeviceidRebootPost operation.
+     * @callback module:api/DeviceApi~v1AccountAccountidDeviceDeviceidRebootPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ServiceDocsDeviceReboot} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Reboot Device
+     * Reboot one device from a CPaaS account.
+     * @param {String} accountid Account ID, 32 alpha numeric
+     * @param {String} deviceid Device ID, 32 alpha numeric
+     * @param {module:api/DeviceApi~v1AccountAccountidDeviceDeviceidRebootPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ServiceDocsDeviceReboot}
+     */
+    v1AccountAccountidDeviceDeviceidRebootPost(accountid, deviceid, callback) {
+      let postBody = null;
+      // verify the required parameter 'accountid' is set
+      if (accountid === undefined || accountid === null) {
+        throw new Error("Missing the required parameter 'accountid' when calling v1AccountAccountidDeviceDeviceidRebootPost");
+      }
+      // verify the required parameter 'deviceid' is set
+      if (deviceid === undefined || deviceid === null) {
+        throw new Error("Missing the required parameter 'deviceid' when calling v1AccountAccountidDeviceDeviceidRebootPost");
+      }
+
+      let pathParams = {
+        'accountid': accountid,
+        'deviceid': deviceid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['BearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ServiceDocsDeviceReboot;
+      return this.apiClient.callApi(
+        '/v1/account/{accountid}/device/{deviceid}/reboot', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

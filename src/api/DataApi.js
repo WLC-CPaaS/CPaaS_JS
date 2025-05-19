@@ -53,7 +53,7 @@ export default class DataApi {
 
     /**
      * Get Call Daily Summary List
-     * Retrieve a paginated list of call daily summary based on query parameters.
+     * Retrieve a daily summary of calls, including the account ID that made or received a call, the call type, the month and year, the duration, and other relevant information.
      * @param {Object} opts Optional parameters
      * @param {String} [accountId] 
      * @param {String} [callType] 
@@ -104,7 +104,7 @@ export default class DataApi {
 
     /**
      * Get Call Detail List
-     * Retrieve a paginated list of call details based on query parameters.
+     * Retrieve specific details about a call (e.g., caller, recipient, date, time, duration, etc.).
      * @param {Object} opts Optional parameters
      * @param {String} [account] 
      * @param {String} [callType] 
@@ -163,7 +163,7 @@ export default class DataApi {
 
     /**
      * Get Call Detail List
-     * Retrieve a paginated list of call monthly summary based on query parameters.
+     * Retrieve a monthly summary of calls, including which accounts made or received calls, the call type, and other relevant information.
      * @param {Object} opts Optional parameters
      * @param {String} [account] 
      * @param {String} [callType] 
@@ -218,7 +218,7 @@ export default class DataApi {
 
     /**
      * Get Endpoint List
-     * Retrieve a paginated list of endpoints based on query parameters.
+     * Access the endpoint list for each CPaaS API.
      * @param {Object} opts Optional parameters
      * @param {String} [endpointName] 
      * @param {String} [featureName] 
@@ -269,7 +269,7 @@ export default class DataApi {
 
     /**
      * Get Event Daily Summary List
-     * Retrieve a paginated list of event daily summaries based on query parameters.
+     * Obtain a daily summary of events in a CPaaS account (e.g., setting/resetting the presence status for a user or extension).
      * @param {Object} opts Optional parameters
      * @param {String} [accountId] 
      * @param {String} [component] 
@@ -320,7 +320,7 @@ export default class DataApi {
 
     /**
      * Get Event Details
-     * Retrieve a paginated list of event detail based on query parameters.
+     * Obtain specific details about an event (e.g., an E911 notification, a deleted account, or a created user).
      * @param {Object} opts Optional parameters
      * @param {String} [accountId] 
      * @param {String} [component] 
@@ -377,7 +377,7 @@ export default class DataApi {
 
     /**
      * Get Event Monthly Summary List
-     * Retrieve a paginated list of event monthly summaries based on query parameters.
+     * Obtain a monthly summary of events in a CPaaS account (e.g., adding media files or assigning phone numbers).
      * @param {Object} opts Optional parameters
      * @param {String} [accountId] 
      * @param {String} [component] 
@@ -432,7 +432,7 @@ export default class DataApi {
 
     /**
      * Get Feature Daily Summary List
-     * Retrieve a paginated list of feature daily summary based on query parameters.
+     * Retrieve a daily summary about a feature, including usage, which accounts execute the steps, and other relevant information.
      * @param {Object} opts Optional parameters
      * @param {String} [endDate] 
      * @param {String} [featureName] 
@@ -481,7 +481,7 @@ export default class DataApi {
 
     /**
      * Get Feature Monthly Summary List
-     * Retrieve a paginated list of feature monthly summary based on query parameters.
+     * Retrieve a monthly summary about a feature’s usage, new users, updates, and other relevant information.
      * @param {Object} opts Optional parameters
      * @param {Number} [endMonth] 
      * @param {Number} [endYear] 

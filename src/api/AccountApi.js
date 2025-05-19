@@ -18,6 +18,7 @@ import ServiceDocsAccountAPIKey from '../model/ServiceDocsAccountAPIKey';
 import ServiceDocsAccountGetAll from '../model/ServiceDocsAccountGetAll';
 import ServiceDocsAccountGetSingle from '../model/ServiceDocsAccountGetSingle';
 import ServiceDocsAccountLimit from '../model/ServiceDocsAccountLimit';
+import ServiceDocsAccountProvisioning from '../model/ServiceDocsAccountProvisioning';
 import ServiceUpdateRecordTypeForAccount from '../model/ServiceUpdateRecordTypeForAccount';
 import ServiceVOIPAccountAddData from '../model/ServiceVOIPAccountAddData';
 import ServiceVOIPAccountEditData from '../model/ServiceVOIPAccountEditData';
@@ -445,6 +446,92 @@ export default class AccountApi {
       let returnType = ServiceDocsAccountGetSingle;
       return this.apiClient.callApi(
         '/v1/account/{accountid}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountidProvisioningdetailsGet operation.
+     * @callback module:api/AccountApi~v1AccountAccountidProvisioningdetailsGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ServiceDocsAccountProvisioning} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Account Provisioning Details
+     * Get the provisioning details of an account.
+     * @param {String} accountid Account ID, 32 alpha numeric
+     * @param {module:api/AccountApi~v1AccountAccountidProvisioningdetailsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ServiceDocsAccountProvisioning}
+     */
+    v1AccountAccountidProvisioningdetailsGet(accountid, callback) {
+      let postBody = null;
+      // verify the required parameter 'accountid' is set
+      if (accountid === undefined || accountid === null) {
+        throw new Error("Missing the required parameter 'accountid' when calling v1AccountAccountidProvisioningdetailsGet");
+      }
+
+      let pathParams = {
+        'accountid': accountid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['BearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ServiceDocsAccountProvisioning;
+      return this.apiClient.callApi(
+        '/v1/account/{accountid}/provisioningdetails', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountidProvisioningdetailsResetpwPut operation.
+     * @callback module:api/AccountApi~v1AccountAccountidProvisioningdetailsResetpwPutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ServiceDocsAccountProvisioning} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Reset the provisioning details password.
+     * Reset the existing provisioning details password and set it to a new one.
+     * @param {String} accountid Account ID, 32 alpha numeric
+     * @param {module:api/AccountApi~v1AccountAccountidProvisioningdetailsResetpwPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ServiceDocsAccountProvisioning}
+     */
+    v1AccountAccountidProvisioningdetailsResetpwPut(accountid, callback) {
+      let postBody = null;
+      // verify the required parameter 'accountid' is set
+      if (accountid === undefined || accountid === null) {
+        throw new Error("Missing the required parameter 'accountid' when calling v1AccountAccountidProvisioningdetailsResetpwPut");
+      }
+
+      let pathParams = {
+        'accountid': accountid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['BearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ServiceDocsAccountProvisioning;
+      return this.apiClient.callApi(
+        '/v1/account/{accountid}/provisioningdetails/resetpw', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -1,0 +1,11 @@
+# WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsChannelGetAll
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**[ServiceChannelOutput]**](ServiceChannelOutput.md) |  | [optional] 
+**requestId** | **String** | Unique id for each request | [optional] 
+**statusCode** | **Number** | HTTP response status code | [optional] 
+
+

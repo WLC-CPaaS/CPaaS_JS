@@ -49,7 +49,7 @@ class ServiceDocsVoicemailGetAll {
             obj = obj || new ServiceDocsVoicemailGetAll();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ServiceVoicemailOutputShort.constructFromObject(data['data']);
+                obj['data'] = ApiClient.convertToType(data['data'], [ServiceVoicemailOutputShort]);
             }
             if (data.hasOwnProperty('next_start_key')) {
                 obj['next_start_key'] = ApiClient.convertToType(data['next_start_key'], 'String');
@@ -76,9 +76,15 @@ class ServiceDocsVoicemailGetAll {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ServiceDocsVoicemailGetAll</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `data`
         if (data['data']) { // data not null
-          ServiceVoicemailOutputShort.validateJSON(data['data']);
+            // ensure the json data is an array
+            if (!Array.isArray(data['data'])) {
+                throw new Error("Expected the field `data` to be an array in the JSON data but got " + data['data']);
+            }
+            // validate the optional field `data` (array)
+            for (const item of data['data']) {
+                ServiceVoicemailOutputShort.validateJSON(item);
+            };
         }
         // ensure the json data is a string
         if (data['next_start_key'] && !(typeof data['next_start_key'] === 'string' || data['next_start_key'] instanceof String)) {
@@ -102,7 +108,7 @@ class ServiceDocsVoicemailGetAll {
 
 
 /**
- * @member {module:model/ServiceVoicemailOutputShort} data
+ * @member {Array.<module:model/ServiceVoicemailOutputShort>} data
  */
 ServiceDocsVoicemailGetAll.prototype['data'] = undefined;
 

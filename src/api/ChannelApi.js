@@ -15,10 +15,10 @@
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
 import ServiceAPIResponse from '../model/ServiceAPIResponse';
-import ServiceChannelRunActionData from '../model/ServiceChannelRunActionData';
-import ServiceChannelRunMetaflowData from '../model/ServiceChannelRunMetaflowData';
-import ServiceDocsChannelGet from '../model/ServiceDocsChannelGet';
+import ServiceDocsChannelGetAll from '../model/ServiceDocsChannelGetAll';
 import ServiceDocsChannelGetSingle from '../model/ServiceDocsChannelGetSingle';
+import ServiceVOIPChannelRunActionData from '../model/ServiceVOIPChannelRunActionData';
+import ServiceVOIPChannelRunMetaflowData from '../model/ServiceVOIPChannelRunMetaflowData';
 
 /**
 * Channel service.
@@ -101,7 +101,7 @@ export default class ChannelApi {
      * Link an action, such as transfer or hangup to a channel.
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {String} channelID Channel ID
-     * @param {module:model/ServiceChannelRunActionData} reqBody payload fields
+     * @param {module:model/ServiceVOIPChannelRunActionData} reqBody payload fields
      * @param {module:api/ChannelApi~v1AccountAccountIDChannelChannelIDPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ServiceAPIResponse}
      */
@@ -155,7 +155,7 @@ export default class ChannelApi {
      * Link a metaflow to an active channel.
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {String} channelID Channel ID
-     * @param {module:model/ServiceChannelRunMetaflowData} reqBody payload fields
+     * @param {module:model/ServiceVOIPChannelRunMetaflowData} reqBody payload fields
      * @param {module:api/ChannelApi~v1AccountAccountIDChannelChannelIDPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ServiceAPIResponse}
      */
@@ -200,7 +200,7 @@ export default class ChannelApi {
      * Callback function to receive the result of the v1AccountAccountIDChannelGet operation.
      * @callback module:api/ChannelApi~v1AccountAccountIDChannelGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsChannelGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsChannelGetAll} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -209,7 +209,7 @@ export default class ChannelApi {
      * Get a list of active channels for an account.
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {module:api/ChannelApi~v1AccountAccountIDChannelGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsChannelGet}
+     * data is of type: {@link module:model/ServiceDocsChannelGetAll}
      */
     v1AccountAccountIDChannelGet(accountID, callback) {
       let postBody = null;
@@ -231,7 +231,7 @@ export default class ChannelApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsChannelGet;
+      let returnType = ServiceDocsChannelGetAll;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/channel', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -243,7 +243,7 @@ export default class ChannelApi {
      * Callback function to receive the result of the v1AccountAccountIDDeviceDeviceIDChannelGet operation.
      * @callback module:api/ChannelApi~v1AccountAccountIDDeviceDeviceIDChannelGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsChannelGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsChannelGetAll} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -253,7 +253,7 @@ export default class ChannelApi {
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {String} deviceID Device ID, 32 alpha numeric
      * @param {module:api/ChannelApi~v1AccountAccountIDDeviceDeviceIDChannelGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsChannelGet}
+     * data is of type: {@link module:model/ServiceDocsChannelGetAll}
      */
     v1AccountAccountIDDeviceDeviceIDChannelGet(accountID, deviceID, callback) {
       let postBody = null;
@@ -280,7 +280,7 @@ export default class ChannelApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsChannelGet;
+      let returnType = ServiceDocsChannelGetAll;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/device/{deviceID}/channel', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -292,7 +292,7 @@ export default class ChannelApi {
      * Callback function to receive the result of the v1AccountAccountIDUserUserIDChannelGet operation.
      * @callback module:api/ChannelApi~v1AccountAccountIDUserUserIDChannelGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsChannelGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsChannelGetAll} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -302,7 +302,7 @@ export default class ChannelApi {
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {String} userID User ID, 32 alpha numeric
      * @param {module:api/ChannelApi~v1AccountAccountIDUserUserIDChannelGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsChannelGet}
+     * data is of type: {@link module:model/ServiceDocsChannelGetAll}
      */
     v1AccountAccountIDUserUserIDChannelGet(accountID, userID, callback) {
       let postBody = null;
@@ -329,7 +329,7 @@ export default class ChannelApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsChannelGet;
+      let returnType = ServiceDocsChannelGetAll;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/user/{userID}/channel', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceVoicemailOutput from './ServiceVoicemailOutput';
+import ServiceVoicemailOutputFull from './ServiceVoicemailOutputFull';
 
 /**
  * The ServiceDocsVoicemailGetSingle model module.
@@ -49,7 +49,7 @@ class ServiceDocsVoicemailGetSingle {
             obj = obj || new ServiceDocsVoicemailGetSingle();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ServiceVoicemailOutput.constructFromObject(data['data']);
+                obj['data'] = ServiceVoicemailOutputFull.constructFromObject(data['data']);
             }
             if (data.hasOwnProperty('request_id')) {
                 obj['request_id'] = ApiClient.convertToType(data['request_id'], 'String');
@@ -69,7 +69,7 @@ class ServiceDocsVoicemailGetSingle {
     static validateJSON(data) {
         // validate the optional field `data`
         if (data['data']) { // data not null
-          ServiceVoicemailOutput.validateJSON(data['data']);
+          ServiceVoicemailOutputFull.validateJSON(data['data']);
         }
         // ensure the json data is a string
         if (data['request_id'] && !(typeof data['request_id'] === 'string' || data['request_id'] instanceof String)) {
@@ -85,7 +85,7 @@ class ServiceDocsVoicemailGetSingle {
 
 
 /**
- * @member {module:model/ServiceVoicemailOutput} data
+ * @member {module:model/ServiceVoicemailOutputFull} data
  */
 ServiceDocsVoicemailGetSingle.prototype['data'] = undefined;
 

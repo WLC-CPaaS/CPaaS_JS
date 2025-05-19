@@ -12,13 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceCallForward from './ServiceCallForward';
-import ServiceCallRecordingSettings from './ServiceCallRecordingSettings';
-import ServiceMusicOnHold from './ServiceMusicOnHold';
+import ModelsCallForward from './ModelsCallForward';
+import ModelsMusicOnHold from './ModelsMusicOnHold';
+import ModelsVOIPSharedDoNotDisturb from './ModelsVOIPSharedDoNotDisturb';
 import ServiceVOIPDeviceAddEdit3a from './ServiceVOIPDeviceAddEdit3a';
 import ServiceVOIPDeviceAddEdit3c from './ServiceVOIPDeviceAddEdit3c';
 import ServiceVOIPDeviceAddEdit3d from './ServiceVOIPDeviceAddEdit3d';
-import ServiceVOIPSharedDoNotDisturb from './ServiceVOIPSharedDoNotDisturb';
+import ServiceVOIPDeviceAddEditProvision from './ServiceVOIPDeviceAddEditProvision';
 
 /**
  * The ServiceVOIPDeviceAddEdit2 model module.
@@ -59,10 +59,7 @@ class ServiceVOIPDeviceAddEdit2 {
             obj = obj || new ServiceVOIPDeviceAddEdit2();
 
             if (data.hasOwnProperty('call_forward')) {
-                obj['call_forward'] = ServiceCallForward.constructFromObject(data['call_forward']);
-            }
-            if (data.hasOwnProperty('call_recording')) {
-                obj['call_recording'] = ServiceCallRecordingSettings.constructFromObject(data['call_recording']);
+                obj['call_forward'] = ModelsCallForward.constructFromObject(data['call_forward']);
             }
             if (data.hasOwnProperty('caller_id')) {
                 obj['caller_id'] = ServiceVOIPDeviceAddEdit3c.constructFromObject(data['caller_id']);
@@ -71,7 +68,7 @@ class ServiceVOIPDeviceAddEdit2 {
                 obj['device_type'] = ApiClient.convertToType(data['device_type'], 'String');
             }
             if (data.hasOwnProperty('do_not_disturb')) {
-                obj['do_not_disturb'] = ServiceVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
+                obj['do_not_disturb'] = ModelsVOIPSharedDoNotDisturb.constructFromObject(data['do_not_disturb']);
             }
             if (data.hasOwnProperty('enabled')) {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
@@ -83,13 +80,16 @@ class ServiceVOIPDeviceAddEdit2 {
                 obj['media'] = ServiceVOIPDeviceAddEdit3d.constructFromObject(data['media']);
             }
             if (data.hasOwnProperty('music_on_hold')) {
-                obj['music_on_hold'] = ServiceMusicOnHold.constructFromObject(data['music_on_hold']);
+                obj['music_on_hold'] = ModelsMusicOnHold.constructFromObject(data['music_on_hold']);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('owner_id')) {
                 obj['owner_id'] = ApiClient.convertToType(data['owner_id'], 'String');
+            }
+            if (data.hasOwnProperty('provision')) {
+                obj['provision'] = ServiceVOIPDeviceAddEditProvision.constructFromObject(data['provision']);
             }
             if (data.hasOwnProperty('sip')) {
                 obj['sip'] = ServiceVOIPDeviceAddEdit3a.constructFromObject(data['sip']);
@@ -112,11 +112,7 @@ class ServiceVOIPDeviceAddEdit2 {
         }
         // validate the optional field `call_forward`
         if (data['call_forward']) { // data not null
-          ServiceCallForward.validateJSON(data['call_forward']);
-        }
-        // validate the optional field `call_recording`
-        if (data['call_recording']) { // data not null
-          ServiceCallRecordingSettings.validateJSON(data['call_recording']);
+          ModelsCallForward.validateJSON(data['call_forward']);
         }
         // validate the optional field `caller_id`
         if (data['caller_id']) { // data not null
@@ -128,7 +124,7 @@ class ServiceVOIPDeviceAddEdit2 {
         }
         // validate the optional field `do_not_disturb`
         if (data['do_not_disturb']) { // data not null
-          ServiceVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
+          ModelsVOIPSharedDoNotDisturb.validateJSON(data['do_not_disturb']);
         }
         // ensure the json data is a string
         if (data['mac_address'] && !(typeof data['mac_address'] === 'string' || data['mac_address'] instanceof String)) {
@@ -140,7 +136,7 @@ class ServiceVOIPDeviceAddEdit2 {
         }
         // validate the optional field `music_on_hold`
         if (data['music_on_hold']) { // data not null
-          ServiceMusicOnHold.validateJSON(data['music_on_hold']);
+          ModelsMusicOnHold.validateJSON(data['music_on_hold']);
         }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
@@ -149,6 +145,10 @@ class ServiceVOIPDeviceAddEdit2 {
         // ensure the json data is a string
         if (data['owner_id'] && !(typeof data['owner_id'] === 'string' || data['owner_id'] instanceof String)) {
             throw new Error("Expected the field `owner_id` to be a primitive type in the JSON string but got " + data['owner_id']);
+        }
+        // validate the optional field `provision`
+        if (data['provision']) { // data not null
+          ServiceVOIPDeviceAddEditProvision.validateJSON(data['provision']);
         }
         // validate the optional field `sip`
         if (data['sip']) { // data not null
@@ -164,14 +164,9 @@ class ServiceVOIPDeviceAddEdit2 {
 ServiceVOIPDeviceAddEdit2.RequiredProperties = ["name", "sip"];
 
 /**
- * @member {module:model/ServiceCallForward} call_forward
+ * @member {module:model/ModelsCallForward} call_forward
  */
 ServiceVOIPDeviceAddEdit2.prototype['call_forward'] = undefined;
-
-/**
- * @member {module:model/ServiceCallRecordingSettings} call_recording
- */
-ServiceVOIPDeviceAddEdit2.prototype['call_recording'] = undefined;
 
 /**
  * @member {module:model/ServiceVOIPDeviceAddEdit3c} caller_id
@@ -184,7 +179,7 @@ ServiceVOIPDeviceAddEdit2.prototype['caller_id'] = undefined;
 ServiceVOIPDeviceAddEdit2.prototype['device_type'] = undefined;
 
 /**
- * @member {module:model/ServiceVOIPSharedDoNotDisturb} do_not_disturb
+ * @member {module:model/ModelsVOIPSharedDoNotDisturb} do_not_disturb
  */
 ServiceVOIPDeviceAddEdit2.prototype['do_not_disturb'] = undefined;
 
@@ -206,7 +201,7 @@ ServiceVOIPDeviceAddEdit2.prototype['mac_address'] = undefined;
 ServiceVOIPDeviceAddEdit2.prototype['media'] = undefined;
 
 /**
- * @member {module:model/ServiceMusicOnHold} music_on_hold
+ * @member {module:model/ModelsMusicOnHold} music_on_hold
  */
 ServiceVOIPDeviceAddEdit2.prototype['music_on_hold'] = undefined;
 
@@ -220,6 +215,11 @@ ServiceVOIPDeviceAddEdit2.prototype['name'] = undefined;
  * @member {String} owner_id
  */
 ServiceVOIPDeviceAddEdit2.prototype['owner_id'] = undefined;
+
+/**
+ * @member {module:model/ServiceVOIPDeviceAddEditProvision} provision
+ */
+ServiceVOIPDeviceAddEdit2.prototype['provision'] = undefined;
 
 /**
  * @member {module:model/ServiceVOIPDeviceAddEdit3a} sip
@@ -247,7 +247,13 @@ ServiceVOIPDeviceAddEdit2['DeviceTypeEnum'] = {
      * value: "sip_uri"
      * @const
      */
-    "sip_uri": "sip_uri"
+    "sip_uri": "sip_uri",
+
+    /**
+     * value: "sip_device"
+     * @const
+     */
+    "sip_device": "sip_device"
 };
 
 
