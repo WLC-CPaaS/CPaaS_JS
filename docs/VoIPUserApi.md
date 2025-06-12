@@ -1,6 +1,6 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.VoIPUserApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**v1AccountAccountidUserUseridDelete**](VoIPUserApi.md#v1AccountAccountidUserUseridDelete) | **DELETE** /v1/account/{accountid}/user/{userid} | Delete User
 [**v1AccountAccountidUserUseridGet**](VoIPUserApi.md#v1AccountAccountidUserUseridGet) | **GET** /v1/account/{accountid}/user/{userid} | Get User Details
 [**v1AccountAccountidUserUseridPut**](VoIPUserApi.md#v1AccountAccountidUserUseridPut) | **PUT** /v1/account/{accountid}/user/{userid} | Update User
+[**v1AccountAccountidUserUseridUserauthPost**](VoIPUserApi.md#v1AccountAccountidUserUseridUserauthPost) | **POST** /v1/account/{accountid}/user/{userid}/userauth | Impersonate a User
 
 
 
@@ -272,6 +273,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ServiceDocsUserGetSingle**](ServiceDocsUserGetSingle.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## v1AccountAccountidUserUseridUserauthPost
+
+> ServiceDocsImpersonateUserGetSingle v1AccountAccountidUserUseridUserauthPost(accountid, userid, user)
+
+Impersonate a User
+
+Impersonate as another user if you have access to admin.
+
+### Example
+
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.VoIPUserApi();
+let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
+let userid = "userid_example"; // String | User ID, 32 alpha numeric
+let user = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPImpersonateUser(); // ServiceVOIPImpersonateUser | Payload for impersonate a user
+apiInstance.v1AccountAccountidUserUseridUserauthPost(accountid, userid, user, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountid** | **String**| Account ID, 32 alpha numeric | 
+ **userid** | **String**| User ID, 32 alpha numeric | 
+ **user** | [**ServiceVOIPImpersonateUser**](ServiceVOIPImpersonateUser.md)| Payload for impersonate a user | 
+
+### Return type
+
+[**ServiceDocsImpersonateUserGetSingle**](ServiceDocsImpersonateUserGetSingle.md)
 
 ### Authorization
 

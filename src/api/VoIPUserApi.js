@@ -14,8 +14,10 @@
 
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
+import ServiceDocsImpersonateUserGetSingle from '../model/ServiceDocsImpersonateUserGetSingle';
 import ServiceDocsUserGetAll from '../model/ServiceDocsUserGetAll';
 import ServiceDocsUserGetSingle from '../model/ServiceDocsUserGetSingle';
+import ServiceVOIPImpersonateUser from '../model/ServiceVOIPImpersonateUser';
 import ServiceVOIPUserAdd2 from '../model/ServiceVOIPUserAdd2';
 
 /**
@@ -281,6 +283,60 @@ export default class VoIPUserApi {
       let returnType = ServiceDocsUserGetSingle;
       return this.apiClient.callApi(
         '/v1/account/{accountid}/user/{userid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountidUserUseridUserauthPost operation.
+     * @callback module:api/VoIPUserApi~v1AccountAccountidUserUseridUserauthPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ServiceDocsImpersonateUserGetSingle} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Impersonate a User
+     * Impersonate as another user if you have access to admin.
+     * @param {String} accountid Account ID, 32 alpha numeric
+     * @param {String} userid User ID, 32 alpha numeric
+     * @param {module:model/ServiceVOIPImpersonateUser} user Payload for impersonate a user
+     * @param {module:api/VoIPUserApi~v1AccountAccountidUserUseridUserauthPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ServiceDocsImpersonateUserGetSingle}
+     */
+    v1AccountAccountidUserUseridUserauthPost(accountid, userid, user, callback) {
+      let postBody = user;
+      // verify the required parameter 'accountid' is set
+      if (accountid === undefined || accountid === null) {
+        throw new Error("Missing the required parameter 'accountid' when calling v1AccountAccountidUserUseridUserauthPost");
+      }
+      // verify the required parameter 'userid' is set
+      if (userid === undefined || userid === null) {
+        throw new Error("Missing the required parameter 'userid' when calling v1AccountAccountidUserUseridUserauthPost");
+      }
+      // verify the required parameter 'user' is set
+      if (user === undefined || user === null) {
+        throw new Error("Missing the required parameter 'user' when calling v1AccountAccountidUserUseridUserauthPost");
+      }
+
+      let pathParams = {
+        'accountid': accountid,
+        'userid': userid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['BearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ServiceDocsImpersonateUserGetSingle;
+      return this.apiClient.callApi(
+        '/v1/account/{accountid}/user/{userid}/userauth', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -14,6 +14,8 @@
 
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
+import ProvisioningDocsDocsPingOutput from '../model/ProvisioningDocsDocsPingOutput';
+import ResponseProvisionError from '../model/ResponseProvisionError';
 import ServiceDocsPingGet from '../model/ServiceDocsPingGet';
 import ServiceDocsSystemStatusGetSingle from '../model/ServiceDocsSystemStatusGetSingle';
 
@@ -35,6 +37,43 @@ export default class SystemStatusApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the v1ApPingGet operation.
+     * @callback module:api/SystemStatusApi~v1ApPingGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ProvisioningDocsDocsPingOutput} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Provisioning Ping
+     * Ping the provisioning service.
+     * @param {module:api/SystemStatusApi~v1ApPingGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ProvisioningDocsDocsPingOutput}
+     */
+    v1ApPingGet(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['BearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ProvisioningDocsDocsPingOutput;
+      return this.apiClient.callApi(
+        '/v1/ap/ping', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the v1PingGet operation.

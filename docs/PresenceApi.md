@@ -1,6 +1,6 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.PresenceApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

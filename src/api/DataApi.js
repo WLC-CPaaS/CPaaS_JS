@@ -17,6 +17,8 @@ import CPAASError from '../model/CPAASError';
 import ServiceDocsCallDailySummary from '../model/ServiceDocsCallDailySummary';
 import ServiceDocsCallDetail from '../model/ServiceDocsCallDetail';
 import ServiceDocsCallMonthlySummary from '../model/ServiceDocsCallMonthlySummary';
+import ServiceDocsCdrGetAll from '../model/ServiceDocsCdrGetAll';
+import ServiceDocsCdrGetSingle from '../model/ServiceDocsCdrGetSingle';
 import ServiceDocsEndpointList from '../model/ServiceDocsEndpointList';
 import ServiceDocsEventDailySummary from '../model/ServiceDocsEventDailySummary';
 import ServiceDocsEventDetail from '../model/ServiceDocsEventDetail';
@@ -42,6 +44,108 @@ export default class DataApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountIDCdrCdrIDGet operation.
+     * @callback module:api/DataApi~v1AccountAccountIDCdrCdrIDGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ServiceDocsCdrGetSingle} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get CDR Details
+     * Retrieve the details of a single CDR record from an account.
+     * @param {String} accountID Account ID, 32 alpha numeric
+     * @param {String} cdrID CDR ID, string
+     * @param {module:api/DataApi~v1AccountAccountIDCdrCdrIDGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ServiceDocsCdrGetSingle}
+     */
+    v1AccountAccountIDCdrCdrIDGet(accountID, cdrID, callback) {
+      let postBody = null;
+      // verify the required parameter 'accountID' is set
+      if (accountID === undefined || accountID === null) {
+        throw new Error("Missing the required parameter 'accountID' when calling v1AccountAccountIDCdrCdrIDGet");
+      }
+      // verify the required parameter 'cdrID' is set
+      if (cdrID === undefined || cdrID === null) {
+        throw new Error("Missing the required parameter 'cdrID' when calling v1AccountAccountIDCdrCdrIDGet");
+      }
+
+      let pathParams = {
+        'accountID': accountID,
+        'cdrID': cdrID
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['BearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ServiceDocsCdrGetSingle;
+      return this.apiClient.callApi(
+        '/v1/account/{accountID}/cdr/{cdrID}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountIDCdrGet operation.
+     * @callback module:api/DataApi~v1AccountAccountIDCdrGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ServiceDocsCdrGetAll} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get CDR List
+     * Retrieve a list of CDRs in a specific account.
+     * @param {String} accountID Account ID, 32 alpha numeric
+     * @param {Object} opts Optional parameters
+     * @param {String} [pageSize] Page size (Maximum number of results to display per page)
+     * @param {String} [startKey] Start key (Starting offset for displaying results)
+     * @param {String} [createdFrom] For displaying records which are created on or after this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds)
+     * @param {String} [createdTo] For displaying records which are created on or before this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds)
+     * @param {module:api/DataApi~v1AccountAccountIDCdrGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ServiceDocsCdrGetAll}
+     */
+    v1AccountAccountIDCdrGet(accountID, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'accountID' is set
+      if (accountID === undefined || accountID === null) {
+        throw new Error("Missing the required parameter 'accountID' when calling v1AccountAccountIDCdrGet");
+      }
+
+      let pathParams = {
+        'accountID': accountID
+      };
+      let queryParams = {
+        'page_size': opts['pageSize'],
+        'start_key': opts['startKey'],
+        'created_from': opts['createdFrom'],
+        'created_to': opts['createdTo']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['BearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ServiceDocsCdrGetAll;
+      return this.apiClient.callApi(
+        '/v1/account/{accountID}/cdr', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the v1DataCallDailySummaryGet operation.

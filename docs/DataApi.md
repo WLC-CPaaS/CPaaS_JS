@@ -1,9 +1,11 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.DataApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v1AccountAccountIDCdrCdrIDGet**](DataApi.md#v1AccountAccountIDCdrCdrIDGet) | **GET** /v1/account/{accountID}/cdr/{cdrID} | Get CDR Details
+[**v1AccountAccountIDCdrGet**](DataApi.md#v1AccountAccountIDCdrGet) | **GET** /v1/account/{accountID}/cdr | Get CDR List
 [**v1DataCallDailySummaryGet**](DataApi.md#v1DataCallDailySummaryGet) | **GET** /v1/data/call_daily_summary | Get Call Daily Summary List
 [**v1DataCallDetailGet**](DataApi.md#v1DataCallDetailGet) | **GET** /v1/data/call_detail | Get Call Detail List
 [**v1DataCallMonthlySummaryGet**](DataApi.md#v1DataCallMonthlySummaryGet) | **GET** /v1/data/call_monthly_summary | Get Call Detail List
@@ -14,6 +16,120 @@ Method | HTTP request | Description
 [**v1DataFeatureDailySummaryGet**](DataApi.md#v1DataFeatureDailySummaryGet) | **GET** /v1/data/feature_daily_summary | Get Feature Daily Summary List
 [**v1DataFeatureMonthlySummaryGet**](DataApi.md#v1DataFeatureMonthlySummaryGet) | **GET** /v1/data/feature_monthly_summary | Get Feature Monthly Summary List
 
+
+
+## v1AccountAccountIDCdrCdrIDGet
+
+> ServiceDocsCdrGetSingle v1AccountAccountIDCdrCdrIDGet(accountID, cdrID)
+
+Get CDR Details
+
+Retrieve the details of a single CDR record from an account.
+
+### Example
+
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let cdrID = "cdrID_example"; // String | CDR ID, string
+apiInstance.v1AccountAccountIDCdrCdrIDGet(accountID, cdrID, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **cdrID** | **String**| CDR ID, string | 
+
+### Return type
+
+[**ServiceDocsCdrGetSingle**](ServiceDocsCdrGetSingle.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## v1AccountAccountIDCdrGet
+
+> ServiceDocsCdrGetAll v1AccountAccountIDCdrGet(accountID, opts)
+
+Get CDR List
+
+Retrieve a list of CDRs in a specific account.
+
+### Example
+
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
+let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
+let opts = {
+  'pageSize': "pageSize_example", // String | Page size (Maximum number of results to display per page)
+  'startKey': "startKey_example", // String | Start key (Starting offset for displaying results)
+  'createdFrom': "createdFrom_example", // String | For displaying records which are created on or after this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds)
+  'createdTo': "createdTo_example" // String | For displaying records which are created on or before this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds)
+};
+apiInstance.v1AccountAccountIDCdrGet(accountID, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountID** | **String**| Account ID, 32 alpha numeric | 
+ **pageSize** | **String**| Page size (Maximum number of results to display per page) | [optional] 
+ **startKey** | **String**| Start key (Starting offset for displaying results) | [optional] 
+ **createdFrom** | **String**| For displaying records which are created on or after this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds) | [optional] 
+ **createdTo** | **String**| For displaying records which are created on or before this timestamp (Supported timestamp formats: iso 8601, unix time in seconds or milliseconds or microseconds or nanoseconds) | [optional] 
+
+### Return type
+
+[**ServiceDocsCdrGetAll**](ServiceDocsCdrGetAll.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## v1DataCallDailySummaryGet

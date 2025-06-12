@@ -17,6 +17,7 @@ import CPAASError from '../model/CPAASError';
 import ServiceDocsDeviceGetAll from '../model/ServiceDocsDeviceGetAll';
 import ServiceDocsDeviceGetSingle from '../model/ServiceDocsDeviceGetSingle';
 import ServiceDocsDeviceReboot from '../model/ServiceDocsDeviceReboot';
+import ServiceDocsDeviceStatus from '../model/ServiceDocsDeviceStatus';
 import ServiceVOIPDeviceAddEdit2 from '../model/ServiceVOIPDeviceAddEdit2';
 
 /**
@@ -200,7 +201,7 @@ export default class DeviceApi {
 
     /**
      * Reboot Device
-     * Reboot one device from a CPaaS account.
+     * Reboot a device in an account to mitigate malware and improve device performance.
      * @param {String} accountid Account ID, 32 alpha numeric
      * @param {String} deviceid Device ID, 32 alpha numeric
      * @param {module:api/DeviceApi~v1AccountAccountidDeviceDeviceidRebootPostCallback} callback The callback function, accepting three arguments: error, data, response
@@ -331,6 +332,49 @@ export default class DeviceApi {
       let returnType = ServiceDocsDeviceGetSingle;
       return this.apiClient.callApi(
         '/v1/account/{accountid}/device', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountidDeviceStatusGet operation.
+     * @callback module:api/DeviceApi~v1AccountAccountidDeviceStatusGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ServiceDocsDeviceStatus} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Device Status
+     * Retrieve a device’s status (e.g., registered or not registered) in an account.
+     * @param {String} accountid Account ID, 32 alpha numeric
+     * @param {module:api/DeviceApi~v1AccountAccountidDeviceStatusGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ServiceDocsDeviceStatus}
+     */
+    v1AccountAccountidDeviceStatusGet(accountid, callback) {
+      let postBody = null;
+      // verify the required parameter 'accountid' is set
+      if (accountid === undefined || accountid === null) {
+        throw new Error("Missing the required parameter 'accountid' when calling v1AccountAccountidDeviceStatusGet");
+      }
+
+      let pathParams = {
+        'accountid': accountid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['BearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ServiceDocsDeviceStatus;
+      return this.apiClient.callApi(
+        '/v1/account/{accountid}/device/status', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -35,10 +35,12 @@ import ModelsAccountOutputFull from './model/ModelsAccountOutputFull';
 import ModelsAccountOutputFullCalleridEmergency from './model/ModelsAccountOutputFullCalleridEmergency';
 import ModelsAccountOutputFullCalleridExternal from './model/ModelsAccountOutputFullCalleridExternal';
 import ModelsAccountOutputFullCalleridInternal from './model/ModelsAccountOutputFullCalleridInternal';
+import ModelsBrand from './model/ModelsBrand';
 import ModelsCallForward from './model/ModelsCallForward';
 import ModelsCallRecordingParameters from './model/ModelsCallRecordingParameters';
 import ModelsCallRecordingSettings from './model/ModelsCallRecordingSettings';
 import ModelsCallRecordingSource from './model/ModelsCallRecordingSource';
+import ModelsConfigFileParameter from './model/ModelsConfigFileParameter';
 import ModelsDeviceOutputFull from './model/ModelsDeviceOutputFull';
 import ModelsDeviceOutputFullCallerid from './model/ModelsDeviceOutputFullCallerid';
 import ModelsDeviceOutputFullCalleridEmergency from './model/ModelsDeviceOutputFullCalleridEmergency';
@@ -48,7 +50,11 @@ import ModelsDeviceOutputFullMedia from './model/ModelsDeviceOutputFullMedia';
 import ModelsDeviceOutputFullMediaAudio from './model/ModelsDeviceOutputFullMediaAudio';
 import ModelsDeviceOutputFullProvision from './model/ModelsDeviceOutputFullProvision';
 import ModelsDeviceOutputFullSIP from './model/ModelsDeviceOutputFullSIP';
+import ModelsFamily from './model/ModelsFamily';
+import ModelsGenerateConfigFileRequest from './model/ModelsGenerateConfigFileRequest';
+import ModelsModel from './model/ModelsModel';
 import ModelsMusicOnHold from './model/ModelsMusicOnHold';
+import ModelsTemplate from './model/ModelsTemplate';
 import ModelsUserOutputFull from './model/ModelsUserOutputFull';
 import ModelsUserOutputFullCallerid from './model/ModelsUserOutputFullCallerid';
 import ModelsUserOutputFullCalleridEmergency from './model/ModelsUserOutputFullCalleridEmergency';
@@ -57,7 +63,19 @@ import ModelsUserOutputFullCalleridInternal from './model/ModelsUserOutputFullCa
 import ModelsVOIPAccountMusicOnHold from './model/ModelsVOIPAccountMusicOnHold';
 import ModelsVOIPAccountOutputFullCallerid from './model/ModelsVOIPAccountOutputFullCallerid';
 import ModelsVOIPSharedDoNotDisturb from './model/ModelsVOIPSharedDoNotDisturb';
+import ProvisioningDocsDocsBrandOutputSingle from './model/ProvisioningDocsDocsBrandOutputSingle';
+import ProvisioningDocsDocsBrandsOutput from './model/ProvisioningDocsDocsBrandsOutput';
+import ProvisioningDocsDocsConfigFileOutput from './model/ProvisioningDocsDocsConfigFileOutput';
+import ProvisioningDocsDocsFamilyOutput from './model/ProvisioningDocsDocsFamilyOutput';
+import ProvisioningDocsDocsFamilyOutputSingle from './model/ProvisioningDocsDocsFamilyOutputSingle';
+import ProvisioningDocsDocsModelOutput from './model/ProvisioningDocsDocsModelOutput';
+import ProvisioningDocsDocsModelOutputSingle from './model/ProvisioningDocsDocsModelOutputSingle';
+import ProvisioningDocsDocsPingOutput from './model/ProvisioningDocsDocsPingOutput';
+import ProvisioningDocsDocsPingOutputData from './model/ProvisioningDocsDocsPingOutputData';
+import ProvisioningDocsDocsTemplateOutputSingle from './model/ProvisioningDocsDocsTemplateOutputSingle';
+import ProvisioningDocsDocsTemplatesOutput from './model/ProvisioningDocsDocsTemplatesOutput';
 import RepositoryLocationsResponse from './model/RepositoryLocationsResponse';
+import ResponseProvisionError from './model/ResponseProvisionError';
 import ServiceAPIKey from './model/ServiceAPIKey';
 import ServiceAPIResponse from './model/ServiceAPIResponse';
 import ServiceAPIResponseStatusCodeOnly from './model/ServiceAPIResponseStatusCodeOnly';
@@ -85,6 +103,7 @@ import ServiceCampaignTagDetagPhonenumbersOutput from './model/ServiceCampaignTa
 import ServiceCdrOutputShort from './model/ServiceCdrOutputShort';
 import ServiceChannelOutput from './model/ServiceChannelOutput';
 import ServiceDeviceOutputShort from './model/ServiceDeviceOutputShort';
+import ServiceDeviceStatusOutput from './model/ServiceDeviceStatusOutput';
 import ServiceDocE911ActiveLocationOutput from './model/ServiceDocE911ActiveLocationOutput';
 import ServiceDocE911ActiveLocationURIApiOutput from './model/ServiceDocE911ActiveLocationURIApiOutput';
 import ServiceDocE911AddLocationOutput from './model/ServiceDocE911AddLocationOutput';
@@ -95,7 +114,6 @@ import ServiceDocE911URIsApiOutput from './model/ServiceDocE911URIsApiOutput';
 import ServiceDocE911ValidateLocationOutput from './model/ServiceDocE911ValidateLocationOutput';
 import ServiceDocGroupGetAll from './model/ServiceDocGroupGetAll';
 import ServiceDocGroupGetSingle from './model/ServiceDocGroupGetSingle';
-import ServiceDocMetaflowGet from './model/ServiceDocMetaflowGet';
 import ServiceDocsAccountAPIKey from './model/ServiceDocsAccountAPIKey';
 import ServiceDocsAccountGetAll from './model/ServiceDocsAccountGetAll';
 import ServiceDocsAccountGetSingle from './model/ServiceDocsAccountGetSingle';
@@ -129,6 +147,7 @@ import ServiceDocsChannelGetSingle from './model/ServiceDocsChannelGetSingle';
 import ServiceDocsDeviceGetAll from './model/ServiceDocsDeviceGetAll';
 import ServiceDocsDeviceGetSingle from './model/ServiceDocsDeviceGetSingle';
 import ServiceDocsDeviceReboot from './model/ServiceDocsDeviceReboot';
+import ServiceDocsDeviceStatus from './model/ServiceDocsDeviceStatus';
 import ServiceDocsEndpointList from './model/ServiceDocsEndpointList';
 import ServiceDocsEventDailySummary from './model/ServiceDocsEventDailySummary';
 import ServiceDocsEventDetail from './model/ServiceDocsEventDetail';
@@ -136,8 +155,10 @@ import ServiceDocsEventMonthlySummary from './model/ServiceDocsEventMonthlySumma
 import ServiceDocsFeatureDailySummary from './model/ServiceDocsFeatureDailySummary';
 import ServiceDocsFeatureMonthlySummary from './model/ServiceDocsFeatureMonthlySummary';
 import ServiceDocsGetQueueRecipients from './model/ServiceDocsGetQueueRecipients';
+import ServiceDocsImpersonateUserGetSingle from './model/ServiceDocsImpersonateUserGetSingle';
 import ServiceDocsMediaGetAll from './model/ServiceDocsMediaGetAll';
 import ServiceDocsMediaGetSingle from './model/ServiceDocsMediaGetSingle';
+import ServiceDocsMetaflowGet from './model/ServiceDocsMetaflowGet';
 import ServiceDocsOrderPhonenumber from './model/ServiceDocsOrderPhonenumber';
 import ServiceDocsParkedcallGet from './model/ServiceDocsParkedcallGet';
 import ServiceDocsPhonenumberAssignPayload from './model/ServiceDocsPhonenumberAssignPayload';
@@ -180,6 +201,8 @@ import ServiceEndpoint from './model/ServiceEndpoint';
 import ServiceFeatureCode from './model/ServiceFeatureCode';
 import ServiceGroupOutputFull from './model/ServiceGroupOutputFull';
 import ServiceGroupOutputShort from './model/ServiceGroupOutputShort';
+import ServiceImpersonateUserOutputFull from './model/ServiceImpersonateUserOutputFull';
+import ServiceImpersonatedUserInfo from './model/ServiceImpersonatedUserInfo';
 import ServiceMediaOutputFull from './model/ServiceMediaOutputFull';
 import ServiceMediaOutputShort from './model/ServiceMediaOutputShort';
 import ServiceMetaflowOutput from './model/ServiceMetaflowOutput';
@@ -230,6 +253,7 @@ import ServiceVOIPDeviceAddEdit4 from './model/ServiceVOIPDeviceAddEdit4';
 import ServiceVOIPDeviceAddEdit5 from './model/ServiceVOIPDeviceAddEdit5';
 import ServiceVOIPDeviceAddEditProvision from './model/ServiceVOIPDeviceAddEditProvision';
 import ServiceVOIPGroupAddEdit2 from './model/ServiceVOIPGroupAddEdit2';
+import ServiceVOIPImpersonateUser from './model/ServiceVOIPImpersonateUser';
 import ServiceVOIPMediaAddEditData from './model/ServiceVOIPMediaAddEditData';
 import ServiceVOIPMetaflowAddData from './model/ServiceVOIPMetaflowAddData';
 import ServiceVOIPPresenceSetResetEditData from './model/ServiceVOIPPresenceSetResetEditData';
@@ -256,7 +280,6 @@ import CallQueueMembershipApi from './api/CallQueueMembershipApi';
 import CallQueueRecipientApi from './api/CallQueueRecipientApi';
 import CallRecordingApi from './api/CallRecordingApi';
 import CallflowApi from './api/CallflowApi';
-import CdrApi from './api/CdrApi';
 import ChannelApi from './api/ChannelApi';
 import DataApi from './api/DataApi';
 import DeviceApi from './api/DeviceApi';
@@ -267,6 +290,8 @@ import MenuApi from './api/MenuApi';
 import MetaflowApi from './api/MetaflowApi';
 import PhoneNumberApi from './api/PhoneNumberApi';
 import PresenceApi from './api/PresenceApi';
+import ProvisionApi from './api/ProvisionApi';
+import ProvisioningApi from './api/ProvisioningApi';
 import SMSApi from './api/SMSApi';
 import StorageApi from './api/StorageApi';
 import SystemStatusApi from './api/SystemStatusApi';
@@ -448,6 +473,12 @@ export {
     ModelsAccountOutputFullCalleridInternal,
 
     /**
+     * The ModelsBrand model constructor.
+     * @property {module:model/ModelsBrand}
+     */
+    ModelsBrand,
+
+    /**
      * The ModelsCallForward model constructor.
      * @property {module:model/ModelsCallForward}
      */
@@ -470,6 +501,12 @@ export {
      * @property {module:model/ModelsCallRecordingSource}
      */
     ModelsCallRecordingSource,
+
+    /**
+     * The ModelsConfigFileParameter model constructor.
+     * @property {module:model/ModelsConfigFileParameter}
+     */
+    ModelsConfigFileParameter,
 
     /**
      * The ModelsDeviceOutputFull model constructor.
@@ -526,10 +563,34 @@ export {
     ModelsDeviceOutputFullSIP,
 
     /**
+     * The ModelsFamily model constructor.
+     * @property {module:model/ModelsFamily}
+     */
+    ModelsFamily,
+
+    /**
+     * The ModelsGenerateConfigFileRequest model constructor.
+     * @property {module:model/ModelsGenerateConfigFileRequest}
+     */
+    ModelsGenerateConfigFileRequest,
+
+    /**
+     * The ModelsModel model constructor.
+     * @property {module:model/ModelsModel}
+     */
+    ModelsModel,
+
+    /**
      * The ModelsMusicOnHold model constructor.
      * @property {module:model/ModelsMusicOnHold}
      */
     ModelsMusicOnHold,
+
+    /**
+     * The ModelsTemplate model constructor.
+     * @property {module:model/ModelsTemplate}
+     */
+    ModelsTemplate,
 
     /**
      * The ModelsUserOutputFull model constructor.
@@ -580,10 +641,82 @@ export {
     ModelsVOIPSharedDoNotDisturb,
 
     /**
+     * The ProvisioningDocsDocsBrandOutputSingle model constructor.
+     * @property {module:model/ProvisioningDocsDocsBrandOutputSingle}
+     */
+    ProvisioningDocsDocsBrandOutputSingle,
+
+    /**
+     * The ProvisioningDocsDocsBrandsOutput model constructor.
+     * @property {module:model/ProvisioningDocsDocsBrandsOutput}
+     */
+    ProvisioningDocsDocsBrandsOutput,
+
+    /**
+     * The ProvisioningDocsDocsConfigFileOutput model constructor.
+     * @property {module:model/ProvisioningDocsDocsConfigFileOutput}
+     */
+    ProvisioningDocsDocsConfigFileOutput,
+
+    /**
+     * The ProvisioningDocsDocsFamilyOutput model constructor.
+     * @property {module:model/ProvisioningDocsDocsFamilyOutput}
+     */
+    ProvisioningDocsDocsFamilyOutput,
+
+    /**
+     * The ProvisioningDocsDocsFamilyOutputSingle model constructor.
+     * @property {module:model/ProvisioningDocsDocsFamilyOutputSingle}
+     */
+    ProvisioningDocsDocsFamilyOutputSingle,
+
+    /**
+     * The ProvisioningDocsDocsModelOutput model constructor.
+     * @property {module:model/ProvisioningDocsDocsModelOutput}
+     */
+    ProvisioningDocsDocsModelOutput,
+
+    /**
+     * The ProvisioningDocsDocsModelOutputSingle model constructor.
+     * @property {module:model/ProvisioningDocsDocsModelOutputSingle}
+     */
+    ProvisioningDocsDocsModelOutputSingle,
+
+    /**
+     * The ProvisioningDocsDocsPingOutput model constructor.
+     * @property {module:model/ProvisioningDocsDocsPingOutput}
+     */
+    ProvisioningDocsDocsPingOutput,
+
+    /**
+     * The ProvisioningDocsDocsPingOutputData model constructor.
+     * @property {module:model/ProvisioningDocsDocsPingOutputData}
+     */
+    ProvisioningDocsDocsPingOutputData,
+
+    /**
+     * The ProvisioningDocsDocsTemplateOutputSingle model constructor.
+     * @property {module:model/ProvisioningDocsDocsTemplateOutputSingle}
+     */
+    ProvisioningDocsDocsTemplateOutputSingle,
+
+    /**
+     * The ProvisioningDocsDocsTemplatesOutput model constructor.
+     * @property {module:model/ProvisioningDocsDocsTemplatesOutput}
+     */
+    ProvisioningDocsDocsTemplatesOutput,
+
+    /**
      * The RepositoryLocationsResponse model constructor.
      * @property {module:model/RepositoryLocationsResponse}
      */
     RepositoryLocationsResponse,
+
+    /**
+     * The ResponseProvisionError model constructor.
+     * @property {module:model/ResponseProvisionError}
+     */
+    ResponseProvisionError,
 
     /**
      * The ServiceAPIKey model constructor.
@@ -748,6 +881,12 @@ export {
     ServiceDeviceOutputShort,
 
     /**
+     * The ServiceDeviceStatusOutput model constructor.
+     * @property {module:model/ServiceDeviceStatusOutput}
+     */
+    ServiceDeviceStatusOutput,
+
+    /**
      * The ServiceDocE911ActiveLocationOutput model constructor.
      * @property {module:model/ServiceDocE911ActiveLocationOutput}
      */
@@ -806,12 +945,6 @@ export {
      * @property {module:model/ServiceDocGroupGetSingle}
      */
     ServiceDocGroupGetSingle,
-
-    /**
-     * The ServiceDocMetaflowGet model constructor.
-     * @property {module:model/ServiceDocMetaflowGet}
-     */
-    ServiceDocMetaflowGet,
 
     /**
      * The ServiceDocsAccountAPIKey model constructor.
@@ -1012,6 +1145,12 @@ export {
     ServiceDocsDeviceReboot,
 
     /**
+     * The ServiceDocsDeviceStatus model constructor.
+     * @property {module:model/ServiceDocsDeviceStatus}
+     */
+    ServiceDocsDeviceStatus,
+
+    /**
      * The ServiceDocsEndpointList model constructor.
      * @property {module:model/ServiceDocsEndpointList}
      */
@@ -1054,6 +1193,12 @@ export {
     ServiceDocsGetQueueRecipients,
 
     /**
+     * The ServiceDocsImpersonateUserGetSingle model constructor.
+     * @property {module:model/ServiceDocsImpersonateUserGetSingle}
+     */
+    ServiceDocsImpersonateUserGetSingle,
+
+    /**
      * The ServiceDocsMediaGetAll model constructor.
      * @property {module:model/ServiceDocsMediaGetAll}
      */
@@ -1064,6 +1209,12 @@ export {
      * @property {module:model/ServiceDocsMediaGetSingle}
      */
     ServiceDocsMediaGetSingle,
+
+    /**
+     * The ServiceDocsMetaflowGet model constructor.
+     * @property {module:model/ServiceDocsMetaflowGet}
+     */
+    ServiceDocsMetaflowGet,
 
     /**
      * The ServiceDocsOrderPhonenumber model constructor.
@@ -1316,6 +1467,18 @@ export {
      * @property {module:model/ServiceGroupOutputShort}
      */
     ServiceGroupOutputShort,
+
+    /**
+     * The ServiceImpersonateUserOutputFull model constructor.
+     * @property {module:model/ServiceImpersonateUserOutputFull}
+     */
+    ServiceImpersonateUserOutputFull,
+
+    /**
+     * The ServiceImpersonatedUserInfo model constructor.
+     * @property {module:model/ServiceImpersonatedUserInfo}
+     */
+    ServiceImpersonatedUserInfo,
 
     /**
      * The ServiceMediaOutputFull model constructor.
@@ -1618,6 +1781,12 @@ export {
     ServiceVOIPGroupAddEdit2,
 
     /**
+     * The ServiceVOIPImpersonateUser model constructor.
+     * @property {module:model/ServiceVOIPImpersonateUser}
+     */
+    ServiceVOIPImpersonateUser,
+
+    /**
      * The ServiceVOIPMediaAddEditData model constructor.
      * @property {module:model/ServiceVOIPMediaAddEditData}
      */
@@ -1774,12 +1943,6 @@ export {
     CallflowApi,
 
     /**
-    * The CdrApi service constructor.
-    * @property {module:api/CdrApi}
-    */
-    CdrApi,
-
-    /**
     * The ChannelApi service constructor.
     * @property {module:api/ChannelApi}
     */
@@ -1838,6 +2001,18 @@ export {
     * @property {module:api/PresenceApi}
     */
     PresenceApi,
+
+    /**
+    * The ProvisionApi service constructor.
+    * @property {module:api/ProvisionApi}
+    */
+    ProvisionApi,
+
+    /**
+    * The ProvisioningApi service constructor.
+    * @property {module:api/ProvisioningApi}
+    */
+    ProvisioningApi,
 
     /**
     * The SMSApi service constructor.

@@ -1,13 +1,61 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.SystemStatusApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**v1ApPingGet**](SystemStatusApi.md#v1ApPingGet) | **GET** /v1/ap/ping | Provisioning Ping
 [**v1PingGet**](SystemStatusApi.md#v1PingGet) | **GET** /v1/ping | Ping Backend
 [**v1PingseccognitoGet**](SystemStatusApi.md#v1PingseccognitoGet) | **GET** /v1/pingseccognito | Ping Cognito
 [**v1SystemStatusGet**](SystemStatusApi.md#v1SystemStatusGet) | **GET** /v1/system_status | Get System Status
 
+
+
+## v1ApPingGet
+
+> ProvisioningDocsDocsPingOutput v1ApPingGet()
+
+Provisioning Ping
+
+Ping the provisioning service.
+
+### Example
+
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.SystemStatusApi();
+apiInstance.v1ApPingGet((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ProvisioningDocsDocsPingOutput**](ProvisioningDocsDocsPingOutput.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## v1PingGet

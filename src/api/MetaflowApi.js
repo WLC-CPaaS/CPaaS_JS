@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
-import ServiceDocMetaflowGet from '../model/ServiceDocMetaflowGet';
+import ServiceDocsMetaflowGet from '../model/ServiceDocsMetaflowGet';
 import ServiceVOIPMetaflowAddData from '../model/ServiceVOIPMetaflowAddData';
 
 /**
@@ -40,7 +40,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDDeviceDeviceIDMetaflowDelete operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDDeviceDeviceIDMetaflowDeleteCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -50,7 +50,7 @@ export default class MetaflowApi {
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {String} deviceID Device ID, 32 alpha numeric
      * @param {module:api/MetaflowApi~v1AccountAccountIDDeviceDeviceIDMetaflowDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDDeviceDeviceIDMetaflowDelete(accountID, deviceID, callback) {
       let postBody = null;
@@ -77,7 +77,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/device/{deviceID}/metaflow', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -89,7 +89,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDDeviceDeviceIDMetaflowGet operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDDeviceDeviceIDMetaflowGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -99,7 +99,7 @@ export default class MetaflowApi {
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {String} deviceID Device ID, 32 alpha numeric
      * @param {module:api/MetaflowApi~v1AccountAccountIDDeviceDeviceIDMetaflowGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDDeviceDeviceIDMetaflowGet(accountID, deviceID, callback) {
       let postBody = null;
@@ -126,7 +126,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/device/{deviceID}/metaflow', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -138,7 +138,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDDeviceDeviceIDMetaflowPost operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDDeviceDeviceIDMetaflowPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -149,7 +149,7 @@ export default class MetaflowApi {
      * @param {String} deviceID Device ID, 32 alpha numeric
      * @param {module:model/ServiceVOIPMetaflowAddData} reqBody payload fields
      * @param {module:api/MetaflowApi~v1AccountAccountIDDeviceDeviceIDMetaflowPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDDeviceDeviceIDMetaflowPost(accountID, deviceID, reqBody, callback) {
       let postBody = reqBody;
@@ -180,7 +180,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/device/{deviceID}/metaflow', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -192,7 +192,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDMetaflowDelete operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDMetaflowDeleteCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -201,7 +201,7 @@ export default class MetaflowApi {
      * Remove all metaflows from an account.
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {module:api/MetaflowApi~v1AccountAccountIDMetaflowDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDMetaflowDelete(accountID, callback) {
       let postBody = null;
@@ -223,7 +223,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/metaflow', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -235,7 +235,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDMetaflowGet operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDMetaflowGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -244,7 +244,7 @@ export default class MetaflowApi {
      * Get an account's metaflow list.
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {module:api/MetaflowApi~v1AccountAccountIDMetaflowGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDMetaflowGet(accountID, callback) {
       let postBody = null;
@@ -266,7 +266,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/metaflow', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -278,7 +278,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDMetaflowPost operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDMetaflowPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -288,7 +288,7 @@ export default class MetaflowApi {
      * @param {String} accountID Account ID
      * @param {module:model/ServiceVOIPMetaflowAddData} metaflow Metaflow fields
      * @param {module:api/MetaflowApi~v1AccountAccountIDMetaflowPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDMetaflowPost(accountID, metaflow, callback) {
       let postBody = metaflow;
@@ -314,7 +314,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/metaflow', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -326,7 +326,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDUserUserIDMetaflowDelete operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDUserUserIDMetaflowDeleteCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -336,7 +336,7 @@ export default class MetaflowApi {
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {String} userID user ID, 32 alpha numeric
      * @param {module:api/MetaflowApi~v1AccountAccountIDUserUserIDMetaflowDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDUserUserIDMetaflowDelete(accountID, userID, callback) {
       let postBody = null;
@@ -363,7 +363,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/user/{userID}/metaflow', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -375,7 +375,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDUserUserIDMetaflowGet operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDUserUserIDMetaflowGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -385,7 +385,7 @@ export default class MetaflowApi {
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {String} userID user ID, 32 alpha numeric
      * @param {module:api/MetaflowApi~v1AccountAccountIDUserUserIDMetaflowGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDUserUserIDMetaflowGet(accountID, userID, callback) {
       let postBody = null;
@@ -412,7 +412,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/user/{userID}/metaflow', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -424,7 +424,7 @@ export default class MetaflowApi {
      * Callback function to receive the result of the v1AccountAccountIDUserUserIDMetaflowPost operation.
      * @callback module:api/MetaflowApi~v1AccountAccountIDUserUserIDMetaflowPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocMetaflowGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsMetaflowGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -435,7 +435,7 @@ export default class MetaflowApi {
      * @param {String} userID user ID, 32 alpha numeric
      * @param {module:model/ServiceVOIPMetaflowAddData} reqBody payload fields
      * @param {module:api/MetaflowApi~v1AccountAccountIDUserUserIDMetaflowPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocMetaflowGet}
+     * data is of type: {@link module:model/ServiceDocsMetaflowGet}
      */
     v1AccountAccountIDUserUserIDMetaflowPost(accountID, userID, reqBody, callback) {
       let postBody = reqBody;
@@ -466,7 +466,7 @@ export default class MetaflowApi {
       let authNames = ['BearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ServiceDocMetaflowGet;
+      let returnType = ServiceDocsMetaflowGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/user/{userID}/metaflow', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

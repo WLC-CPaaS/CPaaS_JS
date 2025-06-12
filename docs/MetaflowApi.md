@@ -1,6 +1,6 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.MetaflowApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## v1AccountAccountIDDeviceDeviceIDMetaflowDelete
 
-> ServiceDocMetaflowGet v1AccountAccountIDDeviceDeviceIDMetaflowDelete(accountID, deviceID)
+> ServiceDocsMetaflowGet v1AccountAccountIDDeviceDeviceIDMetaflowDelete(accountID, deviceID)
 
 Delete Device Metaflow
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDDeviceDeviceIDMetaflowGet
 
-> ServiceDocMetaflowGet v1AccountAccountIDDeviceDeviceIDMetaflowGet(accountID, deviceID)
+> ServiceDocsMetaflowGet v1AccountAccountIDDeviceDeviceIDMetaflowGet(accountID, deviceID)
 
 Get Device Metaflow List
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDDeviceDeviceIDMetaflowPost
 
-> ServiceDocMetaflowGet v1AccountAccountIDDeviceDeviceIDMetaflowPost(accountID, deviceID, reqBody)
+> ServiceDocsMetaflowGet v1AccountAccountIDDeviceDeviceIDMetaflowPost(accountID, deviceID, reqBody)
 
 Create Device Metaflow
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDMetaflowDelete
 
-> ServiceDocMetaflowGet v1AccountAccountIDMetaflowDelete(accountID)
+> ServiceDocsMetaflowGet v1AccountAccountIDMetaflowDelete(accountID)
 
 Delete Account Metaflow
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDMetaflowGet
 
-> ServiceDocMetaflowGet v1AccountAccountIDMetaflowGet(accountID)
+> ServiceDocsMetaflowGet v1AccountAccountIDMetaflowGet(accountID)
 
 Get Account Metaflow List
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDMetaflowPost
 
-> ServiceDocMetaflowGet v1AccountAccountIDMetaflowPost(accountID, metaflow)
+> ServiceDocsMetaflowGet v1AccountAccountIDMetaflowPost(accountID, metaflow)
 
 Create Account Metaflow
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDUserUserIDMetaflowDelete
 
-> ServiceDocMetaflowGet v1AccountAccountIDUserUserIDMetaflowDelete(accountID, userID)
+> ServiceDocsMetaflowGet v1AccountAccountIDUserUserIDMetaflowDelete(accountID, userID)
 
 Delete User Metaflow
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDUserUserIDMetaflowGet
 
-> ServiceDocMetaflowGet v1AccountAccountIDUserUserIDMetaflowGet(accountID, userID)
+> ServiceDocsMetaflowGet v1AccountAccountIDUserUserIDMetaflowGet(accountID, userID)
 
 Get User Metaflow List
 
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 ## v1AccountAccountIDUserUserIDMetaflowPost
 
-> ServiceDocMetaflowGet v1AccountAccountIDUserUserIDMetaflowPost(accountID, userID, reqBody)
+> ServiceDocsMetaflowGet v1AccountAccountIDUserUserIDMetaflowPost(accountID, userID, reqBody)
 
 Create User Metaflow
 
@@ -481,7 +481,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocMetaflowGet**](ServiceDocMetaflowGet.md)
+[**ServiceDocsMetaflowGet**](ServiceDocsMetaflowGet.md)
 
 ### Authorization
 

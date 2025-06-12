@@ -1,6 +1,6 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.DeviceApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**v1AccountAccountidDeviceDeviceidRebootPost**](DeviceApi.md#v1AccountAccountidDeviceDeviceidRebootPost) | **POST** /v1/account/{accountid}/device/{deviceid}/reboot | Reboot Device
 [**v1AccountAccountidDeviceGet**](DeviceApi.md#v1AccountAccountidDeviceGet) | **GET** /v1/account/{accountid}/device | Get Device List
 [**v1AccountAccountidDevicePost**](DeviceApi.md#v1AccountAccountidDevicePost) | **POST** /v1/account/{accountid}/device | Create Device
+[**v1AccountAccountidDeviceStatusGet**](DeviceApi.md#v1AccountAccountidDeviceStatusGet) | **GET** /v1/account/{accountid}/device/status | Get Device Status
 
 
 
@@ -180,7 +181,7 @@ Name | Type | Description  | Notes
 
 Reboot Device
 
-Reboot one device from a CPaaS account.
+Reboot a device in an account to mitigate malware and improve device performance.
 
 ### Example
 
@@ -334,5 +335,56 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## v1AccountAccountidDeviceStatusGet
+
+> ServiceDocsDeviceStatus v1AccountAccountidDeviceStatusGet(accountid)
+
+Get Device Status
+
+Retrieve a device’s status (e.g., registered or not registered) in an account.
+
+### Example
+
+```javascript
+import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
+let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
+// Configure API key authorization: BearerAuth
+let BearerAuth = defaultClient.authentications['BearerAuth'];
+BearerAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//BearerAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DeviceApi();
+let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
+apiInstance.v1AccountAccountidDeviceStatusGet(accountid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountid** | **String**| Account ID, 32 alpha numeric | 
+
+### Return type
+
+[**ServiceDocsDeviceStatus**](ServiceDocsDeviceStatus.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
