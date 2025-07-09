@@ -1,6 +1,6 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.E911Api
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## v1E911Get
 
-> ServiceDocE911URIsApiOutput v1E911Get()
+> ServiceDocsE911URIsApiOutput v1E911Get()
 
 Get E911 List
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ServiceDocE911URIsApiOutput**](ServiceDocE911URIsApiOutput.md)
+[**ServiceDocsE911URIsApiOutput**](ServiceDocsE911URIsApiOutput.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 ## v1E911LocationLocationIDActivatePut
 
-> ServiceDocE911ActiveLocationOutput v1E911LocationLocationIDActivatePut(locationID)
+> ServiceDocsE911ActiveLocationOutput v1E911LocationLocationIDActivatePut(locationID)
 
 Activate E911 Location
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ActiveLocationOutput**](ServiceDocE911ActiveLocationOutput.md)
+[**ServiceDocsE911ActiveLocationOutput**](ServiceDocsE911ActiveLocationOutput.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ No authorization required
 
 ## v1E911LocationLocationIDDelete
 
-> ServiceDocE911RemoveLocationOutput v1E911LocationLocationIDDelete(locationID)
+> ServiceDocsE911RemoveLocationOutput v1E911LocationLocationIDDelete(locationID)
 
 Delete E911 Location
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911RemoveLocationOutput**](ServiceDocE911RemoveLocationOutput.md)
+[**ServiceDocsE911RemoveLocationOutput**](ServiceDocsE911RemoveLocationOutput.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ No authorization required
 
 ## v1E911LocationValidatePut
 
-> ServiceDocE911ValidateLocationOutput v1E911LocationValidatePut(reqBody)
+> ServiceDocsE911ValidateLocationOutput v1E911LocationValidatePut(reqBody)
 
 Validate a Location
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ValidateLocationOutput**](ServiceDocE911ValidateLocationOutput.md)
+[**ServiceDocsE911ValidateLocationOutput**](ServiceDocsE911ValidateLocationOutput.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ No authorization required
 
 ## v1E911PhoneNumberDelete
 
-> ServiceDocE911RemoveURIApiOutput v1E911PhoneNumberDelete(phoneNumber)
+> ServiceDocsE911RemoveURIApiOutput v1E911PhoneNumberDelete(phoneNumber)
 
 Delete E911 Phone Number
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911RemoveURIApiOutput**](ServiceDocE911RemoveURIApiOutput.md)
+[**ServiceDocsE911RemoveURIApiOutput**](ServiceDocsE911RemoveURIApiOutput.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
 
 ## v1E911PhoneNumberLocationActiveGet
 
-> ServiceDocE911ActiveLocationURIApiOutput v1E911PhoneNumberLocationActiveGet(phoneNumber)
+> ServiceDocsE911ActiveLocationURIApiOutput v1E911PhoneNumberLocationActiveGet(phoneNumber)
 
 Get Actvie Location for a Phone Number
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911ActiveLocationURIApiOutput**](ServiceDocE911ActiveLocationURIApiOutput.md)
+[**ServiceDocsE911ActiveLocationURIApiOutput**](ServiceDocsE911ActiveLocationURIApiOutput.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ No authorization required
 
 ## v1E911PhoneNumberLocationGet
 
-> ServiceDocE911LocationsURIApiOutput v1E911PhoneNumberLocationGet(phoneNumber)
+> ServiceDocsE911LocationsURIApiOutput v1E911PhoneNumberLocationGet(phoneNumber)
 
 Get Location List for Phone Number
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911LocationsURIApiOutput**](ServiceDocE911LocationsURIApiOutput.md)
+[**ServiceDocsE911LocationsURIApiOutput**](ServiceDocsE911LocationsURIApiOutput.md)
 
 ### Authorization
 
@@ -328,7 +328,7 @@ No authorization required
 
 ## v1E911Post
 
-> ServiceDocE911AddLocationOutput v1E911Post(reqBody)
+> ServiceDocsE911AddLocationOutput v1E911Post(reqBody)
 
 Create an E911 Location
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocE911AddLocationOutput**](ServiceDocE911AddLocationOutput.md)
+[**ServiceDocsE911AddLocationOutput**](ServiceDocsE911AddLocationOutput.md)
 
 ### Authorization
 

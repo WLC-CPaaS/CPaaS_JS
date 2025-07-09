@@ -1,6 +1,6 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.CallQueueRecipientApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## v1AccountAccountIDLoginrecipientRecipientIDPost
 
-> ServiceDocsCallQueueResponseShort v1AccountAccountIDLoginrecipientRecipientIDPost(accountID, recipientID, reqBody)
+> ServiceDocsCallQueueRecipientLoginLogoutOutput v1AccountAccountIDLoginrecipientRecipientIDPost(accountID, recipientID, reqBody)
 
 Login as Recipient
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsCallQueueResponseShort**](ServiceDocsCallQueueResponseShort.md)
+[**ServiceDocsCallQueueRecipientLoginLogoutOutput**](ServiceDocsCallQueueRecipientLoginLogoutOutput.md)
 
 ### Authorization
 

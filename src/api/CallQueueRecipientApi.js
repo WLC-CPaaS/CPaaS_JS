@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
 import ServiceAPIResponse from '../model/ServiceAPIResponse';
-import ServiceDocsCallQueueResponseShort from '../model/ServiceDocsCallQueueResponseShort';
+import ServiceDocsCallQueueRecipientLoginLogoutOutput from '../model/ServiceDocsCallQueueRecipientLoginLogoutOutput';
 import ServiceDocsGetQueueRecipients from '../model/ServiceDocsGetQueueRecipients';
 import ServiceVOIPCallQueueRecipientLoginLogoutData from '../model/ServiceVOIPCallQueueRecipientLoginLogoutData';
 import ServiceVOIPCallQueueRecipientStatusData from '../model/ServiceVOIPCallQueueRecipientStatusData';
@@ -43,7 +43,7 @@ export default class CallQueueRecipientApi {
      * Callback function to receive the result of the v1AccountAccountIDLoginrecipientRecipientIDPost operation.
      * @callback module:api/CallQueueRecipientApi~v1AccountAccountIDLoginrecipientRecipientIDPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsCallQueueResponseShort} data The data returned by the service call.
+     * @param {module:model/ServiceDocsCallQueueRecipientLoginLogoutOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -54,7 +54,7 @@ export default class CallQueueRecipientApi {
      * @param {String} recipientID Recipient ID, 32 alpha numeric
      * @param {module:model/ServiceVOIPCallQueueRecipientLoginLogoutData} reqBody payload fields
      * @param {module:api/CallQueueRecipientApi~v1AccountAccountIDLoginrecipientRecipientIDPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsCallQueueResponseShort}
+     * data is of type: {@link module:model/ServiceDocsCallQueueRecipientLoginLogoutOutput}
      */
     v1AccountAccountIDLoginrecipientRecipientIDPost(accountID, recipientID, reqBody, callback) {
       let postBody = reqBody;
@@ -85,7 +85,7 @@ export default class CallQueueRecipientApi {
       let authNames = ['BearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsCallQueueResponseShort;
+      let returnType = ServiceDocsCallQueueRecipientLoginLogoutOutput;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/loginrecipient/{recipientID}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

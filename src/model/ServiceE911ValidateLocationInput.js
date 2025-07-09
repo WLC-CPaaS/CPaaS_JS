@@ -23,11 +23,10 @@ class ServiceE911ValidateLocationInput {
     /**
      * Constructs a new <code>ServiceE911ValidateLocationInput</code>.
      * @alias module:model/ServiceE911ValidateLocationInput
-     * @param location {module:model/ServiceE911LocationInput} 
      */
-    constructor(location) { 
+    constructor() { 
         
-        ServiceE911ValidateLocationInput.initialize(this, location);
+        ServiceE911ValidateLocationInput.initialize(this);
     }
 
     /**
@@ -35,8 +34,7 @@ class ServiceE911ValidateLocationInput {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, location) { 
-        obj['location'] = location;
+    static initialize(obj) { 
     }
 
     /**
@@ -63,12 +61,6 @@ class ServiceE911ValidateLocationInput {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ServiceE911ValidateLocationInput</code>.
      */
     static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ServiceE911ValidateLocationInput.RequiredProperties) {
-            if (!data.hasOwnProperty(property)) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
         // validate the optional field `location`
         if (data['location']) { // data not null
           ServiceE911LocationInput.validateJSON(data['location']);
@@ -80,7 +72,7 @@ class ServiceE911ValidateLocationInput {
 
 }
 
-ServiceE911ValidateLocationInput.RequiredProperties = ["location"];
+
 
 /**
  * @member {module:model/ServiceE911LocationInput} location

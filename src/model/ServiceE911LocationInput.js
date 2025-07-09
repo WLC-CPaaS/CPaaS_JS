@@ -22,14 +22,11 @@ class ServiceE911LocationInput {
     /**
      * Constructs a new <code>ServiceE911LocationInput</code>.
      * @alias module:model/ServiceE911LocationInput
-     * @param address1 {String} 
-     * @param community {String} 
-     * @param postalCode {String} 
-     * @param state {String} 
+     * @param type {module:model/ServiceE911LocationInput.TypeEnum} 
      */
-    constructor(address1, community, postalCode, state) { 
+    constructor(type) { 
         
-        ServiceE911LocationInput.initialize(this, address1, community, postalCode, state);
+        ServiceE911LocationInput.initialize(this, type);
     }
 
     /**
@@ -37,11 +34,8 @@ class ServiceE911LocationInput {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, address1, community, postalCode, state) { 
-        obj['address_1'] = address1;
-        obj['community'] = community;
-        obj['postal_code'] = postalCode;
-        obj['state'] = state;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -127,7 +121,7 @@ class ServiceE911LocationInput {
 
 }
 
-ServiceE911LocationInput.RequiredProperties = ["address_1", "community", "postal_code", "state"];
+ServiceE911LocationInput.RequiredProperties = ["type"];
 
 /**
  * @member {String} address_1

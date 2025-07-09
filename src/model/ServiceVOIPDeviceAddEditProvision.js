@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ServiceVOIPDeviceAddEditLineKey from './ServiceVOIPDeviceAddEditLineKey';
 
 /**
  * The ServiceVOIPDeviceAddEditProvision model module.
@@ -59,6 +60,9 @@ class ServiceVOIPDeviceAddEditProvision {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('line_keys')) {
+                obj['line_keys'] = ApiClient.convertToType(data['line_keys'], [ServiceVOIPDeviceAddEditLineKey]);
+            }
         }
         return obj;
     }
@@ -84,6 +88,16 @@ class ServiceVOIPDeviceAddEditProvision {
         // ensure the json data is a string
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        if (data['line_keys']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['line_keys'])) {
+                throw new Error("Expected the field `line_keys` to be an array in the JSON data but got " + data['line_keys']);
+            }
+            // validate the optional field `line_keys` (array)
+            for (const item of data['line_keys']) {
+                ServiceVOIPDeviceAddEditLineKey.validateJSON(item);
+            };
         }
 
         return true;
@@ -113,6 +127,11 @@ ServiceVOIPDeviceAddEditProvision.prototype['endpoint_model'] = undefined;
  * @member {String} id
  */
 ServiceVOIPDeviceAddEditProvision.prototype['id'] = undefined;
+
+/**
+ * @member {Array.<module:model/ServiceVOIPDeviceAddEditLineKey>} line_keys
+ */
+ServiceVOIPDeviceAddEditProvision.prototype['line_keys'] = undefined;
 
 
 

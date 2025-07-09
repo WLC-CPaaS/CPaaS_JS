@@ -14,14 +14,14 @@
 
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
-import ServiceDocE911ActiveLocationOutput from '../model/ServiceDocE911ActiveLocationOutput';
-import ServiceDocE911ActiveLocationURIApiOutput from '../model/ServiceDocE911ActiveLocationURIApiOutput';
-import ServiceDocE911AddLocationOutput from '../model/ServiceDocE911AddLocationOutput';
-import ServiceDocE911LocationsURIApiOutput from '../model/ServiceDocE911LocationsURIApiOutput';
-import ServiceDocE911RemoveLocationOutput from '../model/ServiceDocE911RemoveLocationOutput';
-import ServiceDocE911RemoveURIApiOutput from '../model/ServiceDocE911RemoveURIApiOutput';
-import ServiceDocE911URIsApiOutput from '../model/ServiceDocE911URIsApiOutput';
-import ServiceDocE911ValidateLocationOutput from '../model/ServiceDocE911ValidateLocationOutput';
+import ServiceDocsE911ActiveLocationOutput from '../model/ServiceDocsE911ActiveLocationOutput';
+import ServiceDocsE911ActiveLocationURIApiOutput from '../model/ServiceDocsE911ActiveLocationURIApiOutput';
+import ServiceDocsE911AddLocationOutput from '../model/ServiceDocsE911AddLocationOutput';
+import ServiceDocsE911LocationsURIApiOutput from '../model/ServiceDocsE911LocationsURIApiOutput';
+import ServiceDocsE911RemoveLocationOutput from '../model/ServiceDocsE911RemoveLocationOutput';
+import ServiceDocsE911RemoveURIApiOutput from '../model/ServiceDocsE911RemoveURIApiOutput';
+import ServiceDocsE911URIsApiOutput from '../model/ServiceDocsE911URIsApiOutput';
+import ServiceDocsE911ValidateLocationOutput from '../model/ServiceDocsE911ValidateLocationOutput';
 import ServiceE911AddLocationInput from '../model/ServiceE911AddLocationInput';
 import ServiceE911ValidateLocationInput from '../model/ServiceE911ValidateLocationInput';
 
@@ -48,7 +48,7 @@ export default class E911Api {
      * Callback function to receive the result of the v1E911Get operation.
      * @callback module:api/E911Api~v1E911GetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocE911URIsApiOutput} data The data returned by the service call.
+     * @param {module:model/ServiceDocsE911URIsApiOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -56,7 +56,7 @@ export default class E911Api {
      * Get E911 List
      * Obtain e911 URIs associated with the provided account ID.
      * @param {module:api/E911Api~v1E911GetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocE911URIsApiOutput}
+     * data is of type: {@link module:model/ServiceDocsE911URIsApiOutput}
      */
     v1E911Get(callback) {
       let postBody = null;
@@ -73,7 +73,7 @@ export default class E911Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocE911URIsApiOutput;
+      let returnType = ServiceDocsE911URIsApiOutput;
       return this.apiClient.callApi(
         '/v1/e911', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -85,7 +85,7 @@ export default class E911Api {
      * Callback function to receive the result of the v1E911LocationLocationIDActivatePut operation.
      * @callback module:api/E911Api~v1E911LocationLocationIDActivatePutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocE911ActiveLocationOutput} data The data returned by the service call.
+     * @param {module:model/ServiceDocsE911ActiveLocationOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -94,7 +94,7 @@ export default class E911Api {
      * Edit the provision location.
      * @param {String} locationID Location ID
      * @param {module:api/E911Api~v1E911LocationLocationIDActivatePutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocE911ActiveLocationOutput}
+     * data is of type: {@link module:model/ServiceDocsE911ActiveLocationOutput}
      */
     v1E911LocationLocationIDActivatePut(locationID, callback) {
       let postBody = null;
@@ -116,7 +116,7 @@ export default class E911Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocE911ActiveLocationOutput;
+      let returnType = ServiceDocsE911ActiveLocationOutput;
       return this.apiClient.callApi(
         '/v1/e911/location/{locationID}/activate', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -128,7 +128,7 @@ export default class E911Api {
      * Callback function to receive the result of the v1E911LocationLocationIDDelete operation.
      * @callback module:api/E911Api~v1E911LocationLocationIDDeleteCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocE911RemoveLocationOutput} data The data returned by the service call.
+     * @param {module:model/ServiceDocsE911RemoveLocationOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -137,7 +137,7 @@ export default class E911Api {
      * Remove the location.
      * @param {String} locationID Location ID
      * @param {module:api/E911Api~v1E911LocationLocationIDDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocE911RemoveLocationOutput}
+     * data is of type: {@link module:model/ServiceDocsE911RemoveLocationOutput}
      */
     v1E911LocationLocationIDDelete(locationID, callback) {
       let postBody = null;
@@ -159,7 +159,7 @@ export default class E911Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocE911RemoveLocationOutput;
+      let returnType = ServiceDocsE911RemoveLocationOutput;
       return this.apiClient.callApi(
         '/v1/e911/location/{locationID}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -171,7 +171,7 @@ export default class E911Api {
      * Callback function to receive the result of the v1E911LocationValidatePut operation.
      * @callback module:api/E911Api~v1E911LocationValidatePutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocE911ValidateLocationOutput} data The data returned by the service call.
+     * @param {module:model/ServiceDocsE911ValidateLocationOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -180,7 +180,7 @@ export default class E911Api {
      * Validate the location details.
      * @param {module:model/ServiceE911ValidateLocationInput} reqBody location details
      * @param {module:api/E911Api~v1E911LocationValidatePutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocE911ValidateLocationOutput}
+     * data is of type: {@link module:model/ServiceDocsE911ValidateLocationOutput}
      */
     v1E911LocationValidatePut(reqBody, callback) {
       let postBody = reqBody;
@@ -201,7 +201,7 @@ export default class E911Api {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ServiceDocE911ValidateLocationOutput;
+      let returnType = ServiceDocsE911ValidateLocationOutput;
       return this.apiClient.callApi(
         '/v1/e911/location/validate', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -213,7 +213,7 @@ export default class E911Api {
      * Callback function to receive the result of the v1E911PhoneNumberDelete operation.
      * @callback module:api/E911Api~v1E911PhoneNumberDeleteCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocE911RemoveURIApiOutput} data The data returned by the service call.
+     * @param {module:model/ServiceDocsE911RemoveURIApiOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -222,7 +222,7 @@ export default class E911Api {
      * Delete the e911 URI connected with the account URI.
      * @param {String} phoneNumber Phone Number
      * @param {module:api/E911Api~v1E911PhoneNumberDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocE911RemoveURIApiOutput}
+     * data is of type: {@link module:model/ServiceDocsE911RemoveURIApiOutput}
      */
     v1E911PhoneNumberDelete(phoneNumber, callback) {
       let postBody = null;
@@ -244,7 +244,7 @@ export default class E911Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocE911RemoveURIApiOutput;
+      let returnType = ServiceDocsE911RemoveURIApiOutput;
       return this.apiClient.callApi(
         '/v1/e911/{phoneNumber}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -256,7 +256,7 @@ export default class E911Api {
      * Callback function to receive the result of the v1E911PhoneNumberLocationActiveGet operation.
      * @callback module:api/E911Api~v1E911PhoneNumberLocationActiveGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocE911ActiveLocationURIApiOutput} data The data returned by the service call.
+     * @param {module:model/ServiceDocsE911ActiveLocationURIApiOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -265,7 +265,7 @@ export default class E911Api {
      * Get the e911 location connected with the URI.
      * @param {String} phoneNumber Phone Number
      * @param {module:api/E911Api~v1E911PhoneNumberLocationActiveGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocE911ActiveLocationURIApiOutput}
+     * data is of type: {@link module:model/ServiceDocsE911ActiveLocationURIApiOutput}
      */
     v1E911PhoneNumberLocationActiveGet(phoneNumber, callback) {
       let postBody = null;
@@ -287,7 +287,7 @@ export default class E911Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocE911ActiveLocationURIApiOutput;
+      let returnType = ServiceDocsE911ActiveLocationURIApiOutput;
       return this.apiClient.callApi(
         '/v1/e911/{phoneNumber}/location/active', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -299,7 +299,7 @@ export default class E911Api {
      * Callback function to receive the result of the v1E911PhoneNumberLocationGet operation.
      * @callback module:api/E911Api~v1E911PhoneNumberLocationGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocE911LocationsURIApiOutput} data The data returned by the service call.
+     * @param {module:model/ServiceDocsE911LocationsURIApiOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -308,7 +308,7 @@ export default class E911Api {
      * Access a list of the e911 locations associated with the provided URI.
      * @param {String} phoneNumber Phone Number
      * @param {module:api/E911Api~v1E911PhoneNumberLocationGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocE911LocationsURIApiOutput}
+     * data is of type: {@link module:model/ServiceDocsE911LocationsURIApiOutput}
      */
     v1E911PhoneNumberLocationGet(phoneNumber, callback) {
       let postBody = null;
@@ -330,7 +330,7 @@ export default class E911Api {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocE911LocationsURIApiOutput;
+      let returnType = ServiceDocsE911LocationsURIApiOutput;
       return this.apiClient.callApi(
         '/v1/e911/{phoneNumber}/location', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -342,7 +342,7 @@ export default class E911Api {
      * Callback function to receive the result of the v1E911Post operation.
      * @callback module:api/E911Api~v1E911PostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocE911AddLocationOutput} data The data returned by the service call.
+     * @param {module:model/ServiceDocsE911AddLocationOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -351,7 +351,7 @@ export default class E911Api {
      * Enter new location details.
      * @param {module:model/ServiceE911AddLocationInput} reqBody location details
      * @param {module:api/E911Api~v1E911PostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocE911AddLocationOutput}
+     * data is of type: {@link module:model/ServiceDocsE911AddLocationOutput}
      */
     v1E911Post(reqBody, callback) {
       let postBody = reqBody;
@@ -372,7 +372,7 @@ export default class E911Api {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ServiceDocE911AddLocationOutput;
+      let returnType = ServiceDocsE911AddLocationOutput;
       return this.apiClient.callApi(
         '/v1/e911', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

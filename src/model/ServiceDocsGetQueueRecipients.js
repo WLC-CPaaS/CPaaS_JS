@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceQueueRecipientOutputFull from './ServiceQueueRecipientOutputFull';
+import ServiceQueueRecipientOutput from './ServiceQueueRecipientOutput';
 
 /**
  * The ServiceDocsGetQueueRecipients model module.
@@ -49,7 +49,7 @@ class ServiceDocsGetQueueRecipients {
             obj = obj || new ServiceDocsGetQueueRecipients();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ServiceQueueRecipientOutputFull.constructFromObject(data['data']);
+                obj['data'] = ServiceQueueRecipientOutput.constructFromObject(data['data']);
             }
             if (data.hasOwnProperty('next_start_key')) {
                 obj['next_start_key'] = ApiClient.convertToType(data['next_start_key'], 'String');
@@ -78,7 +78,7 @@ class ServiceDocsGetQueueRecipients {
     static validateJSON(data) {
         // validate the optional field `data`
         if (data['data']) { // data not null
-          ServiceQueueRecipientOutputFull.validateJSON(data['data']);
+          ServiceQueueRecipientOutput.validateJSON(data['data']);
         }
         // ensure the json data is a string
         if (data['next_start_key'] && !(typeof data['next_start_key'] === 'string' || data['next_start_key'] instanceof String)) {
@@ -102,7 +102,7 @@ class ServiceDocsGetQueueRecipients {
 
 
 /**
- * @member {module:model/ServiceQueueRecipientOutputFull} data
+ * @member {module:model/ServiceQueueRecipientOutput} data
  */
 ServiceDocsGetQueueRecipients.prototype['data'] = undefined;
 

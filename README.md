@@ -128,7 +128,7 @@ api.v1AccountAccountidChildrenGet(accountid, opts, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -243,16 +243,16 @@ Class | Method | HTTP request | Description
 *WhiteLabelCommunicationsCPaasApiDocumentation.PresenceApi* | [**v1AccountAccountIDPresenceExtensionPut**](docs/PresenceApi.md#v1AccountAccountIDPresenceExtensionPut) | **PUT** /v1/account/{accountID}/presence/{extension} | Set/Reset Presence for Extension
 *WhiteLabelCommunicationsCPaasApiDocumentation.PresenceApi* | [**v1AccountAccountIDPresenceGet**](docs/PresenceApi.md#v1AccountAccountIDPresenceGet) | **GET** /v1/account/{accountID}/presence | Get Presence Details
 *WhiteLabelCommunicationsCPaasApiDocumentation.PresenceApi* | [**v1AccountAccountIDUserUserIDPresencePut**](docs/PresenceApi.md#v1AccountAccountIDUserUserIDPresencePut) | **PUT** /v1/account/{accountID}/user/{userID}/presence | Set/Reset Presence for User
-*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisionApi* | [**v1AccountAccountIDProvisionFilenameGet**](docs/ProvisionApi.md#v1AccountAccountIDProvisionFilenameGet) | **GET** /v1/account/{accountID}/provision/{filename} | 
-*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyFamilyGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyFamilyGet) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family
+*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1AccountAccountIDProvisionFilenameGet**](docs/ProvisioningApi.md#v1AccountAccountIDProvisionFilenameGet) | **GET** /v1/account/{accountID}/provision/{filename} | Get Config File Details
+*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyFamilyGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyFamilyGet) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family Details
 *WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyFamilyModelGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyFamilyModelGet) | **GET** /v1/ap/brand/{brand}/family/{family}/model | Get Model List
-*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyFamilyModelModelGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyFamilyModelModelGet) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model
+*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyFamilyModelModelGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyFamilyModelModelGet) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model Details
 *WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyFamilyModelModelTemplateGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyFamilyModelModelTemplateGet) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template | Get Template List
-*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyFamilyModelModelTemplateTemplateGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyFamilyModelModelTemplateTemplateGet) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template
+*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyFamilyModelModelTemplateTemplateGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyFamilyModelModelTemplateTemplateGet) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template Details
 *WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandFamilyGet**](docs/ProvisioningApi.md#v1ApBrandBrandFamilyGet) | **GET** /v1/ap/brand/{brand}/family | Get Family List
-*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandGet**](docs/ProvisioningApi.md#v1ApBrandBrandGet) | **GET** /v1/ap/brand/{brand} | Get Brand
-*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandGet**](docs/ProvisioningApi.md#v1ApBrandGet) | **GET** /v1/ap/brand | Get Brand
-*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApConfigfileGeneratePost**](docs/ProvisioningApi.md#v1ApConfigfileGeneratePost) | **POST** /v1/ap/configfile/generate | Generate config file
+*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandBrandGet**](docs/ProvisioningApi.md#v1ApBrandBrandGet) | **GET** /v1/ap/brand/{brand} | Get Brand Details
+*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApBrandGet**](docs/ProvisioningApi.md#v1ApBrandGet) | **GET** /v1/ap/brand | Get Brand List
+*WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi* | [**v1ApConfigfileGeneratePost**](docs/ProvisioningApi.md#v1ApConfigfileGeneratePost) | **POST** /v1/ap/configfile/generate | Generate Config File
 *WhiteLabelCommunicationsCPaasApiDocumentation.SMSApi* | [**v1SmsAccountAccountIDCampaignCampaignIDImportGet**](docs/SMSApi.md#v1SmsAccountAccountIDCampaignCampaignIDImportGet) | **GET** /v1/sms/account/{accountID}/campaign/{campaignID}/import | 
 *WhiteLabelCommunicationsCPaasApiDocumentation.SMSApi* | [**v1SmsAccountAccountIDCampaignCampaignIDImportPost**](docs/SMSApi.md#v1SmsAccountAccountIDCampaignCampaignIDImportPost) | **POST** /v1/sms/account/{accountID}/campaign/{campaignID}/import | 
 *WhiteLabelCommunicationsCPaasApiDocumentation.SMSApi* | [**v1SmsAccountAccountIDCampaignCampaignIDPhonenumberGet**](docs/SMSApi.md#v1SmsAccountAccountIDCampaignCampaignIDPhonenumberGet) | **GET** /v1/sms/account/{accountID}/campaign/{campaignID}/phonenumber | 
@@ -352,6 +352,7 @@ Class | Method | HTTP request | Description
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsUserOutputFullCalleridInternal](docs/ModelsUserOutputFullCalleridInternal.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsVOIPAccountMusicOnHold](docs/ModelsVOIPAccountMusicOnHold.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsVOIPAccountOutputFullCallerid](docs/ModelsVOIPAccountOutputFullCallerid.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsVOIPDeviceOutputLineKey](docs/ModelsVOIPDeviceOutputLineKey.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsVOIPSharedDoNotDisturb](docs/ModelsVOIPSharedDoNotDisturb.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningDocsDocsBrandOutputSingle](docs/ProvisioningDocsDocsBrandOutputSingle.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningDocsDocsBrandsOutput](docs/ProvisioningDocsDocsBrandsOutput.md)
@@ -394,14 +395,6 @@ Class | Method | HTTP request | Description
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceChannelOutput](docs/ServiceChannelOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDeviceOutputShort](docs/ServiceDeviceOutputShort.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDeviceStatusOutput](docs/ServiceDeviceStatusOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocE911ActiveLocationOutput](docs/ServiceDocE911ActiveLocationOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocE911ActiveLocationURIApiOutput](docs/ServiceDocE911ActiveLocationURIApiOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocE911AddLocationOutput](docs/ServiceDocE911AddLocationOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocE911LocationsURIApiOutput](docs/ServiceDocE911LocationsURIApiOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocE911RemoveLocationOutput](docs/ServiceDocE911RemoveLocationOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocE911RemoveURIApiOutput](docs/ServiceDocE911RemoveURIApiOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocE911URIsApiOutput](docs/ServiceDocE911URIsApiOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocE911ValidateLocationOutput](docs/ServiceDocE911ValidateLocationOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocGroupGetAll](docs/ServiceDocGroupGetAll.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocGroupGetSingle](docs/ServiceDocGroupGetSingle.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsAccountAPIKey](docs/ServiceDocsAccountAPIKey.md)
@@ -420,12 +413,12 @@ Class | Method | HTTP request | Description
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallQueueGetRoles](docs/ServiceDocsCallQueueGetRoles.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallQueueGetSingle](docs/ServiceDocsCallQueueGetSingle.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallQueueGetSingleStatus](docs/ServiceDocsCallQueueGetSingleStatus.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallQueueMemberGetSingle](docs/ServiceDocsCallQueueMemberGetSingle.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallQueueResponseShort](docs/ServiceDocsCallQueueResponseShort.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallQueueRecipientLoginLogoutOutput](docs/ServiceDocsCallQueueRecipientLoginLogoutOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallRecordingGetAll](docs/ServiceDocsCallRecordingGetAll.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallRecordingGetSingle](docs/ServiceDocsCallRecordingGetSingle.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallflowGetAll](docs/ServiceDocsCallflowGetAll.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallflowGetSingle](docs/ServiceDocsCallflowGetSingle.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCallparkGet](docs/ServiceDocsCallparkGet.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCampaignImportOutput](docs/ServiceDocsCampaignImportOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCampaignImportedGetAllOutput](docs/ServiceDocsCampaignImportedGetAllOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsCampaignPhoneNumberOutput](docs/ServiceDocsCampaignPhoneNumberOutput.md)
@@ -438,6 +431,14 @@ Class | Method | HTTP request | Description
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsDeviceGetSingle](docs/ServiceDocsDeviceGetSingle.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsDeviceReboot](docs/ServiceDocsDeviceReboot.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsDeviceStatus](docs/ServiceDocsDeviceStatus.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsE911ActiveLocationOutput](docs/ServiceDocsE911ActiveLocationOutput.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsE911ActiveLocationURIApiOutput](docs/ServiceDocsE911ActiveLocationURIApiOutput.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsE911AddLocationOutput](docs/ServiceDocsE911AddLocationOutput.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsE911LocationsURIApiOutput](docs/ServiceDocsE911LocationsURIApiOutput.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsE911RemoveLocationOutput](docs/ServiceDocsE911RemoveLocationOutput.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsE911RemoveURIApiOutput](docs/ServiceDocsE911RemoveURIApiOutput.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsE911URIsApiOutput](docs/ServiceDocsE911URIsApiOutput.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsE911ValidateLocationOutput](docs/ServiceDocsE911ValidateLocationOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsEndpointList](docs/ServiceDocsEndpointList.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsEventDailySummary](docs/ServiceDocsEventDailySummary.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsEventDetail](docs/ServiceDocsEventDetail.md)
@@ -450,12 +451,12 @@ Class | Method | HTTP request | Description
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsMediaGetSingle](docs/ServiceDocsMediaGetSingle.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsMetaflowGet](docs/ServiceDocsMetaflowGet.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsOrderPhonenumber](docs/ServiceDocsOrderPhonenumber.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsParkedcallGet](docs/ServiceDocsParkedcallGet.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsPhonenumberAssignPayload](docs/ServiceDocsPhonenumberAssignPayload.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsPhonenumberSearchGetAll](docs/ServiceDocsPhonenumberSearchGetAll.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsPhonenumberUnassignPayload](docs/ServiceDocsPhonenumberUnassignPayload.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsPingGet](docs/ServiceDocsPingGet.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsPresenceGet](docs/ServiceDocsPresenceGet.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsQueueMembershipOutput](docs/ServiceDocsQueueMembershipOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsStorageGet](docs/ServiceDocsStorageGet.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsSystemStatusGetSingle](docs/ServiceDocsSystemStatusGetSingle.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocsTemporalRuleGetAll](docs/ServiceDocsTemporalRuleGetAll.md)
@@ -502,9 +503,9 @@ Class | Method | HTTP request | Description
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServicePhoneNumberSearchOutput](docs/ServicePhoneNumberSearchOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServicePhonenumberOutput](docs/ServicePhonenumberOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServicePingOutput](docs/ServicePingOutput.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceQueueRecipientOutputFull](docs/ServiceQueueRecipientOutputFull.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceQueueRecipientOutputFullFeatures](docs/ServiceQueueRecipientOutputFullFeatures.md)
- - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceQueueRecipientOutputFullRecipient](docs/ServiceQueueRecipientOutputFullRecipient.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceQueueRecipientOutput](docs/ServiceQueueRecipientOutput.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceQueueRecipientOutputRecipient](docs/ServiceQueueRecipientOutputRecipient.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceQueueRecipientOutputRecipientFeatures](docs/ServiceQueueRecipientOutputRecipientFeatures.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceRemoveURIApiOutput](docs/ServiceRemoveURIApiOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceStorageOutput](docs/ServiceStorageOutput.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceStoragePlan](docs/ServiceStoragePlan.md)
@@ -541,6 +542,7 @@ Class | Method | HTTP request | Description
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit3d](docs/ServiceVOIPDeviceAddEdit3d.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit4](docs/ServiceVOIPDeviceAddEdit4.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit5](docs/ServiceVOIPDeviceAddEdit5.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEditLineKey](docs/ServiceVOIPDeviceAddEditLineKey.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEditProvision](docs/ServiceVOIPDeviceAddEditProvision.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPGroupAddEdit2](docs/ServiceVOIPGroupAddEdit2.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPImpersonateUser](docs/ServiceVOIPImpersonateUser.md)

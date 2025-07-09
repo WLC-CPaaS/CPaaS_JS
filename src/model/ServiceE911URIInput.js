@@ -22,12 +22,11 @@ class ServiceE911URIInput {
     /**
      * Constructs a new <code>ServiceE911URIInput</code>.
      * @alias module:model/ServiceE911URIInput
-     * @param callerName {String} 
      * @param uri {String} 
      */
-    constructor(callerName, uri) { 
+    constructor(uri) { 
         
-        ServiceE911URIInput.initialize(this, callerName, uri);
+        ServiceE911URIInput.initialize(this, uri);
     }
 
     /**
@@ -35,8 +34,7 @@ class ServiceE911URIInput {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, callerName, uri) { 
-        obj['callerName'] = callerName;
+    static initialize(obj, uri) { 
         obj['uri'] = uri;
     }
 
@@ -88,7 +86,7 @@ class ServiceE911URIInput {
 
 }
 
-ServiceE911URIInput.RequiredProperties = ["callerName", "uri"];
+ServiceE911URIInput.RequiredProperties = ["uri"];
 
 /**
  * @member {String} callerName

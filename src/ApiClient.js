@@ -32,11 +32,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'http://API_HOSTNAME') {
+    constructor(basePath = 'http://api.beta.cpaaslabs.net') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://API_HOSTNAME
+         * @default http://api.beta.cpaaslabs.net
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -595,7 +595,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "//API_HOSTNAME",
+              'url': "//api.beta.cpaaslabs.net",
               'description': "No description provided",
             }
       ];

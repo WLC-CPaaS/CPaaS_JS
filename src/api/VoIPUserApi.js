@@ -298,7 +298,7 @@ export default class VoIPUserApi {
 
     /**
      * Impersonate a User
-     * Impersonate as another user if you have access to admin.
+     * Retrieve a token for making presence calls.
      * @param {String} accountid Account ID, 32 alpha numeric
      * @param {String} userid User ID, 32 alpha numeric
      * @param {module:model/ServiceVOIPImpersonateUser} user Payload for impersonate a user

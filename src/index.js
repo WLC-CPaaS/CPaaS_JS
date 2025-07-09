@@ -62,6 +62,7 @@ import ModelsUserOutputFullCalleridExternal from './model/ModelsUserOutputFullCa
 import ModelsUserOutputFullCalleridInternal from './model/ModelsUserOutputFullCalleridInternal';
 import ModelsVOIPAccountMusicOnHold from './model/ModelsVOIPAccountMusicOnHold';
 import ModelsVOIPAccountOutputFullCallerid from './model/ModelsVOIPAccountOutputFullCallerid';
+import ModelsVOIPDeviceOutputLineKey from './model/ModelsVOIPDeviceOutputLineKey';
 import ModelsVOIPSharedDoNotDisturb from './model/ModelsVOIPSharedDoNotDisturb';
 import ProvisioningDocsDocsBrandOutputSingle from './model/ProvisioningDocsDocsBrandOutputSingle';
 import ProvisioningDocsDocsBrandsOutput from './model/ProvisioningDocsDocsBrandsOutput';
@@ -104,14 +105,6 @@ import ServiceCdrOutputShort from './model/ServiceCdrOutputShort';
 import ServiceChannelOutput from './model/ServiceChannelOutput';
 import ServiceDeviceOutputShort from './model/ServiceDeviceOutputShort';
 import ServiceDeviceStatusOutput from './model/ServiceDeviceStatusOutput';
-import ServiceDocE911ActiveLocationOutput from './model/ServiceDocE911ActiveLocationOutput';
-import ServiceDocE911ActiveLocationURIApiOutput from './model/ServiceDocE911ActiveLocationURIApiOutput';
-import ServiceDocE911AddLocationOutput from './model/ServiceDocE911AddLocationOutput';
-import ServiceDocE911LocationsURIApiOutput from './model/ServiceDocE911LocationsURIApiOutput';
-import ServiceDocE911RemoveLocationOutput from './model/ServiceDocE911RemoveLocationOutput';
-import ServiceDocE911RemoveURIApiOutput from './model/ServiceDocE911RemoveURIApiOutput';
-import ServiceDocE911URIsApiOutput from './model/ServiceDocE911URIsApiOutput';
-import ServiceDocE911ValidateLocationOutput from './model/ServiceDocE911ValidateLocationOutput';
 import ServiceDocGroupGetAll from './model/ServiceDocGroupGetAll';
 import ServiceDocGroupGetSingle from './model/ServiceDocGroupGetSingle';
 import ServiceDocsAccountAPIKey from './model/ServiceDocsAccountAPIKey';
@@ -130,12 +123,12 @@ import ServiceDocsCallQueueGetAll from './model/ServiceDocsCallQueueGetAll';
 import ServiceDocsCallQueueGetRoles from './model/ServiceDocsCallQueueGetRoles';
 import ServiceDocsCallQueueGetSingle from './model/ServiceDocsCallQueueGetSingle';
 import ServiceDocsCallQueueGetSingleStatus from './model/ServiceDocsCallQueueGetSingleStatus';
-import ServiceDocsCallQueueMemberGetSingle from './model/ServiceDocsCallQueueMemberGetSingle';
-import ServiceDocsCallQueueResponseShort from './model/ServiceDocsCallQueueResponseShort';
+import ServiceDocsCallQueueRecipientLoginLogoutOutput from './model/ServiceDocsCallQueueRecipientLoginLogoutOutput';
 import ServiceDocsCallRecordingGetAll from './model/ServiceDocsCallRecordingGetAll';
 import ServiceDocsCallRecordingGetSingle from './model/ServiceDocsCallRecordingGetSingle';
 import ServiceDocsCallflowGetAll from './model/ServiceDocsCallflowGetAll';
 import ServiceDocsCallflowGetSingle from './model/ServiceDocsCallflowGetSingle';
+import ServiceDocsCallparkGet from './model/ServiceDocsCallparkGet';
 import ServiceDocsCampaignImportOutput from './model/ServiceDocsCampaignImportOutput';
 import ServiceDocsCampaignImportedGetAllOutput from './model/ServiceDocsCampaignImportedGetAllOutput';
 import ServiceDocsCampaignPhoneNumberOutput from './model/ServiceDocsCampaignPhoneNumberOutput';
@@ -148,6 +141,14 @@ import ServiceDocsDeviceGetAll from './model/ServiceDocsDeviceGetAll';
 import ServiceDocsDeviceGetSingle from './model/ServiceDocsDeviceGetSingle';
 import ServiceDocsDeviceReboot from './model/ServiceDocsDeviceReboot';
 import ServiceDocsDeviceStatus from './model/ServiceDocsDeviceStatus';
+import ServiceDocsE911ActiveLocationOutput from './model/ServiceDocsE911ActiveLocationOutput';
+import ServiceDocsE911ActiveLocationURIApiOutput from './model/ServiceDocsE911ActiveLocationURIApiOutput';
+import ServiceDocsE911AddLocationOutput from './model/ServiceDocsE911AddLocationOutput';
+import ServiceDocsE911LocationsURIApiOutput from './model/ServiceDocsE911LocationsURIApiOutput';
+import ServiceDocsE911RemoveLocationOutput from './model/ServiceDocsE911RemoveLocationOutput';
+import ServiceDocsE911RemoveURIApiOutput from './model/ServiceDocsE911RemoveURIApiOutput';
+import ServiceDocsE911URIsApiOutput from './model/ServiceDocsE911URIsApiOutput';
+import ServiceDocsE911ValidateLocationOutput from './model/ServiceDocsE911ValidateLocationOutput';
 import ServiceDocsEndpointList from './model/ServiceDocsEndpointList';
 import ServiceDocsEventDailySummary from './model/ServiceDocsEventDailySummary';
 import ServiceDocsEventDetail from './model/ServiceDocsEventDetail';
@@ -160,12 +161,12 @@ import ServiceDocsMediaGetAll from './model/ServiceDocsMediaGetAll';
 import ServiceDocsMediaGetSingle from './model/ServiceDocsMediaGetSingle';
 import ServiceDocsMetaflowGet from './model/ServiceDocsMetaflowGet';
 import ServiceDocsOrderPhonenumber from './model/ServiceDocsOrderPhonenumber';
-import ServiceDocsParkedcallGet from './model/ServiceDocsParkedcallGet';
 import ServiceDocsPhonenumberAssignPayload from './model/ServiceDocsPhonenumberAssignPayload';
 import ServiceDocsPhonenumberSearchGetAll from './model/ServiceDocsPhonenumberSearchGetAll';
 import ServiceDocsPhonenumberUnassignPayload from './model/ServiceDocsPhonenumberUnassignPayload';
 import ServiceDocsPingGet from './model/ServiceDocsPingGet';
 import ServiceDocsPresenceGet from './model/ServiceDocsPresenceGet';
+import ServiceDocsQueueMembershipOutput from './model/ServiceDocsQueueMembershipOutput';
 import ServiceDocsStorageGet from './model/ServiceDocsStorageGet';
 import ServiceDocsSystemStatusGetSingle from './model/ServiceDocsSystemStatusGetSingle';
 import ServiceDocsTemporalRuleGetAll from './model/ServiceDocsTemporalRuleGetAll';
@@ -212,9 +213,9 @@ import ServicePhoneNumberResult from './model/ServicePhoneNumberResult';
 import ServicePhoneNumberSearchOutput from './model/ServicePhoneNumberSearchOutput';
 import ServicePhonenumberOutput from './model/ServicePhonenumberOutput';
 import ServicePingOutput from './model/ServicePingOutput';
-import ServiceQueueRecipientOutputFull from './model/ServiceQueueRecipientOutputFull';
-import ServiceQueueRecipientOutputFullFeatures from './model/ServiceQueueRecipientOutputFullFeatures';
-import ServiceQueueRecipientOutputFullRecipient from './model/ServiceQueueRecipientOutputFullRecipient';
+import ServiceQueueRecipientOutput from './model/ServiceQueueRecipientOutput';
+import ServiceQueueRecipientOutputRecipient from './model/ServiceQueueRecipientOutputRecipient';
+import ServiceQueueRecipientOutputRecipientFeatures from './model/ServiceQueueRecipientOutputRecipientFeatures';
 import ServiceRemoveURIApiOutput from './model/ServiceRemoveURIApiOutput';
 import ServiceStorageOutput from './model/ServiceStorageOutput';
 import ServiceStoragePlan from './model/ServiceStoragePlan';
@@ -251,6 +252,7 @@ import ServiceVOIPDeviceAddEdit3c from './model/ServiceVOIPDeviceAddEdit3c';
 import ServiceVOIPDeviceAddEdit3d from './model/ServiceVOIPDeviceAddEdit3d';
 import ServiceVOIPDeviceAddEdit4 from './model/ServiceVOIPDeviceAddEdit4';
 import ServiceVOIPDeviceAddEdit5 from './model/ServiceVOIPDeviceAddEdit5';
+import ServiceVOIPDeviceAddEditLineKey from './model/ServiceVOIPDeviceAddEditLineKey';
 import ServiceVOIPDeviceAddEditProvision from './model/ServiceVOIPDeviceAddEditProvision';
 import ServiceVOIPGroupAddEdit2 from './model/ServiceVOIPGroupAddEdit2';
 import ServiceVOIPImpersonateUser from './model/ServiceVOIPImpersonateUser';
@@ -290,7 +292,6 @@ import MenuApi from './api/MenuApi';
 import MetaflowApi from './api/MetaflowApi';
 import PhoneNumberApi from './api/PhoneNumberApi';
 import PresenceApi from './api/PresenceApi';
-import ProvisionApi from './api/ProvisionApi';
 import ProvisioningApi from './api/ProvisioningApi';
 import SMSApi from './api/SMSApi';
 import StorageApi from './api/StorageApi';
@@ -635,6 +636,12 @@ export {
     ModelsVOIPAccountOutputFullCallerid,
 
     /**
+     * The ModelsVOIPDeviceOutputLineKey model constructor.
+     * @property {module:model/ModelsVOIPDeviceOutputLineKey}
+     */
+    ModelsVOIPDeviceOutputLineKey,
+
+    /**
      * The ModelsVOIPSharedDoNotDisturb model constructor.
      * @property {module:model/ModelsVOIPSharedDoNotDisturb}
      */
@@ -887,54 +894,6 @@ export {
     ServiceDeviceStatusOutput,
 
     /**
-     * The ServiceDocE911ActiveLocationOutput model constructor.
-     * @property {module:model/ServiceDocE911ActiveLocationOutput}
-     */
-    ServiceDocE911ActiveLocationOutput,
-
-    /**
-     * The ServiceDocE911ActiveLocationURIApiOutput model constructor.
-     * @property {module:model/ServiceDocE911ActiveLocationURIApiOutput}
-     */
-    ServiceDocE911ActiveLocationURIApiOutput,
-
-    /**
-     * The ServiceDocE911AddLocationOutput model constructor.
-     * @property {module:model/ServiceDocE911AddLocationOutput}
-     */
-    ServiceDocE911AddLocationOutput,
-
-    /**
-     * The ServiceDocE911LocationsURIApiOutput model constructor.
-     * @property {module:model/ServiceDocE911LocationsURIApiOutput}
-     */
-    ServiceDocE911LocationsURIApiOutput,
-
-    /**
-     * The ServiceDocE911RemoveLocationOutput model constructor.
-     * @property {module:model/ServiceDocE911RemoveLocationOutput}
-     */
-    ServiceDocE911RemoveLocationOutput,
-
-    /**
-     * The ServiceDocE911RemoveURIApiOutput model constructor.
-     * @property {module:model/ServiceDocE911RemoveURIApiOutput}
-     */
-    ServiceDocE911RemoveURIApiOutput,
-
-    /**
-     * The ServiceDocE911URIsApiOutput model constructor.
-     * @property {module:model/ServiceDocE911URIsApiOutput}
-     */
-    ServiceDocE911URIsApiOutput,
-
-    /**
-     * The ServiceDocE911ValidateLocationOutput model constructor.
-     * @property {module:model/ServiceDocE911ValidateLocationOutput}
-     */
-    ServiceDocE911ValidateLocationOutput,
-
-    /**
      * The ServiceDocGroupGetAll model constructor.
      * @property {module:model/ServiceDocGroupGetAll}
      */
@@ -1043,16 +1002,10 @@ export {
     ServiceDocsCallQueueGetSingleStatus,
 
     /**
-     * The ServiceDocsCallQueueMemberGetSingle model constructor.
-     * @property {module:model/ServiceDocsCallQueueMemberGetSingle}
+     * The ServiceDocsCallQueueRecipientLoginLogoutOutput model constructor.
+     * @property {module:model/ServiceDocsCallQueueRecipientLoginLogoutOutput}
      */
-    ServiceDocsCallQueueMemberGetSingle,
-
-    /**
-     * The ServiceDocsCallQueueResponseShort model constructor.
-     * @property {module:model/ServiceDocsCallQueueResponseShort}
-     */
-    ServiceDocsCallQueueResponseShort,
+    ServiceDocsCallQueueRecipientLoginLogoutOutput,
 
     /**
      * The ServiceDocsCallRecordingGetAll model constructor.
@@ -1077,6 +1030,12 @@ export {
      * @property {module:model/ServiceDocsCallflowGetSingle}
      */
     ServiceDocsCallflowGetSingle,
+
+    /**
+     * The ServiceDocsCallparkGet model constructor.
+     * @property {module:model/ServiceDocsCallparkGet}
+     */
+    ServiceDocsCallparkGet,
 
     /**
      * The ServiceDocsCampaignImportOutput model constructor.
@@ -1151,6 +1110,54 @@ export {
     ServiceDocsDeviceStatus,
 
     /**
+     * The ServiceDocsE911ActiveLocationOutput model constructor.
+     * @property {module:model/ServiceDocsE911ActiveLocationOutput}
+     */
+    ServiceDocsE911ActiveLocationOutput,
+
+    /**
+     * The ServiceDocsE911ActiveLocationURIApiOutput model constructor.
+     * @property {module:model/ServiceDocsE911ActiveLocationURIApiOutput}
+     */
+    ServiceDocsE911ActiveLocationURIApiOutput,
+
+    /**
+     * The ServiceDocsE911AddLocationOutput model constructor.
+     * @property {module:model/ServiceDocsE911AddLocationOutput}
+     */
+    ServiceDocsE911AddLocationOutput,
+
+    /**
+     * The ServiceDocsE911LocationsURIApiOutput model constructor.
+     * @property {module:model/ServiceDocsE911LocationsURIApiOutput}
+     */
+    ServiceDocsE911LocationsURIApiOutput,
+
+    /**
+     * The ServiceDocsE911RemoveLocationOutput model constructor.
+     * @property {module:model/ServiceDocsE911RemoveLocationOutput}
+     */
+    ServiceDocsE911RemoveLocationOutput,
+
+    /**
+     * The ServiceDocsE911RemoveURIApiOutput model constructor.
+     * @property {module:model/ServiceDocsE911RemoveURIApiOutput}
+     */
+    ServiceDocsE911RemoveURIApiOutput,
+
+    /**
+     * The ServiceDocsE911URIsApiOutput model constructor.
+     * @property {module:model/ServiceDocsE911URIsApiOutput}
+     */
+    ServiceDocsE911URIsApiOutput,
+
+    /**
+     * The ServiceDocsE911ValidateLocationOutput model constructor.
+     * @property {module:model/ServiceDocsE911ValidateLocationOutput}
+     */
+    ServiceDocsE911ValidateLocationOutput,
+
+    /**
      * The ServiceDocsEndpointList model constructor.
      * @property {module:model/ServiceDocsEndpointList}
      */
@@ -1223,12 +1230,6 @@ export {
     ServiceDocsOrderPhonenumber,
 
     /**
-     * The ServiceDocsParkedcallGet model constructor.
-     * @property {module:model/ServiceDocsParkedcallGet}
-     */
-    ServiceDocsParkedcallGet,
-
-    /**
      * The ServiceDocsPhonenumberAssignPayload model constructor.
      * @property {module:model/ServiceDocsPhonenumberAssignPayload}
      */
@@ -1257,6 +1258,12 @@ export {
      * @property {module:model/ServiceDocsPresenceGet}
      */
     ServiceDocsPresenceGet,
+
+    /**
+     * The ServiceDocsQueueMembershipOutput model constructor.
+     * @property {module:model/ServiceDocsQueueMembershipOutput}
+     */
+    ServiceDocsQueueMembershipOutput,
 
     /**
      * The ServiceDocsStorageGet model constructor.
@@ -1535,22 +1542,22 @@ export {
     ServicePingOutput,
 
     /**
-     * The ServiceQueueRecipientOutputFull model constructor.
-     * @property {module:model/ServiceQueueRecipientOutputFull}
+     * The ServiceQueueRecipientOutput model constructor.
+     * @property {module:model/ServiceQueueRecipientOutput}
      */
-    ServiceQueueRecipientOutputFull,
+    ServiceQueueRecipientOutput,
 
     /**
-     * The ServiceQueueRecipientOutputFullFeatures model constructor.
-     * @property {module:model/ServiceQueueRecipientOutputFullFeatures}
+     * The ServiceQueueRecipientOutputRecipient model constructor.
+     * @property {module:model/ServiceQueueRecipientOutputRecipient}
      */
-    ServiceQueueRecipientOutputFullFeatures,
+    ServiceQueueRecipientOutputRecipient,
 
     /**
-     * The ServiceQueueRecipientOutputFullRecipient model constructor.
-     * @property {module:model/ServiceQueueRecipientOutputFullRecipient}
+     * The ServiceQueueRecipientOutputRecipientFeatures model constructor.
+     * @property {module:model/ServiceQueueRecipientOutputRecipientFeatures}
      */
-    ServiceQueueRecipientOutputFullRecipient,
+    ServiceQueueRecipientOutputRecipientFeatures,
 
     /**
      * The ServiceRemoveURIApiOutput model constructor.
@@ -1767,6 +1774,12 @@ export {
      * @property {module:model/ServiceVOIPDeviceAddEdit5}
      */
     ServiceVOIPDeviceAddEdit5,
+
+    /**
+     * The ServiceVOIPDeviceAddEditLineKey model constructor.
+     * @property {module:model/ServiceVOIPDeviceAddEditLineKey}
+     */
+    ServiceVOIPDeviceAddEditLineKey,
 
     /**
      * The ServiceVOIPDeviceAddEditProvision model constructor.
@@ -2001,12 +2014,6 @@ export {
     * @property {module:api/PresenceApi}
     */
     PresenceApi,
-
-    /**
-    * The ProvisionApi service constructor.
-    * @property {module:api/ProvisionApi}
-    */
-    ProvisionApi,
 
     /**
     * The ProvisioningApi service constructor.

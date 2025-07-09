@@ -1,6 +1,6 @@
 # WhiteLabelCommunicationsCPaasApiDocumentation.CallParkApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## v1AccountAccountIDParkedcallGet
 
-> ServiceDocsParkedcallGet v1AccountAccountIDParkedcallGet(accountID)
+> ServiceDocsCallparkGet v1AccountAccountIDParkedcallGet(accountID)
 
 Get Call Park List
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServiceDocsParkedcallGet**](ServiceDocsParkedcallGet.md)
+[**ServiceDocsCallparkGet**](ServiceDocsCallparkGet.md)
 
 ### Authorization
 

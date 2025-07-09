@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
-import ServiceDocsParkedcallGet from '../model/ServiceDocsParkedcallGet';
+import ServiceDocsCallparkGet from '../model/ServiceDocsCallparkGet';
 
 /**
 * CallPark service.
@@ -39,7 +39,7 @@ export default class CallParkApi {
      * Callback function to receive the result of the v1AccountAccountIDParkedcallGet operation.
      * @callback module:api/CallParkApi~v1AccountAccountIDParkedcallGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsParkedcallGet} data The data returned by the service call.
+     * @param {module:model/ServiceDocsCallparkGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -48,7 +48,7 @@ export default class CallParkApi {
      * Retrieve a list of calls parked on hold in a numbered slot.
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {module:api/CallParkApi~v1AccountAccountIDParkedcallGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsParkedcallGet}
+     * data is of type: {@link module:model/ServiceDocsCallparkGet}
      */
     v1AccountAccountIDParkedcallGet(accountID, callback) {
       let postBody = null;
@@ -70,7 +70,7 @@ export default class CallParkApi {
       let authNames = ['BearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsParkedcallGet;
+      let returnType = ServiceDocsCallparkGet;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/parkedcall', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

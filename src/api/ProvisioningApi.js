@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CPAASError from '../model/CPAASError';
 import ModelsGenerateConfigFileRequest from '../model/ModelsGenerateConfigFileRequest';
 import ProvisioningDocsDocsBrandOutputSingle from '../model/ProvisioningDocsDocsBrandOutputSingle';
 import ProvisioningDocsDocsBrandsOutput from '../model/ProvisioningDocsDocsBrandsOutput';
@@ -45,6 +46,55 @@ export default class ProvisioningApi {
 
 
     /**
+     * Callback function to receive the result of the v1AccountAccountIDProvisionFilenameGet operation.
+     * @callback module:api/ProvisioningApi~v1AccountAccountIDProvisionFilenameGetCallback
+     * @param {String} error Error message, if any.
+     * @param {File} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Config File Details
+     * Retrieve the configuration details (e.g., settings and parameters) for a device.
+     * @param {String} accountID Account ID, 32 alpha numeric
+     * @param {String} filename Name of config file
+     * @param {module:api/ProvisioningApi~v1AccountAccountIDProvisionFilenameGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link File}
+     */
+    v1AccountAccountIDProvisionFilenameGet(accountID, filename, callback) {
+      let postBody = null;
+      // verify the required parameter 'accountID' is set
+      if (accountID === undefined || accountID === null) {
+        throw new Error("Missing the required parameter 'accountID' when calling v1AccountAccountIDProvisionFilenameGet");
+      }
+      // verify the required parameter 'filename' is set
+      if (filename === undefined || filename === null) {
+        throw new Error("Missing the required parameter 'filename' when calling v1AccountAccountIDProvisionFilenameGet");
+      }
+
+      let pathParams = {
+        'accountID': accountID,
+        'filename': filename
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['*/*'];
+      let returnType = File;
+      return this.apiClient.callApi(
+        '/v1/account/{accountID}/provision/{filename}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the v1ApBrandBrandFamilyFamilyGet operation.
      * @callback module:api/ProvisioningApi~v1ApBrandBrandFamilyFamilyGetCallback
      * @param {String} error Error message, if any.
@@ -53,7 +103,7 @@ export default class ProvisioningApi {
      */
 
     /**
-     * Get Family
+     * Get Family Details
      * Retrieve a family's details by the randomly generated ID.
      * @param {String} brand brand
      * @param {String} family family
@@ -161,7 +211,7 @@ export default class ProvisioningApi {
      */
 
     /**
-     * Get Model
+     * Get Model Details
      * Retrieve a model's details by the randomly generated ID.
      * @param {String} brand brand
      * @param {String} family family
@@ -283,7 +333,7 @@ export default class ProvisioningApi {
      */
 
     /**
-     * Get Template
+     * Get Template Details
      * Retrieve details about a template for a model by the randomly generated ID.
      * @param {String} brand brand
      * @param {String} family family
@@ -397,7 +447,7 @@ export default class ProvisioningApi {
      */
 
     /**
-     * Get Brand
+     * Get Brand Details
      * Retrieve a brand's details by the randomly generated ID.
      * @param {String} brand brand id to retrieve a brand
      * @param {module:api/ProvisioningApi~v1ApBrandBrandGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -440,7 +490,7 @@ export default class ProvisioningApi {
      */
 
     /**
-     * Get Brand
+     * Get Brand List
      * Retrieve a list of all brands (e.g., Yealink and Polycom) by client.
      * @param {Object} opts Optional parameters
      * @param {String} [brandName] 
@@ -487,7 +537,7 @@ export default class ProvisioningApi {
      */
 
     /**
-     * Generate config file
+     * Generate Config File
      * Generate a configuration file that includes a list of parameters passed to the specified template_id in the request payload, with populated values returned in the response.
      * @param {module:model/ModelsGenerateConfigFileRequest} params body params to generate config file
      * @param {module:api/ProvisioningApi~v1ApConfigfileGeneratePostCallback} callback The callback function, accepting three arguments: error, data, response

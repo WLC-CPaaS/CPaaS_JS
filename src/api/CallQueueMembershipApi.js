@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
 import ServiceAPIResponse from '../model/ServiceAPIResponse';
-import ServiceDocsCallQueueMemberGetSingle from '../model/ServiceDocsCallQueueMemberGetSingle';
+import ServiceDocsQueueMembershipOutput from '../model/ServiceDocsQueueMembershipOutput';
 import ServiceVOIPCallQueueEnableMembershipData from '../model/ServiceVOIPCallQueueEnableMembershipData';
 import ServiceVOIPQueueMembershipAddData from '../model/ServiceVOIPQueueMembershipAddData';
 
@@ -42,7 +42,7 @@ export default class CallQueueMembershipApi {
      * Callback function to receive the result of the v1AccountAccountIDQueuemembershipPost operation.
      * @callback module:api/CallQueueMembershipApi~v1AccountAccountIDQueuemembershipPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsCallQueueMemberGetSingle} data The data returned by the service call.
+     * @param {module:model/ServiceDocsQueueMembershipOutput} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -52,7 +52,7 @@ export default class CallQueueMembershipApi {
      * @param {String} accountID Account ID, 32 alpha numeric
      * @param {module:model/ServiceVOIPQueueMembershipAddData} reqBody payload fields
      * @param {module:api/CallQueueMembershipApi~v1AccountAccountIDQueuemembershipPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsCallQueueMemberGetSingle}
+     * data is of type: {@link module:model/ServiceDocsQueueMembershipOutput}
      */
     v1AccountAccountIDQueuemembershipPost(accountID, reqBody, callback) {
       let postBody = reqBody;
@@ -78,7 +78,7 @@ export default class CallQueueMembershipApi {
       let authNames = ['BearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsCallQueueMemberGetSingle;
+      let returnType = ServiceDocsQueueMembershipOutput;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/queuemembership', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
