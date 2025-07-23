@@ -342,6 +342,7 @@ Class | Method | HTTP request | Description
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsDeviceOutputFullSIP](docs/ModelsDeviceOutputFullSIP.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsFamily](docs/ModelsFamily.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsGenerateConfigFileRequest](docs/ModelsGenerateConfigFileRequest.md)
+ - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsLineKeyProcessedTempData](docs/ModelsLineKeyProcessedTempData.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsModel](docs/ModelsModel.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsMusicOnHold](docs/ModelsMusicOnHold.md)
  - [WhiteLabelCommunicationsCPaasApiDocumentation.ModelsTemplate](docs/ModelsTemplate.md)

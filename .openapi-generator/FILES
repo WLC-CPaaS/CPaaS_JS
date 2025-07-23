@@ -57,6 +57,7 @@ docs/ModelsDeviceOutputFullProvision.md
 docs/ModelsDeviceOutputFullSIP.md
 docs/ModelsFamily.md
 docs/ModelsGenerateConfigFileRequest.md
+docs/ModelsLineKeyProcessedTempData.md
 docs/ModelsModel.md
 docs/ModelsMusicOnHold.md
 docs/ModelsTemplate.md
@@ -361,6 +362,7 @@ src/model/ModelsDeviceOutputFullProvision.js
 src/model/ModelsDeviceOutputFullSIP.js
 src/model/ModelsFamily.js
 src/model/ModelsGenerateConfigFileRequest.js
+src/model/ModelsLineKeyProcessedTempData.js
 src/model/ModelsModel.js
 src/model/ModelsMusicOnHold.js
 src/model/ModelsTemplate.js
@@ -583,19 +585,4 @@ src/model/ServiceVoicemailOutputShort.js
 src/model/ServiceWebhookAdd.js
 src/model/ServiceWebhookDeleteOutput.js
 src/model/ServiceWebhookEdit.js
-test/model/ModelsVOIPDeviceOutputLineKey.spec.js
-test/model/ServiceDocsCallQueueRecipientLoginLogoutOutput.spec.js
-test/model/ServiceDocsCallparkGet.spec.js
-test/model/ServiceDocsE911ActiveLocationOutput.spec.js
-test/model/ServiceDocsE911ActiveLocationURIApiOutput.spec.js
-test/model/ServiceDocsE911AddLocationOutput.spec.js
-test/model/ServiceDocsE911LocationsURIApiOutput.spec.js
-test/model/ServiceDocsE911RemoveLocationOutput.spec.js
-test/model/ServiceDocsE911RemoveURIApiOutput.spec.js
-test/model/ServiceDocsE911URIsApiOutput.spec.js
-test/model/ServiceDocsE911ValidateLocationOutput.spec.js
-test/model/ServiceDocsQueueMembershipOutput.spec.js
-test/model/ServiceQueueRecipientOutput.spec.js
-test/model/ServiceQueueRecipientOutputRecipient.spec.js
-test/model/ServiceQueueRecipientOutputRecipientFeatures.spec.js
-test/model/ServiceVOIPDeviceAddEditLineKey.spec.js
+test/model/ModelsLineKeyProcessedTempData.spec.js

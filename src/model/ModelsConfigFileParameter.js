@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ModelsLineKeyProcessedTempData from './ModelsLineKeyProcessedTempData';
 
 /**
  * The ModelsConfigFileParameter model module.
@@ -59,6 +60,9 @@ class ModelsConfigFileParameter {
             if (data.hasOwnProperty('https_username')) {
                 obj['https_username'] = ApiClient.convertToType(data['https_username'], 'String');
             }
+            if (data.hasOwnProperty('line_keys')) {
+                obj['line_keys'] = ApiClient.convertToType(data['line_keys'], [ModelsLineKeyProcessedTempData]);
+            }
             if (data.hasOwnProperty('mac_address')) {
                 obj['mac_address'] = ApiClient.convertToType(data['mac_address'], 'String');
             }
@@ -102,6 +106,16 @@ class ModelsConfigFileParameter {
         // ensure the json data is a string
         if (data['https_username'] && !(typeof data['https_username'] === 'string' || data['https_username'] instanceof String)) {
             throw new Error("Expected the field `https_username` to be a primitive type in the JSON string but got " + data['https_username']);
+        }
+        if (data['line_keys']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['line_keys'])) {
+                throw new Error("Expected the field `line_keys` to be an array in the JSON data but got " + data['line_keys']);
+            }
+            // validate the optional field `line_keys` (array)
+            for (const item of data['line_keys']) {
+                ModelsLineKeyProcessedTempData.validateJSON(item);
+            };
         }
         // ensure the json data is a string
         if (data['mac_address'] && !(typeof data['mac_address'] === 'string' || data['mac_address'] instanceof String)) {
@@ -155,6 +169,11 @@ ModelsConfigFileParameter.prototype['https_password'] = undefined;
  * @member {String} https_username
  */
 ModelsConfigFileParameter.prototype['https_username'] = undefined;
+
+/**
+ * @member {Array.<module:model/ModelsLineKeyProcessedTempData>} line_keys
+ */
+ModelsConfigFileParameter.prototype['line_keys'] = undefined;
 
 /**
  * @member {String} mac_address

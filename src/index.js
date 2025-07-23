@@ -52,6 +52,7 @@ import ModelsDeviceOutputFullProvision from './model/ModelsDeviceOutputFullProvi
 import ModelsDeviceOutputFullSIP from './model/ModelsDeviceOutputFullSIP';
 import ModelsFamily from './model/ModelsFamily';
 import ModelsGenerateConfigFileRequest from './model/ModelsGenerateConfigFileRequest';
+import ModelsLineKeyProcessedTempData from './model/ModelsLineKeyProcessedTempData';
 import ModelsModel from './model/ModelsModel';
 import ModelsMusicOnHold from './model/ModelsMusicOnHold';
 import ModelsTemplate from './model/ModelsTemplate';
@@ -574,6 +575,12 @@ export {
      * @property {module:model/ModelsGenerateConfigFileRequest}
      */
     ModelsGenerateConfigFileRequest,
+
+    /**
+     * The ModelsLineKeyProcessedTempData model constructor.
+     * @property {module:model/ModelsLineKeyProcessedTempData}
+     */
+    ModelsLineKeyProcessedTempData,
 
     /**
      * The ModelsModel model constructor.

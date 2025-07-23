@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **httpsHost** | **String** |  | [optional] 
 **httpsPassword** | **String** |  | [optional] 
 **httpsUsername** | **String** |  | [optional] 
+**lineKeys** | [**[ModelsLineKeyProcessedTempData]**](ModelsLineKeyProcessedTempData.md) |  | [optional] 
 **macAddress** | **String** |  | [optional] 
 **realm** | **String** |  | [optional] 
 **sipPassword** | **String** |  | [optional] 
