@@ -50,9 +50,6 @@ class ModelsLineKeyProcessedTempData {
             if (data.hasOwnProperty('label')) {
                 obj['label'] = ApiClient.convertToType(data['label'], 'String');
             }
-            if (data.hasOwnProperty('line')) {
-                obj['line'] = ApiClient.convertToType(data['line'], 'Number');
-            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -94,11 +91,6 @@ class ModelsLineKeyProcessedTempData {
  * @member {String} label
  */
 ModelsLineKeyProcessedTempData.prototype['label'] = undefined;
-
-/**
- * @member {Number} line
- */
-ModelsLineKeyProcessedTempData.prototype['line'] = undefined;
 
 /**
  * @member {String} type

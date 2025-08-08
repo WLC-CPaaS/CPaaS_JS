@@ -204,7 +204,6 @@ import ServiceFeatureCode from './model/ServiceFeatureCode';
 import ServiceGroupOutputFull from './model/ServiceGroupOutputFull';
 import ServiceGroupOutputShort from './model/ServiceGroupOutputShort';
 import ServiceImpersonateUserOutputFull from './model/ServiceImpersonateUserOutputFull';
-import ServiceImpersonatedUserInfo from './model/ServiceImpersonatedUserInfo';
 import ServiceMediaOutputFull from './model/ServiceMediaOutputFull';
 import ServiceMediaOutputShort from './model/ServiceMediaOutputShort';
 import ServiceMetaflowOutput from './model/ServiceMetaflowOutput';
@@ -229,7 +228,6 @@ import ServiceSystemStatusCPAASService from './model/ServiceSystemStatusCPAASSer
 import ServiceSystemStatusMessagingService from './model/ServiceSystemStatusMessagingService';
 import ServiceSystemStatusOutput from './model/ServiceSystemStatusOutput';
 import ServiceSystemStatusSupportService from './model/ServiceSystemStatusSupportService';
-import ServiceSystemStatusVOIPService from './model/ServiceSystemStatusVOIPService';
 import ServiceTTS from './model/ServiceTTS';
 import ServiceTemporalRuleOutputFull from './model/ServiceTemporalRuleOutputFull';
 import ServiceTemporalRuleOutputShort from './model/ServiceTemporalRuleOutputShort';
@@ -1489,12 +1487,6 @@ export {
     ServiceImpersonateUserOutputFull,
 
     /**
-     * The ServiceImpersonatedUserInfo model constructor.
-     * @property {module:model/ServiceImpersonatedUserInfo}
-     */
-    ServiceImpersonatedUserInfo,
-
-    /**
      * The ServiceMediaOutputFull model constructor.
      * @property {module:model/ServiceMediaOutputFull}
      */
@@ -1637,12 +1629,6 @@ export {
      * @property {module:model/ServiceSystemStatusSupportService}
      */
     ServiceSystemStatusSupportService,
-
-    /**
-     * The ServiceSystemStatusVOIPService model constructor.
-     * @property {module:model/ServiceSystemStatusVOIPService}
-     */
-    ServiceSystemStatusVOIPService,
 
     /**
      * The ServiceTTS model constructor.

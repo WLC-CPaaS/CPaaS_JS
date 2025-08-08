@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceImpersonatedUserInfo from './ServiceImpersonatedUserInfo';
 
 /**
  * The ServiceImpersonateUserOutputFull model module.
@@ -48,32 +47,8 @@ class ServiceImpersonateUserOutputFull {
         if (data) {
             obj = obj || new ServiceImpersonateUserOutputFull();
 
-            if (data.hasOwnProperty('account_id')) {
-                obj['account_id'] = ApiClient.convertToType(data['account_id'], 'String');
-            }
-            if (data.hasOwnProperty('account_name')) {
-                obj['account_name'] = ApiClient.convertToType(data['account_name'], 'String');
-            }
             if (data.hasOwnProperty('auth_token')) {
                 obj['auth_token'] = ApiClient.convertToType(data['auth_token'], 'String');
-            }
-            if (data.hasOwnProperty('cluster_id')) {
-                obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
-            }
-            if (data.hasOwnProperty('is_master_account')) {
-                obj['is_master_account'] = ApiClient.convertToType(data['is_master_account'], 'Boolean');
-            }
-            if (data.hasOwnProperty('is_reseller')) {
-                obj['is_reseller'] = ApiClient.convertToType(data['is_reseller'], 'Boolean');
-            }
-            if (data.hasOwnProperty('owner_id')) {
-                obj['owner_id'] = ApiClient.convertToType(data['owner_id'], 'String');
-            }
-            if (data.hasOwnProperty('reseller_id')) {
-                obj['reseller_id'] = ApiClient.convertToType(data['reseller_id'], 'String');
-            }
-            if (data.hasOwnProperty('user_info')) {
-                obj['user_info'] = ServiceImpersonatedUserInfo.constructFromObject(data['user_info']);
             }
         }
         return obj;
@@ -86,32 +61,8 @@ class ServiceImpersonateUserOutputFull {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['account_id'] && !(typeof data['account_id'] === 'string' || data['account_id'] instanceof String)) {
-            throw new Error("Expected the field `account_id` to be a primitive type in the JSON string but got " + data['account_id']);
-        }
-        // ensure the json data is a string
-        if (data['account_name'] && !(typeof data['account_name'] === 'string' || data['account_name'] instanceof String)) {
-            throw new Error("Expected the field `account_name` to be a primitive type in the JSON string but got " + data['account_name']);
-        }
-        // ensure the json data is a string
         if (data['auth_token'] && !(typeof data['auth_token'] === 'string' || data['auth_token'] instanceof String)) {
             throw new Error("Expected the field `auth_token` to be a primitive type in the JSON string but got " + data['auth_token']);
-        }
-        // ensure the json data is a string
-        if (data['cluster_id'] && !(typeof data['cluster_id'] === 'string' || data['cluster_id'] instanceof String)) {
-            throw new Error("Expected the field `cluster_id` to be a primitive type in the JSON string but got " + data['cluster_id']);
-        }
-        // ensure the json data is a string
-        if (data['owner_id'] && !(typeof data['owner_id'] === 'string' || data['owner_id'] instanceof String)) {
-            throw new Error("Expected the field `owner_id` to be a primitive type in the JSON string but got " + data['owner_id']);
-        }
-        // ensure the json data is a string
-        if (data['reseller_id'] && !(typeof data['reseller_id'] === 'string' || data['reseller_id'] instanceof String)) {
-            throw new Error("Expected the field `reseller_id` to be a primitive type in the JSON string but got " + data['reseller_id']);
-        }
-        // validate the optional field `user_info`
-        if (data['user_info']) { // data not null
-          ServiceImpersonatedUserInfo.validateJSON(data['user_info']);
         }
 
         return true;
@@ -123,49 +74,9 @@ class ServiceImpersonateUserOutputFull {
 
 
 /**
- * @member {String} account_id
- */
-ServiceImpersonateUserOutputFull.prototype['account_id'] = undefined;
-
-/**
- * @member {String} account_name
- */
-ServiceImpersonateUserOutputFull.prototype['account_name'] = undefined;
-
-/**
  * @member {String} auth_token
  */
 ServiceImpersonateUserOutputFull.prototype['auth_token'] = undefined;
-
-/**
- * @member {String} cluster_id
- */
-ServiceImpersonateUserOutputFull.prototype['cluster_id'] = undefined;
-
-/**
- * @member {Boolean} is_master_account
- */
-ServiceImpersonateUserOutputFull.prototype['is_master_account'] = undefined;
-
-/**
- * @member {Boolean} is_reseller
- */
-ServiceImpersonateUserOutputFull.prototype['is_reseller'] = undefined;
-
-/**
- * @member {String} owner_id
- */
-ServiceImpersonateUserOutputFull.prototype['owner_id'] = undefined;
-
-/**
- * @member {String} reseller_id
- */
-ServiceImpersonateUserOutputFull.prototype['reseller_id'] = undefined;
-
-/**
- * @member {module:model/ServiceImpersonatedUserInfo} user_info
- */
-ServiceImpersonateUserOutputFull.prototype['user_info'] = undefined;
 
 
 

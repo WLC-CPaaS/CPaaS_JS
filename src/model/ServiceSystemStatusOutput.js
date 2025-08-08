@@ -15,7 +15,6 @@ import ApiClient from '../ApiClient';
 import ServiceSystemStatusCPAASService from './ServiceSystemStatusCPAASService';
 import ServiceSystemStatusMessagingService from './ServiceSystemStatusMessagingService';
 import ServiceSystemStatusSupportService from './ServiceSystemStatusSupportService';
-import ServiceSystemStatusVOIPService from './ServiceSystemStatusVOIPService';
 
 /**
  * The ServiceSystemStatusOutput model module.
@@ -60,9 +59,6 @@ class ServiceSystemStatusOutput {
             if (data.hasOwnProperty('support_services')) {
                 obj['support_services'] = ServiceSystemStatusSupportService.constructFromObject(data['support_services']);
             }
-            if (data.hasOwnProperty('voip_services')) {
-                obj['voip_services'] = ServiceSystemStatusVOIPService.constructFromObject(data['voip_services']);
-            }
         }
         return obj;
     }
@@ -84,10 +80,6 @@ class ServiceSystemStatusOutput {
         // validate the optional field `support_services`
         if (data['support_services']) { // data not null
           ServiceSystemStatusSupportService.validateJSON(data['support_services']);
-        }
-        // validate the optional field `voip_services`
-        if (data['voip_services']) { // data not null
-          ServiceSystemStatusVOIPService.validateJSON(data['voip_services']);
         }
 
         return true;
@@ -112,11 +104,6 @@ ServiceSystemStatusOutput.prototype['messaging_services'] = undefined;
  * @member {module:model/ServiceSystemStatusSupportService} support_services
  */
 ServiceSystemStatusOutput.prototype['support_services'] = undefined;
-
-/**
- * @member {module:model/ServiceSystemStatusVOIPService} voip_services
- */
-ServiceSystemStatusOutput.prototype['voip_services'] = undefined;
 
 
 

@@ -213,7 +213,6 @@ docs/ServiceFeatureCode.md
 docs/ServiceGroupOutputFull.md
 docs/ServiceGroupOutputShort.md
 docs/ServiceImpersonateUserOutputFull.md
-docs/ServiceImpersonatedUserInfo.md
 docs/ServiceMediaOutputFull.md
 docs/ServiceMediaOutputShort.md
 docs/ServiceMetaflowOutput.md
@@ -238,7 +237,6 @@ docs/ServiceSystemStatusCPAASService.md
 docs/ServiceSystemStatusMessagingService.md
 docs/ServiceSystemStatusOutput.md
 docs/ServiceSystemStatusSupportService.md
-docs/ServiceSystemStatusVOIPService.md
 docs/ServiceTTS.md
 docs/ServiceTemporalRuleOutputFull.md
 docs/ServiceTemporalRuleOutputShort.md
@@ -514,7 +512,6 @@ src/model/ServiceFeatureCode.js
 src/model/ServiceGroupOutputFull.js
 src/model/ServiceGroupOutputShort.js
 src/model/ServiceImpersonateUserOutputFull.js
-src/model/ServiceImpersonatedUserInfo.js
 src/model/ServiceMediaOutputFull.js
 src/model/ServiceMediaOutputShort.js
 src/model/ServiceMetaflowOutput.js
@@ -539,7 +536,6 @@ src/model/ServiceSystemStatusCPAASService.js
 src/model/ServiceSystemStatusMessagingService.js
 src/model/ServiceSystemStatusOutput.js
 src/model/ServiceSystemStatusSupportService.js
-src/model/ServiceSystemStatusVOIPService.js
 src/model/ServiceTTS.js
 src/model/ServiceTemporalRuleOutputFull.js
 src/model/ServiceTemporalRuleOutputShort.js
@@ -585,4 +581,3 @@ src/model/ServiceVoicemailOutputShort.js
 src/model/ServiceWebhookAdd.js
 src/model/ServiceWebhookDeleteOutput.js
 src/model/ServiceWebhookEdit.js
-test/model/ModelsLineKeyProcessedTempData.spec.js
