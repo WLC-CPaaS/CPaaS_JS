@@ -31,11 +31,11 @@ Retrieve the details of a single CDR record from an account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -84,11 +84,11 @@ Retrieve a list of CDRs in a specific account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -145,11 +145,11 @@ Retrieve a daily summary of calls, including the account ID that made or receive
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -208,11 +208,11 @@ Retrieve specific details about a call (e.g., caller, recipient, date, time, dur
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -279,11 +279,11 @@ Retrieve a monthly summary of calls, including which accounts made or received c
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -346,11 +346,11 @@ Access the endpoint list for each CPaaS API.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -409,11 +409,11 @@ Obtain a daily summary of events in a CPaaS account (e.g., setting/resetting the
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -472,11 +472,11 @@ Obtain specific details about an event (e.g., an E911 notification, a deleted ac
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -541,11 +541,11 @@ Obtain a monthly summary of events in a CPaaS account (e.g., adding media files 
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -587,7 +587,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -608,11 +608,11 @@ Retrieve a daily summary about a feature, including usage, which accounts execut
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -648,7 +648,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -669,11 +669,11 @@ Retrieve a monthly summary about a feature’s usage, new users, updates, and ot
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.DataApi();
 let opts = {
@@ -713,7 +713,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

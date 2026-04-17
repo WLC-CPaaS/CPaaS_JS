@@ -77,7 +77,7 @@ export default class WebhookApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsWebhookGetAll;
@@ -125,7 +125,7 @@ export default class WebhookApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsWebhookGetSingle;
@@ -174,7 +174,7 @@ export default class WebhookApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsWebhookDelete;
@@ -223,7 +223,7 @@ export default class WebhookApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsWebhookGetSingle;
@@ -277,7 +277,7 @@ export default class WebhookApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsWebhookGetSingle;

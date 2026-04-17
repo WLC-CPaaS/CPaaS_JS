@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('v1AccountAccountidUserUseridUserauthPost', function() {
+      it('should call v1AccountAccountidUserUseridUserauthPost successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountidUserUseridUserauthPost
+        //instance.v1AccountAccountidUserUseridUserauthPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

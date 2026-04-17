@@ -75,7 +75,7 @@ export default class TemporalRuleApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsTemporalRuleGetAll;
@@ -123,7 +123,7 @@ export default class TemporalRuleApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsTemporalRuleGetSingle;
@@ -172,7 +172,7 @@ export default class TemporalRuleApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsTemporalRuleGetSingle;
@@ -221,7 +221,7 @@ export default class TemporalRuleApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsTemporalRuleGetSingle;
@@ -275,7 +275,7 @@ export default class TemporalRuleApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsTemporalRuleGetSingle;

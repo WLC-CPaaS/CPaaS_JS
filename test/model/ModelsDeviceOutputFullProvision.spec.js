@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property lineKeys (base name: "line_keys")', function() {
+      // uncomment below and update the code to test the property lineKeys
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ModelsDeviceOutputFullProvision();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

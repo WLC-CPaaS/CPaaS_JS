@@ -75,7 +75,7 @@ export default class MediaApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'audio/mp3', 'audio/mpeg', 'audio/mpeg3', 'audio/x-wav', 'audio/wav', 'audio/ogg', 'video/x-flv', 'video/h264', 'video/mpeg', 'video/quicktime', 'video/mp4', 'video/webm'];
       let returnType = File;
@@ -130,7 +130,7 @@ export default class MediaApi {
         'file': file
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['multipart/form-data'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsMediaGetSingle;
@@ -179,7 +179,7 @@ export default class MediaApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsMediaGetAll;
@@ -228,7 +228,7 @@ export default class MediaApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsMediaGetSingle;
@@ -277,7 +277,7 @@ export default class MediaApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsMediaGetSingle;
@@ -325,7 +325,7 @@ export default class MediaApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsMediaGetSingle;

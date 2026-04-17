@@ -79,7 +79,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailGetAll;
@@ -127,7 +127,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailGetSingle;
@@ -176,7 +176,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailGetSingle;
@@ -225,7 +225,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailGetSingle;
@@ -280,7 +280,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailMessageGetAll;
@@ -335,12 +335,128 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailMessageGetSingle;
       return this.apiClient.callApi(
         '/v1/account/{accountID}/voicemail/{voicemailID}/message/{messageID}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet operation.
+     * @callback module:api/VoicemailApi~v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGetCallback
+     * @param {String} error Error message, if any.
+     * @param {File} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Voicemail Message File
+     * Get the original audio content of a specific voicemail message identified by its unique ID within an account's voicemail box. URL Param \"voicemailID\" is a unique 32-character alphanumeric identifier assigned by the system, which refers to a specific voicemail box. URL Param \"messageID\" is a unique 32-character alphanumeric identifier assigned by the system, which refers to a specific message within a voicemail box.
+     * @param {String} accountID Account ID, unique 32-character alphanumeric identifier
+     * @param {String} voicemailID Voicemail Box ID, unique 32-character alphanumeric identifier
+     * @param {String} messageID Message ID, unique 32-character alphanumeric identifier
+     * @param {module:api/VoicemailApi~v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link File}
+     */
+    v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet(accountID, voicemailID, messageID, callback) {
+      let postBody = null;
+      // verify the required parameter 'accountID' is set
+      if (accountID === undefined || accountID === null) {
+        throw new Error("Missing the required parameter 'accountID' when calling v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet");
+      }
+      // verify the required parameter 'voicemailID' is set
+      if (voicemailID === undefined || voicemailID === null) {
+        throw new Error("Missing the required parameter 'voicemailID' when calling v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet");
+      }
+      // verify the required parameter 'messageID' is set
+      if (messageID === undefined || messageID === null) {
+        throw new Error("Missing the required parameter 'messageID' when calling v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet");
+      }
+
+      let pathParams = {
+        'accountID': accountID,
+        'voicemailID': voicemailID,
+        'messageID': messageID
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerauth'];
+      let contentTypes = [];
+      let accepts = ['application/octet-stream'];
+      let returnType = File;
+      return this.apiClient.callApi(
+        '/v1/account/{accountID}/voicemail/{voicemailID}/message/{messageID}/file', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost operation.
+     * @callback module:api/VoicemailApi~v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePostCallback
+     * @param {String} error Error message, if any.
+     * @param {Object.<String, {String: Object}>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add Voicemail Message File
+     * Associate an audio recording file with the voicemail to fully complete the message.
+     * @param {String} accountID Account ID, 32 alphanumeric characters
+     * @param {String} voicemailID Voicemail ID, 32 alphanumeric characters
+     * @param {String} messageID Message ID, 32 alphanumeric characters
+     * @param {File} file Audio file to upload
+     * @param {module:api/VoicemailApi~v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {String: Object}>}
+     */
+    v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost(accountID, voicemailID, messageID, file, callback) {
+      let postBody = null;
+      // verify the required parameter 'accountID' is set
+      if (accountID === undefined || accountID === null) {
+        throw new Error("Missing the required parameter 'accountID' when calling v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost");
+      }
+      // verify the required parameter 'voicemailID' is set
+      if (voicemailID === undefined || voicemailID === null) {
+        throw new Error("Missing the required parameter 'voicemailID' when calling v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost");
+      }
+      // verify the required parameter 'messageID' is set
+      if (messageID === undefined || messageID === null) {
+        throw new Error("Missing the required parameter 'messageID' when calling v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost");
+      }
+      // verify the required parameter 'file' is set
+      if (file === undefined || file === null) {
+        throw new Error("Missing the required parameter 'file' when calling v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost");
+      }
+
+      let pathParams = {
+        'accountID': accountID,
+        'voicemailID': voicemailID,
+        'messageID': messageID
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+        'file': file
+      };
+
+      let authNames = ['bearerauth'];
+      let contentTypes = ['multipart/form-data'];
+      let accepts = ['application/json'];
+      let returnType = {'String': Object};
+      return this.apiClient.callApi(
+        '/v1/account/{accountID}/voicemail/{voicemailID}/message/{messageID}/file', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -390,7 +506,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailMessageGetSingle;
@@ -450,7 +566,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailMessageGetSingle;
@@ -470,7 +586,7 @@ export default class VoicemailApi {
      */
 
     /**
-     * Get Voicemail Message File
+     * Get Voicemail Message File (Deprecated)
      * Get the original audio content of a specific voicemail message identified by its unique ID within an account's voicemail box. URL Param \"voicemailID\" is a unique 32-character alphanumeric identifier assigned by the system, which refers to a specific voicemail box. URL Param \"messageID\" is a unique 32-character alphanumeric identifier assigned by the system, which refers to a specific message within a voicemail box.
      * @param {String} accountID Account ID, unique 32-character alphanumeric identifier
      * @param {String} voicemailID Voicemail Box ID, unique 32-character alphanumeric identifier
@@ -505,7 +621,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = [];
       let contentTypes = [];
       let accepts = ['application/octet-stream'];
       let returnType = File;
@@ -525,7 +641,7 @@ export default class VoicemailApi {
      */
 
     /**
-     * Add Voicemail Message File
+     * Add Voicemail Message File (Deprecated)
      * Associate an audio recording file with the voicemail to fully complete the message.
      * @param {String} accountID Account ID, 32 alphanumeric characters
      * @param {String} voicemailID Voicemail ID, 32 alphanumeric characters
@@ -566,7 +682,7 @@ export default class VoicemailApi {
         'file': file
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = [];
       let contentTypes = ['multipart/form-data'];
       let accepts = ['application/json'];
       let returnType = {'String': Object};
@@ -620,7 +736,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailMessageGetSingle;
@@ -674,7 +790,7 @@ export default class VoicemailApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsVoicemailGetSingle;

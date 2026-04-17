@@ -129,7 +129,13 @@ ServiceMetaflowPattern['ModuleEnum'] = {
      * value: "record_call"
      * @const
      */
-    "record_call": "record_call"
+    "record_call": "record_call",
+
+    /**
+     * value: "play"
+     * @const
+     */
+    "play": "play"
 };
 
 

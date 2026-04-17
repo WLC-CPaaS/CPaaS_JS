@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property callRecording (base name: "call_recording")', function() {
-      // uncomment below and update the code to test the property callRecording
-      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit2();
-      //expect(instance).to.be();
-    });
-
     it('should have the property callerId (base name: "caller_id")', function() {
       // uncomment below and update the code to test the property callerId
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit2();
@@ -116,6 +110,12 @@
 
     it('should have the property ownerId (base name: "owner_id")', function() {
       // uncomment below and update the code to test the property ownerId
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit2();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property provision (base name: "provision")', function() {
+      // uncomment below and update the code to test the property provision
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit2();
       //expect(instance).to.be();
     });

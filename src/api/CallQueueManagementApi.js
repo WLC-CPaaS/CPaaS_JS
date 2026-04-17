@@ -73,7 +73,7 @@ export default class CallQueueManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallQueueGetAll;
@@ -121,7 +121,7 @@ export default class CallQueueManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallQueueGetSingle;
@@ -170,7 +170,7 @@ export default class CallQueueManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallQueueGetSingle;
@@ -219,7 +219,7 @@ export default class CallQueueManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallQueueGetSingle;
@@ -273,7 +273,7 @@ export default class CallQueueManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallQueueGetSingle;
@@ -322,7 +322,7 @@ export default class CallQueueManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallQueueGetSingleStatus;
@@ -365,7 +365,7 @@ export default class CallQueueManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallQueueGetRoles;
@@ -419,7 +419,7 @@ export default class CallQueueManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceAPIResponse;

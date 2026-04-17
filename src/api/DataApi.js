@@ -83,7 +83,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCdrGetSingle;
@@ -136,7 +136,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCdrGetAll;
@@ -187,7 +187,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsCallDailySummary;
@@ -246,7 +246,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsCallDetail;
@@ -301,7 +301,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsCallMonthlySummary;
@@ -352,7 +352,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsEndpointList;
@@ -403,7 +403,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsEventDailySummary;
@@ -460,7 +460,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsEventDetail;
@@ -515,7 +515,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsEventMonthlySummary;
@@ -564,7 +564,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsFeatureDailySummary;
@@ -617,7 +617,7 @@ export default class DataApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsFeatureMonthlySummary;

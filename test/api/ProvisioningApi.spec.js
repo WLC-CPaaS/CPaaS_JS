@@ -48,6 +48,16 @@
   }
 
   describe('ProvisioningApi', function() {
+    describe('v1AccountAccountIDProvisionFilenameGet', function() {
+      it('should call v1AccountAccountIDProvisionFilenameGet successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountIDProvisionFilenameGet
+        //instance.v1AccountAccountIDProvisionFilenameGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v1ApBrandBrandFamilyFamilyGet', function() {
       it('should call v1ApBrandBrandFamilyFamilyGet successfully', function(done) {
         //uncomment below and update the code to test v1ApBrandBrandFamilyFamilyGet

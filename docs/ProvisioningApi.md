@@ -77,11 +77,11 @@ Retrieve a family&#39;s details by the randomly generated ID.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let brand = "brand_example"; // String | brand
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -130,11 +130,11 @@ Retrieve a list of all models within a family for a brand (e.g., Yealink and Pol
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let brand = "brand_example"; // String | brand
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -193,11 +193,11 @@ Retrieve a model&#39;s details by the randomly generated ID.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let brand = "brand_example"; // String | brand
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -248,11 +248,11 @@ Retrieve a list of all templates for a model within a brand (e.g., Yealink and P
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let brand = "brand_example"; // String | brand
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -315,11 +315,11 @@ Retrieve details about a template for a model by the randomly generated ID.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let brand = "brand_example"; // String | brand
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -372,11 +372,11 @@ Retrieve a list of all families for a brand (e.g., Yealink and Polycom).
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let brand = "brand_example"; // String | brand
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -433,11 +433,11 @@ Retrieve a brand&#39;s details by the randomly generated ID.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let brand = "brand_example"; // String | brand id to retrieve a brand
@@ -463,7 +463,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -484,11 +484,11 @@ Retrieve a list of all brands (e.g., Yealink and Polycom) by client.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let opts = {
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -543,11 +543,11 @@ Generate a configuration file that includes a list of parameters passed to the s
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.ProvisioningApi();
 let params = new WhiteLabelCommunicationsCPaasApiDocumentation.ModelsGenerateConfigFileRequest(); // ModelsGenerateConfigFileRequest | body params to generate config file
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

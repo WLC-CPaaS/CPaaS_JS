@@ -60,8 +60,26 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property nextStartKey (base name: "next_start_key")', function() {
+      // uncomment below and update the code to test the property nextStartKey
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocGroupGetAll();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pageSize (base name: "page_size")', function() {
+      // uncomment below and update the code to test the property pageSize
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocGroupGetAll();
+      //expect(instance).to.be();
+    });
+
     it('should have the property requestId (base name: "request_id")', function() {
       // uncomment below and update the code to test the property requestId
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocGroupGetAll();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property startKey (base name: "start_key")', function() {
+      // uncomment below and update the code to test the property startKey
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDocGroupGetAll();
       //expect(instance).to.be();
     });

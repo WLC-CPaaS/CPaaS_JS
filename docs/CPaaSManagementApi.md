@@ -25,11 +25,11 @@ Retrieve a list of all CPaaS users in an account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
 let opts = {
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -90,11 +90,11 @@ Link a new CPaaS user to an existing client account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
 let reqBody = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceAdminUserAddData(); // ServiceAdminUserAddData | payload fields
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -141,11 +141,11 @@ Delete a CPaaS user from the associated account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
 let userID = "userID_example"; // String | User ID, numeric
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -192,11 +192,11 @@ View details about each CPaaS user in an account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
 let userID = "userID_example"; // String | User ID, numeric
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -243,11 +243,11 @@ Update a CPaaS user&#39;s role within a client&#39;s account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.CPaaSManagementApi();
 let userID = "userID_example"; // String | User ID, numeric
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

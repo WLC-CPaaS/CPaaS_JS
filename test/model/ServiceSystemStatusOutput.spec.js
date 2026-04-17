@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property voipServices (base name: "voip_services")', function() {
-      // uncomment below and update the code to test the property voipServices
-      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceSystemStatusOutput();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

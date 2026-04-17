@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPAccountEditData);
     });
 
-    it('should have the property callRecording (base name: "call_recording")', function() {
-      // uncomment below and update the code to test the property callRecording
-      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPAccountEditData();
-      //expect(instance).to.be();
-    });
-
     it('should have the property callerId (base name: "caller_id")', function() {
       // uncomment below and update the code to test the property callerId
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPAccountEditData();

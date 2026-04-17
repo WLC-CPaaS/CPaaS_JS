@@ -26,11 +26,11 @@ Gather data about the media objects in an account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.MediaApi();
 let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -79,11 +79,11 @@ Include a media file that is connected to a media object in an account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.MediaApi();
 let accountID = "accountID_example"; // String | Account ID, 32 alpha numeric
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -134,11 +134,11 @@ View all media files for an account in your organization.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.MediaApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -191,11 +191,11 @@ Remove a media file that is no longer in use from an account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.MediaApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -244,11 +244,11 @@ Permit users to view an account&#39;s specific media information.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.MediaApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -297,11 +297,11 @@ Generate a media object to allow users to upload a media file in an account.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.MediaApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

@@ -55,6 +55,7 @@ import ModelsGenerateConfigFileRequest from './model/ModelsGenerateConfigFileReq
 import ModelsLineKeyProcessedTempData from './model/ModelsLineKeyProcessedTempData';
 import ModelsModel from './model/ModelsModel';
 import ModelsMusicOnHold from './model/ModelsMusicOnHold';
+import ModelsParkingSlotData from './model/ModelsParkingSlotData';
 import ModelsTemplate from './model/ModelsTemplate';
 import ModelsUserOutputFull from './model/ModelsUserOutputFull';
 import ModelsUserOutputFullCallerid from './model/ModelsUserOutputFullCallerid';
@@ -208,7 +209,6 @@ import ServiceMediaOutputFull from './model/ServiceMediaOutputFull';
 import ServiceMediaOutputShort from './model/ServiceMediaOutputShort';
 import ServiceMetaflowOutput from './model/ServiceMetaflowOutput';
 import ServiceMetaflowPattern from './model/ServiceMetaflowPattern';
-import ServiceParkingSlotData from './model/ServiceParkingSlotData';
 import ServicePhoneNumberResult from './model/ServicePhoneNumberResult';
 import ServicePhoneNumberSearchOutput from './model/ServicePhoneNumberSearchOutput';
 import ServicePhonenumberOutput from './model/ServicePhonenumberOutput';
@@ -273,6 +273,17 @@ import ServiceVoicemailOutputShort from './model/ServiceVoicemailOutputShort';
 import ServiceWebhookAdd from './model/ServiceWebhookAdd';
 import ServiceWebhookDeleteOutput from './model/ServiceWebhookDeleteOutput';
 import ServiceWebhookEdit from './model/ServiceWebhookEdit';
+import TypesAliasTarget from './model/TypesAliasTarget';
+import TypesCidrRoutingConfig from './model/TypesCidrRoutingConfig';
+import TypesCoordinates from './model/TypesCoordinates';
+import TypesGeoLocation from './model/TypesGeoLocation';
+import TypesGeoProximityLocation from './model/TypesGeoProximityLocation';
+import TypesRRType from './model/TypesRRType';
+import TypesResourceRecord from './model/TypesResourceRecord';
+import TypesResourceRecordSet from './model/TypesResourceRecordSet';
+import TypesResourceRecordSetFailover from './model/TypesResourceRecordSetFailover';
+import TypesResourceRecordSetRegion from './model/TypesResourceRecordSetRegion';
+import V1AccountAccountidDnsrecordGet200Response from './model/V1AccountAccountidDnsrecordGet200Response';
 import AccountApi from './api/AccountApi';
 import CPaaSManagementApi from './api/CPaaSManagementApi';
 import CallParkApi from './api/CallParkApi';
@@ -591,6 +602,12 @@ export {
      * @property {module:model/ModelsMusicOnHold}
      */
     ModelsMusicOnHold,
+
+    /**
+     * The ModelsParkingSlotData model constructor.
+     * @property {module:model/ModelsParkingSlotData}
+     */
+    ModelsParkingSlotData,
 
     /**
      * The ModelsTemplate model constructor.
@@ -1511,12 +1528,6 @@ export {
     ServiceMetaflowPattern,
 
     /**
-     * The ServiceParkingSlotData model constructor.
-     * @property {module:model/ServiceParkingSlotData}
-     */
-    ServiceParkingSlotData,
-
-    /**
      * The ServicePhoneNumberResult model constructor.
      * @property {module:model/ServicePhoneNumberResult}
      */
@@ -1899,6 +1910,72 @@ export {
      * @property {module:model/ServiceWebhookEdit}
      */
     ServiceWebhookEdit,
+
+    /**
+     * The TypesAliasTarget model constructor.
+     * @property {module:model/TypesAliasTarget}
+     */
+    TypesAliasTarget,
+
+    /**
+     * The TypesCidrRoutingConfig model constructor.
+     * @property {module:model/TypesCidrRoutingConfig}
+     */
+    TypesCidrRoutingConfig,
+
+    /**
+     * The TypesCoordinates model constructor.
+     * @property {module:model/TypesCoordinates}
+     */
+    TypesCoordinates,
+
+    /**
+     * The TypesGeoLocation model constructor.
+     * @property {module:model/TypesGeoLocation}
+     */
+    TypesGeoLocation,
+
+    /**
+     * The TypesGeoProximityLocation model constructor.
+     * @property {module:model/TypesGeoProximityLocation}
+     */
+    TypesGeoProximityLocation,
+
+    /**
+     * The TypesRRType model constructor.
+     * @property {module:model/TypesRRType}
+     */
+    TypesRRType,
+
+    /**
+     * The TypesResourceRecord model constructor.
+     * @property {module:model/TypesResourceRecord}
+     */
+    TypesResourceRecord,
+
+    /**
+     * The TypesResourceRecordSet model constructor.
+     * @property {module:model/TypesResourceRecordSet}
+     */
+    TypesResourceRecordSet,
+
+    /**
+     * The TypesResourceRecordSetFailover model constructor.
+     * @property {module:model/TypesResourceRecordSetFailover}
+     */
+    TypesResourceRecordSetFailover,
+
+    /**
+     * The TypesResourceRecordSetRegion model constructor.
+     * @property {module:model/TypesResourceRecordSetRegion}
+     */
+    TypesResourceRecordSetRegion,
+
+    /**
+     * The V1AccountAccountidDnsrecordGet200Response model constructor.
+     * @property {module:model/V1AccountAccountidDnsrecordGet200Response}
+     */
+    V1AccountAccountidDnsrecordGet200Response,
 
     /**
     * The AccountApi service constructor.

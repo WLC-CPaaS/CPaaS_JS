@@ -53,6 +53,9 @@ class ModelsDeviceOutputFullSIP {
             if (data.hasOwnProperty('password')) {
                 obj['password'] = ApiClient.convertToType(data['password'], 'String');
             }
+            if (data.hasOwnProperty('route')) {
+                obj['route'] = ApiClient.convertToType(data['route'], 'String');
+            }
             if (data.hasOwnProperty('username')) {
                 obj['username'] = ApiClient.convertToType(data['username'], 'String');
             }
@@ -73,6 +76,10 @@ class ModelsDeviceOutputFullSIP {
         // ensure the json data is a string
         if (data['password'] && !(typeof data['password'] === 'string' || data['password'] instanceof String)) {
             throw new Error("Expected the field `password` to be a primitive type in the JSON string but got " + data['password']);
+        }
+        // ensure the json data is a string
+        if (data['route'] && !(typeof data['route'] === 'string' || data['route'] instanceof String)) {
+            throw new Error("Expected the field `route` to be a primitive type in the JSON string but got " + data['route']);
         }
         // ensure the json data is a string
         if (data['username'] && !(typeof data['username'] === 'string' || data['username'] instanceof String)) {
@@ -96,6 +103,11 @@ ModelsDeviceOutputFullSIP.prototype['invite_format'] = undefined;
  * @member {String} password
  */
 ModelsDeviceOutputFullSIP.prototype['password'] = undefined;
+
+/**
+ * @member {String} route
+ */
+ModelsDeviceOutputFullSIP.prototype['route'] = undefined;
 
 /**
  * @member {String} username

@@ -26,11 +26,11 @@ Get a list of all VoIP users that includes first and last names, email addresses
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.VoIPUserApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -83,11 +83,11 @@ Add new users to the account. When a user is added, the system generates their u
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.VoIPUserApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -136,11 +136,11 @@ Delete VoIP user access to maintain the security of your accounts.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.VoIPUserApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -189,11 +189,11 @@ View specific user details.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.VoIPUserApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -242,11 +242,11 @@ Keep user information current. Modify the first and last name, extension, and ot
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.VoIPUserApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 
@@ -297,11 +297,11 @@ Retrieve a token for making presence calls.
 ```javascript
 import WhiteLabelCommunicationsCPaasApiDocumentation from 'white_label_communications_c_paas_api_documentation';
 let defaultClient = WhiteLabelCommunicationsCPaasApiDocumentation.ApiClient.instance;
-// Configure API key authorization: BearerAuth
-let BearerAuth = defaultClient.authentications['BearerAuth'];
-BearerAuth.apiKey = 'YOUR API KEY';
+// Configure API key authorization: bearerauth
+let bearerauth = defaultClient.authentications['bearerauth'];
+bearerauth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//BearerAuth.apiKeyPrefix = 'Token';
+//bearerauth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhiteLabelCommunicationsCPaasApiDocumentation.VoIPUserApi();
 let accountid = "accountid_example"; // String | Account ID, 32 alpha numeric
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[bearerauth](../README.md#bearerauth)
 
 ### HTTP request headers
 

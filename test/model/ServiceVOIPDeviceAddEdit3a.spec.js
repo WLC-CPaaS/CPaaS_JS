@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property route (base name: "route")', function() {
+      // uncomment below and update the code to test the property route
+      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit3a();
+      //expect(instance).to.be();
+    });
+
     it('should have the property username (base name: "username")', function() {
       // uncomment below and update the code to test the property username
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceVOIPDeviceAddEdit3a();

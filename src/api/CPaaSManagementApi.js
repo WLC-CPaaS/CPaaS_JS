@@ -81,7 +81,7 @@ export default class CPaaSManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsAdminUserGetAll;
@@ -123,7 +123,7 @@ export default class CPaaSManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsAdminUserGetSingle;
@@ -166,7 +166,7 @@ export default class CPaaSManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsAdminUserDelete;
@@ -209,7 +209,7 @@ export default class CPaaSManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsAdminUserGetSingle;
@@ -257,7 +257,7 @@ export default class CPaaSManagementApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['*/*'];
       let returnType = ServiceDocsAdminUserGetSingle;

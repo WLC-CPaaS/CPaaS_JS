@@ -78,7 +78,7 @@ export default class PhoneNumberApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountPhonenumberGetAll;
@@ -120,7 +120,7 @@ export default class PhoneNumberApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceAPIResponseStatusCodeOnly;
@@ -162,7 +162,7 @@ export default class PhoneNumberApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceAPIResponseStatusCodeOnly;
@@ -205,7 +205,7 @@ export default class PhoneNumberApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountPhonenumberGetAll;
@@ -247,7 +247,7 @@ export default class PhoneNumberApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsOrderPhonenumber;
@@ -289,7 +289,7 @@ export default class PhoneNumberApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceAPIResponseStatusCodeOnly;
@@ -336,7 +336,7 @@ export default class PhoneNumberApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsPhonenumberSearchGetAll;

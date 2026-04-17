@@ -29,12 +29,13 @@ class ServiceVOIPDeviceAddEdit2 {
     /**
      * Constructs a new <code>ServiceVOIPDeviceAddEdit2</code>.
      * @alias module:model/ServiceVOIPDeviceAddEdit2
+     * @param deviceType {module:model/ServiceVOIPDeviceAddEdit2.DeviceTypeEnum} 
      * @param name {String} 
      * @param sip {module:model/ServiceVOIPDeviceAddEdit3a} 
      */
-    constructor(name, sip) { 
+    constructor(deviceType, name, sip) { 
         
-        ServiceVOIPDeviceAddEdit2.initialize(this, name, sip);
+        ServiceVOIPDeviceAddEdit2.initialize(this, deviceType, name, sip);
     }
 
     /**
@@ -42,7 +43,8 @@ class ServiceVOIPDeviceAddEdit2 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, sip) { 
+    static initialize(obj, deviceType, name, sip) { 
+        obj['device_type'] = deviceType;
         obj['name'] = name;
         obj['sip'] = sip;
     }
@@ -161,7 +163,7 @@ class ServiceVOIPDeviceAddEdit2 {
 
 }
 
-ServiceVOIPDeviceAddEdit2.RequiredProperties = ["name", "sip"];
+ServiceVOIPDeviceAddEdit2.RequiredProperties = ["device_type", "name", "sip"];
 
 /**
  * @member {module:model/ModelsCallForward} call_forward

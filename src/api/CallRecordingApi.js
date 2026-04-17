@@ -68,7 +68,7 @@ export default class CallRecordingApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallRecordingGetAll;
@@ -117,7 +117,7 @@ export default class CallRecordingApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallRecordingGetSingle;
@@ -166,7 +166,7 @@ export default class CallRecordingApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'audio/mp3', 'audio/mpeg', 'audio/mpeg3', 'audio/x-wav', 'audio/wav'];
       let returnType = ServiceDocsCallRecordingGetSingle;
@@ -215,7 +215,7 @@ export default class CallRecordingApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallRecordingGetAll;

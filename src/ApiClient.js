@@ -45,7 +45,7 @@ class ApiClient {
          * @type {Array.<String>}
          */
         this.authentications = {
-            'BearerAuth': {type: 'apiKey', 'in': 'header', name: 'Authorization'}
+            'bearerauth': {type: 'apiKey', 'in': 'header', name: 'Authorization'}
         }
 
 	/**

@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDeviceOutputShort);
     });
 
-    it('should have the property callRecording (base name: "call_recording")', function() {
-      // uncomment below and update the code to test the property callRecording
-      //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDeviceOutputShort();
-      //expect(instance).to.be();
-    });
-
     it('should have the property deviceType (base name: "device_type")', function() {
       // uncomment below and update the code to test the property deviceType
       //var instance = new WhiteLabelCommunicationsCPaasApiDocumentation.ServiceDeviceOutputShort();

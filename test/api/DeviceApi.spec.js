@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('v1AccountAccountidDeviceDeviceidRebootPost', function() {
+      it('should call v1AccountAccountidDeviceDeviceidRebootPost successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountidDeviceDeviceidRebootPost
+        //instance.v1AccountAccountidDeviceDeviceidRebootPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v1AccountAccountidDeviceGet', function() {
       it('should call v1AccountAccountidDeviceGet successfully', function(done) {
         //uncomment below and update the code to test v1AccountAccountidDeviceGet
@@ -92,6 +102,16 @@
       it('should call v1AccountAccountidDevicePost successfully', function(done) {
         //uncomment below and update the code to test v1AccountAccountidDevicePost
         //instance.v1AccountAccountidDevicePost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v1AccountAccountidDeviceStatusGet', function() {
+      it('should call v1AccountAccountidDeviceStatusGet successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountidDeviceStatusGet
+        //instance.v1AccountAccountidDeviceStatusGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

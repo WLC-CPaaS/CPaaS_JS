@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CPAASError from '../model/CPAASError';
+import ServiceAPIResponse from '../model/ServiceAPIResponse';
 import ServiceDocsAccountAPIKey from '../model/ServiceDocsAccountAPIKey';
 import ServiceDocsAccountGetAll from '../model/ServiceDocsAccountGetAll';
 import ServiceDocsAccountGetSingle from '../model/ServiceDocsAccountGetSingle';
@@ -23,6 +24,7 @@ import ServiceUpdateRecordTypeForAccount from '../model/ServiceUpdateRecordTypeF
 import ServiceVOIPAccountAddData from '../model/ServiceVOIPAccountAddData';
 import ServiceVOIPAccountEditData from '../model/ServiceVOIPAccountEditData';
 import ServiceVOIPAccountLimit2 from '../model/ServiceVOIPAccountLimit2';
+import V1AccountAccountidDnsrecordGet200Response from '../model/V1AccountAccountidDnsrecordGet200Response';
 
 /**
 * Account service.
@@ -81,7 +83,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountGetAll;
@@ -124,7 +126,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountGetSingle;
@@ -139,7 +141,7 @@ export default class AccountApi {
      * Callback function to receive the result of the v1AccountAccountidDnsrecordGet operation.
      * @callback module:api/AccountApi~v1AccountAccountidDnsrecordGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsAccountGetSingle} data The data returned by the service call.
+     * @param {module:model/V1AccountAccountidDnsrecordGet200Response} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -148,7 +150,7 @@ export default class AccountApi {
      * Get the DNS record of an account from the Route 53 entry.
      * @param {String} accountid Account ID, 32 alpha numeric
      * @param {module:api/AccountApi~v1AccountAccountidDnsrecordGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsAccountGetSingle}
+     * data is of type: {@link module:model/V1AccountAccountidDnsrecordGet200Response}
      */
     v1AccountAccountidDnsrecordGet(accountid, callback) {
       let postBody = null;
@@ -167,10 +169,10 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsAccountGetSingle;
+      let returnType = V1AccountAccountidDnsrecordGet200Response;
       return this.apiClient.callApi(
         '/v1/account/{accountid}/dnsrecord', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -182,7 +184,7 @@ export default class AccountApi {
      * Callback function to receive the result of the v1AccountAccountidDnsrecordPost operation.
      * @callback module:api/AccountApi~v1AccountAccountidDnsrecordPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsAccountGetSingle} data The data returned by the service call.
+     * @param {module:model/V1AccountAccountidDnsrecordGet200Response} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -191,7 +193,7 @@ export default class AccountApi {
      * Create the DNS record of an account with the help realm in the Route 53 entry.
      * @param {String} accountid Account ID, 32 alpha numeric
      * @param {module:api/AccountApi~v1AccountAccountidDnsrecordPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsAccountGetSingle}
+     * data is of type: {@link module:model/V1AccountAccountidDnsrecordGet200Response}
      */
     v1AccountAccountidDnsrecordPost(accountid, callback) {
       let postBody = null;
@@ -210,10 +212,10 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsAccountGetSingle;
+      let returnType = V1AccountAccountidDnsrecordGet200Response;
       return this.apiClient.callApi(
         '/v1/account/{accountid}/dnsrecord', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -225,7 +227,7 @@ export default class AccountApi {
      * Callback function to receive the result of the v1AccountAccountidDnsrecordPut operation.
      * @callback module:api/AccountApi~v1AccountAccountidDnsrecordPutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ServiceDocsAccountGetSingle} data The data returned by the service call.
+     * @param {module:model/ServiceAPIResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -235,7 +237,7 @@ export default class AccountApi {
      * @param {String} accountid Account ID, 32 alpha numeric
      * @param {module:model/ServiceUpdateRecordTypeForAccount} dnsrecord record type fields with value SRV, CNAME
      * @param {module:api/AccountApi~v1AccountAccountidDnsrecordPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ServiceDocsAccountGetSingle}
+     * data is of type: {@link module:model/ServiceAPIResponse}
      */
     v1AccountAccountidDnsrecordPut(accountid, dnsrecord, callback) {
       let postBody = dnsrecord;
@@ -258,10 +260,10 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ServiceDocsAccountGetSingle;
+      let returnType = ServiceAPIResponse;
       return this.apiClient.callApi(
         '/v1/account/{accountid}/dnsrecord', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -301,7 +303,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountGetSingle;
@@ -344,7 +346,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountLimit;
@@ -392,7 +394,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountLimit;
@@ -440,7 +442,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountGetSingle;
@@ -483,7 +485,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountProvisioning;
@@ -526,7 +528,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountProvisioning;
@@ -574,7 +576,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountGetSingle;
@@ -610,7 +612,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountAPIKey;
@@ -653,7 +655,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountGetAll;
@@ -695,7 +697,7 @@ export default class AccountApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsAccountGetSingle;

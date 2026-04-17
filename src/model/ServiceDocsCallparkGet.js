@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceParkingSlotData from './ServiceParkingSlotData';
+import ModelsParkingSlotData from './ModelsParkingSlotData';
 
 /**
  * The ServiceDocsCallparkGet model module.
@@ -102,7 +102,7 @@ class ServiceDocsCallparkGet {
 
 
 /**
- * @member {Array.<Object.<String, module:model/ServiceParkingSlotData>>} data
+ * @member {Array.<Object.<String, module:model/ModelsParkingSlotData>>} data
  */
 ServiceDocsCallparkGet.prototype['data'] = undefined;
 

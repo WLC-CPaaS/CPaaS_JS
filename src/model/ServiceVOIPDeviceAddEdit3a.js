@@ -23,11 +23,10 @@ class ServiceVOIPDeviceAddEdit3a {
      * Constructs a new <code>ServiceVOIPDeviceAddEdit3a</code>.
      * @alias module:model/ServiceVOIPDeviceAddEdit3a
      * @param inviteFormat {module:model/ServiceVOIPDeviceAddEdit3a.InviteFormatEnum} 
-     * @param username {String} 
      */
-    constructor(inviteFormat, username) { 
+    constructor(inviteFormat) { 
         
-        ServiceVOIPDeviceAddEdit3a.initialize(this, inviteFormat, username);
+        ServiceVOIPDeviceAddEdit3a.initialize(this, inviteFormat);
     }
 
     /**
@@ -35,9 +34,8 @@ class ServiceVOIPDeviceAddEdit3a {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, inviteFormat, username) { 
+    static initialize(obj, inviteFormat) { 
         obj['invite_format'] = inviteFormat;
-        obj['username'] = username;
     }
 
     /**
@@ -56,6 +54,9 @@ class ServiceVOIPDeviceAddEdit3a {
             }
             if (data.hasOwnProperty('password')) {
                 obj['password'] = ApiClient.convertToType(data['password'], 'String');
+            }
+            if (data.hasOwnProperty('route')) {
+                obj['route'] = ApiClient.convertToType(data['route'], 'String');
             }
             if (data.hasOwnProperty('username')) {
                 obj['username'] = ApiClient.convertToType(data['username'], 'String');
@@ -85,6 +86,10 @@ class ServiceVOIPDeviceAddEdit3a {
             throw new Error("Expected the field `password` to be a primitive type in the JSON string but got " + data['password']);
         }
         // ensure the json data is a string
+        if (data['route'] && !(typeof data['route'] === 'string' || data['route'] instanceof String)) {
+            throw new Error("Expected the field `route` to be a primitive type in the JSON string but got " + data['route']);
+        }
+        // ensure the json data is a string
         if (data['username'] && !(typeof data['username'] === 'string' || data['username'] instanceof String)) {
             throw new Error("Expected the field `username` to be a primitive type in the JSON string but got " + data['username']);
         }
@@ -95,7 +100,7 @@ class ServiceVOIPDeviceAddEdit3a {
 
 }
 
-ServiceVOIPDeviceAddEdit3a.RequiredProperties = ["invite_format", "username"];
+ServiceVOIPDeviceAddEdit3a.RequiredProperties = ["invite_format"];
 
 /**
  * @member {module:model/ServiceVOIPDeviceAddEdit3a.InviteFormatEnum} invite_format
@@ -106,6 +111,11 @@ ServiceVOIPDeviceAddEdit3a.prototype['invite_format'] = undefined;
  * @member {String} password
  */
 ServiceVOIPDeviceAddEdit3a.prototype['password'] = undefined;
+
+/**
+ * @member {String} route
+ */
+ServiceVOIPDeviceAddEdit3a.prototype['route'] = undefined;
 
 /**
  * @member {String} username
@@ -127,7 +137,13 @@ ServiceVOIPDeviceAddEdit3a['InviteFormatEnum'] = {
      * value: "username"
      * @const
      */
-    "username": "username"
+    "username": "username",
+
+    /**
+     * value: "route"
+     * @const
+     */
+    "route": "route"
 };
 
 

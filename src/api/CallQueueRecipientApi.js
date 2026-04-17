@@ -82,7 +82,7 @@ export default class CallQueueRecipientApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceDocsCallQueueRecipientLoginLogoutOutput;
@@ -125,7 +125,7 @@ export default class CallQueueRecipientApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ServiceDocsGetQueueRecipients;
@@ -179,7 +179,7 @@ export default class CallQueueRecipientApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ServiceAPIResponse;

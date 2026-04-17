@@ -48,6 +48,16 @@
   }
 
   describe('SystemStatusApi', function() {
+    describe('v1ApPingGet', function() {
+      it('should call v1ApPingGet successfully', function(done) {
+        //uncomment below and update the code to test v1ApPingGet
+        //instance.v1ApPingGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v1PingGet', function() {
       it('should call v1PingGet successfully', function(done) {
         //uncomment below and update the code to test v1PingGet

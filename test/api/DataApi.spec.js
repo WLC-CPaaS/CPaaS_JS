@@ -48,6 +48,26 @@
   }
 
   describe('DataApi', function() {
+    describe('v1AccountAccountIDCdrCdrIDGet', function() {
+      it('should call v1AccountAccountIDCdrCdrIDGet successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountIDCdrCdrIDGet
+        //instance.v1AccountAccountIDCdrCdrIDGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v1AccountAccountIDCdrGet', function() {
+      it('should call v1AccountAccountIDCdrGet successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountIDCdrGet
+        //instance.v1AccountAccountIDCdrGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v1DataCallDailySummaryGet', function() {
       it('should call v1DataCallDailySummaryGet successfully', function(done) {
         //uncomment below and update the code to test v1DataCallDailySummaryGet

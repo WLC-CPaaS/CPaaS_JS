@@ -138,6 +138,26 @@
         done();
       });
     });
+    describe('v1AccountAccountidProvisioningdetailsGet', function() {
+      it('should call v1AccountAccountidProvisioningdetailsGet successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountidProvisioningdetailsGet
+        //instance.v1AccountAccountidProvisioningdetailsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v1AccountAccountidProvisioningdetailsResetpwPut', function() {
+      it('should call v1AccountAccountidProvisioningdetailsResetpwPut successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountidProvisioningdetailsResetpwPut
+        //instance.v1AccountAccountidProvisioningdetailsResetpwPut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v1AccountAccountidPut', function() {
       it('should call v1AccountAccountidPut successfully', function(done) {
         //uncomment below and update the code to test v1AccountAccountidPut

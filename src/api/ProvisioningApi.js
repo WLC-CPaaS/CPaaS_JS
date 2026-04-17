@@ -132,7 +132,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsFamilyOutputSingle;
@@ -191,7 +191,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsModelOutput;
@@ -246,7 +246,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsModelOutputSingle;
@@ -313,7 +313,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsTemplatesOutput;
@@ -374,7 +374,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsTemplateOutputSingle;
@@ -427,7 +427,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsFamilyOutput;
@@ -470,7 +470,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsBrandOutputSingle;
@@ -517,7 +517,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsBrandsOutput;
@@ -559,7 +559,7 @@ export default class ProvisioningApi {
       let formParams = {
       };
 
-      let authNames = ['BearerAuth'];
+      let authNames = ['bearerauth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ProvisioningDocsDocsConfigFileOutput;

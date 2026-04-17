@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 
 * `record_call` (value: `"record_call"`)
 
+* `play` (value: `"play"`)
+
 
 
 

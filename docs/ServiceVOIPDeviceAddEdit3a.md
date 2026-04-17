@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **inviteFormat** | **String** |  | 
 **password** | **String** |  | [optional] 
-**username** | **String** |  | 
+**route** | **String** |  | [optional] 
+**username** | **String** |  | [optional] 
 
 
 
@@ -14,6 +15,8 @@ Name | Type | Description | Notes
 
 
 * `username` (value: `"username"`)
+
+* `route` (value: `"route"`)
 
 
 

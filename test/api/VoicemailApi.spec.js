@@ -108,6 +108,26 @@
         done();
       });
     });
+    describe('v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet', function() {
+      it('should call v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet
+        //instance.v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFileGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost', function() {
+      it('should call v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost successfully', function(done) {
+        //uncomment below and update the code to test v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost
+        //instance.v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDFilePost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDGet', function() {
       it('should call v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDGet successfully', function(done) {
         //uncomment below and update the code to test v1AccountAccountIDVoicemailVoicemailIDMessageMessageIDGet
